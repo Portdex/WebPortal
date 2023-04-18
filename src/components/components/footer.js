@@ -9,12 +9,11 @@ const footer= () => (
                         <div className="widget">
                             <h5>Marketplace</h5>
                             <ul>
-                                <li><Link to="">All NFTs</Link></li>
-                                <li><Link to="">Art</Link></li>
-                                <li><Link to="">Music</Link></li>
-                                <li><Link to="">Domain Names</Link></li>
-                                <li><Link to="">Virtual World</Link></li>
-                                <li><Link to="">Collectibles</Link></li>
+                                <li><Link to="/marketplace">Decentralized Maarketplace</Link></li>
+                                <li><Link to="">Portdex Videos</Link></li>
+                                <li><Link to="">Token Economy</Link></li>
+                                <li><Link to="">Sell Product</Link></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -70,10 +69,10 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <img alt="" className="f-logo d-1" src="./img/logo.png" />
-                                        <img alt="" className="f-logo d-3" src="./img/logo-2-light.png" />
-                                        <img alt="" className="f-logo d-4" src="./img/logo-3.png" />
-                                        <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span>
+                                        <img alt="" className="f-logo d-1" src="./img/code_logo.png" />
+                                        <img alt="" className="f-logo d-3" src="./img/code_logo.png" />
+                                        <img alt="" className="f-logo d-4" src="./img/code_logo.png" />
+                                        {/* <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span> */}
                                     </span>
                                 </div>
                                 <div className="de-flex-col">

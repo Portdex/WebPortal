@@ -127,23 +127,23 @@ const Header = function({ className }) {
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
                 <img
-                    src="/img/logo.png"
+                    src="/img/code_logo.png"
                     className="img-fluid d-block"
                     alt="#"
                   />
                   <img
-                    src="/img/logo-2.png"
+                    src="/img/code_logo.png"
                     className="img-fluid d-3"
                     alt="#"
                   />
                   <img
-                    src="/img/logo-3.png"
-                    className="img-fluid d-4"
+                    src="/img/code_logo.png"
+                    className="img-fluid d-4 grayscale"
                     alt="#"
                   />
                   <img
-                    src="/img/logo-light.png"
-                    className="img-fluid d-none"
+                    src="/img/code_logo.png"
+                    className="img-fluid d-none grayscale"
                     alt="#"
                   />
                 </NavLink>
@@ -183,37 +183,13 @@ const Header = function({ className }) {
                         )}
                       </div>
                     </div>
-                    <div className='navbar-item'>
-                      <div ref={ref1}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={handleBtnClick1}
-                          >
-                          Explore
-                        </div>
-                        {openMenu1 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu1}>
-                              <NavLink to="/explore" onClick={() => btn_icon(!showmenu)}>Explore</NavLink>
-                              <NavLink to="/explore2" onClick={() => btn_icon(!showmenu)}>Explore 2</NavLink>
-                              <NavLink to="/exploreOpensea" onClick={() => btn_icon(!showmenu)}>Explore OpenSea</NavLink>
-                              <NavLink to="/rangking" onClick={() => btn_icon(!showmenu)}>Rangking</NavLink>
-                              <NavLink to="/colection/1" onClick={() => btn_icon(!showmenu)}>Collection</NavLink>
-                              <NavLink to="/ItemDetail/1" onClick={() => btn_icon(!showmenu)}>Items Details</NavLink>
-                              <NavLink to="/ItemDetailGrey/1" onClick={() => btn_icon(!showmenu)}>Items Details Grey</NavLink>
-                              <NavLink to="/Auction" onClick={() => btn_icon(!showmenu)}>Live Auction</NavLink>
-                              <NavLink to="/AuctionGrey" onClick={() => btn_icon(!showmenu)}>Live Auction Grey</NavLink>
-                              <NavLink to="/helpcenter" onClick={() => btn_icon(!showmenu)}>Help Center</NavLink>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <div className='navbar-item'>
+                    
+                    {/* <div className='navbar-item'>
                       <div ref={ref2}>
                         <div className="dropdown-custom dropdown-toggle btn" 
                           onClick={handleBtnClick2}
                           >
-                          Pages
+                         Decentralized Digital product Marketplace
                         </div>
                         {openMenu2 && (
                           <div className='item-dropdown'>
@@ -239,13 +215,23 @@ const Header = function({ className }) {
                           </div>
                         )}
                       </div>
-                    </div>
+                    </div> */}
                     <div className='navbar-item'>
-                      <NavLink to="/activity" onClick={() => btn_icon(!showmenu)}>
-                        Activity
+                      <NavLink to="/marketplace" onClick={() => btn_icon(!showmenu)}>
+                      Decentralized Digital product Marketplace
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
+                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
+                      Portdex Videos
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item'>
+                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
+                      Tokens Economy
+                      </NavLink>
+                    </div>
+                    {/* <div className='navbar-item'>
                       <div ref={ref3}>
                         <div className="dropdown-custom dropdown-toggle btn" 
                           onClick={handleBtnClick3}
@@ -267,7 +253,7 @@ const Header = function({ className }) {
                           </div>
                         )}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   }
                 </Breakpoint>
@@ -300,42 +286,12 @@ const Header = function({ className }) {
                           
                         </div>
                     </div>
-                    <div className='navbar-item'>
-                      <div ref={ref1}>
-                          <div className="dropdown-custom dropdown-toggle btn" 
-                             onMouseEnter={handleBtnClick1} onMouseLeave={closeMenu1}>
-                            Explore
-                            <span className='lines'></span>
-                            {openMenu1 && (
-                            <div className='item-dropdown'>
-                              <div className="dropdown" onClick={closeMenu1}>
-                              <NavLink to="/explore">Explore</NavLink>
-                              <NavLink to="/exploreGrey">Explore Grey</NavLink>
-                              <NavLink to="/explore2">Explore 2</NavLink>
-                              <NavLink to="/explore2Grey">Explore 2 Grey</NavLink>
-                              <NavLink to="/exploreOpensea">Explore OpenSea</NavLink>
-                              <NavLink to="/rangking">Rangking</NavLink>
-                              <NavLink to="/rangkingGrey">Rangking Grey</NavLink>
-                              <NavLink to="/colection/1">Collection</NavLink>
-                              <NavLink to="/colectionGrey/1">Collection Grey</NavLink>
-                              <NavLink to="/ItemDetail/1">Items Details</NavLink>
-                              <NavLink to="/ItemDetailGrey/1">Items Details Grey</NavLink>
-                              <NavLink to="/Auction">Live Auction</NavLink>
-                              <NavLink to="/AuctionGrey">Live Auction Grey</NavLink>
-                              <NavLink to="/helpcenter">Help Center</NavLink>
-                              <NavLink to="/helpcenterGrey">Help Center Grey</NavLink>
-                              </div>
-                            </div>
-                          )}
-                          </div>
-                          
-                        </div>
-                    </div>
-                    <div className='navbar-item'>
+                  
+                    {/* <div className='navbar-item'>
                       <div ref={ref2}>
                           <div className="dropdown-custom dropdown-toggle btn" 
                              onMouseEnter={handleBtnClick2} onMouseLeave={closeMenu2}>
-                            Pages
+                            Digital Product Marketplace
                             <span className='lines'></span>
                             {openMenu2 && (
                             <div className='item-dropdown'>
@@ -363,14 +319,25 @@ const Header = function({ className }) {
                           )}
                           </div>
                         </div>
+                    </div> */}
+                    <div className='navbar-item'>
+                      <NavLink to="/marketplace">
+                      Decentralized Digital product Marketplace
+                      <span className='lines'></span>
+                      </NavLink>
+                     
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/activity">
-                      Activity
-                      <span className='lines'></span>
+                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
+                      Portdex Videos
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
+                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
+                      Tokens Economy
+                      </NavLink>
+                    </div>
+                    {/* <div className='navbar-item'>
                       <div ref={ref3}>
                           <div className="dropdown-custom dropdown-toggle btn" 
                              onMouseEnter={handleBtnClick3} onMouseLeave={closeMenu3}>
@@ -392,7 +359,7 @@ const Header = function({ className }) {
                           )}
                           </div>
                         </div>
-                    </div>
+                    </div> */}
                   </div>
                 </Breakpoint>
               </BreakpointProvider>

@@ -64,6 +64,7 @@ import Minter from './pages/Minter';
 import Mintergrey from './pages/MinterGrey';
 import auth from '../core/auth';
 import Profile from './pages/Profile';
+import Marketplace from './pages/marketplace';
 //import CreateNft from './pages/Create/index.js';
 
 import { createGlobalStyle } from 'styled-components';
@@ -166,6 +167,7 @@ const app= () => (
       <Route element={<Tabs />} path="/tabs" />
       <Route element={<Minter />} path="/mint" />
       <Route element={<Mintergrey />} path="/minter" />
+      <Route element={<Marketplace />} path="/marketplace" />
       
     </Routes>
     <ScrollToTopBtn />
