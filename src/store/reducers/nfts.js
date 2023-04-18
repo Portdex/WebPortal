@@ -1,12 +1,6 @@
 import { getType } from 'typesafe-actions';
 import * as actions from '../actions';
-import { 
-  initEntityState, 
-  entityLoadingStarted, 
-  entityLoadingSucceeded, 
-  entityLoadingFailed, 
-  remapObject 
-} from '../utils';
+import { initEntityState, entityLoadingStarted, entityLoadingSucceeded, entityLoadingFailed } from '../utils';
 
 export const defaultState = {
   nftBreakdown: initEntityState(null),
@@ -21,7 +15,7 @@ const states = (state = defaultState, action) => {
       return { ...state, nftBreakdown: entityLoadingStarted(state.nftBreakdown, action.payload) };
     case getType(actions.getNftBreakdown.success):
       //append existing data with new data
-      let payload = state.nftBreakdown.data ? [...state.nftBreakdown.data, ...remapObject(action.payload)] : remapObject(action.payload);
+      let payload = state.nftBreakdown.data ? [...state.nftBreakdown.data, ...action.payload] : action.payload;
       return { ...state, nftBreakdown: entityLoadingSucceeded(state.nftBreakdown, payload) };
     case getType(actions.getNftBreakdown.failure):
       return { ...state, nftBreakdown: entityLoadingFailed(state.nftBreakdown) };
@@ -29,7 +23,7 @@ const states = (state = defaultState, action) => {
     case getType(actions.getNftDetail.request):
       return { ...state, nftDetail: entityLoadingStarted(state.nftDetail, action.payload) };
     case getType(actions.getNftDetail.success):
-      return { ...state, nftDetail: entityLoadingSucceeded(state.nftDetail, action.payload, false) };
+      return { ...state, nftDetail: entityLoadingSucceeded(state.nftDetail, action.payload) };
     case getType(actions.getNftDetail.failure):
       return { ...state, nftDetail: entityLoadingFailed(state.nftDetail) };
     

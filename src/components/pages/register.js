@@ -3,7 +3,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import auth, { registerUrl, authorUrl } from '../../core/auth';
+import auth, { registerUrl } from '../../core/auth';
 import request from '../../core/auth/request';
 import { useNavigate } from 'react-router-dom';
 
@@ -70,7 +70,7 @@ const initialValues = {
   password_confirmation: ''
 };
 
-const Register = () => {
+const Register= () => {
 
   const navigate = useNavigate();
   const redirectUser = (path) => {
@@ -79,25 +79,13 @@ const Register = () => {
   
   const handleSubmitForm = async (data) => {
     const requestURL = registerUrl;
+
     await request(requestURL, { method: 'POST', body: data})
       .then((response) => {
         console.log(response)
         auth.setToken(response.jwt, false);
         auth.setUserInfo(response.user, false);
-        request(authorUrl(''), { method: 'POST', body: {data: {
-            username: response.user.username,
-            users_permissions_user: response.user.id,
-            social: '',
-            wallet: '',
-            followers: 0,
-            about: ''
-        }}})
-        .then((responseUser) => {
-          console.log('user response =>', responseUser);
-          redirectUser('/Profile/' + responseUser.data.id);
-        }).catch((err) => {
-          console.log(err);
-        })
+        redirectUser('/Profile/' + response.user.id);
       }).catch((err) => {
         console.log(err);
       });

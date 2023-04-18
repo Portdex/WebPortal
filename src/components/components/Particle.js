@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
 
-
-
 class Particle extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +21,6 @@ class Particle extends Component {
 
   render() {
     return (
-      
       <Particles
         id="tsparticles"
         init={this.particlesInit}
@@ -33,9 +30,6 @@ class Particle extends Component {
             color: {
               value: "none",
             },
-          },
-          style:{
-            position: "relative",
           },
           fpsLimit: 70,
           interactivity: {

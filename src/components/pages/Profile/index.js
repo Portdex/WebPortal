@@ -6,11 +6,11 @@ import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import auth, { authorUrl } from '../../../core/auth';
 import request from '../../../core/auth/request';
+import { useNavigate } from 'react-router-dom';
 import api from "../../../core/api";
 import { fetchAuthorList } from "../../../store/actions/thunks";
 import * as selectors from '../../../store/selectors';
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -49,12 +49,12 @@ const validationSchema = Yup.object().shape({
     ),
 });
 
-const Profile = () => {
-    let { authorId } = useParams();
+const Profile = ({ authorId }) => {
     const navigate = useNavigate();
     const jwt = auth.getToken();
     const authorsState = useSelector(selectors.authorsState);
     const author = authorsState.data ? authorsState.data[0] : null;
+
     const initialValues = {
         username: author ? author.username : '',
         about: author ? author.about : '',
@@ -79,7 +79,7 @@ const Profile = () => {
     const handleSubmitForm = async (data) => {
         const requestURL = authorUrl(authorId);
     
-        await request(requestURL, { method: 'PUT', body: {data: data}})
+        await request(requestURL, { method: 'PUT', body: data})
         .then((response) => {
             console.log(response)
             redirectUser(`/Author/${authorId}`);
@@ -93,13 +93,13 @@ const Profile = () => {
         var formData = new FormData()
 
         formData.append('files', file)
-        formData.append('ref', 'api::author.author') // link the image to a content type
+        formData.append('ref', 'author') // link the image to a content type
         formData.append('refId', authorId) // link the image to a specific entry
         formData.append('field', field) // link the image to a specific field
 
         await axios({
             method: 'post',
-            url : `${api.baseUrl}/api/upload`,
+            url : `${api.baseUrl}/upload`,
             data: formData,
             headers: {
                 Authorization: `Bearer ${jwt}`,

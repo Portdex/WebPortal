@@ -1,11 +1,6 @@
 import { getType } from 'typesafe-actions';
 import * as actions from '../actions';
-import { 
-  initEntityState, 
-  entityLoadingStarted, 
-  entityLoadingSucceeded, 
-  entityLoadingFailed
-} from '../utils';
+import { initEntityState, entityLoadingStarted, entityLoadingSucceeded, entityLoadingFailed } from '../utils';
 
 export const defaultState = {
   hotCollections: initEntityState(null)

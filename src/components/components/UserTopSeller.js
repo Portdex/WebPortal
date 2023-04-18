@@ -3,7 +3,7 @@ import api from '../../core/api';
 
 //react functional component
 const UserTopSeller = ({ user }) => {
-    return user ? (
+    return (
         <>
             <div className="author_list_pp">
               <span onClick={()=> window.open("", "_self")}>
@@ -16,7 +16,7 @@ const UserTopSeller = ({ user }) => {
                 <span className="bot">{user.author_sale.sales} ETH</span>
             </div>   
         </>     
-    ) : <></>;
+    );
 };
 
 export default memo(UserTopSeller);

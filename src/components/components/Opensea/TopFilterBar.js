@@ -66,7 +66,7 @@ const TopFilterBar = ({ setSide, setOwner }) => {
         })
     };
 
-    const getAddress = useCallback( async () => {
+    const getAddress = useCallback(async () => {
         try {
             const addressArray = await window.ethereum.request({
                 method: "eth_requestAccounts",

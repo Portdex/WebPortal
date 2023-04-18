@@ -31,7 +31,7 @@ const CarouselNewRedux = () => {
             setHeight(img.offsetHeight);
         }
     }
-    console.log(nfts)
+    
     useEffect(() => {
         dispatch(fetchNftsBreakdown());
     }, [dispatch]);
@@ -39,7 +39,7 @@ const CarouselNewRedux = () => {
     return (
         <div className='nft'>
           <Slider {...carouselNew}>
-          {nfts && nfts.length && nfts.map( (nft, index) => (
+          {nfts && nfts.map( (nft, index) => (
             <div className='itm' index={index + 1} key={index}>
               <div className="d-item">
                 <div className="nft__item">
@@ -49,10 +49,8 @@ const CarouselNewRedux = () => {
                         </div>
                     }
                     <div className="author_list_pp">
-                        <span onClick={()=> window.open("/home1", "_self")}>
-                            { nft.author.avatar && 
-                                <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt=""/>
-                            }                                    
+                        <span onClick={()=> window.open("/home1", "_self")}>                                    
+                            <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt=""/>
                             <i className="fa fa-check"></i>
                         </span>
                     </div>

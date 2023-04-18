@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const news = () => {
+const News = () => {
   const navigate = useNavigate();
   const navigateTo = (link) => {
       navigate(link);
@@ -85,4 +85,4 @@ const news = () => {
   </div>
   )
 };
-export default memo(news);
+export default memo(News);

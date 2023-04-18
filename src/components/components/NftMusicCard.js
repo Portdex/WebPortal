@@ -29,7 +29,7 @@ const NftMusicCard = ({ nft, audioUrl, className = 'd-item col-lg-3 col-md-6 col
         useEffect(() => {
             playing ? audio.play() : audio.pause();
           },
-          [playing, audio]
+          [playing,audio]
         );
       
         useEffect(() => {
@@ -53,14 +53,12 @@ const NftMusicCard = ({ nft, audioUrl, className = 'd-item col-lg-3 col-md-6 col
                         <Clock deadline={nft.deadline} />
                     </div>
                 }
-                { nft.author && nft.author.avatar && nft.author.avatar.url &&
                 <div className="author_list_pp">
                     <span onClick={()=> navigateTo(nft.author_link)}>                                    
                         <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt="" style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
                         <i className="fa fa-check"></i>
                     </span>
                 </div>
-                }
                 <div className="nft__item_wrap" style={{height: `${height}px`}}>
                     <Outer>
                     <span>

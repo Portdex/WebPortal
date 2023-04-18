@@ -20,7 +20,7 @@ const Column = ({ showLoadMore = true, side = null, owner = null, ownerAddress =
         }
     }
 
-    const fetchData = useCallback(async (resetData = false, currentPage = 1) => {
+    const fetchData = useCallback( async (resetData = false, currentPage = 1) => {
         const seaport = new OpenSeaPort(web3Provider, {
             networkName: Network.Rinkeby
         });
@@ -56,7 +56,7 @@ const Column = ({ showLoadMore = true, side = null, owner = null, ownerAddress =
         const { orders } = await seaport.api.getOrders(query, currentPage)
         let nfts = orderList ? !resetData ? [...orderList, ...orders] : orders : orders;
         setOrderList(nfts);
-    },[orderList,owner,side, address,ownerAddress])
+    },[orderList, owner, address, ownerAddress, side])
 
     const getAddress = async () => {
         try {
@@ -91,7 +91,7 @@ const Column = ({ showLoadMore = true, side = null, owner = null, ownerAddress =
         else {
             fetchData();
         }
-    }, [side, owner, currentOwner, currentSide,fetchData]);
+    }, [side, owner, currentOwner, currentSide, fetchData]);
 
     const loadMore = () => {
         setPage(page+1);

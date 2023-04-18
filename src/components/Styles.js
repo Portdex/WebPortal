@@ -87,9 +87,6 @@ export const StyledHeader = createGlobalStyle`
         #scroll-to-top div {
             background: #ff343f;
         }
-        .greyscheme .btn-main{
-            margin-right:15px;
-        }
         @media only screen and (max-width: 1199px) { 
             .navbar {
                 background: #212428;
@@ -192,9 +189,9 @@ export const StyledHeader = createGlobalStyle`
         }
         }
         @media only screen and (max-width: 1199px) { 
-            .navbar {
-            background: #212428;
-            }
+        .navbar {
+        background: #212428;
+        }
         }
     `}
 

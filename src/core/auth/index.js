@@ -1,5 +1,4 @@
 import { isEmpty } from 'lodash';
-import api from '../api';
 
 const TOKEN_KEY = 'jwtToken';
 const USER_INFO = 'userInfo';
@@ -101,8 +100,8 @@ const auth = {
   },
 };
 
-export const loginUrl = `${api.baseUrl}/api/auth/local`;
-export const registerUrl = `${api.baseUrl}/api/auth/local/register`;
-export const authorUrl = (authorId) => `${api.baseUrl}/api/authors/${authorId}`;
+export const loginUrl = 'http://localhost:1337/auth/local';
+export const registerUrl = 'http://localhost:1337/auth/local/register';
+export const authorUrl = (authorId) => `http://localhost:1337/authors/${authorId}`;
 
 export default auth;

@@ -20,6 +20,7 @@ const ColumnNewSound = ({ showLoadMore = true, shuffle = false, authorId = null 
     }
     
     useEffect(() => {
+        dispatch(clearNfts());
         dispatch(actions.fetchNftsBreakdown(authorId, true));
     }, [dispatch, authorId]);
 

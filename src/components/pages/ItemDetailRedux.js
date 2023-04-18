@@ -72,7 +72,6 @@ const ItemDetailRedux = ({ nftId }) => {
     const dispatch = useDispatch();
     const nftDetailState = useSelector(selectors.nftDetailState);
     const nft = nftDetailState.data ? nftDetailState.data : [];
-    console.log(nft);
 
     const [openCheckout, setOpenCheckout] = React.useState(false);
     const [openCheckoutbid, setOpenCheckoutbid] = React.useState(false);

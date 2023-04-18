@@ -2,26 +2,24 @@ import { Axios, Canceler } from '../../../core/axios';
 import * as actions from '../../actions';
 import api from '../../../core/api';
 
-export const fetchNftsBreakdown = (authorId, isMusic = false) => async (dispatch) => {
+export const fetchNftsBreakdown = (authorId, isMusic = false) => async (dispatch, getState) => {
+  
+  //access the state
+  const state = getState();
+  console.log(state);
 
   dispatch(actions.getNftBreakdown.request(Canceler.cancel));
 
   try {
-    let filter = authorId ? 'filters[author][id][$eq]='+authorId : '';
-    let music = isMusic ? 'filters[category][$eq]=music' : '';
-    const relations = [
-      'author',
-      'author.avatar',
-      'preview_image',
-    ];
-    let populate = `populate=${relations}&`;
+    let filter = authorId ? 'author='+authorId : '';
+    let music = isMusic ? 'category=music' : '';
 
-    const { data } = await Axios.get(`${api.baseUrl}${api.nfts}?${populate}${filter}&${music}`, {
+    const { data } = await Axios.get(`${api.baseUrl}${isMusic ? '/nfts_music.json' : api.nfts}?${filter}&${music}`, {
       cancelToken: Canceler.token,
       params: {}
     });
-    console.log(data)
-    dispatch(actions.getNftBreakdown.success(data.data));
+
+    dispatch(actions.getNftBreakdown.success(data));
   } catch (err) {
     dispatch(actions.getNftBreakdown.failure(err));
   }
@@ -37,7 +35,7 @@ export const fetchNftShowcase = () => async (dispatch) => {
       params: {}
     });
 
-    dispatch(actions.getNftShowcase.success(data.data.attributes));
+    dispatch(actions.getNftShowcase.success(data));
   } catch (err) {
     dispatch(actions.getNftShowcase.failure(err));
   }
@@ -52,6 +50,7 @@ export const fetchNftDetail = (nftId) => async (dispatch) => {
       cancelToken: Canceler.token,
       params: {}
     });
+
     dispatch(actions.getNftDetail.success(data));
   } catch (err) {
     dispatch(actions.getNftDetail.failure(err));

@@ -7,13 +7,13 @@ export const fetchAuthorList = (authorId) => async (dispatch) => {
   dispatch(actions.getAuthorList.request(Canceler.cancel));
 
   try {
-    let filter = authorId ? 'filters[id][$eq]='+authorId : '';
+    let filter = authorId ? 'id='+authorId : '';
     const { data } = await Axios.get(`${api.baseUrl}${api.authors}?${filter}`, {
       cancelToken: Canceler.token,
       params: {}
     });
-    console.log(data);
-    dispatch(actions.getAuthorList.success(data.data.attributes.results));
+
+    dispatch(actions.getAuthorList.success(data));
   } catch (err) {
     dispatch(actions.getAuthorList.failure(err));
   }
@@ -28,7 +28,8 @@ export const fetchAuthorRanking = () => async (dispatch) => {
       cancelToken: Canceler.token,
       params: {}
     });
-    dispatch(actions.getAuthorRanking.success(data.data.attributes.results));
+
+    dispatch(actions.getAuthorRanking.success(data));
   } catch (err) {
     dispatch(actions.getAuthorRanking.failure(err));
   }

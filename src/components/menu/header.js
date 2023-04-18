@@ -9,6 +9,7 @@ import {
 import useOnclickOutside from "react-cool-onclickoutside";
 import auth from '../../core/auth';
 
+
 setDefaultBreakpoints([
   { xs: 0 },
   { l: 1199 },
@@ -224,7 +225,6 @@ const Header = function({ className }) {
                               <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink>
                               <NavLink to="/walletGrey" onClick={() => btn_icon(!showmenu)}>Wallet Grey</NavLink>
                               <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink>
-                              {/* <NavLink to="/createNft" onClick={() => btn_icon(!showmenu)}>Create NFT</NavLink> */}
                               <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink>
                               <NavLink to="/createOptions" onClick={() => btn_icon(!showmenu)}>Create options</NavLink>
                               <NavLink to="/mint" onClick={() => btn_icon(!showmenu)}>Nft Minting</NavLink>
@@ -347,7 +347,6 @@ const Header = function({ className }) {
                               <NavLink to="/wallet">Wallet</NavLink>
                               <NavLink to="/walletGrey">Wallet Grey</NavLink>
                               <NavLink to="/create">Create</NavLink>
-                              {/* <NavLink to="/createNft">Create NFT</NavLink> */}
                               <NavLink to="/createGrey">Create Grey</NavLink>
                               <NavLink to="/create2">Create 2</NavLink>
                               <NavLink to="/createOptions">Create Option</NavLink>

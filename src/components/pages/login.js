@@ -58,7 +58,6 @@ const initialValues = {
 };
 
 const Logintwo = () => {
-
   const navigate = useNavigate();
   const redirectUser = (path) => {
     navigate(path);

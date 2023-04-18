@@ -87,7 +87,7 @@ return (
               <div className="de-flex-col">
                   <div className="profile_avatar">
                     { author.avatar && 
-                      <img src={api.baseUrl + author.avatar.url} alt="" style={{width: '150px', height: '150px'}}/>
+                      <img src={api.baseUrl + author.avatar.url} alt="" style={{backgroundImage: `url(${api.baseUrl + author.banner.url})`}}/>
                     }
                       <i className="fa fa-check"></i>
                       <div className="profile_name">

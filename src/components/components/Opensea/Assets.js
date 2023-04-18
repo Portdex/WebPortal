@@ -44,7 +44,7 @@ const Assets = ({ showLoadMore = true, side = null, owner = null }) => {
             let nfts = orderList ? !resetData ? [...orderList, ...assets] : assets : assets;
             setOrderList(nfts);
         }
-    },[orderList, owner])
+    },[owner, orderList])
     
     useEffect(() => {
         if(owner !== currentOwner) {
@@ -60,7 +60,7 @@ const Assets = ({ showLoadMore = true, side = null, owner = null }) => {
         else {
             setTimeout(() => fetchData(), 1000);
         }
-    }, [side, owner, currentOwner,currentSide,fetchData]);
+    }, [side, owner, currentOwner, currentSide, fetchData]);
 
     const loadMore = () => {
         setPage(page+1);

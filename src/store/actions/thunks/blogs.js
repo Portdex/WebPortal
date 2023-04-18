@@ -7,11 +7,12 @@ export const getBlogPosts = (postId) => async (dispatch) => {
   dispatch(actions.getBlogPosts.request(Canceler.cancel));
 
   try {
-    const { data } = await Axios.get(`${api.baseUrl}${api.blogs}${postId ? `/${postId}` : ''}`, {
+    const { data } = await Axios.get(`${api.baseUrl}${api.blogs}${postId ? '/single.json' : '/all.json'}`, {
       cancelToken: Canceler.token,
       params: {}
     });
-    dispatch(actions.getBlogPosts.success(data.data.attributes.results ? data.data.attributes.results : data.data));
+
+    dispatch(actions.getBlogPosts.success(data));
   } catch (err) {
     dispatch(actions.getBlogPosts.failure(err));
   }
@@ -22,7 +23,7 @@ export const getBlogComments = (postId) => async (dispatch) => {
   dispatch(actions.getComments.request(Canceler.cancel));
 
   try {
-    const { data } = await Axios.get(`${api.baseUrl}${api.comments}/${postId}`, {
+    const { data } = await Axios.get(`${api.baseUrl}${api.comments}`, {
       cancelToken: Canceler.token,
       params: {}
     });
@@ -38,7 +39,7 @@ export const getBlogTags = (postId) => async (dispatch) => {
   dispatch(actions.getTags.request(Canceler.cancel));
 
   try {
-    const { data } = await Axios.get(`${api.baseUrl}${api.tags}/${postId}`, {
+    const { data } = await Axios.get(`${api.baseUrl}${api.tags}`, {
       cancelToken: Canceler.token,
       params: {}
     });

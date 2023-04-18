@@ -2294,7 +2294,7 @@
   "resolved" "https://registry.npmjs.org/@open-draft/until/-/until-1.0.3.tgz"
   "version" "1.0.3"
 
-"@opensea/seaport-js@^1.0.9":
+"@opensea/seaport-js@^1.0.10":
   "integrity" "sha512-k4kBmkCNYxAuB6DYRqwcGXik/8x80cHQ4r4bWWFyB0v4AxGNsqMGOwdeDiP1ajxbg4NnmdEpyA8b2p73GiaK7Q=="
   "resolved" "https://registry.npmjs.org/@opensea/seaport-js/-/seaport-js-1.0.10.tgz"
   "version" "1.0.10"
@@ -2893,9 +2893,9 @@
   "version" "5.2.7"
 
 "@types/node@*":
-  "integrity" "sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g=="
-  "resolved" "https://registry.npmjs.org/@types/node/-/node-18.14.4.tgz"
-  "version" "18.14.4"
+  "integrity" "sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-18.14.6.tgz"
+  "version" "18.14.6"
 
 "@types/node@^10.0.5":
   "integrity" "sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw=="
@@ -4442,9 +4442,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001426", "caniuse-lite@^1.0.30001449":
-  "integrity" "sha512-lQ1VlUUq5q9ro9X+5gOEyH7i3vm+AYVT1WDCVB69XOZ17KZRhnZ9J0Sqz7wTHQaLBJccNCHq8/Ww5LlOIZbB0w=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001458.tgz"
-  "version" "1.0.30001458"
+  "integrity" "sha512-Bud7abqjvEjipUkpLs4D7gR0l8hBYBHoa+tGtKJHvT2AYzLp1z7EmVkUT4ERpVUfca8S2HGIVs883D8pUH1ZzQ=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001460.tgz"
+  "version" "1.0.30001460"
 
 "case-sensitive-paths-webpack-plugin@^2.4.0":
   "integrity" "sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw=="
@@ -5603,9 +5603,9 @@
     "jake" "^10.8.5"
 
 "electron-to-chromium@^1.4.284":
-  "integrity" "sha512-ndBQYz3Eyy3rASjjQ9poMJGoAlsZ/aZnq6GBsGL4w/4sWIAwiUHVSsMuADbxa8WJw7pZ0oxLpGbtoDt4vRTdCg=="
-  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.315.tgz"
-  "version" "1.4.315"
+  "integrity" "sha512-h70iRscrNluMZPVICXYl5SSB+rBKo22XfuIS1ER0OQxQZpKTnFpuS6coj7wY9M/3trv7OR88rRMOlKmRvDty7Q=="
+  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.320.tgz"
+  "version" "1.4.320"
 
 "elegant-icons@0.0.1":
   "integrity" "sha512-Qb0d/gXPHmP4CBnQAtfX78iNACgbbo5ei8TFh0LapACYsU3lu6yOu6vLeguvye7L6ufXYvzolZMUMKytYyaj1g=="
@@ -8952,9 +8952,9 @@
     "type-check" "~0.3.2"
 
 "lilconfig@^2.0.3", "lilconfig@^2.0.5", "lilconfig@^2.0.6":
-  "integrity" "sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg=="
-  "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz"
-  "version" "2.0.6"
+  "integrity" "sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ=="
+  "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.1.0.tgz"
+  "version" "2.1.0"
 
 "lines-and-columns@^1.1.6":
   "integrity" "sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg=="
@@ -9733,11 +9733,11 @@
     "is-wsl" "^2.2.0"
 
 "opensea-js@^4.0.13":
-  "integrity" "sha512-19NIu48DZTimPqwq8ysLsk/MCKpE0xcCWE/dvxzbivs1iKa0P+HGdnkbYXh5CwTgJ7YXmJeseufrKPRO4vfqRg=="
-  "resolved" "https://registry.npmjs.org/opensea-js/-/opensea-js-4.0.15.tgz"
-  "version" "4.0.15"
+  "integrity" "sha512-TyPKtFuQKbO4BS8QnesGYZC2l6+ekvm4VTFOnyzIBZ5VRHFhS2gw1TEeOv385j41sRBhMDVVFdZQQNQZF9/55g=="
+  "resolved" "https://registry.npmjs.org/opensea-js/-/opensea-js-4.0.16.tgz"
+  "version" "4.0.16"
   dependencies:
-    "@opensea/seaport-js" "^1.0.9"
+    "@opensea/seaport-js" "^1.0.10"
     "ajv" "^8.11.0"
     "bignumber.js" "9.0.2"
     "ethereumjs-abi" "git+https://github.com/ProjectWyvern/ethereumjs-abi.git"
