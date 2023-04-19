@@ -13,6 +13,9 @@ const footer= () => (
                                 <li><Link to="">Portdex Videos</Link></li>
                                 <li><Link to="">Token Economy</Link></li>
                                 <li><Link to="">Sell Product</Link></li>
+                                <li><Link to="">Services</Link></li>
+                                <li><Link to="/products">Product</Link></li>
+                                <li><Link to="">Community</Link></li>
                                 
                             </ul>
                         </div>

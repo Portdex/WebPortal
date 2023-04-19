@@ -68,6 +68,7 @@ import Marketplace from './pages/marketplace';
 //import CreateNft from './pages/Create/index.js';
 
 import { createGlobalStyle } from 'styled-components';
+import Product from './pages/product';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -90,7 +91,7 @@ const app= () => (
     <Header/>
     <Routes>
       <Route path="*" element={<Navigate to="/home" replace />} />
-      <Route path="/Author">
+      {/* <Route path="/Author">
         <Route 
           path=":authorId" 
           element={
@@ -99,8 +100,8 @@ const app= () => (
             </ProtectedRoute>
           } 
         />
-      </Route>
-      <Route path="/Profile">
+      </Route> */}
+      {/* <Route path="/Profile">
         <Route 
           path=":authorId" 
           element={
@@ -109,7 +110,7 @@ const app= () => (
             </ProtectedRoute>
           } 
         />
-      </Route>
+      </Route> */}
       <Route path="/home" element={<Home />} />
       <Route path="/homeGrey" element={<HomeGrey />} />
       <Route element={<Home1/>} path="/home1" />
@@ -136,6 +137,8 @@ const app= () => (
       <Route element={<ItemDetailRedux/>} path="/ItemDetail/:nftId" />
       <Route element={<ItemDetailReduxgrey/>} path="/ItemDetailGrey/:nftId" />
       <Route element={<AuthorGrey />} path="/AuthorGrey/:authorId" />
+      <Route element={<Author />} path="/Author/:authorId" />
+      <Route element={<Profile />} path="/Profile/:authorId" />
       <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
       <Route element={<Wallet />} path="/wallet" />
       <Route element={<WalletGrey />} path="/walletGrey" />
@@ -168,6 +171,7 @@ const app= () => (
       <Route element={<Minter />} path="/mint" />
       <Route element={<Mintergrey />} path="/minter" />
       <Route element={<Marketplace />} path="/marketplace" />
+      <Route element={<Product />} path="/products" />
       
     </Routes>
     <ScrollToTopBtn />

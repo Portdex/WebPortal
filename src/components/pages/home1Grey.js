@@ -90,7 +90,7 @@ const homethree= () => (
       <section className='container no-top'>
         <div className='row'>
           <div className='col-lg-12'>
-              <h2 className='style-2'>Top Seller</h2>
+              <h2 className='style-2'>Community</h2>
           </div>
           <div className='col-lg-12'>
             <AuthorListRedux/>
