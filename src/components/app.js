@@ -69,6 +69,9 @@ import Marketplace from './pages/marketplace';
 
 import { createGlobalStyle } from 'styled-components';
 import Product from './pages/product';
+import Community from './pages/Community';
+import Services from './pages/Services';
+import Information from './pages/Information';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -172,6 +175,9 @@ const app= () => (
       <Route element={<Mintergrey />} path="/minter" />
       <Route element={<Marketplace />} path="/marketplace" />
       <Route element={<Product />} path="/products" />
+      <Route element={<Community />} path="/community" />
+      <Route element={<Services />} path="/services" />
+      <Route element={<Information />} path="/information" />
       
     </Routes>
     <ScrollToTopBtn />

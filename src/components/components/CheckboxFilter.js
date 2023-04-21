@@ -29,7 +29,7 @@ const CheckboxFilter = () => {
     return (
         <>
             <div className="item_filter_group">
-              <h4>Select Categories</h4>
+              <h4>Select Category</h4>
               <div className="de_form">
                   { categories.map((item, index) => (
                     <div className="de_checkbox" key={index}>
@@ -46,7 +46,7 @@ const CheckboxFilter = () => {
               </div>
           </div>
 
-          <div className="item_filter_group">
+          {/* <div className="item_filter_group">
               <h4>Status</h4>
               <div className="de_form">
                 { status.map((item, index) => (
@@ -62,9 +62,9 @@ const CheckboxFilter = () => {
                     </div>
                   ))}
               </div>
-          </div>
+          </div> */}
 
-          <div className="item_filter_group">
+          {/* <div className="item_filter_group">
               <h4>Items Type</h4>
               <div className="de_form">
                 { itemsType.map((item, index) => (
@@ -80,9 +80,9 @@ const CheckboxFilter = () => {
                     </div>
                 ))}
               </div>
-          </div>
+          </div> */}
 
-          <div className="item_filter_group">
+          {/* <div className="item_filter_group">
               <h4>Collections</h4>
               <div className="de_form">
               { collections.map((item, index) => (
@@ -98,7 +98,7 @@ const CheckboxFilter = () => {
                     </div>
                 ))}
               </div>
-          </div>
+          </div> */}
         </>
     );
 }

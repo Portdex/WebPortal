@@ -2855,7 +2855,9 @@ i.font60 {
     width: 100%;
 }
 .nft__item img {
-    width: 100%;
+    width: 40%;
+    display:flex;
+    align-items: start;
     height: auto !important;
     border-radius: 8px;
     -moz-border-radius: 8px;
@@ -5344,4 +5346,91 @@ blockquote {
 {
   max-height: 350px;
   height:350px
+}
+.single-card
+{
+  height:200px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.img-fit
+{
+  
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  
+}
+.accord-head 
+{
+  font-size:1.2em;
+  font-weight:bold;
+  background-color: transparent;
+  border:none;
+}
+.accord-head:hover 
+{
+  background-color: transparent;
+}
+.check-box input[type="checkbox"] {
+  display: none;
+}
+
+.check-box label {
+  border: 1px solid #fff;
+  /* padding: 10px; */
+  display: block;
+  position: relative;
+  /* margin: 10px; */
+  cursor: pointer;
+}
+
+.check-box label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.check-box label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+.info-border
+{
+  width:80%;
+  border:1px solid #ddd;
+  border-radius:4px
+}
+/* .check-box :checked + label {
+  border-color: #ddd;
+} */
+
+.check-box :checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+.check-box :checked .info-border {
+  
+ border: 1px solid red
+}
+
+.check-box :checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
 }

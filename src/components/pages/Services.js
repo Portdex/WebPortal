@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 
-const Product = () => (
+const Services = () => (
 <div>
 <GlobalStyles/>
   <section className='container'>
@@ -22,8 +22,8 @@ const Product = () => (
             <CheckboxFilter />
           </div>
           <div className="col-md-9">
-          {/* <ColumnNewThreeColRedux/> */}
-          <SingleColumn/>
+          <ColumnNewThreeColRedux/>
+          {/* <SingleColumn/> */}
           </div>
         </div>
       </section>
@@ -33,4 +33,4 @@ const Product = () => (
 </div>
 
 );
-export default Product;
+export default Services;

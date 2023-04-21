@@ -29,17 +29,18 @@ const NftCard = ({ nft, className = 'd-item col-lg-3 col-md-6 col-sm-6 col-xs-12
              <div className='icontype'><i className="fa fa-shopping-basket"></i></div>
                 )
             }
-                { nft.deadline && clockTop &&
+                {/* { nft.deadline && clockTop &&
                     <div className="de_countdown">
                         <Clock deadline={nft.deadline} />
                     </div>
-                }
+                } */}
                 <div className="author_list_pp">
                     <span onClick={()=> navigateTo(nft.author_link)}>                                    
                         <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt=""/>
                         <i className="fa fa-check"></i>
                     </span>
                 </div>
+               <div className='row'>
                 <div className="nft__item_wrap" style={{height: `${height}px`}}>
                 <Outer>
                     <span>
@@ -47,11 +48,11 @@ const NftCard = ({ nft, className = 'd-item col-lg-3 col-md-6 col-sm-6 col-xs-12
                     </span>
                 </Outer>
                 </div>
-                { nft.deadline && !clockTop &&
+                {/* { nft.deadline && !clockTop &&
                     <div className="de_countdown">
                         <Clock deadline={nft.deadline} />
                     </div>
-                }
+                } */}
                 <div className="nft__item_info">
                     <span onClick={() => navigateTo(`${nft.nft_link}/${nft.id}`)}>
                         <h4>{nft.title}</h4>
@@ -76,6 +77,7 @@ const NftCard = ({ nft, className = 'd-item col-lg-3 col-md-6 col-sm-6 col-xs-12
                         <i className="fa fa-heart"></i><span>{nft.likes}</span>
                     </div>                            
                 </div> 
+                </div>
             </div>
         </div>             
     );

@@ -1,35 +1,71 @@
 export const categories = [
+    // {
+    //     value: 'art',
+    //     label: 'Art'
+    // },
+    // {
+    //     value: 'music',
+    //     label: 'Music'
+    // },
+    // {
+    //     value: 'domain_names',
+    //     label: 'Domain Names'
+    // },
+    // {
+    //     value: 'virtual_world',
+    //     label: 'Virtual World'
+    // },
+    // {
+    //     value: 'trading_cards',
+    //     label: 'Trading Cards'
+    // },
+    // {
+    //     value: 'collectibles',
+    //     label: 'Collectibles'
+    // },
+    // {
+    //     value: 'sports',
+    //     label: 'Sports'
+    // },
+    // {
+    //     value: 'utility',
+    //     label: 'Utility'
+    // }
+    {
+        value: 'logo',
+        label: 'Logo'
+    },
+    {
+        value: 'website',
+        label: 'Website'
+    },
+    {
+        value: 'ebook',
+        label: 'Ebook'
+    },
+    {
+        value: 'pdf',
+        label: 'Pdf'
+    },
     {
         value: 'art',
         label: 'Art'
     },
     {
-        value: 'music',
-        label: 'Music'
+        value: 'themes',
+        label: 'Themes'
     },
     {
-        value: 'domain_names',
-        label: 'Domain Names'
+        value: 'plugins',
+        label: 'Plugins'
     },
     {
-        value: 'virtual_world',
-        label: 'Virtual World'
+        value: 'design',
+        label: 'Design'
     },
     {
-        value: 'trading_cards',
-        label: 'Trading Cards'
-    },
-    {
-        value: 'collectibles',
-        label: 'Collectibles'
-    },
-    {
-        value: 'sports',
-        label: 'Sports'
-    },
-    {
-        value: 'utility',
-        label: 'Utility'
+        value: 'courses',
+        label: 'Courses'
     }
 ];
 
@@ -84,4 +120,48 @@ export const collections = [
         value: 'papercut',
         label: 'Papercut'
     }
+];
+export const services = [
+  
+    {
+        value: 'Teacher',
+        label: 'Teacher'
+    },
+    {
+        value: 'Software Developer',
+        label: 'Software Developer'
+    },
+    {
+        value: 'Service Provider',
+        label: 'Service Provider'
+    },
+    {
+        value: 'Publisher',
+        label: 'Publisher'
+    },
+    {
+        value: 'Writer',
+        label: 'Writer'
+    },
+    {
+        value: 'Lawyer',
+        label: 'Lawyer'
+    },
+    {
+        value: 'Nutritionist',
+        label: 'Nutritionist'
+    },
+    {
+        value: 'Teacher',
+        label: 'Teacher'
+    },
+    {
+        value: 'Software Developer',
+        label: 'Software Developer'
+    },
+    {
+        value: 'Service Provider',
+        label: 'Service Provider'
+    },
+   
 ];

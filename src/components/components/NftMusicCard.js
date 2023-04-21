@@ -48,11 +48,11 @@ const NftMusicCard = ({ nft, audioUrl, className = 'd-item col-lg-3 col-md-6 col
     return (
         <div className={className}>
             <div className="nft__item m-0">
-                { nft.deadline &&
+                {/* { nft.deadline &&
                     <div className="de_countdown">
                         <Clock deadline={nft.deadline} />
                     </div>
-                }
+                } */}
                 <div className="author_list_pp">
                     <span onClick={()=> navigateTo(nft.author_link)}>                                    
                         <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt="" style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
