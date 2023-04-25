@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
 const validationSchema = Yup.object().shape({
   identifier: Yup.lazy(() =>
     Yup.string()
-      .required('Username is required')
+      .required('Email is required')
   ),
   password: Yup.lazy(() =>
     Yup.string()
@@ -62,18 +62,22 @@ const Logintwo = () => {
   const redirectUser = (path) => {
     navigate(path);
   }
-  
+  const handleLogin = () => {
+   
+    navigate('/confirmation')
+  }
   const handleSubmitForm = async (data) => {
-    const requestURL = loginUrl;
+    navigate('/')
+    // const requestURL = loginUrl;
 
-    await request(requestURL, { method: 'POST', body: data})
-      .then((response) => {
-        auth.setToken(response.jwt, false);
-        auth.setUserInfo(response.user, false);
-        redirectUser('/Author/1');
-      }).catch((err) => {
-        console.log(err);
-      });
+    // await request(requestURL, { method: 'POST', body: data})
+    //   .then((response) => {
+    //     auth.setToken(response.jwt, false);
+    //     auth.setUserInfo(response.user, false);
+    //     redirectUser('/Author/1');
+    //   }).catch((err) => {
+    //     console.log(err);
+    //   });
   }
 
   return (
@@ -88,10 +92,10 @@ const Logintwo = () => {
                   <h1>Create, sell or collect digital items.</h1>
                   <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
               </div>
-              <div className="col-lg-4 offset-lg-2 wow fadeIn" data-wow-delay=".5s">
+              <div className="col-lg-5 offset-lg-2 wow fadeIn" data-wow-delay=".5s">
                 <div className="box-login">
                   <h3 className="mb10">Sign In</h3>
-                  <p>Login using an existing account or create a new account <span>here</span>.</p>
+                  <p>Login using an existing account or create a new account <span> <a href='/register'> here </a> </span>.</p>
                   <Formik
                     enableReinitialize
                     validationSchema={validationSchema}
@@ -117,18 +121,18 @@ const Logintwo = () => {
                               <Field className="form-control" type="email" name="identifier" />
                               <ErrorMessage name="identifier" component="div" />
                             </div>
-                            <div className="field-set">
+                            {/* <div className="field-set">
                               <Field className="form-control" type="password" name="password" />
                               <ErrorMessage name="password" component="div" />
-                            </div>
+                            </div> */}
                             <div className="field-set">
-                              <input type='submit' id='send_message' value='Submit' className="btn btn-main btn-fullwidth color-2"/>
+                              <input onClick={handleLogin} type='submit' id='send_message' value='Submit' className="btn btn-main btn-fullwidth color-2"/>
                             </div>
                             <div className="clearfix"></div>
                             <div className="spacer-single"></div>
                             <ul className="list s3">
                               <li>Login with:</li>
-                              <li><span >Facebook</span></li>
+                              {/* <li><span >Facebook</span></li> */}
                               <li><span >Google</span></li>
                             </ul>
                             <div className="spacer-half"></div>

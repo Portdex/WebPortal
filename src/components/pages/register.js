@@ -51,23 +51,23 @@ const validationSchema = Yup.object().shape({
     Yup.string()
       .required('Email is required')
   ),
-  password: Yup.lazy(() =>
-    Yup.string()
-      .required('Password is required')
-  ),
-  password_confirmation: Yup.lazy(() =>
-    Yup.string()
-    .test('passwords-match', 'Passwords must match', function(value){
-      return this.parent.password === value
-    })
-  ),
+  // password: Yup.lazy(() =>
+  //   Yup.string()
+  //     .required('Password is required')
+  // ),
+  // password_confirmation: Yup.lazy(() =>
+  //   Yup.string()
+  //   .test('passwords-match', 'Passwords must match', function(value){
+  //     return this.parent.password === value
+  //   })
+  // ),
 });
 
 const initialValues = {
   username: '',
   email: '',
-  password: '',
-  password_confirmation: ''
+  number: '',
+  category: ''
 };
 
 const Register= () => {
@@ -76,7 +76,10 @@ const Register= () => {
   const redirectUser = (path) => {
     navigate(path);
   }
-  
+  const handleSignup = () => {
+   
+    navigate('/confirmation')
+  }
   const handleSubmitForm = async (data) => {
     const requestURL = registerUrl;
 
@@ -92,103 +95,84 @@ const Register= () => {
   }
 
   return (
-      <div>
-      <GlobalStyles />
-
-        <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
-          <div className='mainbreadcumb'>
-            <div className='container'>
-              <div className='row'>
-                <div className="col-md-12 text-center">
-                    <h1>Register</h1>
-                    <p>Anim pariatur cliche reprehenderit</p>
-                </div>
+     <div>
+      <GlobalStyles/>
+      <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
+        <div className='mainbreadcumb'>
+          <div className='container'>
+            <div className='row align-items-center'>
+              <div className="col-lg-5 text-light wow fadeInRight" data-wow-delay=".5s">
+                  <div className="spacer-10"></div>
+                  <h1>Create, sell or collect digital items.</h1>
+                  <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
               </div>
-            </div>
-          </div>
-        </section>
+              <div className="col-lg-5 offset-lg-2 wow fadeIn" data-wow-delay=".5s">
+                <div className="box-login">
+                  <h3 className="mb10">Sign Up</h3>
+                  <p>Already have an account? <span> <a href='/login'>Sign In </a> </span>.</p>
+                  <Formik
+                    enableReinitialize
+                    validationSchema={validationSchema}
+                    initialValues={initialValues}
+                    validateOnMount={validationSchema.isValidSync(initialValues)}
+                    onSubmit={async (values, { setSubmitting, resetForm }) => {
+                      // const submitData = pick(values, [...requiredFields]);
+                      console.log(values)
+                      setSubmitting(true);
+                      await handleSubmitForm(values);
+                      setSubmitting(false);
+                      resetForm();
+                    }}
+                  >
+                    { 
+                      ({ values, isSubmitting, isValid }) => {
+                        // const isAllValid = isValid;
+                        // const submitValidationMessage = 'Please fill in all required fields';
 
-        <section className='container'>
-          <div className="row">
-
-          <div className="col-md-8 offset-md-2">
-            <h3>Don't have an account? Register now.</h3>
-                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-
-            <div className="spacer-10"></div>
-            <Formik
-                enableReinitialize
-                validationSchema={validationSchema}
-                initialValues={initialValues}
-                validateOnMount={validationSchema.isValidSync(initialValues)}
-                onSubmit={async (values, { setSubmitting, resetForm }) => {
-                  // const submitData = pick(values, [...requiredFields]);
-                  console.log(values)
-                  setSubmitting(true);
-                  await handleSubmitForm(values);
-                  setSubmitting(false);
-                  resetForm();
-                }}
-              >
-                { 
-                  ({ values, isSubmitting, isValid }) => {
-                    // const isAllValid = isValid;
-                    // const submitValidationMessage = 'Please fill in all required fields';
-
-                    return (
-                      <Form className="form-border">
-                        <div className="row">
-
-                          <div className="col-md-6">
+                        return (
+                          <Form className="form-border">
+                             <div className="field-set">
+                              <label>Username:</label>
+                              <Field className="form-control" type="text" name="username" />
+                              <ErrorMessage name="username" component="div" />
+                            </div>
                             <div className="field-set">
                               <label>Email Address:</label>
                               <Field className="form-control" type="email" name="email" />
                               <ErrorMessage name="email" component="div" />
                             </div>
-                          </div>
-                          
-                          <div className="col-md-6">
                             <div className="field-set">
-                              <label>Choose a Username:</label>
-                              <Field className="form-control" type="text" name="username" />
-                              <ErrorMessage name="username" component="div" />
+                              <label>Phone Number:</label>
+                              <Field className="form-control" type="number" name="number" />
+                              <ErrorMessage name="number" component="div" />
                             </div>
-                          </div>
-                          
-                          <div className="col-md-6">
                             <div className="field-set">
-                              <label>Password:</label>
+                              <label>Category:</label>
+                              <Field className="form-control" type="text" name="category" />
+                              <ErrorMessage name="category" component="div" />
+                            </div>
+                            {/* <div className="field-set">
                               <Field className="form-control" type="password" name="password" />
                               <ErrorMessage name="password" component="div" />
-                            </div>
-                          </div>
-                          
-                          <div className="col-md-6">
+                            </div> */}
                             <div className="field-set">
-                              <label>Re-enter Password:</label>
-                              <Field className="form-control" type="password" name="password_confirmation" />
-                              <ErrorMessage name="password_confirmation" component="div" />
+                              <input onClick={handleSignup} type='submit' id='send_message' value='Submit' className="btn btn-main btn-fullwidth color-2"/>
                             </div>
-                          </div>
-
-                          <div className="col-md-12">
-                              <div id='submit' className="pull-left">
-                                  <input type='submit' id='send_message' value='Register Now' className="btn btn-main color-2" />
-                              </div>
-                              
-                              <div className="clearfix"></div>
-                          </div>
-                        </div>
-                      </Form>
-                    )}
-                }
-              </Formik>
+                            <div className="clearfix"></div>
+                            
+                          </Form>
+                        )}
+                    }
+                  </Formik>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
+      <Footer />
+    </div>
   )
 };
 

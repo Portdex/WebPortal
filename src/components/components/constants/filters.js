@@ -165,3 +165,47 @@ export const services = [
     },
    
 ];
+export const products = [
+  
+    {
+        value: 'Teacher',
+        label: 'Teacher'
+    },
+    {
+        value: 'Software Developer',
+        label: 'Software Developer'
+    },
+    {
+        value: 'Service Provider',
+        label: 'Service Provider'
+    },
+    {
+        value: 'Publisher',
+        label: 'Publisher'
+    },
+    {
+        value: 'Writer',
+        label: 'Writer'
+    },
+    {
+        value: 'Lawyer',
+        label: 'Lawyer'
+    },
+    {
+        value: 'Nutritionist',
+        label: 'Nutritionist'
+    },
+    {
+        value: 'Teacher',
+        label: 'Teacher'
+    },
+    {
+        value: 'Software Developer',
+        label: 'Software Developer'
+    },
+    {
+        value: 'Service Provider',
+        label: 'Service Provider'
+    },
+   
+];

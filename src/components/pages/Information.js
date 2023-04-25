@@ -6,6 +6,7 @@ import ServicesCheckbox from '../components/ServicesCheckbox';
 import ColumnNewRedux from "../components/ColumnNewRedux";
 import SingleColumn from '../components/SingleColumn';
 import CheckboxProduct from '../components/CheckboxProduct';
+import { useNavigate } from 'react-router-dom';
 import {
     Button,
     Card,
@@ -18,7 +19,13 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 
-const Information = () => (
+const Information = () => {
+  const navigate = useNavigate();
+  const handleSave = () => {
+   
+    navigate('/')
+  }
+  return(
 <div>
 <GlobalStyles/>
   <section className='container'>
@@ -60,8 +67,8 @@ const Information = () => (
          
         </Accordion>
         <div class="row mt-3">
-                                    <div class="col-lg-12">
-                                        <a class="bg-primary text-center cursor-pointer text-white font-xsss fw-600 p-3 w175 rounded-3 d-inline-block">Confirm</a>
+        <div class="col-lg-12">
+                                        <a onClick={handleSave} class="bg-primary text-center cursor-pointer text-white font-xsss fw-600 p-3 w175 rounded-3 d-inline-block">Confirm</a>
                                     </div>
                                 </div>
         </div>
@@ -71,6 +78,6 @@ const Information = () => (
 
   <Footer />
 </div>
-
-);
+  )
+  };
 export default Information;

@@ -61,10 +61,16 @@ const wallet= () => (
       </div>
     </div>
   </section>
-
+  
   <section className='container'>
-    <Wallet/>
+    <h2 className='text-center'>
+      Coming Soon
+    </h2>
   </section>
+
+  {/* <section className='container'>
+    <Wallet/>
+  </section> */}
 
   <Footer />
 </div>
