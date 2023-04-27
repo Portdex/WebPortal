@@ -5474,7 +5474,16 @@ blockquote {
   
     
 }
-
+.video-border-radius
+{
+  box-shadow: 4px 6.928px 24px 0px rgba(106, 105, 194, 0.25);
+  border-radius: 10px;
+}
+.price-border-radius
+{
+  box-shadow: 4px 6.928px 24px 0px rgba(106, 105, 194, 0.25);
+  height:400px
+}
 .text-blue
 {
   color:#403f83
@@ -5482,4 +5491,51 @@ blockquote {
 .cursor-pointer
 {
   cursor:pointer;
+}
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.display-block
+{
+  display: block;
+
+}
+.display-none{
+  display:none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: flex;
+  align-self: center;
+  margin:auto;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  outline: 0;
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  justify-content: center;
 }

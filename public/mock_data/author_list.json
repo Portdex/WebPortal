@@ -2,61 +2,61 @@
     {
         "avatar": "./img/author/author-1.jpg",
         "username": "Monica Lucas",
-        "sales": 3.2
+        "sales": "Art"
     },
     {
         "avatar": "./img/author/author-2.jpg",
         "username": "Mamie Barnett",
-        "sales": 2.8
+        "sales": "Logo"
     },
     {
         "avatar": "./img/author/author-3.jpg",
         "username": "Nicholas Daniels",
-        "sales": 2.5
+        "sales": "Teacher"
     },
     {
         "avatar": "./img/author/author-4.jpg",
         "username": "Lori Hart",
-        "sales": 2.2
+        "sales": "Themes"
     },
     {
         "avatar": "./img/author/author-5.jpg",
         "username": "Jimmy Wright",
-        "sales": 1.9
+        "sales": "Music"
     },
     {
         "avatar": "./img/author/author-6.jpg",
         "username": "Karla Sharp",
-        "sales": 1.6
+        "sales": "Plugins"
     },
     {
         "avatar": "./img/author/author-7.jpg",
         "username": "Gayle Hicks",
-        "sales": 1.5
+        "sales": "Designer"
     },
     {
         "avatar": "./img/author/author-8.jpg",
         "username": "Claude Banks",
-        "sales": 1.3
+        "sales": "Lawyer"
     },
     {
         "avatar": "./img/author/author-9.jpg",
         "username": "Franklin Greer",
-        "sales": 0.9
+        "sales": "Doctor"
     },
     {
         "avatar": "./img/author/author-10.jpg",
         "username": "Stacy Long",
-        "sales": 0.8
+        "sales": "Writer"
     },
     {
         "avatar": "./img/author/author-11.jpg",
         "username": "Ida Chapman",
-        "sales": 0.6
+        "sales": "Software Engineer"
     },
     {
         "avatar": "./img/author/author-12.jpg",
         "username": "Fred Ryan",
-        "sales": 0.5
+        "sales": "Designer"
     }
 ]

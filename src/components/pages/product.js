@@ -23,18 +23,10 @@ const Product = () => (
           </div>
           
           <div className="col-md-9">
-          <div className='row'>
+          <div>
           {/* <ColumnNewThreeColRedux/> */}
           <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
-          <SingleColumn/>
+          
           </div>
           </div>
         </div>

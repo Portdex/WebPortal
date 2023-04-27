@@ -183,7 +183,7 @@ const Header = function({ className }) {
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
+                      <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
                       Service Marketplace
                       </NavLink>
                     </div>
@@ -206,14 +206,14 @@ const Header = function({ className }) {
                               <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink>
                               {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
                               <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
-                              <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink>
+                              {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
                               {/* <NavLink to="/walletGrey" onClick={() => btn_icon(!showmenu)}>Wallet Grey</NavLink> */}
-                              <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink>
-                              <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink>
+                              {/* <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink> */}
+                              {/* <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink> */}
                               {/* <NavLink to="/createOptions" onClick={() => btn_icon(!showmenu)}>Create options</NavLink>
                               <NavLink to="/mint" onClick={() => btn_icon(!showmenu)}>Nft Minting</NavLink>
                               <NavLink to="/minter" onClick={() => btn_icon(!showmenu)}>Nft Minting Grey</NavLink> */}
-                              <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink>
+                              {/* <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink> */}
                               {/* <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>Gallery</NavLink>
                               <NavLink to="/login" onClick={() => btn_icon(!showmenu)}>login</NavLink>
                               <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
@@ -258,7 +258,7 @@ const Header = function({ className }) {
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
+                      <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
                       Service Marketplace
                       </NavLink>
                     </div>
@@ -280,14 +280,14 @@ const Header = function({ className }) {
                               <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink>
                               {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
                               <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
-                              <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink>
+                              {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
                               {/* <NavLink to="/walletGrey" onClick={() => btn_icon(!showmenu)}>Wallet Grey</NavLink> */}
-                              <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink>
-                              <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink>
+                              {/* <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink>
+                              <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink> */}
                               {/* <NavLink to="/createOptions" onClick={() => btn_icon(!showmenu)}>Create options</NavLink>
                               <NavLink to="/mint" onClick={() => btn_icon(!showmenu)}>Nft Minting</NavLink>
                               <NavLink to="/minter" onClick={() => btn_icon(!showmenu)}>Nft Minting Grey</NavLink> */}
-                              <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink>
+                              {/* <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink> */}
                               {/* <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>Gallery</NavLink>
                               <NavLink to="/login" onClick={() => btn_icon(!showmenu)}>login</NavLink>
                               <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
@@ -359,6 +359,13 @@ const Header = function({ className }) {
                             <NavLink to='/create'>
                               <span>
                                 <i className="fa fa-pencil"></i> Create
+                              </span>
+                              </NavLink>
+                            </li>
+                            <li>
+                            <NavLink to='#'>
+                              <span>
+                                <i className="fa fa-pencil"></i> KYC/AML
                               </span>
                               </NavLink>
                             </li>

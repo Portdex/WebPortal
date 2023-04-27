@@ -54,6 +54,8 @@ import Community from './pages/Community';
 import Services from './pages/Services';
 import Information from './pages/Information';
 import Confirmation from './pages/Confirmation';
+import Description from './pages/Description';
+import Portdexvideos from './pages/Portdexvideos';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -142,6 +144,10 @@ const app= () => (
       <Route element={<Services />} path="/services" />
       <Route element={<Information />} path="/information" />
       <Route element={<Confirmation />} path="/confirmation" />
+      <Route element={<Description />} path="/description" />
+      <Route element={<Portdexvideos />} path="/videos" />
+      
+      {/* <Route element={<Description />} path="/description/:id" /> */}
       
     </Routes>
     <ScrollToTopBtn />

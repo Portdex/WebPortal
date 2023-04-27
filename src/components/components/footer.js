@@ -10,7 +10,7 @@ const footer= () => (
                             <h5>Marketplace</h5>
                             <ul>
                                 <li><Link to="/marketplace">Decentralized Maarketplace</Link></li>
-                                <li><Link to="">Portdex Videos</Link></li>
+                                <li><Link to="/videos">Portdex Videos</Link></li>
                                 <li><Link to="">Token Economy</Link></li>
                                 <li><Link to="">Sell Product</Link></li>
                                 <li><Link to="/services">Services</Link></li>

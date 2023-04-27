@@ -209,3 +209,53 @@ export const products = [
     },
    
 ];
+export const productmarket = [
+  
+    {
+        id: '0',
+        name: 'Monica Agracia',
+        img:'/img/items/static-7.jpg',
+    },
+    {
+        id: '1',
+        name: 'Hazel Brown',
+        img:'/img/items/static-8.jpg',
+    },
+    {
+        id: '2',
+        name: 'James Charles',
+        img:'/img/items/static-5.jpg',
+    },
+    {
+        id: '3',
+        name: 'Chris Grey',
+        img:'/img/items/static-4.jpg',
+    },
+    {
+        id: '4',
+        name: 'Diana rich',
+        img:'/img/items/static-6.jpg',
+    },
+    {
+        id: '5',
+        name: 'Jasmine harry',
+        img:'/img/items/static-7.jpg',
+    },
+    {
+        id: '6',
+        name: 'Harry gayle',
+        img:'/img/items/static-8.jpg',
+    },
+    {
+        id: '7',
+        name: 'Brian paul',
+        img:'/img/items/static-4.jpg',
+    },
+    {
+        id: '8',
+        name: 'John Rich',
+        img:'/img/items/static-5.jpg',
+    },
+    
+   
+];

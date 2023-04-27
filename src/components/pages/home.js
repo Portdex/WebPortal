@@ -42,10 +42,8 @@ const home= () => (
             </div>
           </div>
         </div>
-        <h1 className='text-center'>
-          Coming Soon
-        </h1>
-        {/* <Catgor/> */}
+        
+        <Catgor/>
       </section>
 
       <section className='container no-bottom'>

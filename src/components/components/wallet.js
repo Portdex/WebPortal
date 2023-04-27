@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Wallet= () => (
+const WalletData= () => (
   <div className="row">
     <div className="col-lg-3 mb30">
         <span className="box-url">
@@ -71,4 +71,4 @@ const Wallet= () => (
     </div>                                  
 </div>
 );
-export default Wallet;
+export default WalletData;

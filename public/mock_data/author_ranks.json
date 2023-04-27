@@ -407,7 +407,7 @@
       "bid": 5,
       "author_sale": {
         "id": 5,
-        "sales": 1.9,
+        "sales": "Music",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
