@@ -29,7 +29,7 @@ const Information = () => {
 <div>
 <GlobalStyles/>
   <section className='container'>
-        <div className='row w-75 mx-auto mt-5'>
+        <div className='row w-75 mx-auto mt-5 responsive-info'>
                 <h2>Great!</h2>
                 <p>
                     Just a few more Questions so we can customize your Experience.

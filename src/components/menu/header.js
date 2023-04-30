@@ -358,24 +358,25 @@ const Header = function({ className }) {
                             <li>
                             <NavLink to='/create'>
                               <span>
-                                <i className="fa fa-pencil"></i> Create
-                              </span>
-                              </NavLink>
-                            </li>
-                            <li>
-                            <NavLink to='#'>
-                              <span>
-                                <i className="fa fa-pencil"></i> KYC/AML
+                                <i className="fa fa-pencil"></i> Post Job
                               </span>
                               </NavLink>
                             </li>
                             <li onClick={handleLogout}>
                             <NavLink to='/login'>
                               <span>
-                                <i className="fa fa-sign-out"></i> Sign In
+                                <i className="fa fa-sign-out cursor-pointer"></i> Sign In
                               </span>
                               </NavLink>
                             </li>
+                            <li>
+                           
+                              <span>
+                                <i className="fa fa-pencil"></i> KYC/AML
+                              </span>
+                              
+                            </li>
+                            
                           </ul>
                         </div>
                       }

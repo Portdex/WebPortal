@@ -5,7 +5,7 @@ const footer= () => (
   <footer className="footer-light">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3 col-sm-6 col-xs-1">
+                    <div className="col-md-4 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Marketplace</h5>
                             <ul>
@@ -15,12 +15,12 @@ const footer= () => (
                                 <li><Link to="">Sell Product</Link></li>
                                 <li><Link to="/services">Services</Link></li>
                                 <li><Link to="/products">Product</Link></li>
-                                <li><Link to="/community">Community</Link></li>
+                                {/* <li><Link to="/community">Community</Link></li> */}
                                 
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-xs-1">
+                    {/* <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Resources</h5>
                             <ul>
@@ -32,22 +32,22 @@ const footer= () => (
                                 <li><Link to="">Newsletter</Link></li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="col-md-3 col-sm-6 col-xs-1">
+                    </div> */}
+                    <div className="col-md-4 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Community</h5>
                             <ul>
-                                <li><Link to="">Community</Link></li>
-                                <li><Link to="">Documentation</Link></li>
+                                <li><Link to="/community">Community</Link></li>
+                                {/* <li><Link to="">Documentation</Link></li>
                                 <li><Link to="">Brand Assets</Link></li>
                                 <li><Link to="">Blog</Link></li>
                                 <li><Link to="">Forum</Link></li>
-                                <li><Link to="">Mailing List</Link></li>
+                                <li><Link to="">Mailing List</Link></li> */}
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-xs-1">
-                        <div className="widget">
+                    <div className="col-md-4 col-sm-6 col-xs-1">
+                        <div className="widget m-0">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
                             <form action="#" className="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
@@ -65,12 +65,12 @@ const footer= () => (
                     </div>
                 </div>
             </div>
-            <div className="subfooter">
+            <div className="subfooter m-0">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="de-flex">
-                                <div className="de-flex-col">
+                                <div className="de-flex-col mb-3">
                                     <span onClick={()=> window.open("", "_self")}>
                                         <img alt="" className="f-logo d-1" src="./img/code_logo.png" />
                                         <img alt="" className="f-logo d-3" src="./img/code_logo.png" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ColumnNewThreeColRedux from '../components/ColumnNewThreeColRedux';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
@@ -12,7 +12,19 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 
-const Product = () => (
+const Product = () => {
+  const [modal, setModal] = useState(true);
+  const [modalOpen, setModalOpen] = useState(true);
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if(modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+  return(
 <div>
 <GlobalStyles/>
   <section className='container'>
@@ -32,9 +44,25 @@ const Product = () => (
         </div>
       </section>
 
-
+{modal ? 
+        <div className={`modal ${modal ? 'display-block' : 'display-none'}`}>
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h1 className='text-center'>Coming Soon</h1>
+            
+            {/* <p class="text-center pt-5 pb-5">
+              Coming Soon
+            </p> */}
+           
+            
+          </div>
+        </div>
+    :
+    <></>  
+    }
   <Footer />
 </div>
 
 );
+};
 export default Product;

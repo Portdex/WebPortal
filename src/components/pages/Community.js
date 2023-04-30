@@ -66,12 +66,12 @@ const customStyles = {
 };
 
 
-const options = [
-  { value: 'Last 7 days', label: 'Last 7 days' },
-  { value: 'Last 24 hours', label: 'Last 24 hours' },
-  { value: 'Last 30 days', label: 'Last 30 days' },
-  { value: 'All time', label: 'All time' }
-]
+// const options = [
+//   { value: 'Last 7 days', label: 'Last 7 days' },
+//   { value: 'Last 24 hours', label: 'Last 24 hours' },
+//   { value: 'Last 30 days', label: 'Last 30 days' },
+//   { value: 'All time', label: 'All time' }
+// ]
 const options1 = [
   { value: 'All categories', label: 'All categories' },
   { value: 'Software Engineer', label: 'Software Engineer' },
@@ -108,7 +108,7 @@ const Community= () => (
           <div className='col-lg-12'>
 
             <div className="items_filter centerEl">
-                <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div>
+                {/* <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div> */}
                 <div className='dropdownSelect two'><Select className='select1' styles={customStyles} defaultValue={options1[0]} options={options1} /></div>
             </div>
 
