@@ -94,6 +94,28 @@ export const itemsType = [
         label: 'Bundles'
     }
 ];
+export const InfoProducts = [
+    {
+        value: 'Digital_download',
+        label: 'Digital Download',
+        img:'/img/product/download.png'
+    },
+    {
+        value: 'Digital_Subscription',
+        label: 'Digital Subscription / Membership ',
+        img:'/img/product/subscribe.png'
+    },
+    {
+        value: 'Services_Packages',
+        label: 'Services Packages / Time',
+        img:'/img/product/product.jpg'
+    },
+    {
+        value: 'Softwares_Logos',
+        label: 'Softwares / Logos',
+        img:'/img/product/print.png'
+    }
+];
 
 export const collections = [
     {

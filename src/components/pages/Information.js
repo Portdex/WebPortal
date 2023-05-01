@@ -57,9 +57,6 @@ const Information = () => {
               <Card.Body> 
               <div class="row justify-content-center check-box mx-auto w-75">
              <CheckboxProduct/>
-             <CheckboxProduct/>
-             <CheckboxProduct/>
-             <CheckboxProduct/>
              </div>
               </Card.Body>
             </Accordion.Collapse>

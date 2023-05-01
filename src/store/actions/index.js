@@ -67,6 +67,7 @@ export const clearNfts = action('nft/CLEAR_ALL_NFTS')();
 export const clearFilter = action('nft/CLEAR_FILTER')();
 export const filterCategories = action('nft/FILTER_CATEGORIES')();
 export const filterproductmarket = action('nft/FILTER_PRODUCTMARKET')();
+export const infoProducts = action('nft/INFO_PRODUCTS')();
 export const filterServices = action('nft/FILTER_SERVICES')();
 export const filterStatus = action('nft/FILTER_STATUS')();
 export const filterItemsType = action('nft/FILTER_ITEMS_TYPE')();
