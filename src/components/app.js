@@ -3,12 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import ScrollToTopBtn from './menu/ScrollToTop';
 import Header from './menu/header';
 import Home from './pages/home';
-import Home1 from './pages/home1';
-import Home2 from './pages/home2';
-import Home3 from './pages/home3';
-import Home4 from './pages/home4';
-import Home5 from './pages/home5';
-import Home6 from './pages/home6';
+
 import Explore from './pages/explore';
 import Explore2 from './pages/explore2';
 import ExploreOpensea from './pages/Opensea/explore';
@@ -99,12 +94,7 @@ const app= () => (
         />
       </Route> */}
       <Route path="/home" element={<Home />} />
-      <Route element={<Home1/>} path="/home1" />
-      <Route element={<Home2/>} path="/home2" />
-      <Route element={<Home3/>} path="/home3" />
-      <Route element={<Home4/>} path="/home4" />
-      <Route element={<Home5/>} path="/home5" />
-      <Route element={<Home6/>} path="/home6" />
+     
       <Route element={<Explore/>} path="/explore" />
       <Route element={<Explore2/>} path="/explore2" />
       <Route element={<ExploreOpensea/>} path="/exploreOpensea" />

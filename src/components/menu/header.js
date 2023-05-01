@@ -362,6 +362,14 @@ const Header = function({ className }) {
                               </span>
                               </NavLink>
                             </li>
+                            
+                            <li>
+                            <NavLink to='#'>
+                              <span>
+                                <i className="fa fa-pencil cursor-pointer"></i> KYC/AML
+                              </span>
+                              </NavLink>
+                            </li>
                             <li onClick={handleLogout}>
                             <NavLink to='/login'>
                               <span>
@@ -369,14 +377,6 @@ const Header = function({ className }) {
                               </span>
                               </NavLink>
                             </li>
-                            <li>
-                           
-                              <span>
-                                <i className="fa fa-pencil"></i> KYC/AML
-                              </span>
-                              
-                            </li>
-                            
                           </ul>
                         </div>
                       }

@@ -141,11 +141,11 @@ const Register= () => {
                               <Field className="form-control" type="email" name="email" />
                               <ErrorMessage name="email" component="div" />
                             </div>
-                            <div className="field-set">
+                            {/* <div className="field-set">
                               <label>Phone Number:</label>
                               <Field className="form-control" type="number" name="number" />
                               <ErrorMessage name="number" component="div" />
-                            </div>
+                            </div> */}
                             <div className="field-set">
                               <label>Category:</label>
                               <Field className="form-control" type="text" name="category" />
