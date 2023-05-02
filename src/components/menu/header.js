@@ -192,7 +192,7 @@ const Header = function({ className }) {
                       Community
                       </NavLink>
                     </div>
-                    <div className='navbar-item'>
+                    {/* <div className='navbar-item'>
                       <div ref={ref2}>
                         <div className="dropdown-custom dropdown-toggle btn" 
                           onClick={handleBtnClick2}
@@ -203,7 +203,7 @@ const Header = function({ className }) {
                           <div className='item-dropdown'>
                             <div className="dropdown" onClick={closeMenu2}>
                               <NavLink to="/Author/1" onClick={() => btn_icon(!showmenu)}>Author</NavLink>
-                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink>
+                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink> */}
                               {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
                               <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
                               {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
@@ -219,11 +219,11 @@ const Header = function({ className }) {
                               <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
                               <NavLink to="/register" onClick={() => btn_icon(!showmenu)}>Register</NavLink>
                               <NavLink to="/contact" onClick={() => btn_icon(!showmenu)}>Contact Us</NavLink> */}
-                            </div>
+                            {/* </div>
                           </div>
                         )}
                       </div>
-                    </div>
+                    </div> */}
                     
                     {/* <div className='navbar-item'>
                       <NavLink to="/marketplace" onClick={() => btn_icon(!showmenu)}>
@@ -267,7 +267,7 @@ const Header = function({ className }) {
                       Community
                       </NavLink>
                     </div>
-                    <div className='navbar-item'>
+                    {/* <div className='navbar-item'>
                       <div ref={ref2}>
                           <div className="dropdown-custom dropdown-toggle btn" 
                              onMouseEnter={handleBtnClick2} onMouseLeave={closeMenu2}>
@@ -277,7 +277,7 @@ const Header = function({ className }) {
                             <div className='item-dropdown'>
                               <div className="dropdown" onClick={closeMenu2}>
                               <NavLink to="/Author/1" onClick={() => btn_icon(!showmenu)}>Author</NavLink>
-                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink>
+                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink> */}
                               {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
                               <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
                               {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
@@ -293,12 +293,12 @@ const Header = function({ className }) {
                               <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
                               <NavLink to="/register" onClick={() => btn_icon(!showmenu)}>Register</NavLink>
                               <NavLink to="/contact" onClick={() => btn_icon(!showmenu)}>Contact Us</NavLink> */}
-                              </div>
+                              {/* </div>
                             </div>
                           )}
                           </div>
                         </div>
-                    </div>
+                    </div> */}
                    
                     {/* <div className='navbar-item'>
                       <NavLink to="/marketplace">
