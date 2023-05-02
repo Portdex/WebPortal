@@ -134,10 +134,10 @@ const app= () => (
       <Route element={<Services />} path="/services" />
       <Route element={<Information />} path="/information" />
       <Route element={<Confirmation />} path="/confirmation" />
-      <Route element={<Description />} path="/description" />
+      {/* <Route element={<Description />} path="/description" /> */}
       <Route element={<Portdexvideos />} path="/videos" />
       
-      {/* <Route element={<Description />} path="/description/:id" /> */}
+      <Route element={<Description />} path="/description/:id" />
       
     </Routes>
     <ScrollToTopBtn />

@@ -2,11 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { productmarket } from "../components/constants/filters";
 const Description = ()=>{
-    // const id = useParams();
+    const id = useParams();
     // const found = productmarket.find(obj => {
     //     return obj.id === id;
     //   });
-    // console.log(found)
+    console.log(id)
     
    
     return(

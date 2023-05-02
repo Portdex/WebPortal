@@ -235,6 +235,7 @@ section{
 }
 .text-gradient {
     -webkit-background-clip: text !important;
+    background-clip: text ;
     -webkit-text-fill-color: transparent;
     display: inline-block;
     background: linear-gradient(to bottom, $color, $color_more);
@@ -1044,9 +1045,9 @@ a{
 .navbar-item {  
     pointer-events: auto;
 }
-.navbar-item a.active {
-    /*pointer-events: none;*/
-}
+// .navbar-item a.active {
+//     /*pointer-events: none;*/
+// }
 /* disable click active */
 
 /*** slider ***/
@@ -1104,9 +1105,9 @@ a{
     color: #fff;
     opacity: .8;
 }
-.previousButton:hover, .nextButton:hover {
+// .previousButton:hover, .nextButton:hover {
  
-}
+// }
 .previousButton {
   left: 0;
   -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
@@ -1454,9 +1455,9 @@ a{
     font-weight: 500;
     margin: 5px 0;
   }
-  .content{
+  // .content{
     
-  }
+  // }
 }
 .border-radius{
   border-radius: 0px;
@@ -1740,9 +1741,9 @@ footer{
   height: 100%;
   width: 100%;
   background: none;
-  .gallery-container{
-    .react-photo-gallery--gallery{}
-  }
+  // .gallery-container{
+  //   // .react-photo-gallery--gallery{}
+  // }
 }
 .react-photo-gallery--gallery{
   margin-top: 15px;
@@ -2810,6 +2811,7 @@ i.font60 {
     &:hover img{
       padding: 3px;
       -webkit-box-shadow: 0px 0px 0px 2px $color;
+      box-shadow: 0px 0px 0px 2px $color;
       transition: .3s;
     }
     span{
@@ -2884,7 +2886,7 @@ i.font60 {
     margin-left: 10px;
     margin-top: -3px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 4;
     &:hover{
       img{
         padding: 1px;
@@ -3301,6 +3303,7 @@ i.font60 {
         font-size: 15px;
         cursor: poInter;
         -webkit-border-radius: 3px;
+        border-radius: 3px;
         &:before {
             content: '';
             position: absolute;
@@ -4365,14 +4368,14 @@ blockquote {
     position: absolute;
 }
 
-#blog-comment li li .comment {}
+// #blog-comment li li .comment {}
 
 .comment-info {
     margin-left: 85px;
     margin-bottom: 5px;
 }
 
-.comment-info span {}
+// .comment-info span {}
 
 .comment-info .c_name {
     display: block;
@@ -4403,7 +4406,7 @@ blockquote {
     color: #333;
 }
 
-.blog-list .post-wrapper {}
+// .blog-list .post-wrapper {}
 
 .blog-read h4 {
     color: #333;
