@@ -61,7 +61,7 @@ const Marketplace= () => (
   <div>
   <GlobalStyles />
       <section className="jumbotron no-bg" style={{backgroundImage: `url(${'./img/background/2.jpg'})`}}>
-       <Particle/>
+       {/* <Particle/> */}
          <SliderMainParticle/>
       </section>
 
