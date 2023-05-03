@@ -1,6 +1,6 @@
 import React, { memo, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import UserTopSeller from './UserTopSeller';
+import CommunityColumn from "./CommunityColumn";
 import * as selectors from '../../store/selectors';
 import { fetchAuthorList } from "../../store/actions/thunks";
 
@@ -16,13 +16,13 @@ const AuthorList = () => {
 
     return (
         <div>
-            <ol className="author_list">
+            <div className="row">
             { authors && authors.map((author, index) => (
-                <li key={index}>
-                    <UserTopSeller user={author} />
-                </li>
+                <div className="col-lg-4 col-md-6 col-12" key={index}>
+                    <CommunityColumn user={author} />
+                </div>
             ))}
-            </ol>
+            </div>
         </div>
     );
 };

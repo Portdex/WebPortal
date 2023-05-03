@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
-import Catgor from '../components/Catgor';
+
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -44,6 +44,17 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 `;
+const inline = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  .d-inline{
+    display: inline-block;
+   }
+`;
 const fadeInUp = keyframes`
   0% {
     opacity: 0;
@@ -57,19 +68,43 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Marketplace= () => (
+const TokenEconomy= () => (
   <div>
   <GlobalStyles />
       <section className="jumbotron no-bg" style={{backgroundImage: `url(${'./img/background/2.jpg'})`}}>
-       {/* <Particle/> */}
-         <SliderMainParticle/>
+      <div className="container">
+    <div className="row align-items-center">
+          <div className="col-md-6">
+              <div className="spacer-single"></div>
+              <div className="spacer-double"></div>
+               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
+              <h6 className=""><span className="text-uppercase color">Portdex will launch a utility token</span></h6>
+              </Reveal>
+              <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
+              <h1 className="col-white">DE - FACTO PAYMENT METHOD FOR PLATFORM SERVICES</h1>
+              </Reveal>
+              <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
+              <p className="lead col-white">
+              Portdex will allocate 40% of the token to the community.
+              </p>
+              </Reveal>
+              <div className="spacer-10"></div>
+              <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
+              <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank"> 
+              Portdex token will be launched under foundation structure
+              </a>
+              <div className="mb-sm-30"></div>
+              </Reveal>
+          </div>
+      </div>
+    </div>
       </section>
 
       <section className='container-fluid bg-gray'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2>DECENTRALIZED DIGITAL MARKETPLACE</h2>
+              <h2>FREELANCERS - SUPER DAPP WILL BE POWERED BY PORTDEX TOKEN</h2>
               <div className="small-border"></div>
             </div>
           </div>
@@ -87,10 +122,10 @@ const Marketplace= () => (
                   </Reveal>
                     <div className="text">
                       <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="">Decentralized Digital Store</h4>
+                        <h4 className="">Shop-to-Earn / Post-to-Earn</h4>
                       </Reveal>
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="">Users will be able to own and govern digital product store</p>
+                        <p className="">Consumers can earn tokens as rewards from shopping through a P2P app and posting content for local businesses.</p>
                       </Reveal>
                     </div>
                     <i className="wm icon_wallet"></i>
@@ -108,10 +143,10 @@ const Marketplace= () => (
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Blockchain & Smart Contracts</h4>
+                      <h4 className="">Token Reward</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Blockchain & Smart contracts based marketplace for freelancers and small service providers</p>
+                      <p className="">Portdex will help create a digital high street experience. It will distribute 30% of the commission as a reward in tokens.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_cloud-upload_alt"></i>
@@ -129,10 +164,10 @@ const Marketplace= () => (
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Multicurrency Payments</h4>
+                      <h4 className="">All in One</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Integrated with multicurrency payments</p>
+                      <p className="">Shopping through card payments and creating content for local retailers will enable consumers to earn tokens as rewards.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_tags_alt"></i>
@@ -144,50 +179,60 @@ const Marketplace= () => (
       <section className=''>
         <div className='row'>
           <div className='col-lg-6'>
-            <div className='d-rtl p-5'>
-            <img src='/img/market/dapp.png'/>
-            </div>
+            <img src='/img/market/token.png'/>
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            PEER-TO-PEER SERVICE MARKETPLACE
+            A TOKEN FOR BUSINESSES, FREELANCERS, AND CONSUMERS
             </h1>
-           
+            <h6>
+            A token that will offer SMEs Super DApp and P2P marketplace
+            </h6>
             <div className='row'>
-              <div className='col-lg-12'>
+              <div className='col-lg-6'>
                 <div className=' token-boxes'>
-              
+              <img src='/img/market/govern.png'/>
                 <h2>
-                P2P Transactions ›
+                  Governance
                 </h2>
                 <p>
-                Portdex allows service providers, freelancers, and sellers of digital products to connect directly with buyers without intermediaries like traditional marketplaces.
+                Enable users to govern the platform
                 </p>
                 </div>
               </div>
-              <div className='col-lg-12'>
+              <div className='col-lg-6'>
                 <div className=' token-boxes'>
-             
+              <img src='/img/market/reward.png'/>
                 <h2>
-                Buyer & Seller Control ›
+                Rewards
                 </h2>
                 <p>
-                Portdex through blockchain, will transform the digital products industry by creating decentralized marketplaces that offer greater security, transparency, and control to both buyers and sellers.
+                Shop-to-Earn AND Post-to-Earn  
                 </p>
                 </div>
               </div>
-              <div className='col-lg-12'>
+              <div className='col-lg-6'>
                 <div className=' token-boxes'>
-              
+              <img src='/img/market/paymentmethod.png'/>
                 <h2>
-                Eliminating Third Party ›
+                Payment Method
                 </h2>
                 <p>
-                Portdex's platform offers a P2P decentralised marketplace for small service providers to list their service as a digital package
+                De - Facto payment method for platform services 
                 </p>
                 </div>
               </div>
-             
+              <div className='col-lg-6'>
+                <div className=' token-boxes'>
+              <img src='/img/market/license.png'/>
+                <h2>
+                license
+                </h2>
+                <p>
+                P Tokens will be a license key to access the eco-system and services execution  
+                </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -197,7 +242,7 @@ const Marketplace= () => (
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2 className="text-light">FREELANCERS ALL IN ONE - SUPER APP TO MANAGE PAYMENTS & TRANSACTIONS</h2>
+              <h2 className="text-light">TOKEN FOR ALL IN ONE FREELANCERS - SUPER DAPP</h2>
               <div className="small-border"></div>
             </div>
           </div>
@@ -215,10 +260,10 @@ const Marketplace= () => (
                   </Reveal>
                     <div className="text">
                       <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="text-dark">Manage Clients</h4>
+                        <h4 className="text-dark">ALL IN ONE</h4>
                       </Reveal>
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="text-dark">Portdex will enable freelancers to manage all their clients from one place.</p>
+                        <p className="text-dark">SMEs' sales, customer support, invoice, payment process automation, and instant account settlement.</p>
                       </Reveal>
                     </div>
                     <i className="wm icon_wallet"></i>
@@ -236,10 +281,10 @@ const Marketplace= () => (
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">Manage Transactions</h4>
+                      <h4 className="text-dark">SUBSCRIPTION</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">Freelancers will be able to manage all transactions from one place.</p>
+                      <p className="text-dark">SMEs subscription management is based on Blockchain</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_cloud-upload_alt"></i>
@@ -257,10 +302,10 @@ const Marketplace= () => (
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">Manage Payments</h4>
+                      <h4 className="text-dark">TOKENS</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">Freelancers will be able to manage multicurrency payments through wallet.</p>
+                      <p className="text-dark">Portdex utility tokens enable businesses to be part of governance at the application, network, and infrastructure layers.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_tags_alt"></i>
@@ -269,26 +314,94 @@ const Marketplace= () => (
         </div>
         </div>
       </section>
-
-      <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
-        <div className='row opacity'>
-          <div className='col-lg-12'>
-            <div className='text-center'>
-              <h2>Browse by category</h2>
-              <div className="small-border"></div>
+      <section className=''>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <div className='d-rtl p-5'>
+            <img src='/img/market/dapp.png'/>
             </div>
           </div>
-        
-        
-        <Catgor/>
+          <div className='col-lg-6 p-4'>
+            <h1>
+            TOKEN FOR ALL IN ONE FREELANCERS - SUPER DAPP
+            </h1>
+           
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                Digital Marketplace
+                </h2>
+                <p>
+                Blockchain based marketplace, digital product listing, sale, management, and payment processing.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+             
+                <h2>
+                In-person Payments
+                </h2>
+                <p>
+                Freelancers will be able to claim the token as part of the governing council of the platform.
+10% of the token and 30% of the commission paid by the retailers will be shared with freelancers.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                Instant Account settlement
+                </h2>
+                <p>
+                Freelancers will have instant account settlement with minimum transaction costs.
+                </p>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+
         </div>
       </section>
 
+      
+
      
 
-    
+      {/* <section className='container'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className='text-center'>
+              <h2>Community</h2>
+              <div className="small-border"></div>
+            </div>
+          </div>
+          <div className='col-lg-12'>
+            <AuthorListRedux/>
+          </div>
+        </div>
+      </section> */}
+
+      {/* <section className='container-fluid bg-gray'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className='text-center'>
+              <h2>Create and sell your NFTs</h2>
+              <div className="small-border"></div>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+          <FeatureBox/>
+        </div>
+      </section> */}
+
     <Footer />
 
   </div>
 );
-export default Marketplace;
+export default TokenEconomy;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
+import { useNavigate } from 'react-router-dom';
 
 const fadeInUp = keyframes`
   0% {
@@ -23,26 +24,28 @@ const fadeIn = keyframes`
   }
 `;
 
-const slidermain= () => (
+const Slidermain= () => {
+ const navigate=useNavigate();
+  return(
  <div className="container">
     <div className="row align-items-center">
           <div className="col-md-6">
               <div className="spacer-single"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-              <h6 className=""><span className="text-uppercase color">Gigaland Market</span></h6>
+              <h6 className=""><span className="text-uppercase color">Community Governed Decentralised Marketplace</span></h6>
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={600} triggerOnce>
-              <h1 className="">Create, sell or collect digital items.</h1>
+              <h1 className="">Sell Digital Product & Services Directly to Buyers.</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={600} triggerOnce>
               <p className=" lead">
-              Unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable
-              </p>
+              Portdex is a web 3.0 decentralised community governed peer-to-peer digital products and services marketplace. Digital product owners,  & freelance service providers can digitize their offering, and can connect directly with buyers without intermediaries
+               </p>
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={800} duration={900} triggerOnce>
-              <span onClick={()=> window.open("/#", "_self")} className="btn-main lead">Explore</span>
+              <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank">Join the Community & Earn Rewards</a>
               <div className="mb-sm-30"></div>
               </Reveal>
           </div>
@@ -54,4 +57,5 @@ const slidermain= () => (
       </div>
     </div>
 );
-export default slidermain;
+  };
+export default Slidermain;

@@ -20,7 +20,17 @@ const Outer = styled.div`
 `;
 
 const CarouselNewRedux = () => {
-
+    const [modal, setModal] = useState(true);
+    const [modalOpen, setModalOpen] = useState(true);
+    const toggleModal = () => {
+      setModal(!modal);
+    };
+  
+    if(modal) {
+      document.body.classList.add('active-modal')
+    } else {
+      document.body.classList.remove('active-modal')
+    }
     const dispatch = useDispatch();
     const nftsState = useSelector(selectors.nftBreakdownState);
     const nfts = nftsState.data ? nftsState.data : [];
@@ -39,49 +49,9 @@ const CarouselNewRedux = () => {
     }, [dispatch]);
 
     return (
+        
         <div className='nft'>
           <Slider {...carouselNew}>
-          {/* {nfts && nfts.map( (nft, index) => (
-            <div className='itm' index={index + 1} key={index}>
-              <div className="d-item">
-                <div className="nft__item">
-                    { nft.deadline &&
-                        <div className="de_countdown">
-                            <Clock deadline={nft.deadline} />
-                        </div>
-                    }
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/home1", "_self")}>                                    
-                            <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap" style={{height: `${height}px`}}>
-                      <Outer>
-                        <span>
-                            <img src={api.baseUrl + nft.preview_image.url} className="lazy nft__item_preview" onLoad={onImgLoad} alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>{nft.title}</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            {nft.price} ETH<span>{nft.bid}/{nft.max_bid}</span>
-                        </div>
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open(nft.bid_link, "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>{nft.likes}</span>
-                        </div>                                                        
-                    </div> 
-                </div>
-              </div>
-            </div>
-          ))} */}
-        
         { productmarket.map((item, index) => (
             <div className=' col-lg-4 col-sm-6 col-md-6 p-0'>
             <div className='single-card m-2'>
@@ -99,18 +69,20 @@ const CarouselNewRedux = () => {
 <span className='icon-style'> <i className='fa fa-shopping-cart'></i> </span>
 </div> */}
 <div className='col-lg-6 col-sm-6 col-6 p-3 cursor-pointer'>
-    <NavLink to={`/description/${item.id}`}>
+    {/* <NavLink to={`/description/${item.id}`}> */}
 <span className='text-blue'> Preview </span>
-</NavLink>
+{/* </NavLink> */}
 </div>
 </div>         
 </div>
             </div>
             </div>
         ))}
+        
             
           </Slider>
-        </div>
+          </div>
+      
     );
 }
 

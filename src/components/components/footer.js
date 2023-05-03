@@ -9,9 +9,9 @@ const footer= () => (
                         <div className="widget">
                             <h5>Marketplace</h5>
                             <ul>
-                                <li><Link to="/marketplace">Decentralized Maarketplace</Link></li>
+                                <li><Link to="/marketplace">Decentralized Marketplace</Link></li>
                                 <li><Link to="/videos">Portdex Videos</Link></li>
-                                <li><Link to="">Token Economy</Link></li>
+                                <li><Link to="/tokenEconomy">Token Economy</Link></li>
                                 <li><Link to="">Sell Product</Link></li>
                                 <li><Link to="/services">Services</Link></li>
                                 <li><Link to="/products">Product</Link></li>
@@ -80,11 +80,10 @@ const footer= () => (
                                 </div>
                                 <div className="de-flex-col">
                                     <div className="social-icons">
-                                        <span onClick={()=> window.open("", "_self")}><i className="fa fa-facebook fa-lg"></i></span>
-                                        <span onClick={()=> window.open("", "_self")}><i className="fa fa-twitter fa-lg"></i></span>
-                                        <span onClick={()=> window.open("", "_self")}><i className="fa fa-linkedin fa-lg"></i></span>
-                                        <span onClick={()=> window.open("", "_self")}><i className="fa fa-pinterest fa-lg"></i></span>
-                                        <span onClick={()=> window.open("", "_self")}><i className="fa fa-rss fa-lg"></i></span>
+                                        <a href="https://www.facebook.com/Portdex/" target="_blank"><i className="fa fa-facebook fa-lg"></i></a>
+                                        <a href="https://twitter.com/portdex" target="_blank"><i className="fa fa-twitter fa-lg"></i></a>
+                                        <a href="https://www.linkedin.com/company/portdex/" target="_blank"><i className="fa fa-linkedin fa-lg"></i></a>
+                                        
                                     </div>
                                 </div>
                             </div>

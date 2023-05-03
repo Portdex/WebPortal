@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import { carouselNew } from './constants';
 const catgor= () => (
+   
     <div className='nft'>
     <Slider {...carouselNew}>
        
@@ -66,6 +67,7 @@ const catgor= () => (
    
     </Slider>
     </div>
+    
   
 );
 export default catgor;

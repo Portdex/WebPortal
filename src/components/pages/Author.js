@@ -60,8 +60,8 @@ const author = authorsState.data ? authorsState.data[0] : {};
     const initialValues = {
         username: author ? author.username : '',
         about: author ? author.about : '',
-        social: author ? author.social : '',
-        wallet: author ? author.wallet : ''
+        social: author ? author.author_sale.category : '',
+        wallet: author ? author.author_sale.payment_method : ''
     };
 
     const initialProfilePicture = {
@@ -225,9 +225,9 @@ return (
           <div className='col-lg-12'>
               <div className="items_filter">
                 <ul className="de_nav text-left">
-                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Created</span></li>
+                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Digital Products</span></li>
                     <li id='Mainbtn1' className=""><span onClick={handleBtnClick1}>Profile</span></li>
-                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Liked</span></li>
+                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Services Packages</span></li>
                 </ul>
             </div>
           </div>
@@ -283,12 +283,12 @@ return (
                                                         <ErrorMessage name="about" component="div" />
                                                         <div className="spacer-20"></div>
 
-                                                        <h5>Social</h5>
+                                                        <h5>Category</h5>
                                                         <Field type="text" name="social" id="social" className="form-control" placeholder="Enter Social URLs like Instagram or Twitter"/>
                                                         <ErrorMessage name="social" component="div" />
                                                         <div className="spacer-20"></div>
 
-                                                        <h5>Wallet</h5>
+                                                        <h5>PaymentMethod</h5>
                                                         <Field type="text" name="wallet" id="wallet" className="form-control" placeholder="Enter your Wallet Address"/>
                                                         <ErrorMessage name="wallet" component="div" />
                                                         <div className="spacer-20"></div>

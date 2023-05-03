@@ -18,6 +18,7 @@
         "id": 1,
         "category": "Software Engineer",
         "volume": 15.22587,
+        "payment_method": "Metamask",
         "daily_sales": 87.54,
         "weekly_sales": 309.49,
         "floor_price": 5.9,
@@ -132,6 +133,7 @@
           "id": 1,
           "unique_id": null,
           "category": "art",
+          
           "status": "on_auction",
           "item_type": "single_items",
           "collections": "abstraction",
@@ -221,6 +223,7 @@
           "id": 16,
           "unique_id": null,
           "category": "art",
+          
           "status": "buy_now",
           "item_type": "single_items",
           "collections": "abstraction",
@@ -368,6 +371,7 @@
       "author_sale": {
         "id": 2,
         "category": "Teacher",
+        "payment_method": "Bitski",
         "volume": 14.30478,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -598,6 +602,7 @@
         "id": 3,
         "category": "Logo",
         "volume": 13.22587,
+        "payment_method": "Torus",
         "daily_sales": -33.56,
         "weekly_sales": 307.97,
         "floor_price": 4.5,
@@ -1005,6 +1010,7 @@
       "author_sale": {
         "id": 4,
         "category": "Designer",
+        "payment_method": "Fortmatic",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -1212,6 +1218,7 @@
       "author_sale": {
         "id": 5,
         "category": "Music",
+        "payment_method": "Metamask",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -1422,6 +1429,7 @@
       "author_sale": {
         "id": 6,
         "category": "Doctor",
+        "payment_method": "Metamask",
         "volume": 35.11,
         "daily_sales": 35.11,
         "weekly_sales": -29.82,
@@ -1632,6 +1640,7 @@
       "author_sale": {
         "id": 7,
         "category": "Themes",
+        "payment_method": "CoinBase",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -1803,6 +1812,7 @@
       "author_sale": {
         "id": 8,
         "category": "Plugins",
+        "payment_method": "Metamask",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -1963,6 +1973,7 @@
       "author_sale": {
         "id": 9,
         "category": "Logo",
+        "payment_method": "Torus",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -2190,6 +2201,7 @@
       "author_sale": {
         "id": 10,
         "category": "Lawyer",
+        "payment_method": "Metamask",
         "volume": 15.22587,
         "daily_sales": -35.11,
         "weekly_sales": 239.83,
@@ -2295,6 +2307,7 @@
       "author_sale": {
         "id": 11,
         "category": "Writer",
+        "payment_method": "Metamask",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,
@@ -2455,6 +2468,7 @@
       "author_sale": {
         "id": 12,
         "category": "Photographer",
+        "payment_method": "Arkane",
         "volume": 15.22587,
         "daily_sales": 35.11,
         "weekly_sales": 239.83,

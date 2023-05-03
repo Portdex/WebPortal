@@ -6,9 +6,13 @@ import CarouselNewRedux from '../components/CarouselNewRedux';
 import AuthorListRedux from '../components/AuthorListRedux';
 import Catgor from '../components/Catgor';
 import Footer from '../components/footer';
+import CarouselNewCommunity from '../components/CarouselNewCommunity';
 
 
-const home= () => (
+const Home= () => {
+  
+  return(
+
   <div>
       <section className="jumbotron breadcumb no-bg h-vh" style={{backgroundImage: `url(${'./img/bg-shape-1.jpg'})`}}>
          <SliderMain/>
@@ -20,8 +24,8 @@ const home= () => (
 
      
 
-      <section className='container no-bottom'>
-        <div className='row'>
+      <section className='container no-bottom image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
+        <div className='row opacity'>
           <div className='col-lg-12'>
             <div className='text-center'>
               <h2>Marketplace</h2>
@@ -33,17 +37,18 @@ const home= () => (
           </div>
         </div>
       </section>
-      <section className='container'>
-        <div className='row'>
+      <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
+        <div className='row opacity'>
           <div className='col-lg-12'>
             <div className='text-center'>
               <h2>Browse by category</h2>
               <div className="small-border"></div>
             </div>
           </div>
-        </div>
+        
         
         <Catgor/>
+        </div>
       </section>
 
       <section className='container no-bottom'>
@@ -55,7 +60,8 @@ const home= () => (
             </div>
           </div>
           <div className='col-lg-12'>
-            <AuthorListRedux/>
+            {/* <AuthorListRedux/> */}
+            <CarouselNewCommunity/>
           </div>
         </div>
       </section>
@@ -65,4 +71,5 @@ const home= () => (
 
   </div>
 );
-export default home;
+  };
+export default Home;

@@ -58,8 +58,8 @@ const Profile = ({ authorId }) => {
     const initialValues = {
         username: author ? author.username : '',
         about: author ? author.about : '',
-        social: author ? author.social : '',
-        wallet: author ? author.wallet : ''
+        social: author ? author.author_sale.category : '',
+        wallet: author ? author.author_sale.payment_method : ''
     };
 
     const initialProfilePicture = {

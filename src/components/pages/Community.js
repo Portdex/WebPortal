@@ -105,7 +105,7 @@ const Community= () => (
 
   <section className='container'>
         <div className='row'>
-          <div className='col-lg-12'>
+          <div>
 
             <div className="items_filter centerEl">
                 {/* <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div> */}
