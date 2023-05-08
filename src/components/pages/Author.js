@@ -60,8 +60,8 @@ const author = authorsState.data ? authorsState.data[0] : {};
     const initialValues = {
         username: author ? author.username : '',
         about: author ? author.about : '',
-        social: author ? author.author_sale.category : '',
-        wallet: author ? author.author_sale.payment_method : ''
+        // social: author ? author.author_sale.category : '',
+        // wallet: author ? author.author_sale.payment_method : ''
     };
 
     const initialProfilePicture = {
@@ -284,12 +284,12 @@ return (
                                                         <div className="spacer-20"></div>
 
                                                         <h5>Category</h5>
-                                                        <Field type="text" name="social" id="social" className="form-control" placeholder="Enter Social URLs like Instagram or Twitter"/>
+                                                        <Field type="text" name="social" id="social" className="form-control" placeholder="Enter Category"/>
                                                         <ErrorMessage name="social" component="div" />
                                                         <div className="spacer-20"></div>
 
                                                         <h5>PaymentMethod</h5>
-                                                        <Field type="text" name="wallet" id="wallet" className="form-control" placeholder="Enter your Wallet Address"/>
+                                                        <Field type="text" name="wallet" id="wallet" className="form-control" placeholder="Enter your Payment Method"/>
                                                         <ErrorMessage name="wallet" component="div" />
                                                         <div className="spacer-20"></div>
                                                     </div>

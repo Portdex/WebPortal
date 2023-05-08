@@ -5,7 +5,6 @@ const fetch = async () => {
 
   const response = axios({
     method: 'get',
-   
     url: 'https://business.portdex.ai/portdex/2/user_details',    
     crossDomain: true
   });

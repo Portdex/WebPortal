@@ -358,7 +358,7 @@ const Header = function({ className }) {
                             <li>
                             <NavLink to='/create'>
                               <span>
-                                <i className="fa fa-pencil"></i> Post Job
+                                <i className="fa fa-pencil"></i> Post Your Project
                               </span>
                               </NavLink>
                             </li>

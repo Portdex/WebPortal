@@ -4,6 +4,8 @@ import Footer from '../components/footer';
 import AuthorListRedux from '../components/AuthorListRedux';
 import { createGlobalStyle } from 'styled-components';
 import fetch from './fetch';
+import Spinner from 'react-bootstrap/Spinner';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -90,31 +92,31 @@ const options1 = [
 
 
 const Community= () => {
-  const [users, setUsers] = useState(null)
-  // const fetchUserData = () => {
-  //   fetch("https://business.portdex.ai/portdex/2/user_details")
-  //     .then(response => {
-  //       return response.json()
-  //     })
-  //     .then(data => {
-  //       setUsers(data)
-  //     })
-  // }
+  const [userData, setUserData] = useState([])
+  const [loading, setLoading] = useState(false)
+  console.log(userData)
+  const navigate = useNavigate();
+  const Description =()=>{
+      navigate(`/Author/1`)
+      // navigate(`/description/${user.id}`)
+  }
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get('https://business.portdex.ai/portdex/2/user_details');
-        setUsers(response.data.results.users);
-        console.log(users)
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    // fetchUserData()
-    fetchUserData();
+    setLoading(true)
+    fetch()
+    .then(data => {
+      data=data.data.results.users;
+      setUserData(data)
+     setLoading(false)
+    })
   }, []);
   return(
-
+    <div>
+{loading
+?
+<div className="Loader">
+<Spinner animation="border" size="lg" />
+</div>
+:
 <div>
 <GlobalStyles/>
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -137,8 +139,57 @@ const Community= () => {
                 {/* <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div> */}
                 <div className='dropdownSelect two z-index'><Select className='select1' styles={customStyles} defaultValue={options1[0]} options={options1} /></div>
             </div>
+            <div className="row">
+            { userData && userData.map((author, index) => (
+                <div className="col-lg-4 col-md-6 col-12" key={index}>
+                  <div className='single-card m-2'>
+            <div className='col-lg-12'>
+                <img src='img/author_single/porto-2.jpg' className='img-fit lazy'/>
+                <h6 className='m-3'>{author.username}</h6>
+                <p className='m-3'>
+               {author.mail}
+                </p>
+                <div className='row w-100 m-0'>
+                    <div className='col-lg-6'>
+                        <h6 className='m-3'>
+                            Category
+                        </h6>
+                <p className='m-3'>
+                {/* {user.author_sale.category} */}
+                Teacher
+                </p>
+                </div>
+                <div className='col-lg-6'>
+                <h6 className='m-3'>
+                            PaymentMethod
+                        </h6>
+                <p className='m-3'>
+                {/* {user.author_sale.payment_method} */}
+                Metamask
+                </p>
+                </div>
+                </div>
+                <div className='row text-center align-items-center icon-style-text mx-0'>
+<div className='col-lg-6 col-sm-6 col-6 p-3 cursor-pointer'>
+<span className='text-blue'> Chat </span>
+</div>
+{/* <div className='col-lg-4 col-sm-4 col-4 cursor-pointer'>
+<span className='icon-style'> <i className='fa fa-shopping-cart'></i> </span>
+</div> */}
+<div className='col-lg-6 col-sm-6 col-6 p-3 cursor-pointer'>
+<NavLink to={`/Author/1`}>
+   
+<span className='text-blue'> Preview </span>
+</NavLink>
+</div>
+</div>         
+</div>
+            </div>
+                </div>
+            ))}
+            </div>
 
-            <AuthorListRedux/>
+            {/* <AuthorListRedux/> */}
 
             <div className="spacer-double"></div>
 
@@ -214,7 +265,8 @@ const Community= () => {
 
   <Footer />
 </div>
-
+}
+</div>
 );
 };
 export default Community;
