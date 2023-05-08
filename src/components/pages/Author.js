@@ -209,7 +209,7 @@ return (
               <div className="de-flex-col">
                   <div className="profile_avatar">
                    
-                      <img src='/img/author/author-4.jpg' alt=""/>
+                      <img src='/img/favicon.ico' alt=""/>
                    
                       <i className="fa fa-check"></i>
                       <div className="profile_name">
