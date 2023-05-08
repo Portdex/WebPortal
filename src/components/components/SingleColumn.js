@@ -61,9 +61,9 @@ const SingleColumn = ({ showLoadMore = true, shuffle = false, authorId = null })
 </div> */}
 <div className='col-lg-6 col-sm-6 col-6 p-3 cursor-pointer'>
     {/* <NavLink to={`/description/${item.id}`}> */}
-    <NavLink to={`/Author/${item.id}`}> 
+    {/* <NavLink to={`/Author/${item.id}`}>  */}
 <span className='text-blue'> Preview </span>
-</NavLink>
+{/* </NavLink> */}
 </div>
 </div>         
 </div>

@@ -1,4 +1,4 @@
-import React, { memo,useState, useEffect } from "react";
+import React, { memo,useState,  useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import ColumnNewRedux from '../components/ColumnNewRedux';
 import Footer from '../components/footer';
@@ -6,11 +6,13 @@ import { createGlobalStyle } from 'styled-components';
 import * as selectors from '../../store/selectors';
 import { fetchAuthorList } from "../../store/actions/thunks";
 import api from "../../core/api";
+import { Spinner } from "react-bootstrap";
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import auth , { authorUrl }from "../../core/auth";
 import request from '../../core/auth/request';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import fetch from "./fetch";
 import axios from "axios";
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -49,7 +51,11 @@ const validationSchema = Yup.object().shape({
 });
 
 const Colection = ({ authorId }) => {
-
+  const { index } = useParams();
+  console.log(index)
+  const [userData, setUserData] = useState([])
+  console.log(userData)
+  const [loading , setLoading]= useState(false)
 const [openMenu, setOpenMenu] = React.useState(true);
 const [openMenu1, setOpenMenu1] = React.useState(false);
 const [openMenu2, setOpenMenu2] = React.useState(false);
@@ -139,10 +145,19 @@ const author = authorsState.data ? authorsState.data[0] : {};
         };
         reader.readAsDataURL(file);
     }
-
     useEffect(() => {
-        dispatch(fetchAuthorList(authorId));
-    }, [dispatch, authorId]);
+      setLoading(true)
+      fetch()
+      .then(data => {
+        data=data.data.results.users;
+        setUserData(data[parseInt(index)])
+
+       setLoading(false)
+      })
+    }, []);
+  //   useEffect(() => {
+  //     dispatch(fetchAuthorList(authorId));
+  // }, [dispatch, authorId]);
     
 const handleBtnClick = () => {
   setOpenMenu(!openMenu);
@@ -177,6 +192,13 @@ useEffect(() => {
 }, [dispatch, authorId]);
 
 return (
+  <div>
+  {loading
+  ?
+  <div className="Loader">
+  <Spinner animation="border" size="lg" />
+  </div>
+  :
 <div>
 <GlobalStyles/>
   { author.banner && 
@@ -192,24 +214,29 @@ return (
          <div className="d_profile de-flex">
               <div className="de-flex-col">
                   <div className="profile_avatar">
-                    { author.avatar && 
-                      <img src={api.baseUrl + author.avatar.url} alt="" style={{backgroundImage: `url(${api.baseUrl + author.banner.url})`}}/>
-                    }
+                   
+                      <img src='/img/author/author-4.jpg' alt=""/>
+                   
                       <i className="fa fa-check"></i>
                       <div className="profile_name">
                           <h4>
-                            {author.username}                                          
-                              <span className="profile_username">{author.social}</span>
-                              <span id="wallet" className="profile_wallet">{author.wallet}</span>
-                              <button id="btn_copy" title="Copy Text">Copy</button>
+                            {userData.username}                                          
+                              <span className="profile_username">{userData.mail}</span>
+                              {
+                              userData.payment_method && userData.payment_method.map((item, index) => (
+                              <span id="wallet" className="profile_wallet">{item.name}
+                              {index !== userData.payment_method.length - 1 && ' , '}
+                              </span>
+                              ))
+                          }
                           </h4>
                       </div>
                   </div>
               </div>
               <div className="profile_follow de-flex">
-                  <div className="de-flex-col">
+                  {/* <div className="de-flex-col">
                       <div className="profile_follower">{author.followers} followers</div>
-                  </div>
+                  </div> */}
                   <div className="de-flex-col">
                       <span className="btn-main">Follow</span>
                   </div>
@@ -225,18 +252,21 @@ return (
           <div className='col-lg-12'>
               <div className="items_filter">
                 <ul className="de_nav text-left">
-                    <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Digital Products</span></li>
+                <li id='Mainbtn' className=""><span>Digital Products</span></li>
+                    <li id='Mainbtn1' className=""><span>Profile</span></li>
+                    <li id='Mainbtn2' className=""><span>Services Packages</span></li>
+                    {/* <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Digital Products</span></li>
                     <li id='Mainbtn1' className=""><span onClick={handleBtnClick1}>Profile</span></li>
-                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Services Packages</span></li>
+                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Services Packages</span></li> */}
                 </ul>
             </div>
           </div>
         </div>
-      {openMenu && author.id && (  
+      {/* {openMenu && author.id && (  
         <div id='zero1' className='onStep fadeIn'>
          <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/>
         </div>
-      )}
+      )} */}
       {openMenu1 && author.id && ( 
         // <div id='zero2' className='onStep fadeIn'>
         //  <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/>
@@ -383,6 +413,8 @@ return (
 
 
   <Footer />
+</div>
+}
 </div>
 );
 }

@@ -2877,7 +2877,7 @@ i.font60 {
   column-count: 3;
   column-gap: 20px;
   li {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
   .author_list_pp {
     position: absolute;
@@ -2910,7 +2910,7 @@ i.font60 {
     }
     .bot{
         color: $gray;
-        display: block;
+        display: inline-block;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.2em;

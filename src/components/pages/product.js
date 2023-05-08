@@ -14,16 +14,14 @@ const GlobalStyles = createGlobalStyle`
 const options1 = [
   { value: '', label: 'What Services Are You Looking For?' },
   { value: 'Software Engineer', label: 'Software Engineer' },
-  { value: 'Music', label: 'Music' },
-  { value: 'Teacher', label: 'Teacher' },
-  { value: 'Lawyer', label: 'Lawyer' },
+  { value: 'Website', label: 'Website' },
   { value: 'Logo', label: 'Logo' },
   { value: 'Themes', label: 'Themes' },
   { value: 'Plugins', label: 'Plugins' },
-  { value: 'Writer', label: 'Writer' },
-  { value: 'Photographer', label: 'Photographer' },
-  { value: 'Doctor', label: 'Doctor' },
-  { value: 'Designer', label: 'Designer' }
+  { value: 'Pdf', label: 'Pdf' },
+  { value: 'Courses', label: 'Courses' },
+  { value: 'Designs', label: 'Designs' },
+  { value: 'Ebook', label: 'Ebook' }
 ]
 
 
@@ -45,12 +43,7 @@ const Product = () => {
   <section className='container'>
         <div className='row'>
         <div className='px-5 pb-3'>
-            <h2>
-              Find the Perfect Professional for You
-            </h2>
-            <h4 className='text-secondary'>
-              Get Free quotes within minutes
-            </h4>
+          
             <div className='row'>
             <div className='dropdownSelect two z-indez col-lg-6'><Select className='select1 m-2' defaultValue={options1[0]} options={options1} /></div>
             <div className='dropdownSelect two z-indez col-lg-6'><input type='submit' name='search' className='m-2 hover-light bg-light border-none p-2'/></div>
@@ -61,44 +54,45 @@ const Product = () => {
               </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              SoftwareEngineer
+              Themes
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Music
+             Logos
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Teacher
+              Plugins
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Lawyer
+              Designs
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Doctor
+              Website
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Photographer
+              Ebook
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Writer
+              Pdf
             </div>
            </div>
            <div className='col-lg-2'>
             <div className='cat-box mt-2'>
-              Artist
+              Courses
             </div>
            </div>
+           
 
             </div>
           </div>

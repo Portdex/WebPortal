@@ -329,10 +329,10 @@ const Header = function({ className }) {
                 <div className="logout">
                   <NavLink to="/wallet">Connect Wallet</NavLink>
                   
-                  <div id="de-click-menu-profile" className="de-menu-profile" onClick={() => btn_icon_pop(!showpop)} ref={refpop}>                           
+                  {/* <div id="de-click-menu-profile" className="de-menu-profile" onClick={() => btn_icon_pop(!showpop)} ref={refpop}>                           
                   <i className="fa fa-user user-icon-style" ></i>
                       {showpop && 
-                        <div className="popshow">
+                        <div className="popshow"> */}
                           {/* <div className="d-name">
                               <h4>Monica Lucas</h4>
                               <span className="name" onClick={()=> window.open("", "_self")}>Set display name</span>
@@ -347,7 +347,7 @@ const Header = function({ className }) {
                               <button id="btn_copy" title="Copy Text">Copy</button>
                           </div> */}
                           {/* <div className="d-line"></div> */}
-                          <ul className="de-submenu-profile">
+                          {/* <ul className="de-submenu-profile">
                             <li>
                               <NavLink to='/profile'>
                               <span>
@@ -380,7 +380,7 @@ const Header = function({ className }) {
                           </ul>
                         </div>
                       }
-                  </div>
+                  </div> */}
                 </div>
               </div>
                   

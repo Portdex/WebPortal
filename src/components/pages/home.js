@@ -60,8 +60,8 @@ const Home= () => {
             </div>
           </div>
           <div className='col-lg-12'>
-            {/* <AuthorListRedux/> */}
-            <CarouselNewCommunity/>
+            <AuthorListRedux/>
+            {/* <CarouselNewCommunity/> */}
           </div>
         </div>
       </section>

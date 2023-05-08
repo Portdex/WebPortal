@@ -19,9 +19,9 @@ const options1 = [
   { value: 'Music', label: 'Music' },
   { value: 'Teacher', label: 'Teacher' },
   { value: 'Lawyer', label: 'Lawyer' },
-  { value: 'Logo', label: 'Logo' },
-  { value: 'Themes', label: 'Themes' },
-  { value: 'Plugins', label: 'Plugins' },
+  { value: 'Accountant', label: 'Accountant' },
+  { value: 'Typist', label: 'Typist' },
+  { value: 'Developer', label: 'Developer' },
   { value: 'Writer', label: 'Writer' },
   { value: 'Photographer', label: 'Photographer' },
   { value: 'Doctor', label: 'Doctor' },
@@ -48,12 +48,6 @@ const Services = () => {
          
         <div className="spacer-double"></div>
         <div className='px-5 pb-3'>
-            <h2>
-              Find the Perfect Professional for You
-            </h2>
-            <h4 className='text-secondary'>
-              Get Free quotes within minutes
-            </h4>
             <div className='row'>
             <div className='dropdownSelect two z-indez col-lg-6'><Select className='select1 m-2' defaultValue={options1[0]} options={options1} /></div>
             <div className='dropdownSelect two z-indez col-lg-6'><input type='submit' name='search' className='m-2 hover-light bg-light border-none p-2'/></div>
