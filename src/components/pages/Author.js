@@ -52,7 +52,7 @@ const validationSchema = Yup.object().shape({
 
 const Colection = ({ authorId }) => {
   const { index } = useParams();
-  console.log(index)
+  
   const [userData, setUserData] = useState([])
   console.log(userData)
   const [loading , setLoading]= useState(false)
@@ -192,13 +192,7 @@ useEffect(() => {
 }, [dispatch, authorId]);
 
 return (
-  <div>
-  {loading
-  ?
-  <div className="Loader">
-  <Spinner animation="border" size="lg" />
-  </div>
-  :
+ 
 <div>
 <GlobalStyles/>
   { author.banner && 
@@ -414,8 +408,7 @@ return (
 
   <Footer />
 </div>
-}
-</div>
+
 );
 }
 export default memo(Colection);

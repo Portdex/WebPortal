@@ -2878,6 +2878,9 @@ i.font60 {
   column-gap: 20px;
   li {
     // margin-bottom: 30px;
+    border: 1px solid lightgray;
+   
+    border-radius:15px
   }
   .author_list_pp {
     position: absolute;

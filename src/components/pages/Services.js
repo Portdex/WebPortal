@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 const options1 = [
-  { value: '', label: 'What Services Are You Looking For?' },
+  { value: '', label: 'What Freelance Services Are You Looking For?' },
   { value: 'Software Engineer', label: 'Software Engineer' },
   { value: 'Music', label: 'Music' },
   { value: 'Teacher', label: 'Teacher' },

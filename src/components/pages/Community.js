@@ -94,26 +94,20 @@ const options1 = [
 const Community= () => {
   const [userData, setUserData] = useState([])
   const [loading, setLoading] = useState(false)
-  console.log(userData)
+  // console.log(userData)
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setLoading(true)
-    fetch()
-    .then(data => {
-      data=data.data.results.users;
-      setUserData(data)
-     setLoading(false)
-    })
-  }, []);
+  // useEffect(() => {
+    
+  //   fetch()
+  //   .then(data => {
+  //     data=data.data.results.users;
+  //     setUserData(data)
+     
+  //   })
+  // }, []);
   return(
-    <div>
-{loading
-?
-<div className="Loader">
-<Spinner animation="border" size="lg" />
-</div>
-:
+
 <div>
 <GlobalStyles/>
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -214,8 +208,7 @@ const Community= () => {
 
   <Footer />
 </div>
-}
-</div>
+
 );
 };
 export default Community;

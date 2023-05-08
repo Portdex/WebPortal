@@ -19,23 +19,17 @@ const AuthorList = () => {
     const authors = authorsState.data ? authorsState.data : [];
 
     useEffect(() => {
-        setLoading(true)
+        
         fetch()
         .then(data => {
           data=data.data.results.users;
           setUserData(data)
-         setLoading(false)
+         
         })
       }, []);
 
     return (
-        <div>
-        {loading
-        ?
-        <div className="Loader">
-        <Spinner animation="border" size="lg" />
-        </div>
-        :
+       
         <div>
            {/* <ol className="author_list">
             { authors && authors.map((author, index) => (
@@ -47,11 +41,11 @@ const AuthorList = () => {
             <ol className="author_list">
             { userData && userData.map((author, index) => (
              
-                <li key={index} className='p-3'>
+                <li key={index} className='p-3 pb-0 mb-2 mx-2'>
                    <Link to={`/Author/${index}`} key={index}>
                      <div className="author_list_pp">
         <span>
-            <img className="lazy" src='img/author/author-4.jpg' alt=""/>
+            <img className="lazy" src='img/favicon.ico' alt=""/>
             <i className="fa fa-check"></i>
         </span>
       </div>                                    
@@ -60,19 +54,13 @@ const AuthorList = () => {
           {/* <span className="bot">{user.author_sale.category} </span> */}
        
           <p className='mb-0'>
-          {author.category.length > 0 ? (
-            author.category.slice(0, 2).map((item, index) => (
-              <span className="bot" key={item.name}>
-                {item.name || '-'}
-                {index !== author.category.slice(0, 3).length - 1 && ', '}
-              </span>
-            ))
-          ) : (
-            '-'
-          )}
-          {author.category.length > 3 && <span className="bot"> ...</span>}
+          <span className="bot fw-bold">Category:</span> <br/>
+          <span className="bot">
+            {author.services || '-'}
+          </span>
           </p>
-          <p>
+          <p className='mb-0'>
+            <span className="bot fw-bold">Payment Method:</span> <br/>
           {author.payment_method.length > 0 ? (
             author.payment_method.slice(0, 2).map((item, index) => (
               <span className="bot" key={item.name}>
@@ -81,7 +69,7 @@ const AuthorList = () => {
               </span>
             ))
           ) : (
-            '-'
+            <span className="bot"> - </span>
           )}
           {author.payment_method.length > 3 && <span className="bot"> ...</span>}
           </p>
@@ -91,8 +79,7 @@ const AuthorList = () => {
             ))}
             </ol>
         </div>
-}
-</div>
+
     );
 };
 export default memo(AuthorList);

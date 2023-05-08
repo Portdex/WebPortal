@@ -46,7 +46,7 @@ const footer= () => (
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-6 col-xs-1">
+                    {/* <div className="col-md-4 col-sm-6 col-xs-1">
                         <div className="widget m-0">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
@@ -62,7 +62,7 @@ const footer= () => (
                             <div className="spacer-10"></div>
                             <small>Your email is safe with us. We don't spam.</small>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="subfooter m-0">

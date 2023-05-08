@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 const options1 = [
-  { value: '', label: 'What Services Are You Looking For?' },
+  { value: '', label: 'What Digital Products Are You Looking For?' },
   { value: 'Software Engineer', label: 'Software Engineer' },
   { value: 'Website', label: 'Website' },
   { value: 'Logo', label: 'Logo' },
