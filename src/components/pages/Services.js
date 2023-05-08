@@ -58,6 +58,52 @@ const Services = () => {
             <div className='dropdownSelect two z-indez col-lg-6'><Select className='select1 m-2' defaultValue={options1[0]} options={options1} /></div>
             <div className='dropdownSelect two z-indez col-lg-6'><input type='submit' name='search' className='m-2 hover-light bg-light border-none p-2'/></div>
             </div>
+            <div className='row'>
+              <div className='col-lg-12'>
+                <h6 className='text-secondary'> Popular Searches: </h6>
+              </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              SoftwareEngineer
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Music
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Teacher
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Lawyer
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Doctor
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Photographer
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Writer
+            </div>
+           </div>
+           <div className='col-lg-2'>
+            <div className='cat-box mt-2'>
+              Artist
+            </div>
+           </div>
+
+            </div>
           </div>
           
           <div className="col-md-12">

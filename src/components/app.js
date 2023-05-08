@@ -52,6 +52,7 @@ import Confirmation from './pages/Confirmation';
 import Description from './pages/Description';
 import Portdexvideos from './pages/Portdexvideos';
 import TokenEconomy from './pages/TokenEconomy';
+import UserDetails from './pages/Checkurl';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -138,6 +139,7 @@ const app= () => (
       {/* <Route element={<Description />} path="/description" /> */}
       <Route element={<Portdexvideos />} path="/videos" />
       <Route element={<TokenEconomy />} path="/tokenEconomy" />
+      <Route element={<UserDetails />} path="/check" />
 
       <Route element={<Description />} path="/description/:id" />
       

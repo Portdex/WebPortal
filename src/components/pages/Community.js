@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState , useEffect} from 'react';
 import Select from 'react-select'
 import Footer from '../components/footer';
 import AuthorListRedux from '../components/AuthorListRedux';
 import { createGlobalStyle } from 'styled-components';
-
+import fetch from './fetch';
+import axios from 'axios';
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
     background: #403f83;
@@ -88,7 +89,32 @@ const options1 = [
 ]
 
 
-const Community= () => (
+const Community= () => {
+  const [users, setUsers] = useState(null)
+  // const fetchUserData = () => {
+  //   fetch("https://business.portdex.ai/portdex/2/user_details")
+  //     .then(response => {
+  //       return response.json()
+  //     })
+  //     .then(data => {
+  //       setUsers(data)
+  //     })
+  // }
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get('https://business.portdex.ai/portdex/2/user_details');
+        setUsers(response.data.results.users);
+        console.log(users)
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    // fetchUserData()
+    fetchUserData();
+  }, []);
+  return(
+
 <div>
 <GlobalStyles/>
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -125,10 +151,70 @@ const Community= () => (
           </div>
         </div>
       </section>
+      <section className='container p-0 pb-2'>
+        <h2 className='text-center'>
+          Categories
+        </h2>
+      </section>
+      <section className='container pt-0'>
+    <div className='row'>
+     <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.4</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use pencil"></i>
+              Writer
+              
+              <span className="text-grey">[&amp;#xf26e;]</span>
+            </div>
+
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              
+            <i className="fa fa-fw" aria-hidden="true" title="Copy to use camera"></i>
+              Photographer
+              
+              <span className="text-grey">[&amp;#xf166;]</span>
+            </div>
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.4</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use balance-scale"></i>
+              Lawyer
+              
+              <span className="text-grey">[&amp;#xf24e;]</span>
+            </div>
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use music"></i>
+              Music
+              
+              <span className="text-grey">[&amp;#xf001;]</span>
+            </div>
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.2</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use paint-brush"></i>
+              Designer
+              
+              <span className="text-grey">[&amp;#xf1fc;]</span>
+            </div>
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.1</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use mortar-board"></i>
+              Teacher
+               <span className="text-grey">(alias)</span>
+              <span className="text-grey">[&amp;#xf19d;]</span>
+            </div>
+            <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.0</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use plus-square-o"></i>
+             Doctor
+              
+              <span className="text-grey">[&amp;#xf196;]</span>
+            </div>
+    </div>
+  </section>
 
 
   <Footer />
 </div>
 
 );
+};
 export default Community;
