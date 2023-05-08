@@ -42,6 +42,7 @@ const Product = () => {
 <GlobalStyles/>
   <section className='container'>
         <div className='row'>
+        <div class="spacer-double"></div>
         <div className='px-5 pb-3'>
           
             <div className='row'>
