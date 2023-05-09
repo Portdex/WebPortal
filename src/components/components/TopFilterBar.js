@@ -64,7 +64,7 @@ const TopFilterBar = () => {
                         className="form-control" 
                         id="name_1" 
                         name="name_1" 
-                        placeholder="search item here..." 
+                        placeholder="Search coming soon..." 
                         type="text"
                         onChange={filterNftTitles}
                     /> 

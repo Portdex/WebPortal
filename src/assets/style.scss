@@ -2876,9 +2876,13 @@ i.font60 {
   -webkit-column-gap: 20px;
   column-count: 3;
   column-gap: 20px;
+  list-style-position: outside;
+  margin-left: 1em; 
   li {
     // margin-bottom: 30px;
     border: 1px solid lightgray;
+    display: inline-block;
+    width: 100%;
    
     border-radius:15px
   }

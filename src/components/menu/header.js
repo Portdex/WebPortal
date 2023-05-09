@@ -165,7 +165,7 @@ const Header = function({ className }) {
           </div>
 
           <div className='search'>
-            <input id="quick_search" className="xs-hide" name="quick_search" placeholder="search item here..." type="text" />
+            <input id="quick_search" className="xs-hide" name="quick_search" placeholder="Search coming soon..." type="text" />
           </div>
                     
               <BreakpointProvider>
@@ -327,7 +327,7 @@ const Header = function({ className }) {
                   <NavLink to="/wallet">Connect Wallet</NavLink>
                 </div> */}
                 <div className="logout">
-                  <NavLink to="/wallet">Connect Wallet</NavLink>
+                  <NavLink to="/wallet">Connect Wallet-coming soon</NavLink>
                   
                   {/* <div id="de-click-menu-profile" className="de-menu-profile" onClick={() => btn_icon_pop(!showpop)} ref={refpop}>                           
                   <i className="fa fa-user user-icon-style" ></i>

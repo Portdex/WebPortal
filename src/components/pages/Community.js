@@ -122,7 +122,7 @@ const Community= () => {
     </div>
   </section>
 
-  <section className='container'>
+  <section className='container pb-0'>
         <div className='row'>
           <div>
 
@@ -136,21 +136,21 @@ const Community= () => {
 
             <div className="spacer-double"></div>
 
-            <ul className="pagination justify-content-center">
+            {/* <ul className="pagination justify-content-center">
                 <li className="active"><span>1 - 20</span></li>
                 <li><span>21 - 40</span></li>
                 <li><span>41 - 60</span></li>
-            </ul> 
+            </ul>  */}
 
           </div>
         </div>
       </section>
-      <section className='container p-0 pb-2'>
+      <section className='container image-center p-0 pb-2' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
+        <div className='opacity'>
         <h2 className='text-center'>
           Categories
         </h2>
-      </section>
-      <section className='container pt-0'>
+      <div className='container pt-0'>
     <div className='row'>
      <div className="col-lg-4 col-md-6 demo-icon-wrap">
               <small className="text-grey pull-right">4.4</small>
@@ -202,6 +202,22 @@ const Community= () => {
               
               <span className="text-grey">[&amp;#xf196;]</span>
             </div>
+             <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.0</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use mortar-board"></i>
+            Software Engineer
+              
+              <span className="text-grey">[&amp;#xf196;]</span>
+            </div>
+             <div className="col-lg-4 col-md-6 demo-icon-wrap">
+              <small className="text-grey pull-right">4.0</small>
+              <i className="fa fa-fw" aria-hidden="true" title="Copy to use plus-square-o"></i>
+             Accountant
+              
+              <span className="text-grey">[&amp;#xf196;]</span>
+            </div>
+    </div>
+    </div>
     </div>
   </section>
 

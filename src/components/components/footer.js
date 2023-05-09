@@ -12,9 +12,8 @@ const footer= () => (
                                 <li><Link to="/marketplace">Decentralized Marketplace</Link></li>
                                 <li><Link to="/videos">Portdex Videos</Link></li>
                                 <li><Link to="/tokenEconomy">Token Economy</Link></li>
-                                <li><Link to="">Sell Product</Link></li>
-                                <li><Link to="/services">Services</Link></li>
-                                <li><Link to="/products">Product</Link></li>
+                                <li><Link to="/services">Service Marketplace</Link></li>
+                                <li><Link to="/products">Product Marketplace</Link></li>
                                 {/* <li><Link to="/community">Community</Link></li> */}
                                 
                             </ul>
