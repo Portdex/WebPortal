@@ -45,7 +45,7 @@ const Slidermain= () => {
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={800} duration={900} triggerOnce>
-              <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank">Join the Community & Earn Rewards</a>
+              <a href='https://business.portdex.ai/web/user_signup' className="btn-main lead" target="_blank">Join the Community & Earn Rewards</a>
               <div className="mb-sm-30"></div>
               </Reveal>
           </div>
