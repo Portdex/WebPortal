@@ -51,7 +51,7 @@ const footer= () => (
                             <ul>
                             <li><Link to="">Technology</Link></li>
                             <li><Link to="">Company</Link></li>
-                                <li><Link to="/our-team">Team</Link></li>
+                                <li><Link to="">Team</Link></li>
                                 <li><Link to="">Objective</Link></li>
                                 <li><Link to="">Token-Foundation</Link></li>
                                 <li><Link to="">Roadmap</Link></li>
