@@ -32,12 +32,12 @@ const Slidermain= () => {
           <div className="col-md-6">
               <div className="spacer-single"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-              <h6 className=""><span className="text-uppercase color">Community Governed Decentralised Marketplace</span></h6>
+              <h3 className="mb-2"><span className="text-uppercase color">Decentralised Freelancers Digital product and services Marketplace </span></h3>
               </Reveal>
               <div className="spacer-10"></div>
-              <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={600} triggerOnce>
+              {/* <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={600} triggerOnce>
               <h1 className="">Sell Digital Product & Services Directly to Buyers.</h1>
-              </Reveal>
+              </Reveal> */}
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={600} triggerOnce>
               <p className=" lead">
               Portdex is a web 3.0 decentralised community governed peer-to-peer digital products and services marketplace. Digital product owners,  & freelance service providers can digitize their offering, and can connect directly with buyers without intermediaries
@@ -45,13 +45,14 @@ const Slidermain= () => {
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={800} duration={900} triggerOnce>
-              <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank">Join the Community & Earn Rewards</a>
+              <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank">Join our freelance community</a>
               <div className="mb-sm-30"></div>
               </Reveal>
           </div>
           <div className="col-md-6 xs-hide">
             <Reveal className='onStep' keyframes={fadeIn} delay={900} duration={1500} triggerOnce>
               <img src="./img/banner.png" className="lazy img-fluid" alt=""/>
+              <h3 className="text-end color pt-3 animated-heading ">Sell Digital Product & Services Directly to Buyers.</h3>
             </Reveal>
           </div>
       </div>

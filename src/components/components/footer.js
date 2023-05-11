@@ -5,7 +5,7 @@ const footer= () => (
   <footer className="footer-light">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4 col-sm-6 col-xs-1">
+                    <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Marketplace</h5>
                             <ul>
@@ -32,7 +32,7 @@ const footer= () => (
                             </ul>
                         </div>
                     </div> */}
-                    <div className="col-md-4 col-sm-6 col-xs-1">
+                    <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Community</h5>
                             <ul>
@@ -45,7 +45,21 @@ const footer= () => (
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-6 col-xs-1">
+                    <div className="col-md-3 col-sm-6 col-xs-1">
+                        <div className="widget">
+                            <h5>About Us</h5>
+                            <ul>
+                            <li><Link to="">Technology</Link></li>
+                            <li><Link to="">Company</Link></li>
+                                <li><Link to="/our-team">Team</Link></li>
+                                <li><Link to="">Objective</Link></li>
+                                <li><Link to="">Token-Foundation</Link></li>
+                                <li><Link to="">Roadmap</Link></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget m-0">
                             <h5>Contact Us</h5>
                             <a href='mailto:info@portdex.ai'>

@@ -38,46 +38,42 @@ const AuthorList = () => {
                 </li>
             ))}
             </ol> */}
-            <ol className="author_list">
-            { userData && userData.map((author, index) => (
-             
-                <li key={index} className='p-3 pb-0 mb-2 mx-2'>
-                   <Link to={`/Author/${index}`} key={index}>
-                     <div className="author_list_pp">
-        <span>
-            <img className="lazy" src='img/favicon.ico' alt=""/>
-            <i className="fa fa-check"></i>
-        </span>
-      </div>                                    
-      <div className="author_list_info">
-          <span>{author.username}</span>
-          {/* <span className="bot">{user.author_sale.category} </span> */}
-       
-          <p className='mb-0'>
-          <span className="bot fw-bold">Category:</span> <br/>
-          <span className="bot">
-            {author.services || '-'}
-          </span>
-          </p>
-          <p className='mb-0'>
-            <span className="bot fw-bold">Payment Method:</span> <br/>
-          {author.payment_method.length > 0 ? (
-            author.payment_method.slice(0, 2).map((item, index) => (
-              <span className="bot" key={item.name}>
-                {item.name || '-'}
-                {index !== author.payment_method.slice(0, 3).length - 1 && ', '}
-              </span>
-            ))
-          ) : (
-            <span className="bot"> - </span>
-          )}
-          {author.payment_method.length > 3 && <span className="bot"> ...</span>}
-          </p>
-      </div>  </Link>
-                </li>
-                
-            ))}
-            </ol>
+          
+
+      <div class="row">
+        {/* <!-- Column 1--> */}
+        { userData && userData.map((author, index) => (
+        <div  key={index} class="col-lg-4 p-5">
+          <div className='community-column text-center'>
+           <Link to={`/Author/${index}`} key={index}>
+          <div class="community-card p-3">
+            <div class="img-container">
+              <img src="img/favicon.ico" />
+            </div>
+            <h3 className="community-h3 mb-2">{author.username}</h3>
+            <p className="m-0 mb-2">{author.services || '-'}</p>
+            <div class="community-icons">
+            {author.payment_method.length > 0 ? (
+author.payment_method.map((item, index) => (
+  <span className="bot" key={item.name} >
+    {item.name || '-'} 
+    {index !== author.payment_method.length - 1 && ', '}
+  </span>
+))
+) : (
+<span className="bot"> - </span>
+)}
+
+            </div>
+          </div>
+          </Link>
+          </div>
+        </div>
+        
+        ))}
+        {/* <!-- Column 2--> */}
+      </div>
+    
         </div>
 
     );

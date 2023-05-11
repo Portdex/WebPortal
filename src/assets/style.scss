@@ -99,7 +99,7 @@ section{
     border-left-color: currentcolor;
     border-right: none;
     border-right-color: currentcolor;
-    margin: 18px auto 30px;
+    margin: auto ;
   }
   &.bg-gray{
     background: rgb(247, 244, 253);
@@ -2379,6 +2379,7 @@ i.font60 {
 .feature-box.f-boxed {
     overflow: none;
     padding: 50px;
+    min-height: 320px;
     background: rgba(131,100,226, .1);
     border-radius: 6px;
     -moz-border-radius: 6px;
@@ -5640,3 +5641,101 @@ border: 2px solid #8364E2;
   background: $white;
   transition: .3s;
 }
+.animated-heading {
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  50% {
+    color:black;
+     opacity: 0.5;
+  }
+ 
+}
+.community-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  text-align: center;
+}
+.community-column {
+  width: 100%;
+  padding: 0.5em 0;
+}
+.community-h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  color: #1f003b;
+}
+.community-card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  // padding: 3.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+.community-card .img-container {
+  width: 8em;
+  height: 8em;
+  background-color: #a993ff;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+.community-card img {
+  width: 100%;
+  border-radius: 50%;
+}
+.community-card h3 {
+  font-weight: 500;
+}
+.community-card p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+}
+.community-icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.community-card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.community-card:hover {
+  background: linear-gradient(#6045ea, #8567f7);
+  color: #ffffff;
+}
+.community-card:hover h3 {
+ 
+  color: #ffffff;
+}
+.community-card:hover .img-container {
+  transform: scale(1.15);
+}
+// @media screen and (min-width: 768px) {
+//   section .community{
+//     padding: 1em 7em;
+//   }
+// }
+// @media screen and (min-width: 992px) {
+//   section .community {
+//     padding: 1em;
+//   }
+//   // .community-card {
+//   //   padding: 5em 1em;
+//   // }
+//   .community-column {
+//     flex: 0 0 33.33%;
+//     // max-width: 33.33%;
+//     padding: 0 1em;
+//   }
+// }
