@@ -54,15 +54,16 @@ const AuthorList = () => {
             <p className="m-0 mb-2">{author.services || '-'}</p>
             <div class="community-icons">
             {author.payment_method.length > 0 ? (
-author.payment_method.map((item, index) => (
+author.payment_method.slice(0, 4).map((item, index) => (
   <span className="bot" key={item.name} >
     {item.name || '-'} 
-    {index !== author.payment_method.length - 1 && ', '}
+    {index !== author.payment_method.slice(0, 4).length - 1 && ', '}
   </span>
 ))
 ) : (
 <span className="bot"> - </span>
 )}
+{author.payment_method.length > 3 && <span className="bot"> ...</span>}
 
             </div>
           </div>
