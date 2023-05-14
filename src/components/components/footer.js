@@ -9,9 +9,9 @@ const footer= () => (
                         <div className="widget">
                             <h5>Marketplace</h5>
                             <ul>
-                                <li><Link to="/marketplace">Decentralized Marketplace</Link></li>
+                                <li><Link to="/marketplace">Freelancers Governed – Web 3.0 Marketplace</Link></li>
                                 <li><Link to="/videos">Portdex Videos</Link></li>
-                                <li><Link to="/tokenEconomy">Token Economy</Link></li>
+                                <li><Link to="/tokenEconomy">Token Economics</Link></li>
                                 <li><Link to="/services">Service Marketplace</Link></li>
                                 <li><Link to="/products">Product Marketplace</Link></li>
                                 {/* <li><Link to="/community">Community</Link></li> */}
@@ -37,24 +37,32 @@ const footer= () => (
                             <h5>Community</h5>
                             <ul>
                                 <li><Link to="/community">Community</Link></li>
-                                {/* <li><Link to="">Documentation</Link></li>
-                                <li><Link to="">Brand Assets</Link></li>
-                                <li><Link to="">Blog</Link></li>
-                                <li><Link to="">Forum</Link></li>
-                                <li><Link to="">Mailing List</Link></li> */}
+                            </ul>
+                            <h5 className='mt-3'> Business videos</h5>
+                            <ul>
+                                <li><Link to="">service providers</Link></li>
+                                <li><Link to="">product videos</Link></li>
                             </ul>
                         </div>
+                        
+                           
+                        
                     </div>
                     <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>About Us</h5>
                             <ul>
-                            <li><Link to="">Technology</Link></li>
-                            <li><Link to="">Company</Link></li>
+                            <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li>
+                            <li><Link to="/portexDAO">Portdex DAO</Link></li>
+                            {/* <li><Link to="">Company</Link></li> */}
+                            <li><Link to="/digital-products">Digital Products NFTs</Link></li>
+                            <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li>
+                            <li><Link to="/connectivity">Real Time Connectivity</Link></li>
+                           
                                 <li><Link to="">Team</Link></li>
-                                <li><Link to="">Objective</Link></li>
+                                {/* <li><Link to="">Objective</Link></li>
                                 <li><Link to="">Token-Foundation</Link></li>
-                                <li><Link to="">Roadmap</Link></li>
+                                <li><Link to="">Roadmap</Link></li> */}
                                 
                             </ul>
                         </div>
@@ -81,13 +89,13 @@ const footer= () => (
             <div className="subfooter m-0">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12 mb-5">
                             <div className="de-flex">
                                 <div className="de-flex-col mb-3">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <img alt="" className="f-logo d-1" src="./img/code_logo.png" />
-                                        <img alt="" className="f-logo d-3" src="./img/code_logo.png" />
-                                        <img alt="" className="f-logo d-4" src="./img/code_logo.png" />
+                                        <img alt="" className="f-logo d-1" src="/img/code_logo.png" />
+                                        <img alt="" className="f-logo d-3" src="/img/code_logo.png" />
+                                        <img alt="" className="f-logo d-4" src="/img/code_logo.png" />
                                         {/* <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span> */}
                                     </span>
                                 </div>

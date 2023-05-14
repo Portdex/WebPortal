@@ -99,8 +99,105 @@ const TokenEconomy= () => (
       </div>
     </div>
       </section>
-
       <section className='container-fluid bg-gray'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className='text-center'>
+              <h2>Token Economics</h2>
+              <div className="small-border"></div>
+              <p className='text-center'>
+              Portdex token will be issued by Portdex.ai Foundation. The foundation will be setup in their <br/> jurisdiction where regulations allow and define both utility and security tokens.  
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+        <div className='row'>
+        <div className="col-lg-12 col-md-12 mb-3">
+                <div className="feature-box f-boxed style-3">
+                 
+                    <div className="text">
+                     
+                      <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
+                        <p className="">
+                          Portdex token economics has a clear purpose, including access, permission (Usage), and governance (validation and Voting). The Token will also generate value for the ecosystem stakeholder. The token will act as a de facto payment method for the platform services. The behavior of the Token will be spendable. 
+                        <br/>
+<br/>
+Portdex Utility token can be used to pay for products and services. The token will be spent for governance, usage, and rewards. Portdex utility tokens will enable businesses and consumers to be part of the governance at the application, network, and infrastructure layer. 
+<ul>
+  <li>
+Utility token will be required to connect API</li>
+<li>
+Utility tokens will act as a license key to access the ecosystem and services execution.
+</li>
+<li>
+It Will also act as Enterprise license fee, platform fee, developer fee, user fee
+</li>
+</ul>
+The businesses that will hold tokens as governance nodes will be able to earn rewards.
+<br/>
+The rewards can be categorized into
+<ul>
+  <li>
+  Staking Rewards
+  </li>
+  
+    <li>
+    Governance Rewards 
+  </li>
+
+ 
+  <li>
+  Holder Discount fee
+
+  </li>
+  <li>
+  Hiring rewards 
+  </li>
+</ul>
+
+</p>
+                      </Reveal>
+                    </div>
+                    <i className="wm icon_wallet"></i>
+                </div>
+            </div>
+            {/* <div className="col-lg-6 col-md-6 mb-3">
+                <div className="feature-box f-boxed style-3">
+                 
+                    <div className="text">
+                     
+                      <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
+                        <p className="">
+                          Portdex token economics has a clear purpose, including access, permission (Usage), and governance (validation and Voting). The Token will also generate value for the ecosystem stakeholder. The token will act as a de facto payment method for the platform services. The behavior of the Token will be spendable. 
+                        <br/>
+<br/>
+Portdex Utility token can be used to pay for products and services. The token will be spent for governance, usage, and rewards. Portdex utility tokens will enable businesses and consumers to be part of the governance at the application, network, and infrastructure layer. 
+<ul>
+  <li>
+Utility token will be required to connect API</li>
+<li>
+Utility tokens will act as a license key to access the ecosystem and services execution.
+</li>
+<li>
+It Will also act as Enterprise license fee, platform fee, developer fee, user fee
+</li>
+</ul>
+The businesses that will hold tokens as governance nodes will be able to earn rewards.
+</p>
+                      </Reveal>
+                    </div>
+                    <i className="wm icon_wallet"></i>
+                </div>
+            </div> */}
+         
+
+          
+        </div>
+        </div>
+      </section> 
+      {/* <section className='container-fluid bg-gray'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -175,11 +272,13 @@ const TokenEconomy= () => (
           </div>
         </div>
         </div>
-      </section>
+      </section> */}
       <section className=''>
         <div className='row'>
           <div className='col-lg-6'>
+            <div className='d-rtl'>
             <img src='/img/market/token.png'/>
+            </div>
           </div>
           <div className='col-lg-6 p-4'>
             <h1>

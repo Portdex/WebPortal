@@ -65,7 +65,7 @@ const Marketplace= () => (
          <SliderMainParticle/>
       </section>
 
-      <section className='container-fluid bg-gray'>
+      {/* <section className='container-fluid bg-gray'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -140,6 +140,71 @@ const Marketplace= () => (
           </div>
         </div>
         </div>
+      </section> */}
+      <section className='pb-0'>
+      <div className='row'>
+          <div className='col-lg-12'>
+            <div className='text-center'>
+              <h2>Freelancers Governed – Web 3.0 Marketplace</h2>
+              <div className="small-border"></div>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+        <div className='row mt-5 d-flex align-items-center'>
+        <div className='col-lg-6'>
+          <img
+                    src="/img/vector2.jpg"
+                    className="mx-auto radius img-fluid d-block mb-3"
+                    alt="#"
+                  />
+          </div>
+        <div className='col-lg-6 p-5'>
+        <p>
+        Portdex is a web 3.0 freelancers decentralised digital products and services marketplace governed by the community. Sellers of digital products & service providers will connect directly with buyers without intermediaries like traditional marketplaces. Portdex uses blockchain technology, smart contracts, & AI to create a peer-to-peer network where transactions are verified and processed securely without a central authority/intermediary.
+        <br/> <br/>
+        Portdex will eliminate centralised third-party platforms facilitating digital product and service transactions between freelancers and buyers. The third-party platform act as a regulator and charge hefty subscription fees, transaction fees, sales commissions, and payment processing fees. 
+        </p>
+        </div>
+        
+        </div>
+        <div className='row mt-5 d-flex align-items-center'>
+        
+        <div className='col-lg-6 p-5'>
+        <p>
+        Portdex decentralised marketplace will enable digital product sellers to sell digital products such as subscriptions, memberships, logos, themes, websites, plugins, code,  libraries, algorithms, and services packages directly to buyers integrated with real-time communication.   They can earn real-value rewards through tokens for their sales and contribution to the platform. Smart contracts will give sellers more control over their digital products, content, pricing, and terms.
+        <br/> <br/>
+        Portdex decentralised model will disrupt the centralised digital product and services market and provide new opportunities for digital product and services sellers and buyers to transact in a decentralized, transparent, and rewarding manner.
+        </p>
+        </div>
+        <div className='col-lg-6'>
+          <img
+                    src="/img/vector1.jpg"
+                    className="mx-auto radius img-fluid d-block mb-3"
+                    alt="#"
+                  />
+          </div>
+        </div>
+        <div className='row d-flex align-items-center'>
+          <div className='col-lg-6'>
+            <div className='d-rtl'>
+            <img src='/img/market/token.png' className='custom-height'/>
+            </div>
+          </div>
+          <div className='col-lg-6 pt-5'>
+            <p>
+            Portdex will enable users to transact using various currencies, including digital money, cryptocurrencies, and stable currency. Overall, Portdex offers a more efficient, secure, and cost-effective way for service providers, freelancers, and digital product sellers to reach buyers directly and transact in a peer-to-peer fashion. 
+<br/><br/>
+Portdex, through blockchains, will transform the digital products industry by creating decentralized marketplaces that offer greater security, transparency, and control to buyers and sellers. Portdex Blockchain-based marketplaces will enable peer-to-peer transactions without intermediaries, reducing transaction costs and increasing sellers' profitability. Additionally, blockchain-based marketplaces will offer increased security for buyers and sellers by utilizing smart contracts and distributed ledger technology to facilitate transactions and record ownership of digital assets. Furthermore, blockchain-based marketplaces can provide greater transparency and accountability in the digital products industry. With the help of blockchain technology, buyers can verify the authenticity of digital products, while sellers can track the ownership and usage of their products.
+<br/><br/>
+Portdex decentralised digital product and services marketplaces will not be controlled by a single entity but instead operate on a peer-to-peer basis and be governed by the community. The marketplaces will provide opportunities for digital product owners and buyers to interact directly, without intermediaries, and allow for greater freedom of expression.
+
+            </p>
+          </div>
+          
+
+        </div>
+        </div>
       </section>
       <section className=''>
         <div className='row'>
@@ -193,7 +258,7 @@ const Marketplace= () => (
 
         </div>
       </section>
-      <section className='container-fluid' style={{backgroundImage: 'url("/img/market/background.png")', backgroundRepeat:'no-repeat'}}>
+      {/* <section className='container-fluid' style={{backgroundImage: 'url("/img/market/background.png")', backgroundRepeat:'no-repeat'}}>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -268,7 +333,7 @@ const Marketplace= () => (
           </div>
         </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
         <div className='row opacity'>

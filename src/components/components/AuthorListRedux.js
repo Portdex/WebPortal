@@ -63,7 +63,7 @@ author.payment_method.slice(0, 4).map((item, index) => (
 ) : (
 <span className="bot"> - </span>
 )}
-{author.payment_method.length > 3 && <span className="bot"> ...</span>}
+{author.payment_method.length > 4 && <span className="bot"> ...</span>}
 
             </div>
           </div>

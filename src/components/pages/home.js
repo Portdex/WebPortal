@@ -1,6 +1,7 @@
 import React from 'react';
 import SliderMain from '../components/SliderMain';
 import FeatureBox from '../components/FeatureBox';
+import FeatureBox2 from '../components/FeatureBox2';
 import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
 import CarouselNewRedux from '../components/CarouselNewRedux';
 import AuthorListRedux from '../components/AuthorListRedux';
@@ -22,9 +23,19 @@ const Home= () => {
         <FeatureBox/>
       </section>
 
+      <section className='container no-bottom'>
+      <h4 className='text-center purple'>
+        Portdex aim is to Eliminate Centralised third-party Platforms
+       </h4>
+       <h2 className='text-center purple'>
+        Decentralized Digital Products & Services-Users Governed Model
+       </h2>
+       <FeatureBox2/>
+      </section>
+
      
 
-      <section className='container no-bottom image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
+      {/* <section className='container no-bottom image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
         <div className='row opacity'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -36,8 +47,8 @@ const Home= () => {
             <CarouselNewRedux/>
           </div>
         </div>
-      </section>
-      <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
+      </section> */}
+      {/* <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
         <div className='row opacity'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -49,9 +60,61 @@ const Home= () => {
         
         <Catgor/>
         </div>
+      </section> */}
+       <section className='pb-0'>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <div className='d-rtl p-5'>
+            <img src='/img/market/dapp.png'/>
+            </div>
+          </div>
+          <div className='col-lg-6 p-4'>
+            <h1>
+            PEER-TO-PEER SERVICE MARKETPLACE
+            </h1>
+           
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                P2P Transactions ›
+                </h2>
+                <p>
+                Portdex allows service providers, freelancers, and sellers of digital products to connect directly with buyers without intermediaries like traditional marketplaces.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+             
+                <h2>
+                Buyer & Seller Control ›
+                </h2>
+                <p>
+                Portdex through blockchain, will transform the digital products industry by creating decentralized marketplaces that offer greater security, transparency, and control to both buyers and sellers.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                Eliminating Third Party ›
+                </h2>
+                <p>
+                Portdex's platform offers a P2P decentralised marketplace for small service providers to list their service as a digital package
+                </p>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+
+        </div>
       </section>
 
-      <section className='container no-bottom'>
+      <section className='container no-bottom pt-2'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>

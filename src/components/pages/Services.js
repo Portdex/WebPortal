@@ -1,4 +1,4 @@
-import React , {useState}from 'react';
+import React , {useState ,useEffect }from 'react';
 import { Button } from 'react-bootstrap';
 import Select from 'react-select'
 import ColumnNewThreeColRedux from '../components/ColumnNewThreeColRedux';
@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import CheckboxFilter from '../components/CheckboxFilter';
 import ColumnNewRedux from "../components/ColumnNewRedux";
-
+import fetchServices from './fetchServices';
 import SingleColumn from '../components/SingleColumn';
 const GlobalStyles = createGlobalStyle`
   .navbar {
@@ -30,7 +30,14 @@ const options1 = [
 
 const Services = () => {
   const [modal, setModal] = useState(true);
+  const [userData, setUserData] = useState([])
   const [modalOpen, setModalOpen] = useState(true);
+  const [selectedServices, setSelectedServices] = useState(null);
+
+  const handleChange = (service) => {
+    setSelectedServices(service);
+    
+  };
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -40,6 +47,16 @@ const Services = () => {
   } else {
     document.body.classList.remove('active-modal')
   }
+  useEffect(() => {
+        
+    fetchServices()
+    .then(data => {
+      data=data.data.results.users;
+      setUserData(data)
+     
+    })
+    console.log(selectedServices);
+  }, [selectedServices]);
   return(
 <div>
 <GlobalStyles/>
@@ -49,7 +66,7 @@ const Services = () => {
         <div className="spacer-double"></div>
         <div className='px-5 pb-3'>
             <div className='row'>
-            <div className='dropdownSelect two z-indez col-lg-6'><Select className='select1 m-2' defaultValue={options1[0]} options={options1} /></div>
+            <div className='dropdownSelect two z-indez col-lg-6'><Select className='select1 m-2' defaultValue={options1[0]} options={options1} onChange={handleChange}/></div>
             <div className='dropdownSelect two z-indez col-lg-6'><input type='submit' name='search' className='m-2 hover-light bg-light border-none p-2'/></div>
             </div>
             <div className='row'>

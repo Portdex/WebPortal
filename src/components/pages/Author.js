@@ -214,8 +214,10 @@ return (
                       <i className="fa fa-check"></i>
                       <div className="profile_name">
                           <h4>
-                            {userData.username}                                          
+                            {userData.username}      
+                                                          
                               <span className="profile_username">{userData.mail}</span>
+                              <span className="profile_username text-muted">{userData.services}</span>
                               {
                               userData.payment_method && userData.payment_method.map((item, index) => (
                               <span id="wallet" className="profile_wallet">{item.name}

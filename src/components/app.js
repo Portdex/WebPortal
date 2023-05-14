@@ -42,7 +42,6 @@ import auth from '../core/auth';
 import Profile from './pages/Profile';
 import Marketplace from './pages/marketplace';
 //import CreateNft from './pages/Create/index.js';
-
 import { createGlobalStyle } from 'styled-components';
 import Product from './pages/product';
 import Community from './pages/Community';
@@ -54,6 +53,12 @@ import Portdexvideos from './pages/Portdexvideos';
 import TokenEconomy from './pages/TokenEconomy';
 import UserDetails from './pages/Checkurl';
 import Ourteam from './pages/Ourteam';
+import Portdexdao from './pages/Portdexdao';
+import Blockchain from './pages/Blockchain';
+import Digitalproduct from './pages/Digitalproduct';
+import Taxtracking from './pages/Taxtracking';
+import Connectivity from './pages/Connectivity';
+
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -142,6 +147,11 @@ const app= () => (
       <Route element={<TokenEconomy />} path="/tokenEconomy" />
       <Route element={<UserDetails />} path="/check" />
       <Route element={<Ourteam />} path="/our-team" />
+      <Route element={<Portdexdao />} path="/portexDAO" />
+      <Route element={<Blockchain />} path="/blockchain" />
+      <Route element={<Digitalproduct />} path="/digital-products" />
+      <Route element={<Taxtracking />} path="/tax-tracking" />
+      <Route element={<Connectivity />} path="/connectivity" />
 
       <Route element={<Description />} path="/description/:id" />
       

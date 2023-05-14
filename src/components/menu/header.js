@@ -167,10 +167,10 @@ const Header = function({ className }) {
           <div className='search'>
             <input id="quick_search" className="xs-hide" name="quick_search" placeholder="Search coming soon..." type="text" />
           </div>
-                    
+          
               <BreakpointProvider>
                 <Breakpoint l down>
-                  {showmenu && 
+                  {/* {showmenu && 
                   <div className='menu'>
                      <div className='navbar-item'>
                       <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
@@ -189,60 +189,42 @@ const Header = function({ className }) {
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
-                      Community
+                      Communitye
                       </NavLink>
                     </div>
-                    {/* <div className='navbar-item'>
-                      <div ref={ref2}>
-                        <div className="dropdown-custom dropdown-toggle btn" 
-                          onClick={handleBtnClick2}
-                          >
-                        Pages
-                        </div>
-                        {openMenu2 && (
-                          <div className='item-dropdown'>
-                            <div className="dropdown" onClick={closeMenu2}>
-                              <NavLink to="/Author/1" onClick={() => btn_icon(!showmenu)}>Author</NavLink>
-                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink> */}
-                              {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
-                              <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
-                              {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
-                              {/* <NavLink to="/walletGrey" onClick={() => btn_icon(!showmenu)}>Wallet Grey</NavLink> */}
-                              {/* <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink> */}
-                              {/* <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink> */}
-                              {/* <NavLink to="/createOptions" onClick={() => btn_icon(!showmenu)}>Create options</NavLink>
-                              <NavLink to="/mint" onClick={() => btn_icon(!showmenu)}>Nft Minting</NavLink>
-                              <NavLink to="/minter" onClick={() => btn_icon(!showmenu)}>Nft Minting Grey</NavLink> */}
-                              {/* <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink> */}
-                              {/* <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>Gallery</NavLink>
-                              <NavLink to="/login" onClick={() => btn_icon(!showmenu)}>login</NavLink>
-                              <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
-                              <NavLink to="/register" onClick={() => btn_icon(!showmenu)}>Register</NavLink>
-                              <NavLink to="/contact" onClick={() => btn_icon(!showmenu)}>Contact Us</NavLink> */}
-                            {/* </div>
-                          </div>
-                        )}
-                      </div>
-                    </div> */}
-                    
-                    {/* <div className='navbar-item'>
-                      <NavLink to="/marketplace" onClick={() => btn_icon(!showmenu)}>
-                      Explore
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
-                      Portdex Videos
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
-                      Tokens Economy
-                      </NavLink>
-                    </div> */}
-                   
+                  
                   </div>
-                  }
+                  } */}
+                  <div className="bottom-bar">
+          <div className='menu row d-flex w-100 justify-content-center'>
+            
+                  <div className='navbar-item col-md-2 col-2'>
+                      <NavLink to="/">
+                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use home"></i>
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item col-md-2 col-2'>
+                      <NavLink to="/videos">
+                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use video-camera"></i>
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item col-md-2 col-2'>
+                      <NavLink to="/services">
+                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use shopping-cart"></i>
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item col-md-2 col-2'>
+                      <NavLink to="/products">
+                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use shopping-bag"></i>
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item col-md-2 col-2'>
+                      <NavLink to="/community">
+                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use wechat"></i>
+                      </NavLink>
+                    </div>
+    </div>
+    </div>
                 </Breakpoint>
 
                 <Breakpoint xl>
@@ -386,11 +368,11 @@ const Header = function({ className }) {
                   
       </div>
 
-        <button className="nav-icon" onClick={() => btn_icon(!showmenu)}>
+        {/* <button className="nav-icon" onClick={() => btn_icon(!showmenu)}>
           <div className="menu-line white"></div>
           <div className="menu-line1 white"></div>
           <div className="menu-line2 white"></div>
-        </button>
+        </button> */}
 
       </div>     
     </header>
