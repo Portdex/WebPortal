@@ -27,7 +27,7 @@ const Home= () => {
       <h4 className='text-center purple'>
         Portdex aim is to Eliminate Centralised third-party Platforms
        </h4>
-       <h2 className='text-center purple'>
+       <h2 className='text-center purple mx-auto'>
         Decentralized Digital Products & Services-Users Governed Model
        </h2>
        <FeatureBox2/>
@@ -70,7 +70,7 @@ const Home= () => {
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            PEER-TO-PEER SERVICE MARKETPLACE
+            PEER-TO-PEER
             </h1>
            
             <div className='row'>

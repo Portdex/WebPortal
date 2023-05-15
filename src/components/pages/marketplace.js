@@ -218,7 +218,7 @@ Portdex decentralised digital product and services marketplaces will not be cont
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            PEER-TO-PEER SERVICE MARKETPLACE
+            PEER-TO-PEER
             </h1>
            
             <div className='row'>

@@ -2384,7 +2384,7 @@ i.font60 {
 }
 .feature-box.f-boxed {
     overflow: none;
-    padding: 50px;
+    padding: 38px;
     
     background: rgba(131,100,226, .1);
     border-radius: 6px;
@@ -5804,4 +5804,8 @@ border: 2px solid #8364E2;
 .opacity-heading
 {
   opacity:0.8
+}
+.min-height-box
+{
+  min-height: 310px;
 }

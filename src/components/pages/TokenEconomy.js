@@ -282,11 +282,11 @@ The businesses that will hold tokens as governance nodes will be able to earn re
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            A TOKEN FOR BUSINESSES, FREELANCERS, AND CONSUMERS
+            A TOKEN FOR FREELANCERS
             </h1>
-            <h6>
+            {/* <h6>
             A token that will offer SMEs Super DApp and P2P marketplace
-            </h6>
+            </h6> */}
             <div className='row'>
               <div className='col-lg-6'>
                 <div className=' token-boxes'>
@@ -306,12 +306,12 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 Rewards
                 </h2>
                 <p>
-                Shop-to-Earn AND Post-to-Earn  
+                Post-to-Earn  
                 </p>
                 </div>
               </div>
               <div className='col-lg-6'>
-                <div className=' token-boxes'>
+                <div className=' token-boxes min-height-box'>
               <img src='/img/market/paymentmethod.png'/>
                 <h2>
                 Payment Method
@@ -322,13 +322,13 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 </div>
               </div>
               <div className='col-lg-6'>
-                <div className=' token-boxes'>
+                <div className=' token-boxes min-height-box'>
               <img src='/img/market/license.png'/>
                 <h2>
                 license
                 </h2>
                 <p>
-                P Tokens will be a license key to access the eco-system and services execution  
+                Token will be a license key to access the eco-system and services execution  
                 </p>
                 </div>
               </div>
@@ -341,7 +341,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2 className="text-light">TOKEN FOR ALL IN ONE FREELANCERS - SUPER DAPP</h2>
+              <h2 className="text-light">Freelancers All in One Dashboard </h2>
               <div className="small-border"></div>
             </div>
           </div>
@@ -359,10 +359,10 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                   </Reveal>
                     <div className="text">
                       <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="text-dark">ALL IN ONE</h4>
+                        <h4 className="text-dark">Manage Product and Services</h4>
                       </Reveal>
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="text-dark">SMEs' sales, customer support, invoice, payment process automation, and instant account settlement.</p>
+                        <p className="text-dark"> Manage All transactions related to your digital product, services and clients.</p>
                       </Reveal>
                     </div>
                     <i className="wm icon_wallet"></i>
@@ -380,10 +380,10 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">SUBSCRIPTION</h4>
+                      <h4 className="text-dark">Manage Multi-currency Transactions</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">SMEs subscription management is based on Blockchain</p>
+                      <p className="text-dark">Manage All your currency transactions including tax records of digital currency.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_cloud-upload_alt"></i>
@@ -401,10 +401,10 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">TOKENS</h4>
+                      <h4 className="text-dark">Manage Nodes</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">Portdex utility tokens enable businesses to be part of governance at the application, network, and infrastructure layers.</p>
+                      <p className="text-dark">Act as a node to secure the network and manage it from dashboard and earn rewards.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_tags_alt"></i>

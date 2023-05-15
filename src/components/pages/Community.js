@@ -87,25 +87,40 @@ const options1 = [
   { value: 'Writer', label: 'Writer' },
   { value: 'Photographer', label: 'Photographer' },
   { value: 'Doctor', label: 'Doctor' },
+  { value: 'Accountant', label: 'Accountant' },
   { value: 'Designer', label: 'Designer' }
 ]
 
 
 const Community= () => {
   const [userData, setUserData] = useState([])
+//   const [filterCommunity, setfilterCommunity] = useState(null)
+// console.log(filterCommunity)
   const [loading, setLoading] = useState(false)
   // console.log(userData)
   const navigate = useNavigate();
+  // const [selectedCommunity, setSelectedCommunity] = useState(null);
 
-  // useEffect(() => {
+  // const handleChange = (community) => {
+  //   setSelectedCommunity(community);
     
-  //   fetch()
-  //   .then(data => {
-  //     data=data.data.results.users;
-  //     setUserData(data)
-     
-  //   })
-  // }, []);
+  // };
+
+  useEffect(() => {
+    
+    fetch()
+    .then(data => {
+      data=data.data.results.users;
+      setUserData(data)
+    })
+    // if(selectedCommunity != null){ const selectedUser = userData.filter((user) => user.services === selectedCommunity.value);
+    //   setfilterCommunity(selectedUser)
+    //   console.log(selectedUser)}
+    //   else{
+    //     console.log(null)
+    //   }
+   
+  }, []);
   return(
 
 <div>
@@ -115,7 +130,7 @@ const Community= () => {
       <div className='container'>
         <div className='row m-10-hor'>
           <div className='col-12'>
-            <h1 className='text-center'>Top Sellers</h1>
+            <h1 className='text-center'>Community</h1>
           </div>
         </div>
       </div>
@@ -128,9 +143,88 @@ const Community= () => {
 
             <div className="items_filter centerEl">
                 {/* <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div> */}
-                <div className='dropdownSelect two z-index'><Select className='select1' styles={customStyles} defaultValue={options1[0]} options={options1} /></div>
+                <div className='dropdownSelect two z-index'><Select className='select1' styles={customStyles} defaultValue={options1[0]}  options={options1} /></div>
             </div>
-           
+            {/* {filterCommunity != null ?   <div class="row">
+       
+  
+    
+        { filterCommunity && filterCommunity.map((author, index) => (
+        <div  key={index} class="col-lg-4 p-5">
+          <div className='community-column text-center'>
+           <Link to={`/Author/${index}`} key={index}>
+          <div class="community-card p-3">
+            <div class="img-container">
+              <img src="img/favicon.ico" />
+            </div>
+            <h3 className="community-h3 mb-2">{author.username}</h3>
+            <p className="m-0 mb-2">{author.services || '-'}</p>
+            <div class="community-icons">
+            {author.payment_method.length > 0 ? (
+author.payment_method.slice(0, 4).map((item, index) => (
+  <span className="bot" key={item.name} >
+    {item.name || '-'} 
+    {index !== author.payment_method.slice(0, 4).length - 1 && ', '}
+  </span>
+))
+) : (
+<span className="bot"> - </span>
+)}
+{author.payment_method.length > 4 && <span className="bot"> ...</span>}
+
+            </div>
+          </div>
+          </Link>
+          </div>
+        </div>
+        
+        ))}
+         
+
+      
+      </div>
+            :
+            <div class="row">
+   
+  
+    
+        { userData && userData.map((author, index) => (
+        <div  key={index} class="col-lg-4 p-5">
+          <div className='community-column text-center'>
+           <Link to={`/Author/${index}`} key={index}>
+          <div class="community-card p-3">
+            <div class="img-container">
+              <img src="img/favicon.ico" />
+            </div>
+            <h3 className="community-h3 mb-2">{author.username}</h3>
+            <p className="m-0 mb-2">{author.services || '-'}</p>
+            <div class="community-icons">
+            {author.payment_method.length > 0 ? (
+author.payment_method.slice(0, 4).map((item, index) => (
+  <span className="bot" key={item.name} >
+    {item.name || '-'} 
+    {index !== author.payment_method.slice(0, 4).length - 1 && ', '}
+  </span>
+))
+) : (
+<span className="bot"> - </span>
+)}
+{author.payment_method.length > 4 && <span className="bot"> ...</span>}
+
+            </div>
+          </div>
+          </Link>
+          </div>
+        </div>
+        
+        ))}
+        
+
+      
+      </div>
+      }
+    */}
+        
 
             <AuthorListRedux/>
 

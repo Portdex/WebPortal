@@ -24,7 +24,7 @@ const featurebox2= () => (
                   </Reveal>
                     <div className="text">
                       <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="">P2P Marketplace-Services</h4>
+                        <h4 className="">Blockchain & Smart contracts</h4>
                       </Reveal>
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
                         <p className="">
