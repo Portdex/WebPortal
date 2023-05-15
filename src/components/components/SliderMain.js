@@ -31,7 +31,7 @@ const Slidermain= () => {
     <div className="row align-items-center">
           <div className="col-md-6">
           <Reveal className='onStep' keyframes={fadeIn} delay={900} duration={1500} triggerOnce>
-              <h2 className="color pt-3 m-0">Community-Governed</h2>
+              <h2 className="color pt-3 m-0">Community Governed-Web 3.0 Freelancers Platform </h2>
             </Reveal>
               <div className="spacer-single"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
