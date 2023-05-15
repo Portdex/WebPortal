@@ -160,6 +160,9 @@ const Marketplace= () => (
                   />
           </div>
         <div className='col-lg-6 p-5'>
+          <h3>
+          Blockchain & Smart Contracts
+          </h3>
         <p>
         Portdex is a web 3.0 freelancers decentralised digital products and services marketplace governed by the community. Sellers of digital products & service providers will connect directly with buyers without intermediaries like traditional marketplaces. Portdex uses blockchain technology, smart contracts, & AI to create a peer-to-peer network where transactions are verified and processed securely without a central authority/intermediary.
         <br/> <br/>
@@ -226,7 +229,7 @@ Portdex decentralised digital product and services marketplaces will not be cont
                 P2P Transactions ›
                 </h2>
                 <p>
-                Portdex allows service providers, freelancers, and sellers of digital products to connect directly with buyers without intermediaries like traditional marketplaces.
+                Freelancers, and sellers of digital products will be able to connect directly with buyers without intermediaries like traditional marketplaces.
                 </p>
                 </div>
               </div>
@@ -248,7 +251,7 @@ Portdex decentralised digital product and services marketplaces will not be cont
                 Eliminating Third Party ›
                 </h2>
                 <p>
-                Portdex's platform offers a P2P decentralised marketplace for small service providers to list their service as a digital package
+                	Portdex's platform will eliminate third party marketplaces commission and transaction fee.  
                 </p>
                 </div>
               </div>

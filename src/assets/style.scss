@@ -1635,7 +1635,7 @@ footer{
     .subfooter {
       margin-top: 40px;
       padding: 20px 0 20px 0;
-      border-top: solid 1px #eeeeee;
+      // border-top: solid 1px #eeeeee;
       span{
         cursor: pointer;
         img{
@@ -5800,4 +5800,8 @@ border: 2px solid #8364E2;
 .min-height-f
 {
   min-height: 320px;
+}
+.opacity-heading
+{
+  opacity:0.8
 }

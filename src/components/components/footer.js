@@ -2,9 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const footer= () => (
-  <footer className="footer-light">
+  <footer className="footer-light p-0">
             <div className="container">
                 <div className="row">
+                <div className="subfooter m-0">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="de-flex">
+                                <div className="de-flex-col mb-3">
+                                    <span onClick={()=> window.open("", "_self")}>
+                                        <img alt="" className="f-logo d-1" src="/img/code_logo.png" />
+                                        <img alt="" className="f-logo d-3" src="/img/code_logo.png" />
+                                        <img alt="" className="f-logo d-4" src="/img/code_logo.png" />
+                                        {/* <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span> */}
+                                    </span>
+                                </div>
+                                {/* <div className="de-flex-col">
+                                    <div className="social-icons">
+                                        <a href="https://www.facebook.com/Portdex/" target="_blank"><i className="fa fa-facebook fa-lg"></i></a>
+                                        <a href="https://twitter.com/portdex" target="_blank"><i className="fa fa-twitter fa-lg"></i></a>
+                                        <a href="https://www.linkedin.com/company/portdex/" target="_blank"><i className="fa fa-linkedin fa-lg"></i></a>
+                                        
+                                    </div>
+                                </div> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Marketplace</h5>
@@ -34,11 +60,11 @@ const footer= () => (
                     </div> */}
                     <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
-                            <h5>Community</h5>
+                            {/* <h5>Community</h5>
                             <ul>
                                 <li><Link to="/community">Community</Link></li>
-                            </ul>
-                            <h5 className='mt-3'> Business videos</h5>
+                            </ul> */}
+                            <h5 className=''> Business videos</h5>
                             <ul>
                                 <li><Link to="">service providers</Link></li>
                                 <li><Link to="">product videos</Link></li>
@@ -86,32 +112,7 @@ const footer= () => (
                     </div>
                 </div>
             </div>
-            <div className="subfooter m-0">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 mb-5">
-                            <div className="de-flex">
-                                <div className="de-flex-col mb-3">
-                                    <span onClick={()=> window.open("", "_self")}>
-                                        <img alt="" className="f-logo d-1" src="/img/code_logo.png" />
-                                        <img alt="" className="f-logo d-3" src="/img/code_logo.png" />
-                                        <img alt="" className="f-logo d-4" src="/img/code_logo.png" />
-                                        {/* <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span> */}
-                                    </span>
-                                </div>
-                                <div className="de-flex-col">
-                                    <div className="social-icons">
-                                        <a href="https://www.facebook.com/Portdex/" target="_blank"><i className="fa fa-facebook fa-lg"></i></a>
-                                        <a href="https://twitter.com/portdex" target="_blank"><i className="fa fa-twitter fa-lg"></i></a>
-                                        <a href="https://www.linkedin.com/company/portdex/" target="_blank"><i className="fa fa-linkedin fa-lg"></i></a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </footer>
 );
 export default footer;

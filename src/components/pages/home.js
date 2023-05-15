@@ -81,7 +81,7 @@ const Home= () => {
                 P2P Transactions ›
                 </h2>
                 <p>
-                Portdex allows service providers, freelancers, and sellers of digital products to connect directly with buyers without intermediaries like traditional marketplaces.
+                Freelancers, and sellers of digital products will be able to connect directly with buyers without intermediaries like traditional marketplaces.
                 </p>
                 </div>
               </div>
@@ -103,7 +103,7 @@ const Home= () => {
                 Eliminating Third Party ›
                 </h2>
                 <p>
-                Portdex's platform offers a P2P decentralised marketplace for small service providers to list their service as a digital package
+               Portdex's platform will eliminate third party marketplaces commission and transaction fee.  
                 </p>
                 </div>
               </div>
