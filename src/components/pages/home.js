@@ -33,8 +33,6 @@ const Home= () => {
        <FeatureBox2/>
       </section>
 
-     
-
       {/* <section className='container no-bottom image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
         <div className='row opacity'>
           <div className='col-lg-12'>
