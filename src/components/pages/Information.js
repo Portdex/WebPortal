@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import ServicesCheckbox from '../components/ServicesCheckbox';
 import ColumnNewRedux from "../components/ColumnNewRedux";
-import SingleColumn from '../components/SingleColumn';
+
 import CheckboxProduct from '../components/CheckboxProduct';
 import { useNavigate } from 'react-router-dom';
 import {

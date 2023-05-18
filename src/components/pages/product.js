@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import CheckboxFilter from '../components/CheckboxFilter';
 import ColumnNewRedux from "../components/ColumnNewRedux";
-import SingleColumn from '../components/SingleColumn';
+import ProductBox from '../components/ProductBox';
 import Select from 'react-select'
 const GlobalStyles = createGlobalStyle`
   .navbar {
@@ -53,49 +53,19 @@ const Product = () => {
               <div className='col-lg-12'>
                 <h6 className='text-secondary'> Popular Searches: </h6>
               </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Themes
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-             Logos
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Plugins
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Designs
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Website
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Ebook
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Pdf
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Courses
-            </div>
-           </div>
-           
+              <div className='col-lg-12 d-flex flex-wrap'>
+    <div className='cat-box mt-2'>Themes</div>
+    <div className='cat-box mt-2'>Logos</div>
+    <div className='cat-box mt-2'>Plugins</div>
+    <div className='cat-box mt-2'>Designs</div>
+    <div className='cat-box mt-2'>Website</div>
+    <div className='cat-box mt-2'>Ebook</div>
+    <div className='cat-box mt-2'>Pdf</div>
+    <div className='cat-box mt-2'>Courses</div>
+  </div>
+         
 
-            </div>
+            </div> 
           </div>
           
         <div className="spacer-half"></div>
@@ -106,7 +76,7 @@ const Product = () => {
           <div className="col-md-9">
           <div>
           {/* <ColumnNewThreeColRedux/> */}
-          <SingleColumn/>
+          <ProductBox/>
           
           </div>
           </div>

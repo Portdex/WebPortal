@@ -5344,9 +5344,9 @@ blockquote {
   .de_nav.text-left{
     margin-left: 0;
   }
-  .profile_avatar i{
-    margin-top: -35px;
-  }
+  // .profile_avatar i{
+  //   margin-top: -35px;
+  // }
 }
 @media only screen and (max-width: 600px) {
   .responsive-info
@@ -5374,7 +5374,7 @@ blockquote {
   // height:200px;
   // border: 1px solid lightgray;
   border-radius: 10px;
-  box-shadow: 0 0 1px #333; ;
+  box-shadow: 0 0 2px lightgray;
 }
 .img-fit
 {
@@ -5625,7 +5625,9 @@ blockquote {
 {
 border: 2px solid #8364E2;
     padding: 9px;
+    // max-width:120px;
     text-align: center;
+    margin:10px
 }
 .Loader
 {
@@ -5732,6 +5734,10 @@ border: 2px solid #8364E2;
  
   color: #ffffff;
 }
+.community-card:hover h4 {
+ 
+  color: #ffffff;
+}
 .community-card:hover .img-container {
   transform: scale(1.15);
 }
@@ -5808,4 +5814,57 @@ border: 2px solid #8364E2;
 .min-height-box
 {
   min-height: 310px;
+}
+.f-size
+{
+  font-size: 23px;
+}
+.min-community-card
+{
+  min-height: 315px;
+
+}
+@media (max-width: 1190px) {
+  section {
+    padding-top:0px
+  }    
+}
+.package-box
+{
+  border:2px solid lightgray;
+  padding:20px;
+  border-radius:20px
+}
+.package-button
+{
+  width: 80%;
+    background-color: #403f83;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+}
+.list-check
+{
+    list-style: none;
+    margin:auto;
+    width:80%;
+}
+.list-check li::before
+{
+  content: '✓ ';
+}
+.list-check li
+{
+  margin:15px;
+}
+.profile-height
+{
+  height: 162px;
+}
+.profile-section
+{
+  border:1px solid lightgrey;
+  height:400px;
 }

@@ -43,9 +43,9 @@ const AuthorList = () => {
       <div class="row">
         {/* <!-- Column 1--> */}
         { userData && userData.map((author, index) => (
-        <div  key={index} class="col-lg-4 p-5">
+        <div  key={index} class="col-lg-4 p-5 pt-0">
           <div className='community-column text-center'>
-           <Link to={`/Author/${index}`} key={index}>
+           <Link to={`/Author/${author.username}`} key={index}>
           <div class="community-card p-3">
             <div class="img-container">
               <img src="img/favicon.ico" />

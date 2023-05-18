@@ -7,6 +7,7 @@ import fetch from "./fetch";
 import { Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/footer";
 import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -50,18 +51,24 @@ const Ourteam = () =>
       const dispatch = useDispatch();
       const authorsState = useSelector(selectors.authorsState);
       const authors = authorsState.data ? authorsState.data : [];
-  
+      const teamMembers = [
+        { id: 1, name: 'Muhammad Rehman Tanoli ' , title: 'CEO|Founder' , img:'/img/frame-1.png' ,linkedIn: 'https://www.linkedin.com/in/mohtanoli/' },
+        { id: 2, name: 'Andrew Henderson' , title: 'Commercial|Board Member' , img:'/img/frame-2.png' ,linkedIn: 'https://www.linkedin.com/in/adhenderson/' },
+        { id: 3, name: 'Dr. Jonathan Blackledge' , title: 'Director Cyber Security' , img:'/img/frame-3.jpg' ,linkedIn: 'https://www.linkedin.com/in/jonathan-blackledge-7643a5150/' },
+        { id: 4, name: 'Dr. Hermann Sterzinger' , title: 'Board Member' , img:'/img/frame-4.png' ,linkedIn: '#' },
+        { id: 5, name: 'Martyn Walker ' , title: 'Blockchain Technologist' , img:'/img/favicon.ico' ,linkedIn: '#' },
+        { id: 6, name: 'Faheem Ziker' , title: 'Web/API Developer' , img:'/img/favicon.ico' ,linkedIn: '#' },
+        { id: 7, name: 'Mubashira Iqbal' , title: 'Software Engineer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/mubashira-iqbal-36aa7b201/' },
+        { id: 8, name: 'Tahreem Farooq' , title: 'Software Developer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/tehreemfarooq12/' },
+      ];
       useEffect(() => {
-          
           fetch()
           .then(data => {
             data=data.data.results.users;
             setUserData(data)
-           
           })
         }, []);
     return (
-       
         <div>
             <GlobalStyles/>
          <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -75,33 +82,36 @@ const Ourteam = () =>
           </div>
         </div>
       </section>
+      <section className="p-3 pt-4">
+        <div className="row">
+          <h2 className="text-center">
+          Our Executive Team 
+          </h2>
+        </div>
+      </section>
        
-
-   <div class="row">
-     {/* <!-- Column 1--> */}
-     
-     <div  class="col-lg-4 p-5">
-       <div className='community-column text-center'>
-       
-       <div class="community-card p-3">
-         <div class="img-container">
-           <img src="img/favicon.ico" />
-         </div>
-         <h3 className="community-h3 mb-2">Muhammad</h3>
-         <p className="m-0 mb-2"></p>
-         <div class="community-icons">
-     
-
-         </div>
-       </div>
-       
-       </div>
-     </div>
-     
-    
+   <div class="row m-4">
+     {teamMembers.map((item)=>(
+ <div  class="col-lg-3">
+ <div className='community-column text-center'>
+ <div class="community-card min-community-card p-3">
+   <div class="img-container">
+     <img src={item.img} />
+   </div>
+   <h4 className="community-h3 mb-2">{item.name}</h4>
+   <p className="m-0 mb-2"> {item.title} </p>
+   <div class="community-icons">
+    <a className="mx-auto" href={item.linkedIn} target="_blank">
+   <i className="f-size fa fa-fw mx-auto" aria-hidden="true" title="Copy to use linkedin-square"></i>
+   </a>
+   </div>
+ </div>
+ </div>
+</div>
+     ))}
      {/* <!-- Column 2--> */}
    </div>
- 
+   <Footer/>
      </div>
 
     )

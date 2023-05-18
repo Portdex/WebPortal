@@ -85,7 +85,7 @@ const footer= () => (
                             <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li>
                             <li><Link to="/connectivity">Real Time Connectivity</Link></li>
                            
-                                <li><Link to="">Team</Link></li>
+                                <li><Link to="/our-team">Team</Link></li>
                                 {/* <li><Link to="">Objective</Link></li>
                                 <li><Link to="">Token-Foundation</Link></li>
                                 <li><Link to="">Roadmap</Link></li> */}

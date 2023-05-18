@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 import CheckboxFilter from '../components/CheckboxFilter';
 import ColumnNewRedux from "../components/ColumnNewRedux";
 import fetchServices from './fetchServices';
-import SingleColumn from '../components/SingleColumn';
+import ServicesBox from '../components/ServicesBox';
 const GlobalStyles = createGlobalStyle`
   .navbar {
     border-bottom: solid 1px rgba(255, 255, 255, .1) !important;
@@ -31,7 +31,6 @@ const options1 = [
 const Services = () => {
   const [modal, setModal] = useState(true);
   const [userData, setUserData] = useState([])
-  const [modalOpen, setModalOpen] = useState(true);
   const [selectedServices, setSelectedServices] = useState(null);
 
   const handleChange = (service) => {
@@ -73,53 +72,24 @@ const Services = () => {
               <div className='col-lg-12'>
                 <h6 className='text-secondary'> Popular Searches: </h6>
               </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              SoftwareEngineer
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Music
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Teacher
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Lawyer
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Doctor
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Photographer
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Writer
-            </div>
-           </div>
-           <div className='col-lg-2'>
-            <div className='cat-box mt-2'>
-              Artist
-            </div>
-           </div>
+               {/* {options1.slice(1).map((item, index) => (
+    <div className='col-lg-2 col-4' key={index + 1}>
+      <p className='cat-box mt-2'>{item.label}</p>
+    </div>
+  ))}  */}
+   <div className='col-lg-12 d-flex flex-wrap'>
+            {options1.slice(1).map((item, index) => (
+   <div className='cat-box mt-2'>{item.value}</div>
+  ))} 
+</div>
+         
 
             </div>
           </div>
           
           <div className="col-md-12">
           {/* <ColumnNewThreeColRedux/> */}
-          <SingleColumn/>
+          <ServicesBox/>
           </div>
         </div>
       </section>

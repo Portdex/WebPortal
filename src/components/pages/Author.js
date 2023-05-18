@@ -13,7 +13,9 @@ import auth , { authorUrl }from "../../core/auth";
 import request from '../../core/auth/request';
 import { useNavigate, useParams } from 'react-router-dom';
 import fetch from "./fetch";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import fetchServices from "./fetchServices";
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
     background: #fff;
@@ -51,9 +53,11 @@ const validationSchema = Yup.object().shape({
 });
 
 const Colection = ({ authorId }) => {
-  const { index } = useParams();
+  const { username } = useParams();
   
   const [userData, setUserData] = useState([])
+  const [serviceData, setServiceData] = useState([])
+  console.log(serviceData)
   console.log(userData)
   const [loading , setLoading]= useState(false)
 const [openMenu, setOpenMenu] = React.useState(true);
@@ -64,8 +68,8 @@ const [openMenu2, setOpenMenu2] = React.useState(false);
     const authorsState = useSelector(selectors.authorsState);
 const author = authorsState.data ? authorsState.data[0] : {};
     const initialValues = {
-        username: author ? author.username : '',
-        about: author ? author.about : '',
+        // username: author ? author.username : '',
+        // about: author ? author.about : '',
         // social: author ? author.author_sale.category : '',
         // wallet: author ? author.author_sale.payment_method : ''
     };
@@ -150,8 +154,15 @@ const author = authorsState.data ? authorsState.data[0] : {};
       fetch()
       .then(data => {
         data=data.data.results.users;
-        setUserData(data[parseInt(index)])
-
+        const product = data.find((product) => product.username  === username);
+          setUserData(product)
+       setLoading(false)
+      })
+      fetchServices()
+      .then(data => {
+        data=data.data.results.service;
+        const product = data.find((product) => product.username  === username);
+          setServiceData(product)
        setLoading(false)
       })
     }, []);
@@ -187,225 +198,102 @@ const handleBtnClick2 = () => {
 
 
 
-useEffect(() => {
-  dispatch(fetchAuthorList(authorId));
-}, [dispatch, authorId]);
 
 return (
  
 <div>
 <GlobalStyles/>
-  { author.banner && 
-    <section id='profile_banner' className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${api.baseUrl + author.banner.url})`}}>
-      <div className='mainbreadcumb'>
+<section>
+  <div className="mt-5">
+    <div className="row ">
+      <div className="col-lg-4 mx-auto px-5 mt-3 ">
+        <div className="profile-section p-3">
+      <div className="profile_avatar d-flex justify-content-center">
+      <img src='/img/favicon.ico' alt=""/>
+      <i className="d-flex fa fa-check"></i>
       </div>
-    </section>
-  }
-
-  <section className='container no-bottom'>
-    <div className='row'>
-      <div className="col-md-12">
-         <div className="d_profile de-flex">
-              <div className="de-flex-col">
-                  <div className="profile_avatar">
-                   
-                      <img src='/img/favicon.ico' alt=""/>
-                   
-                      <i className="fa fa-check"></i>
-                      <div className="profile_name">
+      <div className="profile_name justify-content-center text-center mt-3">
                           <h4>
                             {userData.username}      
                                                           
                               <span className="profile_username">{userData.mail}</span>
                               <span className="profile_username text-muted">{userData.services}</span>
+                              <div className="justify-content-center">
                               {
                               userData.payment_method && userData.payment_method.map((item, index) => (
+                                
                               <span id="wallet" className="profile_wallet">{item.name}
                               {index !== userData.payment_method.length - 1 && ' , '}
                               </span>
+                              
                               ))
                           }
+                          </div>
                           </h4>
+                          
                       </div>
-                  </div>
-              </div>
-              <div className="profile_follow de-flex">
-                  {/* <div className="de-flex-col">
-                      <div className="profile_follower">{author.followers} followers</div>
-                  </div> */}
-                  <div className="de-flex-col">
-                      <span className="btn-main">Follow</span>
-                  </div>
-              </div>
+                      {/* <div className="row d-flex justify-content-center">
+              <button className="package-button"> Chat - Order Now </button>
+            </div> */}
+      </div>
+      </div>
+      <div className="col-lg-8 gig-section p-4 pt-0 mt-3">
+        <h4>{userData.username}'s Service Packages</h4>
+      {serviceData !=null ? 
+         <div className='row'>
+      
+           
+             {serviceData.services && serviceData.services.map((service, serviceIndex) => (
+                <>
+                { service.name ?
+                  
+            <div className=' col-lg-4 col-sm-6 col-md-6 p-0'>
+                <Link
+                  key={service.id}
+                  to={`/servicedetail/${serviceData.username}/${service.id}`}
+                  style={{ textDecoration: 'none' }}
+                >
+            <div className='single-card m-2'>
+            <div className='col-lg-12'>
+                <img src='/img/code_logo.png' alt='' className='img-fit-none'/>
+                <h6 className='m-3'>{serviceData.username}</h6>
+                <p className='m-3'>
+               { service.name ? service.name : '-'}
+                </p>
+                <div className='row text-center align-items-center icon-style-text mx-0'>
+<div className='col-lg-12 col-sm-12 col-12 p-3 cursor-pointer'>
+    {/* <NavLink to={`/description/${item.id}`}> */}
+    {/* <NavLink to={`/Author/${item.id}`}>  */}
+<span className='text-blue'> View the packages </span>
+{/* </NavLink> */}
+</div>
+</div>         
+</div>
+            </div>
+            </Link>
+            </div>
 
+:
+<></>
+}
+            </>
+             ))}
+            
+            </div>
+            :
+          <div className="row">
+            <h3>
+              No Packages Available
+            </h3>
           </div>
+}
+      </div>
       </div>
     </div>
-  </section>
+ 
+</section>
 
-  <section className='container no-top'>
-        <div className='row'>
-          <div className='col-lg-12'>
-              <div className="items_filter">
-                <ul className="de_nav text-left">
-                <li id='Mainbtn' className=""><span>Digital Products</span></li>
-                    <li id='Mainbtn1' className=""><span>Profile</span></li>
-                    <li id='Mainbtn2' className=""><span>Services Packages</span></li>
-                    {/* <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Digital Products</span></li>
-                    <li id='Mainbtn1' className=""><span onClick={handleBtnClick1}>Profile</span></li>
-                    <li id='Mainbtn2' className=""><span onClick={handleBtnClick2}>Services Packages</span></li> */}
-                </ul>
-            </div>
-          </div>
-        </div>
-      {/* {openMenu && author.id && (  
-        <div id='zero1' className='onStep fadeIn'>
-         <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/>
-        </div>
-      )} */}
-      {openMenu1 && author.id && ( 
-        // <div id='zero2' className='onStep fadeIn'>
-        //  <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/>
-        // </div>
-        <section id="section-main" aria-label="section">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-10 offset-lg-1 d-flex">
-                <Formik
-                    enableReinitialize
-                    validationSchema={validationSchema}
-                    initialValues={initialValues}
-                    validateOnMount={validationSchema.isValidSync(initialValues)}
-                    onSubmit={async (values, { setSubmitting, resetForm }) => {
-                    setSubmitting(true);
-                    await handleSubmitForm(values);
-                    setSubmitting(false);
-                    resetForm();
-                    }}
-                >
-                    { 
-                        ({ values, isSubmitting, isValid }) => {
-
-                            return (
-                                <Form className="form-border w-100">
-                                    <div className="de_tab tab_simple">
-                                    
-                                    <ul className="de_nav text-left m-0 mb-3">
-                                        <li className="active" style={{opacity: 1}}><span><i className="fa fa-user"></i>Profile</span></li>
-                                    </ul>
-                                    
-                                    <div className="de_tab_content">                            
-                                        <div className="tab-1">
-                                            <div className="row wow fadeIn animated" style={{backgroundSize: 'cover', visibility: 'visible', animationName: 'fadeIn'}}>
-                                                <div className="col-lg-8 mb-sm-20">
-                                                    <div className="field-set">
-                                                        <h5>Username</h5>
-                                                        <Field type="text" name="username" id="username" className="form-control" placeholder="Enter username"/>                                    
-                                                        <ErrorMessage name="username" component="div" />
-                                                        <div className="spacer-20"></div>
-
-                                                        <h5>About</h5>
-                                                        <Field component="textarea" name="about" id="about" className="form-control" placeholder="Tell the world who you are!"/>
-                                                        <ErrorMessage name="about" component="div" />
-                                                        <div className="spacer-20"></div>
-
-                                                        <h5>Category</h5>
-                                                        <Field type="text" name="social" id="social" className="form-control" placeholder="Enter Category"/>
-                                                        <ErrorMessage name="social" component="div" />
-                                                        <div className="spacer-20"></div>
-
-                                                        <h5>PaymentMethod</h5>
-                                                        <Field type="text" name="wallet" id="wallet" className="form-control" placeholder="Enter your Payment Method"/>
-                                                        <ErrorMessage name="wallet" component="div" />
-                                                        <div className="spacer-20"></div>
-                                                    </div>
-                                                </div>                                         
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="submit" id="submit" className="btn-main" value="Update profile"/>
-                                </Form>
-                            )
-                        }
-                    }
-                    </Formik>
-                    {/* different form for image and banner */}
-                    <div id="sidebar" className="col-lg-4">
-                    <Formik
-                        initialValues={initialProfilePicture}
-                        onSubmit={async (values, { setSubmitting, resetForm }) => {
-                        setSubmitting(true);
-                        await handleSubmitProfilePicture(profileImage, 'avatar');
-                        setSubmitting(false);
-                        resetForm();
-                        }}
-                    >
-                        { 
-                        ({ values, isSubmitting, isValid }) => {
-
-                            return (
-                                <Form>
-                                    <h5>Profile image <i className="fa fa-info-circle id-color-2" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Recommend 400 x 400. Max size: 50MB. Click the image to upload." aria-label="Recommend 400 x 400. Max size: 50MB. Click the image to upload."></i></h5>
-                                    <img 
-                                        src={(author && author.avatar && author.avatar.url) ? profileImageTemp ? profileImageTemp : (api.baseUrl + author.avatar.url) : '../../img/author_single/author_thumbnail.jpg'} 
-                                        id="click_profile_img" 
-                                        className="d-profile-img-edit img-fluid" 
-                                        alt=""
-                                        style={{width: '150px', height: '150px', objectFit: 'cover'}}
-                                    />
-                                    <input name="profile_image" type="file" id="upload_profile_img" onChange={(event) => {
-                                        handleProfilePicture(event)
-                                    }} />
-                                    <input type="submit" className="btn-main mt-3" value="Save Profile Image"/>
-                                </Form>
-                            )
-                        }}
-                    </Formik>
-                        <div className="spacer-30"></div>
-                    <Formik
-                        initialValues={initialProfileBanner}
-                        onSubmit={async (values, { setSubmitting, resetForm }) => {
-                        setSubmitting(true);
-                        await handleSubmitProfilePicture(profileBanner, 'banner');
-                        setSubmitting(false);
-                        resetForm();
-                        }}
-                    >
-                        { 
-                        ({ values, isSubmitting, isValid }) => {
-
-                            return (
-                                <Form>
-                                    <h5>Profile banner <i className="fa fa-info-circle id-color-2" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Recommend 1500 x 500. Max size: 50MB. Click the image to upload." aria-label="Recommend 1500 x 500. Max size: 50MB. Click the image to upload."></i></h5>
-                                    <img 
-                                        src={(author && author.banner && author.banner.url) ? profileBannerTemp ? profileBannerTemp : (api.baseUrl + author.banner.url) : "../../img/author_single/author_banner.jpg"} 
-                                        id="click_banner_img" 
-                                        className="d-banner-img-edit img-fluid" 
-                                        alt=""
-                                    />
-                                    <input name="profile_banner" type="file" id="upload_banner_img" onChange={(event) => {
-                                        handleProfileBanner(event)
-                                    }} />
-                                    <ErrorMessage name="profile_banner" component="div" />
-                                    <input type="submit" className="btn-main mt-3" value="Save Profile Banner"/>
-                                </Form>
-                            )
-                        }}
-                    </Formik>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-      )}
-      {openMenu2 && ( 
-        <div id='zero3' className='onStep fadeIn'>
-         <ColumnNewRedux shuffle showLoadMore={false}/>
-        </div>
-      )}
-      </section>
+  
 
 
   <Footer />
