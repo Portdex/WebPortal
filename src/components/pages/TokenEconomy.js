@@ -106,7 +106,7 @@ const TokenEconomy= () => (
               <h2>Token Economics</h2>
               <div className="small-border"></div>
               <p className='text-center'>
-              Portdex token will be issued by Portdex.ai Foundation. The foundation will be setup in their <br/> jurisdiction where regulations allow and define both utility and security tokens.  
+              Portdex.ai may issue a governance & utility token in regulated jurisdiction
               </p>
 
             </div>

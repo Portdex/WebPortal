@@ -95,7 +95,7 @@ const Wallet = () => {
 
 {modal ? 
         <div className={`modal ${modal ? 'display-block' : 'display-none'}`}>
-          <div onClick={toggleModal} className="overlay"></div>
+          <div className="overlay"></div>
           <div className="modal-content">
             <h1 className='text-center'>Coming Soon</h1>
             
