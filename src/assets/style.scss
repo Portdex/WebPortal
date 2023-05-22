@@ -5704,6 +5704,8 @@ border: 2px solid #8364E2;
 .community-card img {
   width: 100%;
   border-radius: 50%;
+  height:100%;
+  object-fit: cover;
 }
 .community-card h3 {
   font-weight: 500;

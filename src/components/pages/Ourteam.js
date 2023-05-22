@@ -55,11 +55,16 @@ const Ourteam = () =>
         { id: 1, name: 'Muhammad Rehman Tanoli ' , title: 'CEO|Founder' , img:'/img/frame-1.png' ,linkedIn: 'https://www.linkedin.com/in/mohtanoli/' },
         { id: 2, name: 'Andrew Henderson' , title: 'Commercial|Board Member' , img:'/img/frame-2.png' ,linkedIn: 'https://www.linkedin.com/in/adhenderson/' },
         { id: 3, name: 'Dr. Jonathan Blackledge' , title: 'Director Cyber Security' , img:'/img/frame-3.jpg' ,linkedIn: 'https://www.linkedin.com/in/jonathan-blackledge-7643a5150/' },
-        { id: 4, name: 'Dr. Hermann Sterzinger' , title: 'Board Member' , img:'/img/frame-4.png' ,linkedIn: '#' },
-        { id: 5, name: 'Martyn Walker ' , title: 'Blockchain Technologist' , img:'/img/favicon.ico' ,linkedIn: '#' },
-        { id: 6, name: 'Faheem Ziker' , title: 'Web/API Developer' , img:'/img/favicon.ico' ,linkedIn: '#' },
-        { id: 7, name: 'Mubashira Iqbal' , title: 'Software Engineer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/mubashira-iqbal-36aa7b201/' },
+        { id: 4, name: 'Dr. Hermann Sterzinger' , title: 'Board Member' , img:'/img/frame-4.png' ,linkedIn: 'https://www.linkedin.com/in/hermann-sterzinger-7989b72/' },
+        { id: 5, name: 'Martyn Walker ' , title: 'Blockchain Technologist' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/martynwalker/' },
+        { id: 6, name: 'Faheem Ziker' , title: 'Web/API Developer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/faheem-mohammad-ziker-7bb0a415/' },
+        { id: 7, name: 'Faisal Ahmed' , title: 'Freelance Developer Engagement Australia' , img:'/img/frame-7.png' ,linkedIn: 'https://www.linkedin.com/in/faisal-ahmed-8a986246/' },
         { id: 8, name: 'Tahreem Farooq' , title: 'Software Developer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/tehreemfarooq12/' },
+        { id: 9, name: 'Mubashir hassan' , title: 'Software Developer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/mubashir-hassan/' },
+        { id: 10, name: 'Mubashira Iqbal' , title: 'Software Engineer' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/mubashira-iqbal-36aa7b201/' },
+        { id: 11, name: 'tehmina safdar' , title: 'Business Development Manager' , img:'/img/favicon.ico' ,linkedIn: 'https://www.linkedin.com/in/tehmina-safdar-b8126318b/' },
+        { id: 12, name: 'Richard Poynder' , title: 'Freelancer Events Engagement' , img:'/img/frame-5.png' ,linkedIn: 'https://www.linkedin.com/in/richard-poynder-1835422/' },
+        { id: 13, name: 'Annabel Cartwright' , title: 'Event Strategist' , img:'/img/frame-6.png' ,linkedIn: 'https://www.linkedin.com/in/annabel-cartwright-a2517bb/' },
       ];
       useEffect(() => {
           fetch()

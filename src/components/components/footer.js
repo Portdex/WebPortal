@@ -110,6 +110,11 @@ const footer= () => (
                            
                         </div>
                     </div>
+                    <div className="col-md-12 text-center mb-3">
+                   <span className=''>
+                   A Project of Portdex Limited - Registered  in England and Wales
+                   </span>
+                    </div>
                 </div>
             </div>
             
