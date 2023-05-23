@@ -64,7 +64,7 @@ import Servicedetail from './pages/servicedetail';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    scroll-behavior: unset;
+    scroll-behavior: auto;
   }
 `;
 
@@ -81,7 +81,7 @@ const app= () => (
   <div className="wraper">
   <GlobalStyles />
     <Header/>
-    <Routes>
+    <Routes >
       <Route path="*" element={<Navigate to="/home" replace />} />
       {/* <Route path="/Author">
         <Route 

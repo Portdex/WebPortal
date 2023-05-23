@@ -60,9 +60,10 @@ const Colection = ({ authorId }) => {
   console.log(serviceData)
   console.log(userData)
   const [loading , setLoading]= useState(false)
-const [openMenu, setOpenMenu] = React.useState(true);
+const [openMenu, setOpenMenu] = React.useState(false);
 const [openMenu1, setOpenMenu1] = React.useState(false);
-const [openMenu2, setOpenMenu2] = React.useState(false);
+const [openMenu2, setOpenMenu2] = React.useState(true);
+const [openMenu3, setOpenMenu3] = React.useState(true);
  const navigate = useNavigate();
     const jwt = auth.getToken();
     const authorsState = useSelector(selectors.authorsState);
@@ -139,7 +140,26 @@ const author = authorsState.data ? authorsState.data[0] : {};
         };
         reader.readAsDataURL(file);
     }
-    
+    const renderDescription = (html) => {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+  
+      const pElement = div.getElementsByTagName('p')[0];
+      const liElements = div.getElementsByTagName('li');
+      const replaceNbsp = (text) => text.replace(/&nbsp;/g, ' ');
+      return (
+        <div>
+          {pElement && <p>{replaceNbsp(pElement.innerHTML)}</p>}
+          {liElements.length > 0 && (
+            <ul>
+              {Array.from(liElements).map((liElement, index) => (
+              <li key={index}>{replaceNbsp(liElement.innerHTML)}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    };
     const handleProfileBanner = (event) => {
         let file = event.target.files[0];
         setProfileBanner(file)
@@ -170,55 +190,83 @@ const author = authorsState.data ? authorsState.data[0] : {};
   //     dispatch(fetchAuthorList(authorId));
   // }, [dispatch, authorId]);
     
-const handleBtnClick = () => {
-  setOpenMenu(!openMenu);
-  setOpenMenu1(false);
-  setOpenMenu2(false);
-  document.getElementById("Mainbtn").classList.add("active");
-  document.getElementById("Mainbtn1").classList.remove("active");
-  document.getElementById("Mainbtn2").classList.remove("active");
-};
-const handleBtnClick1 = () => {
-  setOpenMenu1(!openMenu1);
-  setOpenMenu2(false);
-  setOpenMenu(false);
-  document.getElementById("Mainbtn1").classList.add("active");
-  document.getElementById("Mainbtn").classList.remove("active");
-  document.getElementById("Mainbtn2").classList.remove("active");
-};
-const handleBtnClick2 = () => {
-  setOpenMenu2(!openMenu2);
-  setOpenMenu(false);
-  setOpenMenu1(false);
-  document.getElementById("Mainbtn2").classList.add("active");
-  document.getElementById("Mainbtn").classList.remove("active");
-  document.getElementById("Mainbtn1").classList.remove("active");
-};
-
+  const handleBtnClick = () => {
+    setOpenMenu(!openMenu);
+    setOpenMenu1(false);
+    setOpenMenu2(false);
+    setOpenMenu3(false);
+    document.getElementById("Mainbtn").classList.add("active");
+    document.getElementById("Mainbtn1").classList.remove("active");
+    document.getElementById("Mainbtn2").classList.remove("active");
+    document.getElementById("Mainbtn3").classList.remove("active");
+  };
+  const handleBtnClick1 = () => {
+    setOpenMenu1(!openMenu1);
+    setOpenMenu2(false);
+    setOpenMenu(false);
+    setOpenMenu3(false);
+    document.getElementById("Mainbtn1").classList.add("active");
+    document.getElementById("Mainbtn").classList.remove("active");
+    document.getElementById("Mainbtn2").classList.remove("active");
+    document.getElementById("Mainbtn3").classList.remove("active");
+  };
+  const handleBtnClick2 = () => {
+    setOpenMenu2(!openMenu2);
+    setOpenMenu(false);
+    setOpenMenu1(false);
+    setOpenMenu3(false);
+    document.getElementById("Mainbtn2").classList.add("active");
+    document.getElementById("Mainbtn").classList.remove("active");
+    document.getElementById("Mainbtn1").classList.remove("active");
+    document.getElementById("Mainbtn3").classList.remove("active");
+  };
+  const handleBtnClick3 = () => {
+    setOpenMenu3(!openMenu3);
+    setOpenMenu(false);
+    setOpenMenu2(false);
+    setOpenMenu1(false);
+    document.getElementById("Mainbtn3").classList.add("active");
+    document.getElementById("Mainbtn").classList.remove("active");
+    document.getElementById("Mainbtn1").classList.remove("active");
+    document.getElementById("Mainbtn2").classList.remove("active");
+  };
+  
 
 
 
 
 return (
  
+
 <div>
 <GlobalStyles/>
-<section>
-  <div className="mt-5">
-    <div className="row ">
-      <div className="col-lg-4 mx-auto px-5 mt-3 ">
-        <div className="profile-section p-3">
-      <div className="profile_avatar d-flex justify-content-center">
-      <img src='/img/favicon.ico' alt=""/>
-      <i className="d-flex fa fa-check"></i>
+  { author.banner && 
+    <section id='profile_banner' className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${api.baseUrl + author.banner.url})`}}>
+      <div className='mainbreadcumb'>
       </div>
-      <div className="profile_name justify-content-center text-center mt-3">
+    </section>
+  }
+
+  
+  <section className="no-bottom">
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-md-2">
+        <div className="profile_avatar icon profile-height">
+                   
+                   <img src='/img/favicon.ico' alt=""/>
+                
+                   <i className="fa fa-check"></i>
+                   
+               </div>
+        </div>
+        <div className="col-md-10">
+        <div className="profile_name">
                           <h4>
                             {userData.username}      
                                                           
                               <span className="profile_username">{userData.mail}</span>
                               <span className="profile_username text-muted">{userData.services}</span>
-                              <div className="justify-content-center">
                               {
                               userData.payment_method && userData.payment_method.map((item, index) => (
                                 
@@ -228,16 +276,59 @@ return (
                               
                               ))
                           }
-                          </div>
                           </h4>
                           
                       </div>
-                      {/* <div className="row d-flex justify-content-center">
-              <button className="package-button"> Chat - Order Now </button>
-            </div> */}
+        </div>
       </div>
-      </div>
-      <div className="col-lg-8 gig-section p-4 pt-0 mt-3">
+    </div>
+  </section>
+
+  <section className='container no-top'>
+        <div className='row'>
+          <div className='col-lg-12'>
+              <div className="items_filter">
+                <ul className="de_nav text-left">
+                {/* <li id='Mainbtn' className=""><span>Digital Products</span></li>
+                    <li id='Mainbtn1' className=""><span>Profile</span></li>
+                    <li id='Mainbtn2' className=""><span>Services Packages</span></li> */}
+                    <li id='Mainbtn' className="mt-3 "><span onClick={handleBtnClick}>Description</span></li>
+                    
+                    <li id='Mainbtn2' className="mt-3 active"><span onClick={handleBtnClick2}>Services</span></li>
+                    <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Videos</span></li> 
+                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Digital Products</span></li> 
+                </ul>
+            </div>
+          </div>
+        </div>
+      {openMenu && author.id && (  
+        <>
+        <div id='zero1' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+        </div>
+        </>
+      )}
+        {openMenu1 && author.id && (  
+        <>
+        <div id='zero1' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+        </div>
+        </>
+      )}
+        {openMenu3 && author.id && (  
+        <>
+        <div id='zero1' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+        </div>
+        </>
+      )}
+  
+      {openMenu2 && ( 
+        <div id='zero3' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false}/> */} 
+    <div className="row">
+      
+      
         <h4>{userData.username}'s Service Packages</h4>
       {serviceData !=null ? 
          <div className='row'>
@@ -247,7 +338,7 @@ return (
                 <>
                 { service.name ?
                   
-            <div className=' col-lg-4 col-sm-6 col-md-6 p-0'>
+            <div className=' col-lg-3 col-sm-6 col-md-6 p-0'>
                 <Link
                   key={service.id}
                   to={`/servicedetail/${serviceData.username}/${service.id}`}
@@ -288,12 +379,11 @@ return (
           </div>
 }
       </div>
-      </div>
-    </div>
- 
-</section>
-
-  
+       </div>
+   
+        
+      )}
+      </section>
 
 
   <Footer />

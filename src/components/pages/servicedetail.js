@@ -95,6 +95,7 @@ const Servicedetail = ({ authorId }) => {
 const [openMenu, setOpenMenu] = React.useState(false);
 const [openMenu1, setOpenMenu1] = React.useState(false);
 const [openMenu2, setOpenMenu2] = React.useState(true);
+const [openMenu3, setOpenMenu3] = React.useState(true);
  const navigate = useNavigate();
     const jwt = auth.getToken();
     const authorsState = useSelector(selectors.authorsState);
@@ -200,26 +201,42 @@ const handleBtnClick = () => {
   setOpenMenu(!openMenu);
   setOpenMenu1(false);
   setOpenMenu2(false);
+  setOpenMenu3(false);
   document.getElementById("Mainbtn").classList.add("active");
   // document.getElementById("Mainbtn1").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
+  // document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick1 = () => {
   setOpenMenu1(!openMenu1);
   setOpenMenu2(false);
   setOpenMenu(false);
+  setOpenMenu3(false);
   // document.getElementById("Mainbtn1").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
+  // document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick2 = () => {
   setOpenMenu2(!openMenu2);
   setOpenMenu(false);
   setOpenMenu1(false);
+  setOpenMenu3(false);
   document.getElementById("Mainbtn2").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
   // document.getElementById("Mainbtn1").classList.remove("active");
+  // document.getElementById("Mainbtn3").classList.remove("active");
 };
+// const handleBtnClick3 = () => {
+//   setOpenMenu3(!openMenu3);
+//   setOpenMenu(false);
+//   setOpenMenu2(false);
+//   setOpenMenu1(false);
+//   document.getElementById("Mainbtn3").classList.add("active");
+//   document.getElementById("Mainbtn").classList.remove("active");
+//   document.getElementById("Mainbtn1").classList.remove("active");
+//   document.getElementById("Mainbtn2").classList.remove("active");
+// };
 
 
 
@@ -308,14 +325,30 @@ return (
                 {/* <li id='Mainbtn' className=""><span>Digital Products</span></li>
                     <li id='Mainbtn1' className=""><span>Profile</span></li>
                     <li id='Mainbtn2' className=""><span>Services Packages</span></li> */}
-                    <li id='Mainbtn' className=""><span onClick={handleBtnClick}>Description</span></li>
-                    {/* <li id='Mainbtn1' className=""><span onClick={handleBtnClick1}>Profile</span></li> */}
-                    <li id='Mainbtn2' className="active"><span onClick={handleBtnClick2}>Services Packages</span></li>
+                    <li id='Mainbtn' className="mt-3 "><span onClick={handleBtnClick}>Description</span></li>
+                    
+                    <li id='Mainbtn2' className="mt-3 active"><span onClick={handleBtnClick2}>Services Packages</span></li>
+                    {/* <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Videos</span></li> 
+                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Digital Products</span></li>  */}
                 </ul>
             </div>
           </div>
         </div>
       {openMenu && author.id && (  
+        <>
+        <div id='zero1' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+        </div>
+        </>
+      )}
+        {openMenu1 && author.id && (  
+        <>
+        <div id='zero1' className='onStep fadeIn'>
+         {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+        </div>
+        </>
+      )}
+        {openMenu3 && author.id && (  
         <>
         <div id='zero1' className='onStep fadeIn'>
          {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}

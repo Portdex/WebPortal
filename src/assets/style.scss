@@ -839,7 +839,7 @@ a{
     .navbar-item {
         position: relative;
         display: inline-block;
-        padding: 30px 6px;
+        padding: 30px 3px;
         height: max-content;
         cursor: default;
         .lines{
@@ -5392,6 +5392,14 @@ blockquote {
     object-fit: none;
   
 }
+.img-fit-cover
+{
+  
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  
+}
 .accord-head 
 {
   font-size:1.2em;
@@ -5623,11 +5631,16 @@ blockquote {
 }
 .cat-box
 {
-border: 2px solid #8364E2;
-    padding: 9px;
-    // max-width:120px;
-    text-align: center;
-    margin:10px
+  border: 2px solid #8364E2;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: center;
+  margin: 3px;
+  min-width: 150px;
+  
+
+ 
+  
 }
 .Loader
 {
@@ -5882,4 +5895,22 @@ border: 2px solid #8364E2;
   .responsive-bottom {
     margin-bottom: 60px;
   }    
+}
+
+
+.wow-image{
+  overflow: hidden !important;
+}
+
+.wow-image .img-fit-cover {
+  width: 100%;
+  height: 150px;
+  object-position: center;
+  transition: all 0.5s ease-out;
+  transform: scale(1.1);
+}
+.wow-image:hover img {
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: scale(1);
 }

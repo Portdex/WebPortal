@@ -70,18 +70,18 @@ const Services = () => {
             </div>
             <div className='row'>
               <div className='col-lg-12'>
-                <h6 className='text-secondary'> Popular Searches: </h6>
+                <h6 className='text-secondary'> Popular Categories: </h6>
               </div>
-               {/* {options1.slice(1).map((item, index) => (
-    <div className='col-lg-2 col-4' key={index + 1}>
+               {options1.slice(1).map((item, index) => (
+    <div className='col-lg-2 col-6' key={index + 1}>
       <p className='cat-box mt-2'>{item.label}</p>
     </div>
-  ))}  */}
-   <div className='col-lg-12 d-flex flex-wrap'>
+  ))} 
+   {/* <div className='col-lg-12 d-flex flex-wrap'>
             {options1.slice(1).map((item, index) => (
    <div className='cat-box mt-2'>{item.value}</div>
   ))} 
-</div>
+</div> */}
          
 
             </div>

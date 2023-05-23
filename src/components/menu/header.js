@@ -236,7 +236,7 @@ const Header = function({ className }) {
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
-                       Product Marketplace
+                      Decentralised Product Marketplace 
                       </NavLink>
                     </div>
                     <div className='navbar-item'>

@@ -13,18 +13,28 @@ import fetchServices from '../pages/fetchServices';
 
 //react functional component
 const ProductBox = () => {
-    const [userData, setUserData] = useState([])
-console.log(userData)
-    
-    useEffect(() => {
+//     const [userData, setUserData] = useState([])
+// console.log(userData)
+const userData = [
+    { value: 'Website', label: 'Website', img:'/img/product/website.jpg' },
+    { value: 'Logo', label: 'Logo', img:'/img/product/logo.jpg' },
+    { value: 'Themes', label: 'Themes', img:'/img/product/theme.jpg' },
+    { value: 'Plugins', label: 'Plugins', img:'/img/product/plugins.jpg' },
+    { value: 'Pdf', label: 'Pdf', img:'/img/product/pdf.png' },
+    { value: 'Courses', label: 'Courses' , img:'/img/product/courses.jpg'},
+    { value: 'Designs', label: 'Designs' , img:'/img/product/designs.png'},
+    { value: 'Ebook', label: 'Ebook', img:'/img/product/ebooks.jpg' }
+  ]
+  
+    // useEffect(() => {
         
-        fetchServices()
-        .then(data => {
-          data=data.data.results.service;
-          setUserData(data)
+    //     fetchServices()
+    //     .then(data => {
+    //       data=data.data.results.service;
+    //       setUserData(data)
  
-        })
-      }, []);
+    //     })
+    //   }, []);
     //will run when component unmounted
    
 
@@ -34,8 +44,10 @@ console.log(userData)
             <div className=' col-lg-4 col-sm-6 col-md-6 p-0'>
             <div className='single-card m-2'>
             <div className='col-lg-12'>
-                <img src='/img/code_logo.png' className='img-fit-none'/>
-                <h6 className='m-3'>{item.username}</h6>
+                <div className='wow-image'>
+                <img src={item.img} className='img-hover-zoom img-fit-cover'/>
+                </div>
+                <h6 className='m-3'>{item.label}</h6>
                 <p className='m-3'>
                 Sed ut perspiciatis unde omnis iste natus error sit.
                 </p>
