@@ -239,7 +239,7 @@ return (
     </section>
   }
 
-  <section className='container no-bottom'>
+  {/* <section className='container no-bottom'>
     <div className='row'>
       <div className="col-md-12">
          <div className="d_profile de-flex">
@@ -258,7 +258,7 @@ return (
                           </h4>
                       </div>
                   </div>
-              </div>
+              </div> */}
               {/* <div className="profile_follow de-flex">
                   {/* <div className="de-flex-col">
                       <div className="profile_follower">{author.followers} followers</div>
@@ -268,7 +268,34 @@ return (
                   </div>
               </div> */} 
 
-          </div>
+          {/* </div>
+      </div>
+    </div>
+  </section> */}
+  <section className="no-bottom">
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-md-2">
+        <div className="profile_avatar icon profile-height">
+                   
+                   <img src='/img/favicon.ico' alt=""/>
+                
+                   <i className="fa fa-check"></i>
+                   
+               </div>
+        </div>
+        <div className="col-md-10">
+        <div className="profile_name">
+                          <h4>
+                            {userData.username}      
+                                                          
+                              <span className="profile_username">{serviceData.name}</span>
+                              <span className="profile_username text-muted">{renderDescription(serviceData.description)}</span>
+                             
+                          </h4>
+                          
+                      </div>
+        </div>
       </div>
     </div>
   </section>

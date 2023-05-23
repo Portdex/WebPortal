@@ -2,12 +2,21 @@ import React from 'react';
 import SliderMain from '../components/SliderMain';
 import FeatureBox from '../components/FeatureBox';
 import FeatureBox2 from '../components/FeatureBox2';
-import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
-import CarouselNewRedux from '../components/CarouselNewRedux';
 import AuthorListRedux from '../components/AuthorListRedux';
-import Catgor from '../components/Catgor';
 import Footer from '../components/footer';
-import CarouselNewCommunity from '../components/CarouselNewCommunity';
+import { keyframes } from "@emotion/react";
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+`;
 
 
 const Home= () => {

@@ -5870,3 +5870,16 @@ border: 2px solid #8364E2;
   border:1px solid lightgrey;
   height:400px;
 }
+.responsive-bottom{
+  margin-bottom:1rem;
+}
+@media (max-width: 768px) {
+  .icon i {
+    margin: -40px 0 0 110px;
+  }    
+}
+@media (max-width: 1199px) {
+  .responsive-bottom {
+    margin-bottom: 60px;
+  }    
+}
