@@ -170,32 +170,65 @@ const Header = function({ className }) {
           
               <BreakpointProvider>
                 <Breakpoint l down>
-                  {/* {showmenu && 
-                  <div className='menu'>
-                     <div className='navbar-item'>
-                      <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
-                       Home
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
-                       Product Marketplace
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
-                      Service Marketplace
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
-                      Communitye
-                      </NavLink>
-                    </div>
-                  
+                  {showmenu && 
+                  <div className='menu text-center'>
+                  <div className='navbar-item text-start'>
+                  <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
+                      Home
+                    </NavLink>
                   </div>
-                  } */}
-                  <div className="bottom-bar">
+                  <div className='navbar-item text-start'>
+                  <NavLink to="/videos" onClick={() => btn_icon(!showmenu)}>
+                      Videos
+                    </NavLink>
+                  </div>
+                  <div className='navbar-item text-start'>
+                  <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
+                  Service Market place
+                    </NavLink>
+                  </div>
+                  <div className='navbar-item text-start'>
+                    <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
+                      Decentralised Product Marketplace
+                    </NavLink>
+                  </div>
+                  <div className='navbar-item text-start'>
+                  <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
+                      Community
+                    </NavLink>
+                  </div>
+                </div>
+                  // <div className='sidebar'>
+                  //   <img src="/img/close.svg" className="close-button" alt="" onClick={() => btn_icon(!showmenu)} />
+                  //    <div className='sidebar-item'>
+                  //     <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
+                  //      Home
+                  //     </NavLink>
+                  //   </div>
+                  //   <div className='sidebar-item'>
+                  //     <NavLink to="/videos" onClick={() => btn_icon(!showmenu)}>
+                  //    Videos
+                  //     </NavLink>
+                  //   </div>
+                  //   <div className='sidebar-item'>
+                  //     <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
+                  //      Product Marketplace
+                  //     </NavLink>
+                  //   </div>
+                  //   <div className='sidebar-item'>
+                  //     <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
+                  //     Service Marketplace
+                  //     </NavLink>
+                  //   </div>
+                  //   <div className='sidebar-item'>
+                  //     <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
+                  //     Community
+                  //     </NavLink>
+                  //   </div>
+                  
+                  // </div>
+                  }
+                  {/* <div className="bottom-bar">
           <div className='menu row d-flex w-100 justify-content-center'>
             
                   <div className='navbar-item col-md-2 col-2'>
@@ -224,10 +257,10 @@ const Header = function({ className }) {
                       </NavLink>
                     </div>
     </div>
-    </div>
+    </div> */}
                 </Breakpoint>
 
-                <Breakpoint xl>
+                <Breakpoint xl className="p-0">
                   <div className='menu'>
                   <div className='navbar-item'>
                       <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
@@ -368,11 +401,11 @@ const Header = function({ className }) {
                   
       </div>
 
-        {/* <button className="nav-icon" onClick={() => btn_icon(!showmenu)}>
+        <button className="nav-icon" onClick={() => btn_icon(!showmenu)}>
           <div className="menu-line white"></div>
           <div className="menu-line1 white"></div>
           <div className="menu-line2 white"></div>
-        </button> */}
+        </button>
 
       </div>     
     </header>

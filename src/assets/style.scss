@@ -805,8 +805,8 @@ a{
     }
     a{
       position: relative;
-      font-size: 14px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 600;
       padding: 0 5px 0 0;
       text-decoration: none !important;
       color: $white;
@@ -929,8 +929,8 @@ a{
         padding: 20px 2%;
       }
       .navbar-item {
-        // display: block;
-        display: inline-block;
+         display: block;
+       // display: inline-block;
         padding: 15px 0;
         text-align: center;
         border-bottom: 1px solid rgba(0,0,0,.1);
@@ -952,7 +952,7 @@ a{
       background: none;
       border: none;
       padding: 0;
-      z-index: 9999;
+      z-index: 777;
       }
       .bg-nav-icon{ 
       width:32px; 
@@ -992,9 +992,9 @@ a{
       top: 10px;
       background-color:$black;
       }
-       &.sticky {
-       position: absolute !important;
-       }
+      //  &.sticky {
+      //  position: absolute !important;
+      //  }
      }
      @media only screen and (max-width: 641px) {
       &.navbar{
@@ -4807,7 +4807,7 @@ blockquote {
     display: none;
     a{
       display: inline-block;
-      margin: 0 5px;
+      margin: 0 0px;
     }
   }
   .de-menu-notification {
@@ -5734,7 +5734,7 @@ blockquote {
   min-width: 180px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .community-card a {
   text-decoration: none;
@@ -5781,7 +5781,7 @@ blockquote {
   width: 100%;
   height: 50px;
   background-color: lightgrey;
-  
+  z-index:999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5913,4 +5913,48 @@ blockquote {
   width: 100%;
   transition: all 0.5s ease-out;
   transform: scale(1);
+}
+.sidebar {
+  background-color: #f1f1f1;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 888;
+  padding-top:100px;
+  box-shadow: 5px 0 16px -5px #333;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+
+.side-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.close-button
+{
+  height:24px;
+  width:24px;
+  position:absolute;
+  right:10px;
+  top:18px;
+}
+.sidebar-item {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  width: 90%;
+}
+.text-grey-important
+{
+  color:#bbb !important;
 }
