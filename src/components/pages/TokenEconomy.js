@@ -106,7 +106,7 @@ const TokenEconomy= () => (
               <h2>Token Economics</h2>
               <div className="small-border"></div>
               <p className='text-center'>
-              Portdex.ai may issue a governance & utility token in regulated jurisdiction
+              Portdex.ai may issue platform utility token in a regulated jurisdiction
               </p>
 
             </div>
@@ -124,7 +124,7 @@ const TokenEconomy= () => (
                           Portdex token economics has a clear purpose, including access, permission (Usage), and governance (validation and Voting). The Token will also generate value for the ecosystem stakeholder. The token will act as a de facto payment method for the platform services. The behavior of the Token will be spendable. 
                         <br/>
 <br/>
-Portdex Utility token can be used to pay for products and services. The token will be spent for governance, usage, and rewards. Portdex utility tokens will enable businesses and consumers to be part of the governance at the application, network, and infrastructure layer. 
+Portdex Utility token may be used to access products and services. It will be spent for governance, usage, and rewards. Portdex utility tokens will enable businesses and consumers to be part of the governance at the application, network, and infrastructure layer. 
 <ul>
   <li>
 Utility token will be required to connect API</li>
@@ -149,7 +149,6 @@ The rewards can be categorized into
 
  
   <li>
-  Holder Discount fee
 
   </li>
   <li>
@@ -243,7 +242,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                       <h4 className="">Token Reward</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Portdex will help create a digital high street experience. It will distribute 30% of the commission as a reward in tokens.</p>
+                      <p className="">Portdex will promote local and international freelancers. It will distribute 30% of the commission as a reward in tokens.</p>
                     </Reveal>
                   </div>
                   <i className="wm icon_cloud-upload_alt"></i>
@@ -285,7 +284,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
             A TOKEN FOR FREELANCERS
             </h1>
             {/* <h6>
-            A token that will offer SMEs Super DApp and P2P marketplace
+            Portdex will offer SMEs Super DApp and P2P marketplace
             </h6> */}
             <div className='row'>
               <div className='col-lg-6'>
@@ -317,7 +316,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 Payment Method
                 </h2>
                 <p>
-                De - Facto payment method for platform services 
+                De - Facto method for platform services 
                 </p>
                 </div>
               </div>
@@ -328,7 +327,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 license
                 </h2>
                 <p>
-                Token will be a license key to access the eco-system and services execution  
+                Will act as license key to access the eco-system and services execution  
                 </p>
                 </div>
               </div>
@@ -444,8 +443,8 @@ The businesses that will hold tokens as governance nodes will be able to earn re
                 In-person Payments
                 </h2>
                 <p>
-                Freelancers will be able to claim the token as part of the governing council of the platform.
-10% of the token and 30% of the commission paid by the retailers will be shared with freelancers.
+                Freelancers will be able to claim the rewards as part of the governing council of the platform.
+ 30% of the Platform profit will be shared with freelancers.
                 </p>
                 </div>
               </div>
