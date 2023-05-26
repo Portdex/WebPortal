@@ -148,7 +148,7 @@ const app= () => (
       <Route element={<TokenEconomy />} path="/tokenEconomy" />
       <Route element={<UserDetails />} path="/check" />
       <Route element={<Ourteam />} path="/our-team" />
-      <Route element={<Portdexdao />} path="/portexDAO" />
+      <Route element={<Portdexdao />} path="/portexGovernance" />
       <Route element={<Blockchain />} path="/blockchain" />
       <Route element={<Digitalproduct />} path="/digital-products" />
       <Route element={<Taxtracking />} path="/tax-tracking" />

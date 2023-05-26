@@ -79,7 +79,7 @@ const footer= () => (
                             <h5>About Us</h5>
                             <ul>
                             <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li>
-                            <li><Link to="/portexDAO">Portdex DAO</Link></li>
+                            <li><Link to="/portexGovernance">Portdex Governance </Link></li>
                             {/* <li><Link to="">Company</Link></li> */}
                             <li><Link to="/digital-products">Digital Products NFTs</Link></li>
                             <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li>
