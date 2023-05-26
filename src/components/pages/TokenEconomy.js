@@ -81,7 +81,7 @@ const TokenEconomy= () => (
               <h6 className=""><span className="text-uppercase color">Portdex Service accessbility</span></h6>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1 className="col-white">DE - FACTO PAYMENT METHOD FOR PLATFORM SERVICES</h1>
+              <h1 className="col-white"> Portdex.ai will publish a detailed Legal Compliant Paper before issuing the token</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
