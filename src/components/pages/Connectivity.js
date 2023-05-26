@@ -107,7 +107,6 @@ const Connectivity= () => (
         <li>
         Portdex will also facilitate conversion through interoperable SDK in real time between different blockchains network.
         </li>
-       
        </ul>
         </p>
         </div>
@@ -115,39 +114,7 @@ const Connectivity= () => (
         </div>
         <div className='row mt-5 d-flex align-items-center'>
         
-        <div className='col-lg-6 p-5'>
-            <h4>
-            Currency Connectivity - Multi-Currency Connectivity/Links
-            </h4>
-       <ul>
-        <li>
-Portdex will enable businesses & Freelancers to transact in real-time by integrating stable-currency/cryptocurrency features natively payment link option. 
-        </li>
-        <li>
-        User will have same seamless payment experience as traditional apps. The user will add the bank account, and payment in the background will be processed through stable currency providers. 
-        </li>
-        <li>
-       <strong> 75% of SME’s plan to accept cryptocurrency payments </strong> within the next two years; over 50% plan to have third-party payment processors to convert digital currency into fiat (Deloitte, 2022). 
-        </li>
-       </ul>
-        </div>
-        <div className='col-lg-6'>
-          <img
-                    src="/img/vector1.jpg"
-                    className="mx-auto radius img-fluid d-block mb-3"
-                    alt="#"
-                  />
-          </div>
-        </div>
-        <div className='row d-flex align-items-center'>
-        <div className='col-lg-6'>
-          <img
-                    src="/img/vector3.jpg"
-                    className="mx-auto radius img-fluid d-block mb-3 px-3"
-                    alt="#"
-                  />
-          </div>
-          <div className='col-lg-6 pt-5'>
+        <div className='col-lg-6 pt-5'>
             <h4>
             DeFi Connectivity 
             </h4>
@@ -155,13 +122,19 @@ Portdex will enable businesses & Freelancers to transact in real-time by integra
            <i> Nearly Half of Gig Economy Freelance and Contract Workers are denied Access to Financial Services (Yahoo Finance 2022). 28% of self-employed workers in the UK struggle to access financial services.
            </i>
 <br/><br/>
-Portdex will connect freelancers to peer to peer financial system that leverage blockchain and smart contracts to enable micro, small businesses, and the freelance community to access decentralised finance. Freelance community without intermediary will have access to decentralised finance based on blockchain & smart contracts. Portdex will make the process easier for freelancers and transform how freelancers access and use financial services through stable currency.
+Portdex will connect freelancers to peer to peer financial system that leverage blockchain and smart contracts to enable micro, small businesses, and the freelance community to access decentralised finance.  ( Portdex will connect freelancers to llenders who may accept invoice /Purchase order to fullfill their need)
 
             </p>
           </div>
-          
-
+        <div className='col-lg-6'>
+          <img
+                    src="/img/vector3.jpg"
+                    className="mx-auto radius img-fluid d-block mb-3"
+                    alt="#"
+                  />
+          </div>
         </div>
+       
         </div>
       </section>
     <Footer />

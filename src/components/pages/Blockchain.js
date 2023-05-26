@@ -105,7 +105,7 @@ const Blockchain= () => (
                      
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
                         <p className="">
-                        Centralised models based on traditional databases are organization-centric, asymmetric and promote the interest of the organisations. Portdex Decentralised model based on blockchain technology and smart contracts will enable distributed trust and Governance.  Portdex combined Digital Product & Freelance. It will offer decentralised Digital product Marketplace based on Blockchain & smart contracts. 
+                        Centralised models based on traditional databases are organization-centric, asymmetric and promote the interest of the organisations. Portdex Decentralised model based on blockchain technology and smart contracts will enable distributed trust and Governance. It will offer decentralised Digital product Marketplace based on Blockchain & smart contracts. 
                         <br/>
 Through Blockchain Portdex will enable the users to govern the Platform.  
 <br/>
@@ -148,14 +148,7 @@ Security: Transactional level security using zero-knowledge proof to preserve fi
 </ul>
 
 <br/>
-<h3>
-Encrypted Transaction 
-</h3>
-<ul>
-    <li>
-    “Financial Data - buyer & Seller transaction processing:  
-    </li>
-</ul>
+
 
 </p>
                       </Reveal>

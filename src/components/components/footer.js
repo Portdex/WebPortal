@@ -81,7 +81,7 @@ const footer= () => (
                             <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li>
                             <li><Link to="/portexGovernance">Portdex Governance </Link></li>
                             {/* <li><Link to="">Company</Link></li> */}
-                            <li><Link to="/digital-products">Digital Products NFTs</Link></li>
+                            <li><Link to="/digital-products">Digital Product Traceability Through NFT</Link></li>
                             <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li>
                             <li><Link to="/connectivity">Real Time Connectivity</Link></li>
                            
