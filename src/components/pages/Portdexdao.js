@@ -126,7 +126,7 @@ Blockchain network governed by the freelance community
 </ul>
 
 <br/>
-Instead of paying high commission third-party Centralised marketplaces, Portdex token holders will only pay a min transaction fee. Portdex will charge a 3% commission on successful transactions between freelancer and buyer. Portdex will distribute 30% of the profit back to the freelance community. Freelancers and Buyers will be able to interact directly through peer-to-peer communication platforms and will be able to transact directly.
+Instead of paying high commission third-party Centralised marketplaces, Freelancers will only pay a min transaction fee. Portdex will charge a 3% commission on successful transactions between freelancer and buyer. Portdex will distribute 30% of the profit back to the freelance community. Freelancers and Buyers will be able to interact directly through peer-to-peer communication platforms and will be able to transact directly.
 
 </p>
                       </Reveal>
@@ -167,7 +167,7 @@ Instead of paying high commission third-party Centralised marketplaces, Portdex 
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="1">
-              <Card.Body> Governance token will allow the ecosystem stakeholder to vote on platform features at the application, network, and infrastructure layer. Governance token holders can submit new proposals, vote on an existing one, or even decide on possible changes to the governance system. Proposals can determine specific system parameters, such as platform features, and important community goals and targets, and vote on code contributions and funds allocation. Governance tokens will be essential in the Portdex ecosystems for giving users a direct stake in managing the Platform.</Card.Body>
+              <Card.Body> Freelancers as ecosystem stakeholder to vote on platform features at the application, network, and infrastructure layer. Governance token holders can submit new proposals, vote on an existing one, or even decide on possible changes to the governance system. Proposals can determine specific system parameters, such as platform features, and important community goals and targets, and vote on code contributions and funds allocation. Governance tokens will be essential in the Portdex ecosystems for giving users a direct stake in managing the Platform.</Card.Body>
             </Accordion.Collapse>
           </Card>
           <Card>
@@ -186,10 +186,10 @@ Instead of paying high commission third-party Centralised marketplaces, Portdex 
                             Voting on the rewards.
                             </li>
                             <li>
-                            Voting on cryptocurrency addition by platform users & token distribution.
+                            Voting on payment methods, platform features, and Future roadmap.
                             </li>
                         </ul>
-                        Portdex token will be the driving force behind the platform. Token holder buyers will get a discount when paying in the Portdex token. Portdex token is neither a security nor a capital investment and hence not subject to a capital market regulation. Portdex Utility Tokens will be digital vouchers that can be redeemed against Portdex services. The utility token does not reflect a claim for money against the issuer. It will only serve as a voucher that can be redeemed for goods or services.</p></Card.Body>
+                         Portdex Utility Tokens will be digital vouchers that can be redeemed against Portdex services. The utility token does not reflect a claim for money against the issuer. It will only serve as a voucher that can be redeemed for goods or services.</p></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
