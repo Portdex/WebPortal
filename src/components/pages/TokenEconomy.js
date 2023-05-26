@@ -262,7 +262,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            A TOKEN FOR FREELANCERS
+             Portdex will empower Freelancers
             </h1>
             {/* <h6>
             Portdex will offer SMEs Super DApp and P2P marketplace
@@ -402,7 +402,7 @@ The businesses that will hold tokens as governance nodes will be able to earn re
           </div>
           <div className='col-lg-6 p-4'>
             <h1>
-            TOKEN FOR ALL IN ONE FREELANCERS - SUPER DAPP
+          ALL IN ONE FREELANCERS - SUPER DAPP
             </h1>
            
             <div className='row'>
