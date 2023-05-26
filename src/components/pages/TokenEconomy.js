@@ -78,20 +78,20 @@ const TokenEconomy= () => (
               <div className="spacer-single"></div>
               <div className="spacer-double"></div>
                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-              <h6 className=""><span className="text-uppercase color">Portdex will launch a utility token</span></h6>
+              <h6 className=""><span className="text-uppercase color">Portdex Service accessbility</span></h6>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
               <h1 className="col-white">DE - FACTO PAYMENT METHOD FOR PLATFORM SERVICES</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
-              Portdex will allocate 40% of the token to the community.
+              Portdex community Governed Model.
               </p>
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
               <a href='https://business.portdex.ai/web/company_signup' className="btn-main lead" target="_blank"> 
-              Portdex token will be launched under foundation structure
+              Portdex.ai foundation will run the governance and development
               </a>
               <div className="mb-sm-30"></div>
               </Reveal>
@@ -106,7 +106,7 @@ const TokenEconomy= () => (
               <h2>Token Economics</h2>
               <div className="small-border"></div>
               <p className='text-center'>
-              Portdex.ai may issue platform utility token in a regulated jurisdiction
+              Portdex.ai foundation as a compliant entity may issue platform utility token in a regulated jurisdiction
               </p>
 
             </div>
@@ -121,7 +121,7 @@ const TokenEconomy= () => (
                      
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
                         <p className="">
-                          Portdex token economics has a clear purpose, including access, permission (Usage), and governance (validation and Voting). The Token will also generate value for the ecosystem stakeholder. The token will act as a de facto payment method for the platform services. The behavior of the Token will be spendable. 
+                          Portdex token economics has a clear purpose, including access, permission (Usage), and governance (validation and Voting). The token in future will act as a de facto  method for the platform services. The behavior of the Token will be spendable. 
                         <br/>
 <br/>
 Portdex Utility token may be used to access products and services. It will be spent for governance, usage, and rewards. Portdex utility tokens will enable businesses and consumers to be part of the governance at the application, network, and infrastructure layer. 
@@ -135,26 +135,7 @@ Utility tokens will act as a license key to access the ecosystem and services ex
 It Will also act as Enterprise license fee, platform fee, developer fee, user fee
 </li>
 </ul>
-The businesses that will hold tokens as governance nodes will be able to earn rewards.
-<br/>
-The rewards can be categorized into
-<ul>
-  <li>
-  Staking Rewards
-  </li>
-  
-    <li>
-    Governance Rewards 
-  </li>
 
- 
-  <li>
-
-  </li>
-  <li>
-  Hiring rewards 
-  </li>
-</ul>
 
 </p>
                       </Reveal>
