@@ -108,6 +108,7 @@ const Community= () => {
       setFilteredProducts(data); 
     })
     .catch((error) => console.error(error));
+    window.scrollTo(0, 0);
   }, []);
   const handleProductSelect = (option) => {
     if (option.value === 'all') {

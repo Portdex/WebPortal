@@ -71,7 +71,9 @@ const Ourteam = () =>
           .then(data => {
             data=data.data.results.users;
             setUserData(data)
+
           })
+          window.scrollTo(0, 0);
         }, []);
     return (
         <div>
