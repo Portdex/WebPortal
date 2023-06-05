@@ -185,6 +185,7 @@ const author = authorsState.data ? authorsState.data[0] : {};
           setServiceData(product)
        setLoading(false)
       })
+      window.scrollTo(0, 0);
     }, []);
   //   useEffect(() => {
   //     dispatch(fetchAuthorList(authorId));

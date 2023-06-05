@@ -90,6 +90,7 @@ const Servicedetail = ({ authorId }) => {
     
           
           })
+          window.scrollTo(0, 0);
         }, []);
   const [loading , setLoading]= useState(false)
 const [openMenu, setOpenMenu] = React.useState(false);
@@ -203,19 +204,19 @@ const handleBtnClick = () => {
   setOpenMenu2(false);
   setOpenMenu3(false);
   document.getElementById("Mainbtn").classList.add("active");
-  // document.getElementById("Mainbtn1").classList.remove("active");
+  document.getElementById("Mainbtn1").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
-  // document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick1 = () => {
   setOpenMenu1(!openMenu1);
   setOpenMenu2(false);
   setOpenMenu(false);
   setOpenMenu3(false);
-  // document.getElementById("Mainbtn1").classList.add("active");
+  document.getElementById("Mainbtn1").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
-  // document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick2 = () => {
   setOpenMenu2(!openMenu2);
@@ -224,19 +225,19 @@ const handleBtnClick2 = () => {
   setOpenMenu3(false);
   document.getElementById("Mainbtn2").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
-  // document.getElementById("Mainbtn1").classList.remove("active");
-  // document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn1").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
-// const handleBtnClick3 = () => {
-//   setOpenMenu3(!openMenu3);
-//   setOpenMenu(false);
-//   setOpenMenu2(false);
-//   setOpenMenu1(false);
-//   document.getElementById("Mainbtn3").classList.add("active");
-//   document.getElementById("Mainbtn").classList.remove("active");
-//   document.getElementById("Mainbtn1").classList.remove("active");
-//   document.getElementById("Mainbtn2").classList.remove("active");
-// };
+const handleBtnClick3 = () => {
+  setOpenMenu3(!openMenu3);
+  setOpenMenu(false);
+  setOpenMenu2(false);
+  setOpenMenu1(false);
+  document.getElementById("Mainbtn3").classList.add("active");
+  document.getElementById("Mainbtn").classList.remove("active");
+  document.getElementById("Mainbtn1").classList.remove("active");
+  document.getElementById("Mainbtn2").classList.remove("active");
+};
 
 
 
@@ -301,16 +302,13 @@ return (
                    
                </div>
         </div>
-        <div className="col-md-10">
+        <div className="col-md-10 d-flex align-items-center">
         <div className="profile_name">
                           <h4>
-                            {userData.username}      
-                                                          
+                            {userData.username}                       
                               <span className="profile_username">{serviceData.name}</span>
                               <span className="profile_username text-muted">{renderDescription(serviceData.description)}</span>
-                             
-                          </h4>
-                          
+                          </h4> 
                       </div>
         </div>
       </div>
@@ -328,8 +326,8 @@ return (
                     <li id='Mainbtn' className="mt-3 "><span onClick={handleBtnClick}>Description</span></li>
                     
                     <li id='Mainbtn2' className="mt-3 active"><span onClick={handleBtnClick2}>Services Packages</span></li>
-                    {/* <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Videos</span></li> 
-                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Digital Products</span></li>  */}
+                    <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Videos</span></li> 
+                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Digital Products</span></li> 
                 </ul>
             </div>
           </div>
@@ -361,7 +359,7 @@ return (
          {/* <ColumnNewRedux shuffle showLoadMore={false}/> */} 
     <div className="row">
       <div className="col-lg-4 col-md-6 p-3">
-        <div className="package-box">
+        <div className="package-box-services">
           <div className="row d-flex justify-content-center mb-4">
           <div className="col-lg-6 col-6 text-center">
           <p className="m-0">
@@ -415,7 +413,7 @@ return (
         </div>
       </div>
       <div className="col-lg-4 col-md-6 p-3">
-        <div className="package-box">
+        <div className="package-box-services">
           <div className="row d-flex justify-content-center mb-4">
           <div className="col-lg-6 col-6 text-center">
           <p className="m-0">
@@ -469,7 +467,7 @@ return (
         </div>
       </div>
       <div className="col-lg-4 col-md-6 p-3">
-        <div className="package-box">
+        <div className="package-box-services">
           <div className="row d-flex justify-content-center mb-4">
           <div className="col-lg-6 col-6 text-center">
           <p className="m-0">

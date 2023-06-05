@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ColumnNewThreeColRedux from '../components/ColumnNewThreeColRedux';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
@@ -37,6 +37,11 @@ const Product = () => {
   } else {
     document.body.classList.remove('active-modal')
   }
+  useEffect(() => {
+   
+    window.scrollTo(0, 0);
+  }, []);
+
   return(
 <div>
 <GlobalStyles/>

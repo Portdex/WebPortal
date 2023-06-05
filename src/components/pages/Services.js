@@ -55,6 +55,7 @@ const Services = () => {
      
     })
     console.log(selectedServices);
+    window.scrollTo(0, 0);
   }, [selectedServices]);
   return(
 <div>

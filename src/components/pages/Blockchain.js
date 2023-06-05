@@ -153,7 +153,7 @@ Security: Transactional level security using zero-knowledge proof to preserve fi
 </p>
                       </Reveal>
                     </div>
-                    <i className="wm icon_wallet"></i>
+                    <i className="wm fa fa-chain"></i>
                 </div>
             </div>
           

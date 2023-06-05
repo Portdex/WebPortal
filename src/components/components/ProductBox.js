@@ -16,14 +16,14 @@ const ProductBox = () => {
 //     const [userData, setUserData] = useState([])
 // console.log(userData)
 const userData = [
-    { value: 'Website', label: 'Website', img:'/img/product/website.jpg' },
-    { value: 'Logo', label: 'Logo', img:'/img/product/logo.jpg' },
-    { value: 'Themes', label: 'Themes', img:'/img/product/theme.jpg' },
-    { value: 'Plugins', label: 'Plugins', img:'/img/product/plugins.jpg' },
-    { value: 'Pdf', label: 'Pdf', img:'/img/product/pdf.png' },
-    { value: 'Courses', label: 'Courses' , img:'/img/product/courses.jpg'},
-    { value: 'Designs', label: 'Designs' , img:'/img/product/designs.png'},
-    { value: 'Ebook', label: 'Ebook', img:'/img/product/ebooks.jpg' }
+    { id: 1 , label: 'Website', img:'/img/product/website.jpg' },
+    { id: 2 , label: 'Logo', img:'/img/product/logo.jpg' },
+    { id: 3 , label: 'Themes', img:'/img/product/theme.jpg' },
+    { id: 4 , label: 'Plugins', img:'/img/product/plugins.jpg' },
+    { id: 5 , label: 'Pdf', img:'/img/product/pdf.png' },
+    { id: 6 , label: 'Courses' , img:'/img/product/courses.jpg'},
+    { id: 7 , label: 'Designs' , img:'/img/product/designs.png'},
+    { id: 8 , label: 'Ebook', img:'/img/product/ebooks.jpg' }
   ]
   
     // useEffect(() => {
@@ -60,9 +60,9 @@ const userData = [
 </div> */}
 <div className='col-lg-12 col-sm-12 col-12 p-3 cursor-pointer'>
     {/* <NavLink to={`/description/${item.id}`}> */}
-    {/* <NavLink to={`/Author/${item.id}`}>  */}
+    <NavLink to={`/productdetail/${item.id}`}> 
 <span className='text-blue'> View the packages </span>
-{/* </NavLink> */}
+</NavLink>
 </div>
 </div>         
 </div>

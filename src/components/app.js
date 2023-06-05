@@ -8,7 +8,7 @@ import Explore from './pages/explore';
 import Explore2 from './pages/explore2';
 import ExploreOpensea from './pages/Opensea/explore';
 // import Rangking from './pages/rangking';
-import RankingRedux from './pages/RankingRedux';
+
 import Auction from './pages/Auction';
 import Helpcenter from './pages/helpcenter';
 import Colection from './pages/colection';
@@ -18,7 +18,6 @@ import Author from './pages/Author';
 import AuthorOpensea from './pages/Opensea/author';
 import Wallet from './pages/wallet';
 import Login from './pages/login';
-import LoginTwo from './pages/loginTwo';
 import Register from './pages/register';
 import Price from './pages/price';
 import News from './pages/news';
@@ -34,7 +33,6 @@ import EtlineIcons from './pages/etlineIcons';
 import FontAwesomeIcons from './pages/fontAwesomeIcons';
 
 import Alerts from './pages/alerts';
-import Progressbar from './pages/progressbar';
 
 import Minter from './pages/Minter';
 import auth from '../core/auth';
@@ -57,9 +55,9 @@ import Blockchain from './pages/Blockchain';
 import Digitalproduct from './pages/Digitalproduct';
 import Taxtracking from './pages/Taxtracking';
 import Connectivity from './pages/Connectivity';
-import ProductList from './pages/trial';
 import ProductDescription from './pages/productsdetal';
 import Servicedetail from './pages/servicedetail';
+import Productdetail from './pages/Productdetail';
 
 
 const GlobalStyles = createGlobalStyle`
@@ -108,7 +106,6 @@ const app= () => (
       <Route element={<Explore/>} path="/explore" />
       <Route element={<Explore2/>} path="/explore2" />
       <Route element={<ExploreOpensea/>} path="/exploreOpensea" />
-      <Route element={<RankingRedux/>} path="/rangking" />
       <Route element={<Auction/>} path="/Auction" />
       <Route element={<Helpcenter/>} path="/helpcenter" />
       <Route element={<Colection/>} path="/colection/:collectionId" />
@@ -120,7 +117,6 @@ const app= () => (
       <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
       <Route element={<Wallet />} path="/wallet" />
       <Route element={<Login />} path="/login" />
-      <Route element={<LoginTwo />} path="/loginTwo" />
       <Route element={<Register />} path="/register" />
       <Route element={<Price />} path="/price" />
       <Route element={<News />} path="/news" />
@@ -135,7 +131,6 @@ const app= () => (
       <Route element={<EtlineIcons />} path="/etlineIcons" />
       <Route element={<FontAwesomeIcons />} path="/fontAwesomeIcons" />
       <Route element={<Alerts />} path="/alerts" />
-      <Route element={<Progressbar />} path="/progressbar" />
       <Route element={<Minter />} path="/mint" />
       <Route element={<Marketplace />} path="/marketplace" />
       <Route element={<Product />} path="/products" />
@@ -153,9 +148,8 @@ const app= () => (
       <Route element={<Digitalproduct />} path="/digital-products" />
       <Route element={<Taxtracking />} path="/tax-tracking" />
       <Route element={<Connectivity />} path="/connectivity" />
-      <Route element={<ProductList />} path="/trial" />
       <Route element={<ProductDescription />} path="/productsdetails/:username" />
-
+      <Route element={<Productdetail />} path="/productdetail/:id" />
       <Route element={<Description />} path="/description/:id" />
       
     </Routes>
