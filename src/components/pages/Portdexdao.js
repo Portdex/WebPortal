@@ -105,8 +105,7 @@ const Portdexdao= () => (
                      
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
                         <p className="">
-                        Portdex Decentralised Autonomous Organization (DAO) will empower the freelancer’s community to decide on product and services marketplace features, development, and future roadmap. Portdex aims to distribute 40% of the token to the freelance community over four years. Any freelancer holding the Portdex token will be a member of the community. 
-Benefits of the community-driven model: 
+                        Portdex Decentralised Autonomous Organization (DAO) will empower the freelancer’s community to decide on product and services marketplace features, development, and future roadmap.
 <ul>
   <li>
   Decentralised governance, User empowerment, future direction
@@ -138,6 +137,7 @@ Instead of paying high commission third-party Centralised marketplaces, Freelanc
         </div>
         </div>
       </section> 
+
       <section className='custom-accord bg-gray pb-5 pt-0'>
 <div className='container bg-gray'>
       <Accordion defaultActiveKey="0">
@@ -163,7 +163,7 @@ Instead of paying high commission third-party Centralised marketplaces, Freelanc
           <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              Governance & Utility Token
+              Platform Governance
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="1">
@@ -195,8 +195,199 @@ Instead of paying high commission third-party Centralised marketplaces, Freelanc
         </Accordion>
         </div>
         </section>
+  <section className=''>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <div className='d-rtl'>
+            <img src='/img/market/token.png'/>
+            </div>
+          </div>
+          <div className='col-lg-6 p-4'>
+            <h1>
+             Portdex will empower Freelancers
+            </h1>
+            {/* <h6>
+            Portdex will offer SMEs Super DApp and P2P marketplace
+            </h6> */}
+            <div className='row'>
+              <div className='col-lg-6'>
+                <div className=' token-boxes'>
+              <img src='/img/market/govern.png'/>
+                <h2>
+                  Governance
+                </h2>
+                <p>
+                Enable users to govern the platform
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-6'>
+                <div className=' token-boxes'>
+              <img src='/img/market/reward.png'/>
+                <h2>
+                Rewards
+                </h2>
+                <p>
+                Post-to-Earn  
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-6'>
+                <div className=' token-boxes min-height-box'>
+              <img src='/img/market/paymentmethod.png'/>
+                <h2>
+                Payment Method
+                </h2>
+                <p>
+                De - Facto method for platform services 
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-6'>
+                <div className=' token-boxes min-height-box'>
+              <img src='/img/market/license.png'/>
+                <h2>
+                license
+                </h2>
+                <p>
+                Will act as license key to access the eco-system and services execution  
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      
+        </div>
+      </section>
+      <section className='container-fluid' style={{backgroundImage: 'url("/img/market/background.png")', backgroundRepeat:'no-repeat'}}>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className='text-center'>
+              <h2 className="text-light">Freelancers All in One Dashboard </h2>
+              <div className="small-border"></div>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+        <div className='row'>
+            <div className="col-lg-4 col-md-6 mb-3">
+                <div className="feature-box max-height f-boxed style-3 bg-light">
+                  <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
+                  <img
+                    src="/img/market/clients.png"
+                    className="mx-auto img-fluid d-block mb-3"
+                    alt="#"
+                  />
+                  </Reveal>
+                    <div className="text">
+                      <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
+                        <h4 className="text-dark">Manage Product and Services</h4>
+                      </Reveal>
+                      <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
+                        <p className="text-dark"> Manage All transactions related to your digital product, services and clients.</p>
+                      </Reveal>
+                    </div>
+                    <i className="wm icon_wallet"></i>
+                </div>
+            </div>
+
+          <div className="col-lg-4 col-md-6 mb-3">
+              <div className="feature-box max-height f-boxed style-3 bg-light">
+                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
+                <img
+                    src="/img/market/transaction.png"
+                    className="mx-auto img-fluid d-block mb-3"
+                    alt="#"
+                  />
+                </Reveal>
+                  <div className="text">
+                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
+                      <h4 className="text-dark">Manage Multi-currency Transactions</h4>
+                    </Reveal>
+                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
+                      <p className="text-dark">Manage All your currency transactions including tax records of digital currency.</p>
+                    </Reveal>
+                  </div>
+                  <i className="wm icon_cloud-upload_alt"></i>
+              </div>
+          </div>
+
+          <div className="col-lg-4 col-md-6 mb-3">
+              <div className="feature-box max-height f-boxed style-3 bg-light">
+                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
+                <img
+                    src="/img/market/managepayment.png"
+                    className="mx-auto img-fluid d-block mb-3"
+                    alt="#"
+                  />
+                </Reveal>
+                  <div className="text">
+                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
+                      <h4 className="text-dark">Manage Nodes</h4>
+                    </Reveal>
+                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
+                      <p className="text-dark">Act as a node to secure the network and manage it from dashboard and earn rewards.</p>
+                    </Reveal>
+                  </div>
+                  <i className="wm icon_tags_alt"></i>
+              </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <section className=''>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <div className='d-rtl p-5'>
+            <img src='/img/market/dapp.png'/>
+            </div>
+          </div>
+          <div className='col-lg-6 p-4'>
+            <h1>
+          ALL IN ONE FREELANCERS - SUPER DAPP
+            </h1>
+           
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                Digital Marketplace
+                </h2>
+                <p>
+                Blockchain based marketplace, digital product listing, sale, management, and payment processing.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+             
+                <h2>
+                In-person Payments
+                </h2>
+                <p>
+                Freelancers will be able to claim the rewards as part of the governing council of the platform.
+ 30% of the Platform profit will be shared with freelancers.
+                </p>
+                </div>
+              </div>
+              <div className='col-lg-12'>
+                <div className=' token-boxes'>
+              
+                <h2>
+                Instant Account settlement
+                </h2>
+                <p>
+                Freelancers will have instant account settlement with minimum transaction costs.
+                </p>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+
+        </div>
+      </section>
 
     <Footer />
 

@@ -35,7 +35,7 @@ const Slidermain= () => {
             </Reveal>
               <div className="spacer-single"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-              <h3 className="mb-2"><span className="text-uppercase color">Decentralised Freelancers Digital product and services Marketplace </span></h3>
+              <h3 className="mb-2"><span className="text-uppercase color">Decentralised Freelancers Digital product and services Marketplace (Coming Soon)</span></h3>
               </Reveal>
               <div className="spacer-10"></div>
               {/* <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={600} triggerOnce>
@@ -48,14 +48,16 @@ const Slidermain= () => {
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={800} duration={900} triggerOnce>
-              <a href='https://business.portdex.ai/web/user_signup' className="btn-main lead" target="_blank">Join our Freelance Community</a>
+              <a href='https://business.portdex.ai/web/user_signup' className="btn-main lead" target="_blank">Join our beta Freelance Community</a>
               <div className="mb-sm-30"></div>
               </Reveal>
           </div>
           <div className="col-md-6 xs-hide">
             <Reveal className='onStep' keyframes={fadeIn} delay={900} duration={1500} triggerOnce>
               <img src="./img/banner.png" className="lazy img-fluid" alt=""/>
-              <h3 className="text-end color pt-3 animated-heading ">Sell Digital Product & Services Directly to Buyers.</h3>
+              <h3 className="text-end color pt-3 animated-heading ">Sell Digital Product & Services Directly to Buyers. <br/>
+             <p className='text-center'> (Coming Soon) </p> 
+              </h3>
             </Reveal>
           </div>
       </div>
