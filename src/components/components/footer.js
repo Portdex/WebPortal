@@ -37,7 +37,7 @@ const footer= () => (
                             <ul>
                                 <li><Link to="/marketplace">Freelancers Governed – Web 3.0 Marketplace</Link></li>
                                 <li><Link to="/videos">Portdex Videos</Link></li>
-                                <li><Link to="/tokenEconomy">Token Economics</Link></li>
+                                {/* <li><Link to="/tokenEconomy">Token Economics</Link></li> */}
                                 <li><Link to="/services">Service Marketplace</Link></li>
                                 <li><Link to="/products">Product Marketplace</Link></li>
                                 {/* <li><Link to="/community">Community</Link></li> */}
