@@ -374,19 +374,62 @@ return (
         </div>
         <div className="col-lg-8 p-5">
           <h3>
-            Descrition
+            Description
           </h3>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non neque risus. Ut tellus mauris, maximus sit amet interdum vel, tincidunt ut mi. Sed semper magna et ex placerat, sed molestie dolor porta. Duis viverra molestie urna, eget laoreet eros ullamcorper ac. Donec non nunc volutpat, facilisis elit vel, vestibulum nulla. Praesent sit amet turpis quis ipsum malesuada ultricies. Quisque eu tortor sit amet dolor pellentesque congue. Maecenas elit lectus, congue ac odio ac, interdum ultrices nulla. Aliquam erat volutpat. Nam lorem nunc, volutpat sed massa id, tincidunt placerat urna. Mauris vitae sapien vel eros efficitur pulvinar sit amet ac ligula. Sed a faucibus metus, non placerat elit. Aenean ac imperdiet purus. Ut pharetra lectus lorem, eu dapibus nulla ultrices quis. Nam vitae finibus purus. Vestibulum in turpis nec lorem elementum consequat ut vitae ante.
+          <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
 
 Etiam et erat ac ligula accumsan blandit. Nam arcu ante, porta a luctus sit amet, aliquet ut ante. Quisque mattis est id bibendum facilisis. Nunc et massa bibendum, tristique justo eget, egestas erat. Proin sagittis sed ipsum ac maximus. Vestibulum facilisis mollis ultricies. Curabitur suscipit sem vitae leo tristique, sed pulvinar ipsum iaculis.
 
 Cras laoreet interdum erat. Nulla lobortis, lectus et malesuada molestie, ipsum quam accumsan nisl, ut sollicitudin lacus justo in erat. Nunc posuere quis sapien nec ornare. Donec at nisl nisi. Vivamus porttitor eu ex eu molestie. Cras mollis, turpis eget aliquam dignissim, urna nunc dignissim enim, eget congue velit enim id nunc. Nullam enim orci, fermentum non eleifend et, porttitor in orci. Praesent tincidunt, nisl a efficitur pretium, dolor enim egestas lectus, id vestibulum tortor nibh ac nisi. Cras maximus finibus turpis, sit amet viverra nibh pellentesque eu.
+<ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
 
 Pellentesque scelerisque, mauris eu ultricies varius, lorem massa cursus massa, non condimentum nulla ipsum a libero. Aliquam in metus efficitur, cursus turpis eget, rutrum sapien. Nam tincidunt sem sit amet fringilla ultricies. Sed in varius est, eu laoreet dolor. Pellentesque ut laoreet mi, sed vestibulum elit. Phasellus ut ligula in lectus ultricies fermentum vitae quis eros. Curabitur laoreet turpis a diam convallis viverra a pharetra metus.
 
 Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, pretium facilisis urna. Nulla vulputate mi dapibus, dignissim tortor sit amet, molestie magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Fusce scelerisque tortor at magna convallis, ut tincidunt magna mollis. Cras viverra tempus sem et ultricies. Duis id egestas mauris. Ut eget maximus risus. Aenean eget dapibus nisl, et mollis nunc. Vivamus scelerisque erat a risus porta, at aliquam felis condimentum. Curabitur non tempor sem, ut consequat arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+         <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
           </p>
+          
         </div>
     </div>
 </section>
