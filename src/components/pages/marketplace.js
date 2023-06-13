@@ -1,10 +1,5 @@
-import React from 'react';
-import Particle from '../components/Particle';
+import React , {useEffect} from 'react';
 import SliderMainParticle from '../components/SliderMainParticle';
-import FeatureBox from '../components/FeatureBox';
-import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
-import ColumnNewRedux from '../components/ColumnNewRedux';
-import AuthorListRedux from '../components/AuthorListRedux';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import Reveal from 'react-awesome-reveal';
@@ -57,7 +52,11 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Marketplace= () => (
+const Marketplace= () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  return(
   <div>
   <GlobalStyles />
       <section className="jumbotron no-bg" style={{backgroundImage: `url(${'./img/background/2.jpg'})`}}>
@@ -65,83 +64,8 @@ const Marketplace= () => (
          <SliderMainParticle/>
       </section>
 
-      {/* <section className='container-fluid bg-gray'>
-        <div className='row'>
-          <div className='col-lg-12'>
-            <div className='text-center'>
-              <h2>DECENTRALIZED DIGITAL MARKETPLACE</h2>
-              <div className="small-border"></div>
-            </div>
-          </div>
-        </div>
-        <div className='container'>
-        <div className='row'>
-            <div className="col-lg-4 col-md-6 mb-3">
-                <div className="feature-box max-height f-boxed style-3">
-                  <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                  <img
-                    src="/img/market/store.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                  </Reveal>
-                    <div className="text">
-                      <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="">Decentralized Digital Store</h4>
-                      </Reveal>
-                      <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="">Users will be able to own and govern digital product store</p>
-                      </Reveal>
-                    </div>
-                    <i className="wm icon_wallet"></i>
-                </div>
-            </div>
-
-          <div className="col-lg-4 col-md-6 mb-3">
-              <div className="feature-box max-height f-boxed style-3">
-                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                <img
-                    src="/img/market/blockchain.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                </Reveal>
-                  <div className="text">
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Blockchain & Smart Contracts</h4>
-                    </Reveal>
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Blockchain & Smart contracts based marketplace for freelancers and small service providers</p>
-                    </Reveal>
-                  </div>
-                  <i className="wm icon_cloud-upload_alt"></i>
-              </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 mb-3">
-              <div className="feature-box max-height f-boxed style-3">
-                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                <img
-                    src="/img/market/payment.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                </Reveal>
-                  <div className="text">
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Multicurrency Payments</h4>
-                    </Reveal>
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Integrated with multicurrency payments</p>
-                    </Reveal>
-                  </div>
-                  <i className="wm icon_tags_alt"></i>
-              </div>
-          </div>
-        </div>
-        </div>
-      </section> */}
-      <section className='pb-0'>
+      
+      <section className='pb-0 padding-top-more'>
       <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -171,9 +95,9 @@ const Marketplace= () => (
         </div>
         
         </div>
-        <div className='row mt-5 d-flex align-items-center'>
+        <div className='row d-flex align-items-center margin-top-zero'>
         
-        <div className='col-lg-6 p-5'>
+        <div className='col-lg-6 p-5 padding-top-zero'>
         <p>
         Portdex decentralised marketplace will enable digital product sellers to sell digital products such as subscriptions, memberships, logos, themes, websites, plugins, code,  libraries, algorithms, and services packages directly to buyers integrated with real-time communication.   They can earn real-value rewards through tokens for their sales and contribution to the platform. Smart contracts will give sellers more control over their digital products, content, pricing, and terms.
         <br/> <br/>
@@ -190,11 +114,11 @@ const Marketplace= () => (
         </div>
         <div className='row d-flex align-items-center'>
           <div className='col-lg-6'>
-            <div className='d-rtl'>
+            <div className='d-rtl image-display-none'>
             <img src='/img/market/token.png' className='custom-height'/>
             </div>
           </div>
-          <div className='col-lg-6 pt-5'>
+          <div className='col-lg-6 pt-5 p-5'>
             <p>
             Portdex will enable users to transact using various currencies, including digital money, cryptocurrencies, and stable currency. Overall, Portdex offers a more efficient, secure, and cost-effective way for service providers, freelancers, and digital product sellers to reach buyers directly and transact in a peer-to-peer fashion. 
 <br/><br/>
@@ -261,82 +185,7 @@ Portdex decentralised digital product and services marketplaces will not be cont
 
         </div>
       </section>
-      {/* <section className='container-fluid' style={{backgroundImage: 'url("/img/market/background.png")', backgroundRepeat:'no-repeat'}}>
-        <div className='row'>
-          <div className='col-lg-12'>
-            <div className='text-center'>
-              <h2 className="text-light">FREELANCERS ALL IN ONE - SUPER APP TO MANAGE PAYMENTS & TRANSACTIONS</h2>
-              <div className="small-border"></div>
-            </div>
-          </div>
-        </div>
-        <div className='container'>
-        <div className='row'>
-            <div className="col-lg-4 col-md-6 mb-3">
-                <div className="feature-box max-height f-boxed style-3 bg-light">
-                  <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                  <img
-                    src="/img/market/clients.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                  </Reveal>
-                    <div className="text">
-                      <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="text-dark">Manage Clients</h4>
-                      </Reveal>
-                      <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="text-dark">Portdex will enable freelancers to manage all their clients from one place.</p>
-                      </Reveal>
-                    </div>
-                    <i className="wm icon_wallet"></i>
-                </div>
-            </div>
-
-          <div className="col-lg-4 col-md-6 mb-3">
-              <div className="feature-box max-height f-boxed style-3 bg-light">
-                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                <img
-                    src="/img/market/transaction.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                </Reveal>
-                  <div className="text">
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">Manage Transactions</h4>
-                    </Reveal>
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">Freelancers will be able to manage all transactions from one place.</p>
-                    </Reveal>
-                  </div>
-                  <i className="wm icon_cloud-upload_alt"></i>
-              </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 mb-3">
-              <div className="feature-box max-height f-boxed style-3 bg-light">
-                <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                <img
-                    src="/img/market/managepayment.png"
-                    className="mx-auto img-fluid d-block mb-3"
-                    alt="#"
-                  />
-                </Reveal>
-                  <div className="text">
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="text-dark">Manage Payments</h4>
-                    </Reveal>
-                    <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="text-dark">Freelancers will be able to manage multicurrency payments through wallet.</p>
-                    </Reveal>
-                  </div>
-                  <i className="wm icon_tags_alt"></i>
-              </div>
-          </div>
-        </div>
-        </div>
-      </section> */}
+      
 
       <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
         <div className='row opacity'>
@@ -359,4 +208,5 @@ Portdex decentralised digital product and services marketplaces will not be cont
 
   </div>
 );
+  };
 export default Marketplace;

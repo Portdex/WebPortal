@@ -1,15 +1,7 @@
-import React from 'react';
-import Particle from '../components/Particle';
-import SliderMainParticle from '../components/SliderMainParticle';
-import FeatureBox from '../components/FeatureBox';
-import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
-import ColumnNewRedux from '../components/ColumnNewRedux';
-import AuthorListRedux from '../components/AuthorListRedux';
+import React, {useEffect} from 'react';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
-import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
-import Catgor from '../components/Catgor';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -57,7 +49,11 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Connectivity= () => (
+const Connectivity= () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  return(
   <div>
   <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -71,7 +67,7 @@ const Connectivity= () => (
       </div>
     </div>
   </section>
-      <section className='container pb-0'>
+      <section className='container pb-0 padding-top-more'>
         <div className='row'>
             <h2 className='text-center'>
                 Real Time Connectivity
@@ -112,9 +108,9 @@ const Connectivity= () => (
         </div>
         
         </div>
-        <div className='row mt-5 d-flex align-items-center'>
+        <div className='row mt-5 margin-top-zero d-flex align-items-center'>
         
-        <div className='col-lg-6 pt-5'>
+        <div className='col-lg-6 padding-top-zero'>
             <h4>
             DeFi Connectivity 
             </h4>
@@ -141,4 +137,5 @@ Portdex will connect freelancers to peer to peer financial system that leverage 
 
   </div>
 );
+};
 export default Connectivity;

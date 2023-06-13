@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Particle from '../components/Particle';
 import SliderMainParticle from '../components/SliderMainParticle';
 import FeatureBox from '../components/FeatureBox';
@@ -70,7 +70,11 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Blockchain= () => (
+const Blockchain= () =>{
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  return(
   <div>
   <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -84,7 +88,7 @@ const Blockchain= () => (
       </div>
     </div>
   </section>
-      <section className='container-fluid bg-gray'>
+      <section className='container-fluid bg-gray padding-top-more'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -164,4 +168,5 @@ Security: Transactional level security using zero-knowledge proof to preserve fi
 
   </div>
 );
+ };
 export default Blockchain;

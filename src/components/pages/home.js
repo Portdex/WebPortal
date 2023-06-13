@@ -32,7 +32,7 @@ const Home= () => {
         <FeatureBox/>
       </section>
 
-      <section className='container no-bottom'>
+      <section className='container no-bottom padding-top-more'>
       <h4 className='text-center purple'>
         Portdex aim is to Eliminate Centralised third-party Platforms
        </h4>
@@ -42,36 +42,11 @@ const Home= () => {
        <FeatureBox2/>
       </section>
 
-      {/* <section className='container no-bottom image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
-        <div className='row opacity'>
-          <div className='col-lg-12'>
-            <div className='text-center'>
-              <h2>Marketplace</h2>
-              <div className="small-border"></div>
-            </div>
-          </div>
-          <div className='col-lg-12'>
-            <CarouselNewRedux/>
-          </div>
-        </div>
-      </section> */}
-      {/* <section className='container image-center' style={{backgroundImage:" url('/img/product/comingsoon.jpg')"}}>
-        <div className='row opacity'>
-          <div className='col-lg-12'>
-            <div className='text-center'>
-              <h2>Browse by category</h2>
-              <div className="small-border"></div>
-            </div>
-          </div>
-        
-        
-        <Catgor/>
-        </div>
-      </section> */}
-       <section className='pb-0'>
+     
+       <section className='container pb-0'>
         <div className='row'>
           <div className='col-lg-6'>
-            <div className='d-rtl p-5'>
+            <div className='d-rtl p-5 image-display-none'>
             <img src='/img/market/dapp.png'/>
             </div>
           </div>

@@ -1,17 +1,9 @@
-import React from 'react';
-import Particle from '../components/Particle';
-import SliderMainParticle from '../components/SliderMainParticle';
-import FeatureBox from '../components/FeatureBox';
-import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
-import ColumnNewRedux from '../components/ColumnNewRedux';
-import AuthorListRedux from '../components/AuthorListRedux';
+import React, {useEffect} from 'react';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
-import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -70,7 +62,11 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Taxtracking= () => (
+const Taxtracking= () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  return(
   <div>
   <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -137,4 +133,5 @@ Conversion Transaction Record: Interoperability between legacy system & differen
 
   </div>
 );
+  };
 export default Taxtracking;

@@ -1,10 +1,4 @@
-import React from 'react';
-import Particle from '../components/Particle';
-import SliderMainParticle from '../components/SliderMainParticle';
-import FeatureBox from '../components/FeatureBox';
-import CarouselCollectionRedux from '../components/CarouselCollectionRedux';
-import ColumnNewRedux from '../components/ColumnNewRedux';
-import AuthorListRedux from '../components/AuthorListRedux';
+import React, { useEffect } from 'react';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import Reveal from 'react-awesome-reveal';
@@ -70,7 +64,11 @@ const fadeInUp = keyframes`
   }
 `;
 
-const Portdexdao= () => (
+const Portdexdao= () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  return(
   <div>
   <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
@@ -78,17 +76,17 @@ const Portdexdao= () => (
       <div className='container'>
         <div className='row m-10-hor'>
           <div className='col-12'>
-            <h1 className='text-center'>Portdex DAO</h1>
+            <h1 className='text-center'>Portdex Governance</h1>
           </div>
         </div>
       </div>
     </div>
   </section>
-      <section className='container-fluid bg-gray'>
+      <section className='container-fluid bg-gray padding-top-more'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2>Portdex DAO</h2>
+              <h2>Portdex GOVERNANCE</h2>
               <div className="small-border"></div>
               <p className='text-center'>
               </p>
@@ -260,7 +258,7 @@ Instead of paying high commission third-party Centralised marketplaces, Freelanc
         </div>
       </section>
       <section className='container-fluid' style={{backgroundImage: 'url("/img/market/background.png")', backgroundRepeat:'no-repeat'}}>
-        <div className='row'>
+        <div className='row padding-top-more'>
           <div className='col-lg-12'>
             <div className='text-center'>
               <h2 className="text-light">Freelancers All in One Dashboard </h2>
@@ -393,4 +391,5 @@ Instead of paying high commission third-party Centralised marketplaces, Freelanc
 
   </div>
 );
+          };
 export default Portdexdao;
