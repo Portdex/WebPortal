@@ -16,14 +16,14 @@ const ProductBox = () => {
 //     const [userData, setUserData] = useState([])
 // console.log(userData)
 const userData = [
-    { id: 1 , label: 'Website', img:'/img/product/website.jpg' },
-    { id: 2 , label: 'Logo', img:'/img/product/logo.jpg' },
-    { id: 3 , label: 'Themes', img:'/img/product/theme.jpg' },
-    { id: 4 , label: 'Plugins', img:'/img/product/plugins.jpg' },
-    { id: 5 , label: 'Pdf', img:'/img/product/pdf.png' },
-    { id: 6 , label: 'Courses' , img:'/img/product/courses.jpg'},
-    { id: 7 , label: 'Designs' , img:'/img/product/designs.png'},
-    { id: 8 , label: 'Ebook', img:'/img/product/ebooks.jpg' }
+    { id: 1 , label: 'Ultimate-Responsive Website', img:'/img/product/website.jpg' },
+    { id: 2 , label: 'Logo-Responsive Template', img:'/img/product/logo.jpg' },
+    { id: 3 , label: 'Themes-Wordpress Templates', img:'/img/product/theme.jpg' },
+    { id: 4 , label: 'Wordpress Plugin Development', img:'/img/product/plugins.jpg' },
+    { id: 5 , label: 'Pdf Reader', img:'/img/product/pdf.png' },
+    { id: 6 , label: 'Course Builder-Online Courses' , img:'/img/product/courses.jpg'},
+    { id: 7 , label: 'Web Design Agency' , img:'/img/product/designs.png'},
+    { id: 8 , label: 'Responsive Ebook Landing Page ', img:'/img/product/ebooks.jpg' }
   ]
   
     // useEffect(() => {

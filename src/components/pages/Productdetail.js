@@ -42,14 +42,14 @@ const Productdetail = () => {
 
   const [product, setProduct]=useState(null)
   const userData = [
-    { id: 1 , label: 'Website', img:'/img/product/website.jpg' },
-    { id: 2 , label: 'Logo', img:'/img/product/logo.jpg' },
-    { id: 3 , label: 'Themes', img:'/img/product/theme.jpg' },
-    { id: 4 , label: 'Plugins', img:'/img/product/plugins.jpg' },
-    { id: 5 , label: 'Pdf', img:'/img/product/pdf.png' },
-    { id: 6 , label: 'Courses' , img:'/img/product/courses.jpg'},
-    { id: 7 , label: 'Designs' , img:'/img/product/designs.png'},
-    { id: 8 , label: 'Ebook', img:'/img/product/ebooks.jpg' }
+    { id: 1 , label: 'Ultimate-Responsive Website', img:'/img/product/website.jpg' },
+    { id: 2 , label: 'Logo-Responsive Template', img:'/img/product/logo.jpg' },
+    { id: 3 , label: 'Themes-Wordpress Templates', img:'/img/product/theme.jpg' },
+    { id: 4 , label: 'Wordpress Plugin Development', img:'/img/product/plugins.jpg' },
+    { id: 5 , label: 'Pdf Reader', img:'/img/product/pdf.png' },
+    { id: 6 , label: 'Course Builder-Online Courses' , img:'/img/product/courses.jpg'},
+    { id: 7 , label: 'Web Design Agency' , img:'/img/product/designs.png'},
+    { id: 8 , label: 'Responsive Ebook Landing Page ', img:'/img/product/ebooks.jpg' }
   ]
    useEffect(() => {
     window.scrollTo(0, 0);
@@ -57,32 +57,32 @@ const Productdetail = () => {
             setProduct(productData)
          console.log(productData)
         
-         const handleScroll = () => {
-          const section = document.querySelector('section');
-          const packageBox = document.querySelector('.product-package-box');
+        //  const handleScroll = () => {
+        //   const section = document.querySelector('section');
+        //   const packageBox = document.querySelector('.product-package-box');
     
-          if (!section || !packageBox) {
-            return;
-          }
+        //   if (!section || !packageBox) {
+        //     return;
+        //   }
     
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          const sectionBottom = sectionTop + sectionHeight;
-          const packageBoxHeight = packageBox.offsetHeight;
-          const windowTop = window.pageYOffset || document.documentElement.scrollTop;
-          const screenWidth = window.innerWidth;
+        //   const sectionTop = section.offsetTop;
+        //   const sectionHeight = section.offsetHeight;
+        //   const sectionBottom = sectionTop + sectionHeight;
+        //   const packageBoxHeight = packageBox.offsetHeight;
+        //   const windowTop = window.pageYOffset || document.documentElement.scrollTop;
+        //   const screenWidth = window.innerWidth;
     
-          const isFixed = windowTop >= sectionTop && windowTop + packageBoxHeight <= sectionBottom && screenWidth > 991;
-          setIsFixed(isFixed);
-        };
+        //   const isFixed = windowTop >= sectionTop && windowTop + packageBoxHeight <= sectionBottom && screenWidth > 991;
+        //   setIsFixed(isFixed);
+        // };
     
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
+        // window.addEventListener('scroll', handleScroll);
+        // window.addEventListener('resize', handleScroll);
     
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-          window.removeEventListener('resize', handleScroll);
-        };
+        // return () => {
+        //   window.removeEventListener('scroll', handleScroll);
+        //   window.removeEventListener('resize', handleScroll);
+        // };
        
         }, []);
   const [loading , setLoading]= useState(false)
@@ -144,20 +144,34 @@ return (
     <div className="row">
         <div className="col-lg-12">
         {product && (
-           <h2 className="m-5 mb-0">
+          <div className="label-div">
+  <h2 className="m-5 mb-0">
            {product.label}
        </h2>
+       <p class="mx-5 mb-0">
+        By <span class="text-primary"> ABC </span>
+       </p>
+          </div>
+         
       )}
             
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-7 ">
+          <div className="row ">
+            <div className="col-lg-12 d-flex justify-content-center">
+
+            
         {product && (
-            <div className="product-img-box">
+         
+          <div className="product-img-box">
           <img  className="product-img" src={product.img} alt={product.label} />
           </div>
+         
+           
       )}
         </div>
-        <div className="col-lg-4">
+          
+        {/* <div className="col-lg-4">
         {product && (
           <div>
              <section className="no-top no-bottom"></section>
@@ -308,7 +322,7 @@ return (
        {openMenu2 && ( 
         <div id='zero3' className='onStep fadeIn'>
          {/* <ColumnNewRedux shuffle showLoadMore={false}/>  */}
-     <div className="row">
+     {/* <div className="row">
       
       <div className="col-lg-12 p-3">
         <div className="package-box">
@@ -371,8 +385,10 @@ return (
           </div>
           </div>
       )}
-        </div>
-        <div className="col-lg-8 p-5">
+        </div> */}
+        <div className="col-lg-12 d-flex justify-content-center">
+
+        <div className="w-75">
           <h3>
             Description
           </h3>
@@ -431,6 +447,137 @@ Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, preti
           </p>
           
         </div>
+        </div>
+    </div>
+    </div>
+    <div className="col-lg-5 px-4">
+      <div className="pricing-div w-75">
+          <h3 class="border-bottom pb-3">
+            Regular License <span className="shift-right">
+              $17
+            </span>
+          </h3>
+          <ul className="list-checks">
+            <li>
+              Quality Checked
+            </li>
+            <li>
+              Future Updates
+            </li>
+
+          </ul>
+          <button> Add to Cart </button>
+          <p className=" font-size-small text-center">
+          Price is in US dollars and excludes tax
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <p className="mb-0">
+          Elite Author
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                  Last Updated
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                25 feb 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul className="fw-bold">
+                <li>
+                Published
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                15 march 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                High Resolution
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Yes
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Documentation
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Well documented
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Layout
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Responsive
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Tags
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                ajax contact form, business portfolio, clean, corporate website, creative portfolio, crisp, elegant, html, icons, minimal, minimalist design, modern, professional, responsive, style switcher
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+
+      </div>
+    </div>
+    
     </div>
 </section>
 
