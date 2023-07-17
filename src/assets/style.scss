@@ -3244,6 +3244,12 @@ i.font60 {
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
 }
+.ui-icon i 
+{
+  margin-left:-25px !important;
+  height:37px;
+  position:relative !important;
+}
 .d_coll .profile_avatar i {
   margin-top: -30px;
 }
@@ -5893,8 +5899,17 @@ color:#8364E2
 }
 @media (max-width: 768px) {
   .icon i {
-    margin: -40px 0 0 110px;
-  }    
+    margin: -40px 0 0 110px !important;
+  }   
+  .ui-icon i{
+    width:42px;
+  } 
+}
+@media (max-width: 895px) {
+  .responsive-space
+  {
+    padding-top:100px !important
+  }
 }
 @media (max-width: 1199px) {
   .responsive-bottom {
@@ -6014,9 +6029,12 @@ color:#8364E2
     width:100%;
     border:none
   }
-  .label-div
+  .grid-container
   {
-    padding-left:100px;
+    max-width: 1128px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
  .pricing-div li
  {
@@ -6029,6 +6047,19 @@ color:#8364E2
  .shift-right
  {
   float:right
+ }
+ .product-detail-tabs div
+ {
+  list-style-type: none;
+  display: inline-block;
+  padding:10px;
+  padding-bottom: 0px;
+ }
+ .product-detail-tabs li
+ {
+  
+  padding:10px;
+  padding-bottom: 0px;
  }
   @media (max-width: 991px) {
     .image-display-none
@@ -6051,5 +6082,216 @@ color:#8364E2
     {
       margin-top:20px !important;
     }
+    .label-div h2
+    {
+      font-size:18px
+    }
   }
- 
+  .h-full
+  {
+    height:100vh
+  }
+  .color-purple
+  {
+    color:#8364e2
+  }
+  .w-full
+  {
+    width:100%
+  }
+  .bottom-tabs
+  {
+    position:fixed;
+    bottom:0;
+    height: 145px;
+    overflow-y: scroll;
+    margin-bottom:20px;
+
+  }
+  .bottom-tabs::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+  }
+  .bottom-tabs::-webkit-scrollbar-thumb {
+    background-color: white; /* Set the color of the thumb */
+  }
+  
+  .bottom-tabs::-webkit-scrollbar-track {
+    background-color: gray; /* Set the color of the track */
+  }
+  .bottom-tabs a:hover
+  {
+    color:white
+  }
+  .bottom-tabs ul
+  {
+    list-style-type: none;
+    padding:0px;
+  }
+  .bottom-tabs li
+
+  {
+    border-bottom:1px solid lightgray;
+    width:100%;
+    padding:10px
+  }
+ .gray-boxes
+ {
+  background-color: rgba(131,100,226,.1);
+  // padding:30px;
+  padding-top:30px;
+  padding-bottom: 30px;
+  margin-bottom:10px;
+  margin-top:10px;
+  border-radius:10px;
+  // min-height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+ }
+ .gray-boxes:hover
+ {
+  background-color: #8364e2;
+  color:white;
+  
+ }
+ .gray-boxes p
+ {
+  margin-bottom:0px
+ }
+ .custom-hr
+ {
+  display: block;
+    /* clear: both; */
+    /* border-top: solid 1px #ddd; */
+    margin: 40px 0 40px 0;
+
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+.custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #8364e2;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #8364e2;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.color-gold
+{
+  background-color: goldenrod;
+}
+.blinking-text {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-blink {
+  
+  width: 80%;
+  color: white;
+  animation: blink-animation 2s infinite;
+  text-align: center;
+padding:10px;
+border-radius:20px
+}
+
+@keyframes blink-animation {
+  0% {
+    background-color: #8364e2;
+    color: white;
+  }
+  50% {
+    background-color: white;
+    color: #8364e2;
+  }
+  100% {
+    background-color: #8364e2;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+.responsive-blink
+{
+  padding-top:150px;
+}
+}
+.button-boxes
+{
+  margin-top:16px;
+  margin-bottom:16px
+}
+.view-package-btn
+{
+  padding:10px
+}
+.view-package-btn:hover
+{
+  background-color: white ;
+  color:#8364e2;
+  font-weight:500
+}

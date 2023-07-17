@@ -68,7 +68,7 @@ const Taxtracking= () => {
   }, [])
   return(
   <div>
-  <GlobalStyles />
+  {/* <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
     <div className='mainbreadcumb'>
       <div className='container'>
@@ -79,12 +79,12 @@ const Taxtracking= () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
       <section className='container-fluid bg-gray'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2></h2>
+              <h2>Transaction Level Tax Tracking </h2>
               <div className="small-border"></div>
               <p className='text-center'>
               </p>
@@ -129,7 +129,7 @@ Conversion Transaction Record: Interoperability between legacy system & differen
       </section> 
    
 
-    <Footer />
+    {/* <Footer /> */}
 
   </div>
 );

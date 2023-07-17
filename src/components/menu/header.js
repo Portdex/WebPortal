@@ -261,7 +261,7 @@ const Header = function({ className }) {
                 </Breakpoint>
 
                 <Breakpoint xl className="p-0">
-                  <div className='menu'>
+                  {/* <div className='menu'>
                   <div className='navbar-item'>
                       <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
                        Home
@@ -281,7 +281,7 @@ const Header = function({ className }) {
                       <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
                       Community
                       </NavLink>
-                    </div>
+                    </div> */}
                     {/* <div className='navbar-item'>
                       <div ref={ref2}>
                           <div className="dropdown-custom dropdown-toggle btn" 
@@ -333,7 +333,7 @@ const Header = function({ className }) {
                       </NavLink>
                     </div> */}
                 
-                  </div>
+                  {/* </div> */}
                 </Breakpoint>
               </BreakpointProvider>
 
