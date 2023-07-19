@@ -151,7 +151,7 @@ const Community= () => {
             <div class="row">
         {/* <!-- Column 1--> */}
         { filteredProducts && filteredProducts.map((author) => (
-        <div  key={author.username} class="col-lg-4 p-5 pt-0">
+        <div  key={author.username} class="col-lg-4 col-md-6 p-5 pt-0">
           <div className='community-column text-center'>
          
           <div onClick={() => handleProductClick(author.username)} class="community-card p-3">

@@ -101,7 +101,7 @@ const handleBtnClick = () => {
   document.getElementById("Mainbtn").classList.add("active");
   document.getElementById("Mainbtn1").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
-//   document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick1 = () => {
   setOpenMenu1(!openMenu1);
@@ -111,7 +111,7 @@ const handleBtnClick1 = () => {
   document.getElementById("Mainbtn1").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
   document.getElementById("Mainbtn2").classList.remove("active");
-//   document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
 const handleBtnClick2 = () => {
   setOpenMenu2(!openMenu2);
@@ -121,18 +121,18 @@ const handleBtnClick2 = () => {
   document.getElementById("Mainbtn2").classList.add("active");
   document.getElementById("Mainbtn").classList.remove("active");
   document.getElementById("Mainbtn1").classList.remove("active");
-//   document.getElementById("Mainbtn3").classList.remove("active");
+  document.getElementById("Mainbtn3").classList.remove("active");
 };
-// const handleBtnClick3 = () => {
-//   setOpenMenu3(!openMenu3);
-//   setOpenMenu(false);
-//   setOpenMenu2(false);
-//   setOpenMenu1(false);
-//   document.getElementById("Mainbtn3").classList.add("active");
-//   document.getElementById("Mainbtn").classList.remove("active");
-//   document.getElementById("Mainbtn1").classList.remove("active");
-//   document.getElementById("Mainbtn2").classList.remove("active");
-// };
+const handleBtnClick3 = () => {
+  setOpenMenu3(!openMenu3);
+  setOpenMenu(false);
+  setOpenMenu2(false);
+  setOpenMenu1(false);
+  document.getElementById("Mainbtn3").classList.add("active");
+  document.getElementById("Mainbtn").classList.remove("active");
+  document.getElementById("Mainbtn1").classList.remove("active");
+  document.getElementById("Mainbtn2").classList.remove("active");
+};
 
 return (
  
@@ -141,23 +141,56 @@ return (
 
 
 <section>
-    <div className="row">
+  <div className="bg-light">
+
+  
+    <div className="row grid-container  bg-light">
         <div className="col-lg-12">
         {product && (
-          <div className="label-div">
-  <h2 className="m-5 mb-0">
+          <div className="pt-5">
+  <h2 className=" mb-0">
            {product.label}
        </h2>
-       <p class="mx-5 mb-0">
+       <p class="mb-0">
         By <span class="text-primary"> ABC </span>
        </p>
+       <div className="product-detail-tabs">
+       <div className=" bg-grey">
+       <ul className="de_nav">
+                    <li id='Mainbtn' className="mt-2 mb-2 active "><span onClick={handleBtnClick}>Item Details</span></li>
+                    </ul>
+                </div>
+                <div className=" bg-grey">
+                <ul className="de_nav">
+                <li id='Mainbtn1' className="mt-2 mb-2 "><span onClick={handleBtnClick1}>Comments</span></li> 
+                    </ul>
+                </div>
+                <div className=" bg-grey">
+                <ul className="de_nav">
+                <li id='Mainbtn2' className="mt-2 mb-2 "><span onClick={handleBtnClick2}> Support </span></li>
+                    </ul>
+          </div>
+          <div className=" bg-grey">
+                <ul className="de_nav">
+                <li id='Mainbtn3' className="mt-2 mb-2 "><span onClick={handleBtnClick3}> Support </span></li>
+                    </ul>
+          </div>
+          </div>
           </div>
          
       )}
             
         </div>
+        </div>
+        </div>
+        {openMenu && (  
+        <div className="row grid-container">
+      
+        
         <div className="col-lg-7 ">
+          
           <div className="row ">
+          <div className="label-div">
             <div className="col-lg-12 d-flex justify-content-center">
 
             
@@ -171,221 +204,7 @@ return (
       )}
         </div>
           
-        {/* <div className="col-lg-4">
-        {product && (
-          <div>
-             <section className="no-top no-bottom"></section>
-            <div className={`product-package-box d-flex row text-center  ${isFixed ? 'fixed' : ''}`}>
-                <div className="col-lg-4 col-4 bg-grey">
-                <ul className="de_nav">
-                    <li id='Mainbtn' className="mt-2 mb-2 active "><span onClick={handleBtnClick}>Starter</span></li>
-                    </ul>
-                </div>
-                <div className=" col-lg-4 col-4 bg-grey">
-                <ul className="de_nav">
-                <li id='Mainbtn1' className="mt-2 mb-2 "><span onClick={handleBtnClick1}>Standard</span></li> 
-                    </ul>
-                </div>
-                <div className=" col-lg-4 col-4 bg-grey">
-                <ul className="de_nav">
-                <li id='Mainbtn2' className="mt-2 mb-2 "><span onClick={handleBtnClick2}> Premium </span></li>
-                    </ul>
-                </div>
-               
-             {openMenu && (  
-        <>
-        <div id='zero1' className='onStep fadeIn'> 
-        <div className="row">
-      
-      <div className="col-lg-12 p-3">
-        <div className="package-box">
-          <div className="row d-flex justify-content-center mb-4">
-          <div className="col-lg-6 col-6 text-center">
-          <p className="m-0">
-              Package
-            </p>
-          <h3 className="m-0">
-            Starter
-          </h3>
-          </div>
-          <div className="col-lg-6 col-6 text-center">
-            <p className="m-0">
-              Starts at
-            </p>
-            <h3 className="m-0">
-              $50
-            </h3>
-            </div>
-            </div>
-            <div className="small-border"></div>
-            <div className="row">
-              <ul className="list-check text-start">
-                <li>
-                  200,000+ free Templates
-                </li>
-                <li>
-                  100,000+ free Fonts
-                </li>
-                <li>
-                  5GB of Cloud Storage
-                </li>
-                <li>
-                  Ad Management
-                </li>
-                <li>
-                 Live Chat
-                </li>
-                <li>
-                 Forms
-                </li>
-                <li>
-                 Pop-up Forms
-                </li>
-                <li>
-                 SEO & Content Strategy
-                </li>
-              </ul>
-            </div>
-            <div className="row d-flex justify-content-center">
-              <button className="package-button"> Chat - Order Now </button>
-            </div>
-        </div>
-      </div>
-    </div>
-      
-        </div>
-        </>
-      )}
-       {openMenu1 && (  
-        <>
-        <div id='zero1' className='onStep fadeIn'> 
-        <div className="row">
-      
-      <div className="col-lg-12 p-3">
-        <div className="package-box">
-          <div className="row d-flex justify-content-center mb-4">
-          <div className="col-lg-6 col-6 text-center">
-          <p className="m-0">
-              Package
-            </p>
-          <h3 className="m-0">
-            Standard
-          </h3>
-          </div>
-          <div className="col-lg-6 col-6 text-center">
-            <p className="m-0">
-              Starts at
-            </p>
-            <h3 className="m-0">
-              $100
-            </h3>
-            </div>
-            </div>
-            <div className="small-border"></div>
-            <div className="row">
-              <ul className="list-check text-start">
-                <li>
-                  200,000+ free Templates
-                </li>
-                <li>
-                  100,000+ free Fonts
-                </li>
-                <li>
-                  5GB of Cloud Storage
-                </li>
-                <li>
-                  Ad Management
-                </li>
-                <li>
-                 Live Chat
-                </li>
-                <li>
-                 Forms
-                </li>
-                <li>
-                 Pop-up Forms
-                </li>
-                <li>
-                 SEO & Content Strategy
-                </li>
-              </ul>
-            </div>
-            <div className="row d-flex justify-content-center">
-              <button className="package-button"> Chat - Order Now </button>
-            </div>
-        </div>
-      </div>
-    </div>
-        </div>
-        </>
-      )}
-       {openMenu2 && ( 
-        <div id='zero3' className='onStep fadeIn'>
-         {/* <ColumnNewRedux shuffle showLoadMore={false}/>  */}
-     {/* <div className="row">
-      
-      <div className="col-lg-12 p-3">
-        <div className="package-box">
-          <div className="row d-flex justify-content-center mb-4">
-          <div className="col-lg-6 col-6 text-center">
-          <p className="m-0">
-              Package
-            </p>
-          <h3 className="m-0">
-            Premium
-          </h3>
-          </div>
-          <div className="col-lg-6 col-6 text-center">
-            <p className="m-0">
-              Starts at
-            </p>
-            <h3 className="m-0">
-              $150
-            </h3>
-            </div>
-            </div>
-            <div className="small-border"></div>
-            <div className="row">
-              <ul className="list-check text-start">
-                <li>
-                  200,000+ free Templates
-                </li>
-                <li>
-                  100,000+ free Fonts
-                </li>
-                <li>
-                  5GB of Cloud Storage
-                </li>
-                <li>
-                  Ad Management
-                </li>
-                <li>
-                 Live Chat
-                </li>
-                <li>
-                 Forms
-                </li>
-                <li>
-                 Pop-up Forms
-                </li>
-                <li>
-                 SEO & Content Strategy
-                </li>
-              </ul>
-            </div>
-            <div className="row d-flex justify-content-center">
-              <button className="package-button"> Chat - Order Now </button>
-            </div>
-        </div>
-      </div>
-    </div>
-        </div>
-      )}
-        
-          </div>
-          </div>
-      )}
-        </div> */}
+       
         <div className="col-lg-12 d-flex justify-content-center">
 
         <div className="w-75">
@@ -448,6 +267,7 @@ Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, preti
           
         </div>
         </div>
+    </div>
     </div>
     </div>
     <div className="col-lg-5 px-4">
@@ -579,6 +399,658 @@ Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, preti
     </div>
     
     </div>
+        )}
+         {openMenu1 && (  
+        <div className="row grid-container">
+      
+        
+        <div className="col-lg-7 ">
+          
+          <div className="row ">
+          <div className="label-div">
+            <div className="col-lg-12 d-flex justify-content-center">
+
+            
+        {product && (
+         
+          <div className="product-img-box">
+          <img  className="product-img" src={product.img} alt={product.label} />
+          </div>
+         
+           
+      )}
+        </div>
+          
+       
+        <div className="col-lg-12 d-flex justify-content-center">
+
+        <div className="w-75">
+          <h3>
+            Description
+          </h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non neque risus. Ut tellus mauris, maximus sit amet interdum vel, tincidunt ut mi. Sed semper magna et ex placerat, sed molestie dolor porta. Duis viverra molestie urna, eget laoreet eros ullamcorper ac. Donec non nunc volutpat, facilisis elit vel, vestibulum nulla. Praesent sit amet turpis quis ipsum malesuada ultricies. Quisque eu tortor sit amet dolor pellentesque congue. Maecenas elit lectus, congue ac odio ac, interdum ultrices nulla. Aliquam erat volutpat. Nam lorem nunc, volutpat sed massa id, tincidunt placerat urna. Mauris vitae sapien vel eros efficitur pulvinar sit amet ac ligula. Sed a faucibus metus, non placerat elit. Aenean ac imperdiet purus. Ut pharetra lectus lorem, eu dapibus nulla ultrices quis. Nam vitae finibus purus. Vestibulum in turpis nec lorem elementum consequat ut vitae ante.
+          <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Etiam et erat ac ligula accumsan blandit. Nam arcu ante, porta a luctus sit amet, aliquet ut ante. Quisque mattis est id bibendum facilisis. Nunc et massa bibendum, tristique justo eget, egestas erat. Proin sagittis sed ipsum ac maximus. Vestibulum facilisis mollis ultricies. Curabitur suscipit sem vitae leo tristique, sed pulvinar ipsum iaculis.
+
+Cras laoreet interdum erat. Nulla lobortis, lectus et malesuada molestie, ipsum quam accumsan nisl, ut sollicitudin lacus justo in erat. Nunc posuere quis sapien nec ornare. Donec at nisl nisi. Vivamus porttitor eu ex eu molestie. Cras mollis, turpis eget aliquam dignissim, urna nunc dignissim enim, eget congue velit enim id nunc. Nullam enim orci, fermentum non eleifend et, porttitor in orci. Praesent tincidunt, nisl a efficitur pretium, dolor enim egestas lectus, id vestibulum tortor nibh ac nisi. Cras maximus finibus turpis, sit amet viverra nibh pellentesque eu.
+<ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Pellentesque scelerisque, mauris eu ultricies varius, lorem massa cursus massa, non condimentum nulla ipsum a libero. Aliquam in metus efficitur, cursus turpis eget, rutrum sapien. Nam tincidunt sem sit amet fringilla ultricies. Sed in varius est, eu laoreet dolor. Pellentesque ut laoreet mi, sed vestibulum elit. Phasellus ut ligula in lectus ultricies fermentum vitae quis eros. Curabitur laoreet turpis a diam convallis viverra a pharetra metus.
+
+Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, pretium facilisis urna. Nulla vulputate mi dapibus, dignissim tortor sit amet, molestie magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Fusce scelerisque tortor at magna convallis, ut tincidunt magna mollis. Cras viverra tempus sem et ultricies. Duis id egestas mauris. Ut eget maximus risus. Aenean eget dapibus nisl, et mollis nunc. Vivamus scelerisque erat a risus porta, at aliquam felis condimentum. Curabitur non tempor sem, ut consequat arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+         <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+          </p>
+          
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div className="col-lg-5 px-4">
+      <div className="pricing-div w-75">
+          <h3 class="border-bottom pb-3">
+            Regular License <span className="shift-right">
+              $17
+            </span>
+          </h3>
+          <ul className="list-checks">
+            <li>
+              Quality Checked
+            </li>
+            <li>
+              Future Updates
+            </li>
+
+          </ul>
+          <button> Add to Cart </button>
+          <p className=" font-size-small text-center">
+          Price is in US dollars and excludes tax
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <p className="mb-0">
+          Elite Author
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                  Last Updated
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                25 feb 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul className="fw-bold">
+                <li>
+                Published
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                15 march 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                High Resolution
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Yes
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Documentation
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Well documented
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Layout
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Responsive
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Tags
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                ajax contact form, business portfolio, clean, corporate website, creative portfolio, crisp, elegant, html, icons, minimal, minimalist design, modern, professional, responsive, style switcher
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+
+      </div>
+    </div>
+    
+    </div>
+        )}
+        {openMenu3 && (  
+        <div className="row grid-container">
+      
+        
+        <div className="col-lg-7 ">
+          
+          <div className="row ">
+          <div className="label-div">
+            <div className="col-lg-12 d-flex justify-content-center">
+
+            
+        {product && (
+         
+          <div className="product-img-box">
+          <img  className="product-img" src={product.img} alt={product.label} />
+          </div>
+         
+           
+      )}
+        </div>
+          
+       
+        <div className="col-lg-12 d-flex justify-content-center">
+
+        <div className="w-75">
+          <h3>
+            Description
+          </h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non neque risus. Ut tellus mauris, maximus sit amet interdum vel, tincidunt ut mi. Sed semper magna et ex placerat, sed molestie dolor porta. Duis viverra molestie urna, eget laoreet eros ullamcorper ac. Donec non nunc volutpat, facilisis elit vel, vestibulum nulla. Praesent sit amet turpis quis ipsum malesuada ultricies. Quisque eu tortor sit amet dolor pellentesque congue. Maecenas elit lectus, congue ac odio ac, interdum ultrices nulla. Aliquam erat volutpat. Nam lorem nunc, volutpat sed massa id, tincidunt placerat urna. Mauris vitae sapien vel eros efficitur pulvinar sit amet ac ligula. Sed a faucibus metus, non placerat elit. Aenean ac imperdiet purus. Ut pharetra lectus lorem, eu dapibus nulla ultrices quis. Nam vitae finibus purus. Vestibulum in turpis nec lorem elementum consequat ut vitae ante.
+          <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Etiam et erat ac ligula accumsan blandit. Nam arcu ante, porta a luctus sit amet, aliquet ut ante. Quisque mattis est id bibendum facilisis. Nunc et massa bibendum, tristique justo eget, egestas erat. Proin sagittis sed ipsum ac maximus. Vestibulum facilisis mollis ultricies. Curabitur suscipit sem vitae leo tristique, sed pulvinar ipsum iaculis.
+
+Cras laoreet interdum erat. Nulla lobortis, lectus et malesuada molestie, ipsum quam accumsan nisl, ut sollicitudin lacus justo in erat. Nunc posuere quis sapien nec ornare. Donec at nisl nisi. Vivamus porttitor eu ex eu molestie. Cras mollis, turpis eget aliquam dignissim, urna nunc dignissim enim, eget congue velit enim id nunc. Nullam enim orci, fermentum non eleifend et, porttitor in orci. Praesent tincidunt, nisl a efficitur pretium, dolor enim egestas lectus, id vestibulum tortor nibh ac nisi. Cras maximus finibus turpis, sit amet viverra nibh pellentesque eu.
+<ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Pellentesque scelerisque, mauris eu ultricies varius, lorem massa cursus massa, non condimentum nulla ipsum a libero. Aliquam in metus efficitur, cursus turpis eget, rutrum sapien. Nam tincidunt sem sit amet fringilla ultricies. Sed in varius est, eu laoreet dolor. Pellentesque ut laoreet mi, sed vestibulum elit. Phasellus ut ligula in lectus ultricies fermentum vitae quis eros. Curabitur laoreet turpis a diam convallis viverra a pharetra metus.
+
+Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, pretium facilisis urna. Nulla vulputate mi dapibus, dignissim tortor sit amet, molestie magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Fusce scelerisque tortor at magna convallis, ut tincidunt magna mollis. Cras viverra tempus sem et ultricies. Duis id egestas mauris. Ut eget maximus risus. Aenean eget dapibus nisl, et mollis nunc. Vivamus scelerisque erat a risus porta, at aliquam felis condimentum. Curabitur non tempor sem, ut consequat arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+         <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+          </p>
+          
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div className="col-lg-5 px-4">
+      <div className="pricing-div w-75">
+          <h3 class="border-bottom pb-3">
+            Regular License <span className="shift-right">
+              $17
+            </span>
+          </h3>
+          <ul className="list-checks">
+            <li>
+              Quality Checked
+            </li>
+            <li>
+              Future Updates
+            </li>
+
+          </ul>
+          <button> Add to Cart </button>
+          <p className=" font-size-small text-center">
+          Price is in US dollars and excludes tax
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <p className="mb-0">
+          Elite Author
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                  Last Updated
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                25 feb 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul className="fw-bold">
+                <li>
+                Published
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                15 march 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                High Resolution
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Yes
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Documentation
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Well documented
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Layout
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Responsive
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Tags
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                ajax contact form, business portfolio, clean, corporate website, creative portfolio, crisp, elegant, html, icons, minimal, minimalist design, modern, professional, responsive, style switcher
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+
+      </div>
+    </div>
+    
+    </div>
+        )}
+         {openMenu2 && (  
+        <div className="row grid-container">
+      
+        
+        <div className="col-lg-7 ">
+          
+          <div className="row ">
+          <div className="label-div">
+            <div className="col-lg-12 d-flex justify-content-center">
+
+            
+        {product && (
+         
+          <div className="product-img-box">
+          <img  className="product-img" src={product.img} alt={product.label} />
+          </div>
+         
+           
+      )}
+        </div>
+          
+       
+        <div className="col-lg-12 d-flex justify-content-center">
+
+        <div className="w-75">
+          <h3>
+            Description
+          </h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non neque risus. Ut tellus mauris, maximus sit amet interdum vel, tincidunt ut mi. Sed semper magna et ex placerat, sed molestie dolor porta. Duis viverra molestie urna, eget laoreet eros ullamcorper ac. Donec non nunc volutpat, facilisis elit vel, vestibulum nulla. Praesent sit amet turpis quis ipsum malesuada ultricies. Quisque eu tortor sit amet dolor pellentesque congue. Maecenas elit lectus, congue ac odio ac, interdum ultrices nulla. Aliquam erat volutpat. Nam lorem nunc, volutpat sed massa id, tincidunt placerat urna. Mauris vitae sapien vel eros efficitur pulvinar sit amet ac ligula. Sed a faucibus metus, non placerat elit. Aenean ac imperdiet purus. Ut pharetra lectus lorem, eu dapibus nulla ultrices quis. Nam vitae finibus purus. Vestibulum in turpis nec lorem elementum consequat ut vitae ante.
+          <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Etiam et erat ac ligula accumsan blandit. Nam arcu ante, porta a luctus sit amet, aliquet ut ante. Quisque mattis est id bibendum facilisis. Nunc et massa bibendum, tristique justo eget, egestas erat. Proin sagittis sed ipsum ac maximus. Vestibulum facilisis mollis ultricies. Curabitur suscipit sem vitae leo tristique, sed pulvinar ipsum iaculis.
+
+Cras laoreet interdum erat. Nulla lobortis, lectus et malesuada molestie, ipsum quam accumsan nisl, ut sollicitudin lacus justo in erat. Nunc posuere quis sapien nec ornare. Donec at nisl nisi. Vivamus porttitor eu ex eu molestie. Cras mollis, turpis eget aliquam dignissim, urna nunc dignissim enim, eget congue velit enim id nunc. Nullam enim orci, fermentum non eleifend et, porttitor in orci. Praesent tincidunt, nisl a efficitur pretium, dolor enim egestas lectus, id vestibulum tortor nibh ac nisi. Cras maximus finibus turpis, sit amet viverra nibh pellentesque eu.
+<ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+
+Pellentesque scelerisque, mauris eu ultricies varius, lorem massa cursus massa, non condimentum nulla ipsum a libero. Aliquam in metus efficitur, cursus turpis eget, rutrum sapien. Nam tincidunt sem sit amet fringilla ultricies. Sed in varius est, eu laoreet dolor. Pellentesque ut laoreet mi, sed vestibulum elit. Phasellus ut ligula in lectus ultricies fermentum vitae quis eros. Curabitur laoreet turpis a diam convallis viverra a pharetra metus.
+
+Sed venenatis justo ac mollis rutrum. Sed mauris odio, blandit in dui sed, pretium facilisis urna. Nulla vulputate mi dapibus, dignissim tortor sit amet, molestie magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Fusce scelerisque tortor at magna convallis, ut tincidunt magna mollis. Cras viverra tempus sem et ultricies. Duis id egestas mauris. Ut eget maximus risus. Aenean eget dapibus nisl, et mollis nunc. Vivamus scelerisque erat a risus porta, at aliquam felis condimentum. Curabitur non tempor sem, ut consequat arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+         <ul>
+          <li>
+          Nulla lobortis, lectus et malesuada molestie.
+          </li>
+          <li>
+          ipsum quam accumsan nisl.
+          </li>
+          <li>
+          blandit in dui sed, pretium facilisis urna.
+          </li>
+          <li>
+          Sed mauris odio.
+          </li>
+         </ul>
+          </p>
+          
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div className="col-lg-5 px-4">
+      <div className="pricing-div w-75">
+          <h3 class="border-bottom pb-3">
+            Regular License <span className="shift-right">
+              $17
+            </span>
+          </h3>
+          <ul className="list-checks">
+            <li>
+              Quality Checked
+            </li>
+            <li>
+              Future Updates
+            </li>
+
+          </ul>
+          <button> Add to Cart </button>
+          <p className=" font-size-small text-center">
+          Price is in US dollars and excludes tax
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <p className="mb-0">
+          Elite Author
+          </p>
+      </div>
+      <div className="pricing-div bg-light w-75">
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                  Last Updated
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                25 feb 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul className="fw-bold">
+                <li>
+                Published
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                15 march 2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                High Resolution
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Yes
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Documentation
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Well documented
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Layout
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                 Responsive
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li className="fw-bold">
+                Tags
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-6">
+            <ul>
+                <li>
+                ajax contact form, business portfolio, clean, corporate website, creative portfolio, crisp, elegant, html, icons, minimal, minimalist design, modern, professional, responsive, style switcher
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+
+      </div>
+    </div>
+    
+    </div>
+        )}
 </section>
 
 

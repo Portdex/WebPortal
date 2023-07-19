@@ -55,8 +55,8 @@ const Connectivity= () => {
   }, [])
   return(
   <div>
-  <GlobalStyles />
-  <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
+  {/* <GlobalStyles /> */}
+  {/* <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
     <div className='mainbreadcumb'>
       <div className='container'>
         <div className='row m-10-hor'>
@@ -66,7 +66,7 @@ const Connectivity= () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
       <section className='container pb-0 padding-top-more'>
         <div className='row'>
             <h2 className='text-center'>
@@ -133,7 +133,7 @@ Portdex will connect freelancers to peer to peer financial system that leverage 
        
         </div>
       </section>
-    <Footer />
+    {/* <Footer /> */}
 
   </div>
 );

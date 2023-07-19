@@ -58,6 +58,10 @@ import Connectivity from './pages/Connectivity';
 import ProductDescription from './pages/productsdetal';
 import Servicedetail from './pages/servicedetail';
 import Productdetail from './pages/Productdetail';
+import CategorySelect from './pages/CategorySelect';
+import About from './pages/about';
+import Author2 from './pages/Author2';
+
 
 
 const GlobalStyles = createGlobalStyle`
@@ -102,6 +106,10 @@ const app= () => (
         />
       </Route> */}
       <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/category" element={<CategorySelect />} /> 
+      <Route element={<Author2 />} path="/seller/:username" />
+      
      
       <Route element={<Explore/>} path="/explore" />
       <Route element={<Explore2/>} path="/explore2" />

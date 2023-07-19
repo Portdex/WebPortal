@@ -70,8 +70,8 @@ const Digitalproduct= () => {
   }, [])
   return(
   <div>
-  <GlobalStyles />
-  <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
+  {/* <GlobalStyles /> */}
+  {/* <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
     <div className='mainbreadcumb'>
       <div className='container'>
         <div className='row m-10-hor'>
@@ -81,12 +81,12 @@ const Digitalproduct= () => {
         </div>
       </div>
     </div>
-  </section>
-      <section className='container-fluid bg-gray'>
+  </section> */}
+      <section className='container-fluid bg-gray pt-0'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2></h2>
+              <h2>Digital Products NFTs</h2>
               <div className="small-border"></div>
               <p className='text-center'>
               </p>
@@ -135,7 +135,7 @@ Gig economy workers who use third-party platforms for creating assets such as de
       </section> 
     
 
-    <Footer />
+    {/* <Footer /> */}
 
   </div>
 );

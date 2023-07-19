@@ -76,7 +76,7 @@ const Blockchain= () =>{
   }, [])
   return(
   <div>
-  <GlobalStyles />
+  {/* <GlobalStyles />
   <section className='jumbotron breadcumb no-bg' style={{backgroundImage: `url(${'./img/background/subheader.jpg'})`}}>
     <div className='mainbreadcumb'>
       <div className='container'>
@@ -87,7 +87,7 @@ const Blockchain= () =>{
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
       <section className='container-fluid bg-gray padding-top-more'>
         <div className='row'>
           <div className='col-lg-12'>
@@ -164,7 +164,7 @@ Security: Transactional level security using zero-knowledge proof to preserve fi
         </div>
         </div>
       </section> 
-    <Footer />
+    {/* <Footer /> */}
 
   </div>
 );

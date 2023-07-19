@@ -36,10 +36,10 @@ const footer= () => (
                             <h5>Marketplace</h5>
                             <ul>
                                 <li><Link to="/marketplace">Freelancers Governed – Web 3.0 Marketplace</Link></li>
-                                <li><Link to="/videos">Portdex Videos</Link></li>
+                                {/* <li><Link to="/videos">Portdex Videos</Link></li> */}
                                 {/* <li><Link to="/tokenEconomy">Token Economics</Link></li> */}
-                                <li><Link to="/services">Service Marketplace</Link></li>
-                                <li><Link to="/products">Product Marketplace</Link></li>
+                                {/* <li><Link to="/services">Service Marketplace</Link></li> */}
+                                {/* <li><Link to="/products">Product Marketplace</Link></li> */}
                                 {/* <li><Link to="/community">Community</Link></li> */}
                                 
                             </ul>
@@ -78,12 +78,13 @@ const footer= () => (
                         <div className="widget">
                             <h5>About Us</h5>
                             <ul>
-                            <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li>
+                            <li><Link to="/about">About </Link></li>
+                            {/* <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li> */}
                             <li><Link to="/portexGovernance">Portdex Governance </Link></li>
                             {/* <li><Link to="">Company</Link></li> */}
-                            <li><Link to="/digital-products">Digital Product Traceability Through NFT</Link></li>
-                            <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li>
-                            <li><Link to="/connectivity">Real Time Connectivity</Link></li>
+                            {/* <li><Link to="/digital-products">Digital Product Traceability Through NFT</Link></li> */}
+                            {/* <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li> */}
+                            {/* <li><Link to="/connectivity">Real Time Connectivity</Link></li> */}
                            
                                 <li><Link to="/our-team">Team</Link></li>
                                 {/* <li><Link to="">Objective</Link></li>
