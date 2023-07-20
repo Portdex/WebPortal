@@ -78,7 +78,7 @@ const footer= () => (
                         <div className="widget">
                             <h5>About Us</h5>
                             <ul>
-                            <li><Link to="/about">About </Link></li>
+                            <li><Link to="/blockchain">About </Link></li>
                             {/* <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li> */}
                             <li><Link to="/portexGovernance">Portdex Governance </Link></li>
                             {/* <li><Link to="">Company</Link></li> */}

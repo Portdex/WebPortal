@@ -48,7 +48,7 @@ import Confirmation from './pages/Confirmation';
 import Description from './pages/Description';
 import Portdexvideos from './pages/Portdexvideos';
 import TokenEconomy from './pages/TokenEconomy';
-import UserDetails from './pages/Checkurl';
+import SendMessagePopup from './pages/SendMEssage';
 import Ourteam from './pages/Ourteam';
 import Portdexdao from './pages/Portdexdao';
 import Blockchain from './pages/Blockchain';
@@ -106,7 +106,7 @@ const app= () => (
         />
       </Route> */}
       <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/blockchain" element={<About />} />
       <Route path="/category" element={<CategorySelect />} /> 
       <Route element={<Author2 />} path="/seller/:username" />
       
@@ -149,7 +149,7 @@ const app= () => (
       {/* <Route element={<Description />} path="/description" /> */}
       <Route element={<Portdexvideos />} path="/videos" />
       <Route element={<TokenEconomy />} path="/tokenEconomy" />
-      <Route element={<UserDetails />} path="/check" />
+      <Route element={<SendMessagePopup />} path="/check" />
       <Route element={<Ourteam />} path="/our-team" />
       <Route element={<Portdexdao />} path="/portexGovernance" />
       <Route element={<Blockchain />} path="/blockchain" />

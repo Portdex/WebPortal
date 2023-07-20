@@ -156,7 +156,60 @@ const Sidebars = () => {
 
   return (
     <>
-    
+     <div className=" sidebarWeb pt-0">
+        <div className='p-2 newchat'>
+          <a href="/">
+          <img src="/img/portdex-logo_1.png" alt="" />
+          </a>
+        </div>
+
+        <div className="bottom-tabs">
+          <ul>
+            <li className='color-gold'>
+              <a href='https://business.portdex.ai/web/user_signup'>
+                Service Seller 
+                <br/>
+              Join Our Beta Community
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+              Connect Wallet
+              </a>
+            </li>
+            <li>
+              <a href="/blockchain">
+              BlockChain Technology
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+              Freelancers Governed – Web 3.0 Marketplace
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+             Portdex Governance
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+              Business Videos
+              </a>
+            </li>
+<li>
+              <a href="/our-team">
+              Our Team
+              </a>
+            </li>
+<li>
+              <a href="/community">
+              Community
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
     <Header className="navbarHome">
       <GlobalStyles/>
    <div className='navbar-title navbar-item'>
@@ -173,7 +226,9 @@ const Sidebars = () => {
               <SidebarContainer open={showmenu}>
              <div className=" p-4 sidebar pt-0">
         <div className='p-2 newchat'>
+        <a href="/">
           <img src="/img/portdex-logo_1.png" alt="" />
+          </a>
         </div>
 
         <div className="bottom-tabs">
@@ -191,8 +246,18 @@ const Sidebars = () => {
               </a>
             </li>
             <li>
-              <a href="/about">
+              <a href="/blockchain">
               About
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+              Freelancers Governed – Web 3.0 Marketplace
+              </a>
+            </li>
+            <li>
+              <a href="/wallet">
+             Portdex Governance
               </a>
             </li>
             <li>

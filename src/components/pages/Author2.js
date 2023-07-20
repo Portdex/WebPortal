@@ -251,11 +251,9 @@ return (
       </div>
     </section>
   } */}
- <div className="row">
 
-<WebSidebar/>
 
-    <div className="col-lg-9 col-9 p-0 responsive-flex">
+    <div className="margin-left-sidebar p-0 responsive-flex">
     
     <div className="chat">
       <div className="height-contain">
@@ -362,13 +360,13 @@ return (
         
       </form>
       <p>
-          Get More Information about  <a href="/about"> Portdex.ai </a>
+          Get More Information about  <a href="/blockchain"> Portdex.ai </a>
         </p>
         </div>
     </div>
     </div>
 
- </div>
+ 
   
   
 
