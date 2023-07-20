@@ -2,7 +2,7 @@ import React , {useState , useEffect} from 'react';
 import { keyframes } from "@emotion/react";
 import '../../assets/chat.css'
 import styled , { createGlobalStyle } from 'styled-components';
-
+import axios from 'axios';
 import fetch from './fetch';
 import { 
   Link, 
@@ -71,20 +71,33 @@ const Header = styled.header`
   padding: 10px;
   text-align: center;
 `;
+const PopupContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  border-radius:10px
+`;
 
-  
+const PopupInput = styled.input`
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+`;
 
-const NavLink = (props) => {
-  let resolved = useResolvedPath(props.to);
-  let match = useMatch({ path: resolved.pathname, end: true });
-
-  return (
-    <Link
-      {...props}
-      className={ match ? 'active' : 'non-active'}
-    />
-  )
-};
+const PopupButton = styled.button`
+  padding: 8px 16px;
+  background-color: #8364e2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin:10px
+`;
 
 
 const CategorySelect= () => {
@@ -93,11 +106,58 @@ const CategorySelect= () => {
   const [checkboxes, setCheckboxes] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   console.log(userData)
-
   console.log("filter" , filteredData)
-  const [selectedOptions, setSelectedOptions] = useState([]);
-  console.log(selectedOptions)
   const [data, setData] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [popupName, setPopupName] = useState('');
+  const [popupPhoneNumber, setPopupPhoneNumber] = useState('');
+  const [showAllCategory, setShowAllCategory] = useState(false);
+    const [visibleItems, setVisibleItems] = useState(5);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+    setPopupName('');
+    setPopupPhoneNumber('');
+  };
+
+  const handlePopupNameChange = (event) => {
+    setPopupName(event.target.value);
+  };
+
+  const handlePopupPhoneNumberChange = (event) => {
+    setPopupPhoneNumber(event.target.value);
+  };
+  const handleSeeMore = () => {
+    setShowAllCategory(true);
+  };
+
+  const handleClose = () => {
+    setVisibleItems(5);
+    setShowAllCategory(false);
+  };
+
+  const sendPopupMessage = () => {
+    // Call the Twilio API via your server to send the message
+    axios.post('http://localhost:5000/api/send-message', {
+      name: popupName,
+      phoneNumber: popupPhoneNumber,
+      message: inputValue,
+    })
+      .then((response) => {
+        console.log('Message sent successfully!');
+        console.log(response.data);
+        // Add any success message or actions you want to perform after the message is sent
+      })
+      .catch((error) => {
+        console.error('Error sending message:', error);
+        // Handle the error or show an error message to the user
+      });
+
+    closePopup(); // Close the popup after sending the message
+  };
 
   useEffect(() => {
     // Retrieve data from local storage
@@ -201,13 +261,14 @@ const handleSellerClick = (username) => {
   
   return(
     <>
+    {isPopupOpen && <div className="overlay-chat" onClick={closePopup}></div>}
 <Sidebars/>
 <div className="containerchat">
         <GlobalStyles/>
-        <div className="row">
+      
 
-   <WebSidebar/>
-    <div className="col-lg-9 col-9 p-0 responsive-flex">
+  
+    <div className="margin-left-sidebar p-0 responsive-flex">
     
       <div className="chat">
         <div className="height-contain">
@@ -217,11 +278,10 @@ const handleSellerClick = (username) => {
         <div className="chat-messages d-flex justify-content-center flex-column">
         
   {data === "freelancer" ?
-  <div className='m-auto'>
-    <div className="row">
+  <>
+  <ul className='m-auto category-list desktop-view'>
         {freelancerOptions.map((option, index) => (
-            <div className="col-lg-6 col-md-6">
-            <div key={option} className='m-auto '>
+            <li key={option} className=''>
           <label className='custom-checkbox'>
             <input
               type="checkbox"
@@ -229,24 +289,41 @@ const handleSellerClick = (username) => {
               checked={checkboxes.includes(option)}
               onChange={() => handleCheckboxChange(option)}
             />
-           &nbsp; &nbsp; {option}
+           &nbsp; {option}
            <span class="checkmark"></span>
           </label>
-        </div>
-            </div>
-        
+        </li> 
       ))}
-      </div>
-            </div>
+      </ul> 
+      <ul className='m-auto category-list mobile-view'>
+      {freelancerOptions.slice(0, showAllCategory ? freelancerOptions.length : visibleItems).map((option, index) => (
+          <li key={option} className=''>
+        <label className='custom-checkbox'>
+          <input
+            type="checkbox"
+            value={option}
+            checked={checkboxes.includes(option)}
+            onChange={() => handleCheckboxChange(option)}
+          />
+         &nbsp; {option}
+         <span class="checkmark"></span>
+        </label>
+      </li> 
+    ))}
+    </ul> 
+    {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+    </>
             :
             <></>
         }   
           {data === "accountant" ?
-  <div className='m-auto'>
-    <div className="row">
-    {accountantOptions.map((option, index) => (
-      <div className="col-lg-6 col-md-6">
-           <div key={option} className='m-auto '>
+          <>
+ <ul className='m-auto category-list desktop-view'>
+   
+ {freelancerOptions.slice(0, showAllCategory ? freelancerOptions.length : visibleItems).map((option, index) => (
+     
+           <li key={option} className=''>
           <label className='custom-checkbox'>
             <input
               type="checkbox"
@@ -257,21 +334,36 @@ const handleSellerClick = (username) => {
            &nbsp; &nbsp; {option}
            <span class="checkmark"></span>
           </label>
-        </div>
-        </div>
+        </li>
       ))}
-    </div>
-       
-            </div>
+            </ul>
+            <ul className='m-auto category-list mobile-view'>
+      {accountantOptions.slice(0, showAllCategory ? accountantOptions.length : visibleItems).map((option, index) => (
+          <li key={option} className=''>
+          <label className='custom-checkbox'>
+            <input
+              type="checkbox"
+              value={option}
+              checked={checkboxes.includes(option)}
+              onChange={() => handleCheckboxChange(option)}
+            />
+           &nbsp; &nbsp; {option}
+           <span class="checkmark"></span>
+          </label>
+        </li>
+      ))}
+            </ul>
+            {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+            </>
             :
             <></>
         } 
          {data === "lawyer" ?
-  <div className='m-auto'>
-    <div className="row">
+         <>
+ <ul className='m-auto category-list desktop-view'>
         {lawyerOptions.map((option, index) => (
-          <div className="col-lg-6 col-md-6">
-          <div key={option} className='m-auto '>
+          <li key={option} className=''>
           <label className='custom-checkbox'>
             <input
               type="checkbox"
@@ -282,11 +374,28 @@ const handleSellerClick = (username) => {
            &nbsp; &nbsp; {option}
            <span class="checkmark"></span>
           </label>
-        </div>
-        </div>
+        </li>
       ))}
-      </div>
-            </div>
+      </ul>
+      <ul className='m-auto category-list mobile-view'>
+      {lawyerOptions.slice(0, showAllCategory ? lawyerOptions.length : visibleItems).map((option, index) => (
+          <li key={option} className=''>
+          <label className='custom-checkbox'>
+            <input
+              type="checkbox"
+              value={option}
+              checked={checkboxes.includes(option)}
+              onChange={() => handleCheckboxChange(option)}
+            />
+           &nbsp; &nbsp; {option}
+           <span class="checkmark"></span>
+          </label>
+        </li>
+        ))}
+        </ul>
+        {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+      </>
             :
             <></>
         } 
@@ -346,7 +455,7 @@ author.payment_method.slice(0, 4).map((item, index) => (
             onChange={handleInputChange}
             placeholder="Type your message..."
           />
-          <button type="submit">Send</button>
+          <button type="button" onClick={openPopup}>Send</button>
           <br/>
           <div>
           
@@ -354,14 +463,39 @@ author.payment_method.slice(0, 4).map((item, index) => (
           
         </form>
         <p>
-            Get More Information about  <a href="/about"> Portdex.ai </a>
+            Get More Information about  <a href="/blockchain"> Portdex.ai </a>
           </p>
           </div>
       </div>
       </div>
-      </div>
+     
      
     </div>
+    {isPopupOpen && (
+        <PopupContainer>
+          <h3>Send Message</h3>
+          <PopupInput
+            type="text"
+            placeholder="Enter your name"
+            value={popupName}
+            onChange={handlePopupNameChange}
+          />
+          <PopupInput
+            type="tel"
+            placeholder="Enter your phone number"
+            value={popupPhoneNumber}
+            onChange={handlePopupPhoneNumberChange}
+          />
+          <div>
+            {popupName && popupPhoneNumber ?
+            <PopupButton onClick={sendPopupMessage}>Done</PopupButton>
+            :
+            <PopupButton disabled className='disabled'>Done</PopupButton>
+          }
+            <PopupButton onClick={closePopup}>Cancel</PopupButton>
+          </div>
+        </PopupContainer>
+      )}
     </>
 );
   };
