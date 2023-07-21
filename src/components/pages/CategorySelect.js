@@ -273,7 +273,7 @@ const handleSellerClick = (username) => {
       <div className="chat">
         <div className="height-contain">
       <h6 className='text-center px-3 mt-5 pt-5 pb-3 color-purple'>
-      Let the local service providers come back to you with price in real time. <br/> Portdex will enable you to book and pay with one click
+      Select the services you need, Let Portdex do the rest. <br/> Service Providers will come back to you with a Quote. 
         </h6>
         <div className="chat-messages d-flex justify-content-center flex-column">
         
@@ -321,8 +321,7 @@ const handleSellerClick = (username) => {
           <>
  <ul className='m-auto category-list desktop-view'>
    
- {freelancerOptions.slice(0, showAllCategory ? freelancerOptions.length : visibleItems).map((option, index) => (
-     
+ {accountantOptions.map((option, index) => (
            <li key={option} className=''>
           <label className='custom-checkbox'>
             <input
