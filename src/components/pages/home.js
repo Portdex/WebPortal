@@ -70,20 +70,20 @@ const [showAllProduct, setShowAllProduct] = useState(false);
 
   const Productitems = [
     {
-      name: 'Digital Product',
-      image: './img/digital.jpg'
+      name: 'Logo',
+      image: '/img/product/logo.jpg'
     },
     {
-      name: 'Physical Product',
-      image: './img/physical.jpg'
+      name: 'Themes',
+      image: '/img/product/theme.jpg'
     },
     {
-      name: 'Digital Product Marketplace',
-      image: './img/marketplace.jpg'
+      name: 'Pdf',
+      image: '/img/product/pdf.png'
     },
     {
-      name: 'Pet Product',
-      image: './img/pet.jpg'
+      name: 'Ebook',
+      image: '/img/product/ebooks.jpg'
     },
     // {
     //   name: 'Handmade Product',
@@ -227,7 +227,7 @@ navigate('/category')
                 <ul>
                   <li>
                     <a className={`${selectedOption === 'Product Seller' ? 'activeServices' : ''}`} onClick={() => setSelectedOption('Product Seller')}>
-                      Product Seller
+                      Digital Product Seller
                     </a>
                   </li>
                   <li>
@@ -244,9 +244,9 @@ navigate('/category')
             <>
              {Productitems.map((item, index) => (
           <li className='col-md-3' key={index} onClick={() => handleItemClick(item.name)}>
-           <a className='seller-img' style={{ backgroundImage: `url(${item.image})` }}>
+           <a href='/products' className='seller-img' style={{ backgroundImage: `url(${item.image})` }}>
            </a>
-           <a>
+           <a href='/products'>
             {item.name}
            </a>
           </li>
@@ -272,9 +272,9 @@ navigate('/category')
             <>
            {Productitems.slice(0, showAllProduct ? Productitems.length : visibleItems).map((item, index) => (
           <li className='col-6' key={index} onClick={() => handleItemClick(item.name)}>
-            <a className='seller-img' style={{ backgroundImage: `url(${item.image})` }}>
+            <a href='/products' className='seller-img' style={{ backgroundImage: `url(${item.image})` }}>
            </a>
-           <a>
+           <a href='/products'>
             {item.name}
            </a>
           </li>
@@ -295,9 +295,9 @@ navigate('/category')
          </>
         )}   
             </ul>
-            {!showAllProduct && <button className='mobile-view more-btn' onClick={handleSeeMoreProduct}>See More <i class="fa fa-angle-down"></i> </button>}
-      {showAllProduct && <button className='mobile-view more-btn' onClick={handleCloseProduct}>Close <i class="fa fa-angle-up"></i> </button>}
-          
+            {/* {!showAllProduct && <button className='pt-4 mobile-view more-btn' onClick={handleSeeMoreProduct}>See More <i class="fa fa-angle-down"></i> </button>}
+      {showAllProduct && <button className='pt-4 mobile-view more-btn' onClick={handleCloseProduct}>Close <i class="fa fa-angle-up"></i> </button>}
+           */}
             </div>
            
              {/* <div className="col-lg-4 col-md-4 col-12 text-center">
