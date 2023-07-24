@@ -6301,7 +6301,7 @@ border-radius:20px
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 895px) {
 .responsive-blink
 {
   padding-top:150px;
@@ -6480,7 +6480,17 @@ border-radius:20px
 @media (max-width: 513px){
   .services-tabs a
   {
-    margin:0px
+    margin:0px;
+    padding:0px;
+    padding-right:10px;
+    font-weight:500
+  }
+}
+@media (max-width: 895px){
+  .notification
+  {
+    width:60% !important;
+    margin-top:80px
   }
 }
 .services-list-with-img
@@ -6504,6 +6514,38 @@ border-radius:20px
     top: 0;
     left: 0;
     margin-bottom: 5px;
+}
+.border-none
+{
+  border:none
+}
+.notification {
+  background-color: #ebd5ed;
+  color: black;
+  position: fixed;
+  right: 10px;
+  top:10px;
+  width: 450px;
+  border-radius:10px;
+  padding:15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.notification.hide {
+  /* Animation when hiding the notification */
+  opacity: 0;
+  transform: translateX(100%);
+}
+.close-sign
+{
+  border:none ;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  float:right
 }
 // .services-list h6
 // {

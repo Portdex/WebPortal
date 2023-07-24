@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React , {useState, useEffect} from 'react';
 import { keyframes } from "@emotion/react";
 import '../../assets/chat.css'
 import { useNavigate, } from "react-router-dom";
@@ -55,6 +55,23 @@ const [showAllProduct, setShowAllProduct] = useState(false);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+  const [showNotification, setShowNotification] = useState(true);
+
+  useEffect(() => {
+    // Set a timer to hide the notification after 50-60 seconds
+    const notificationTimer = setTimeout(() => {
+      setShowNotification(false);
+    }, 50000);
+
+    // Clear the timer when the component unmounts to avoid memory leaks
+    return () => clearTimeout(notificationTimer);
+  }, []);
+
+  // Function to close the notification manually if needed
+  const handleCloseNotification = () => {
+    setShowNotification(false);
+  };
+
   const items = [
     'Freelancers',
     'Accountant',
@@ -185,7 +202,16 @@ navigate('/category')
   };
   return(
     <>
+
 <Sidebars/>
+{showNotification && (
+        <div className={`notification${showNotification ? ' show' : ' hide'}`}>
+          {/* Your notification content here */}
+          <button onClick={handleCloseNotification} className='close-sign'> &times; </button>
+          <p>Portdex  does not collect any data at all. Portdex P2P approach enable buyers and sellers encrypted transactions. The email address and the phone number will used for identification of users.  Businesses  and consumer will need to verify  identity for any financial transactions once the platform move to production stage. </p>
+         
+        </div>
+      )}
 <div className="containerchat">
         <GlobalStyles/>
      
@@ -267,6 +293,7 @@ navigate('/category')
          </>
         )}   
             </ul>
+           
               <ul className='mobile-view row'>
           {selectedOption === 'Product Seller' && (
             <>
@@ -295,6 +322,10 @@ navigate('/category')
          </>
         )}   
             </ul>
+          
+           <button className='border-none'> </button>
+      {/* {showAllProduct && <button className='pt-4 mobile-view more-btn' onClick={handleCloseProduct}>Close <i class="fa fa-angle-up"></i> </button>} */}
+          
             {/* {!showAllProduct && <button className='pt-4 mobile-view more-btn' onClick={handleSeeMoreProduct}>See More <i class="fa fa-angle-down"></i> </button>}
       {showAllProduct && <button className='pt-4 mobile-view more-btn' onClick={handleCloseProduct}>Close <i class="fa fa-angle-up"></i> </button>}
            */}
@@ -335,6 +366,7 @@ navigate('/category')
             </div> */}
             
         </div>
+        
         </div>
         <div className="chat-fixed">
         <form className="chat-form">
