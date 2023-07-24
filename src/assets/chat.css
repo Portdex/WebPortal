@@ -110,7 +110,14 @@
    {
     display:none;
    }
+   .height-contain {
+    height: 88vh !important;
   }
+  .chat-messages
+  {
+    padding-bottom:40px;
+  }
+}
   @media (max-width: 1015px) {
     .chat-sidebar
     {
