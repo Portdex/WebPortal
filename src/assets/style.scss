@@ -5712,13 +5712,32 @@ blockquote {
   transition: 0.3s;
   background-color: #ffffff;
 }
+.community-card:hover h6
+{
+color :white
+}
+.community-card:hover .view-package-btn a
+{
+background-color: white;
+color:#8364e2 !important;
+font-weight:500
+}
 .community-card .img-container {
   width: 8em;
   height: 8em;
   background-color: #a993ff;
   padding: 0.5em;
   border-radius: 50%;
-  margin: 0 auto 2em auto;
+  margin: 0 0 2em 0;
+}
+.long-cards
+{
+  width: 6em !important;
+  height: 6em !important;
+  background-color: #a993ff !important;
+  padding: 0.5em !important;
+  border-radius: 50% !important;
+  margin: 0 0 1em 0 !important;
 }
 .community-card img {
   width: 100%;
@@ -5736,11 +5755,25 @@ blockquote {
   letter-spacing: 2px;
 }
 .community-icons {
-  width: 50%;
-  min-width: 180px;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
+  width: 100%
+  // min-width: 180px;
+  // margin: auto;
+  // display: flex;
+  // justify-content: space-around;
+}
+.community-card:hover .community-icons >span {
+  background: white !important;
+  color: #8364e2 !important;
+}
+.community-icons >span {
+  border: none !important;
+  border-radius: 5px;
+  background: #8364e2;
+  padding: 3px 10px;
+  color: white;
+  margin-right: 2px !important;
+  display: inline-block;
+  margin-top:5px
 }
 .community-card a {
   text-decoration: none;
@@ -5750,6 +5783,9 @@ blockquote {
 .community-card:hover {
   background: linear-gradient(#6045ea, #8567f7);
   color: #ffffff;
+}
+.community-card:hover .long-cards {
+  background-color: white !important;
 }
 .community-card:hover h3 {
  
@@ -5916,7 +5952,24 @@ color:#8364E2
     margin-bottom: 60px;
   }    
 }
+@media (min-width:992px){
+  .category-list li 
+  {
+    padding:8px 0px !important;
+  }
+}
 
+@media (max-width:520px){
+  .view-package-btn
+  {
+    margin-top:0px !important;
+  }
+  .community-icons > span
+  {
+    background-color: white !important;
+    color:black !important;
+  }
+}
 
 .wow-image{
   overflow: hidden !important;
@@ -6304,24 +6357,33 @@ border-radius:20px
 @media only screen and (max-width: 895px) {
 .responsive-blink
 {
-  padding-top:150px;
+  padding-top:165px;
   margin-bottom:70px
 }
 }
 .button-boxes
 {
-  margin-top:16px;
-  margin-bottom:16px
+  margin-top: 7px;
+  // margin-bottom:16px
 }
 .view-package-btn
 {
-  padding:10px
+  padding:10px;
+  margin-top:-130px
 }
 .view-package-btn:hover
 {
-  background-color: white ;
-  color:#8364e2;
+  // background-color: white ;
+  // color:#8364e2;
   font-weight:500
+}
+.view-package-btn a 
+{
+  font-size: 17px;
+  background-color:#8364e2 ;
+  color:white !important;
+  padding:10px;
+  border-radius:4px;
 }
 .overlay-chat {
   position: fixed;
@@ -6450,13 +6512,80 @@ border-radius:20px
 .category-list li
 {
   list-style-type: none;
-  display:inline-block ;
-  border:2px solid #8567f7;
+  // display:inline-block ;
+  // border:2px solid #8567f7;
+  text-align: left;
   border-radius:4px;
   margin:10px;
   padding: 8px 12px;
 }
-
+@media (max-width: 415px){
+  .custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 4px;
+    width: 5px;
+    height: 7px;
+  }
+  .custom-checkbox
+  {
+    padding-left:11px
+  }
+  .community-card .img-container
+  {
+        margin: 0 0 10px 0;
+  }
+  .category-list li{
+  margin:2px;
+  }
+  h5
+  {
+    font-size: 15px;
+  }
+  .services-list li
+  {
+    margin:2px
+  }
+  .services-tabs a
+  {
+    font-size:14px
+  }
+  .checkmark
+  {
+    top: 4px;
+    left: 0px;
+    height: 16px;
+    width: 16px;    
+  }
+  .category-list li
+  {
+    padding: 8px 3px;
+    border:1px solid #8567f7;
+  }
+  .packagemodal
+  {
+    width: 100% !important;
+    padding-top: 94px;
+  }
+}
+@media (max-width: 991px){
+  .category-list li
+{
+ 
+  display:inline-block ;
+  border:2px solid #8567f7;
+ text-align: center;
+}
+}
+.cancel-button
+{
+  font-size: 30px;
+  /* margin-bottom: 10px; */
+  /* padding-bottom: 20px; */
+  display:contents;
+  top: 80px;
+  right: 24px;
+  position: absolute;
+}
 .category-list
 {
   padding:0px;
@@ -6489,7 +6618,7 @@ border-radius:20px
 @media (max-width: 895px){
   .notification
   {
-    width:60% !important;
+    width:80% !important;
     margin-top:80px
   }
 }
@@ -6546,6 +6675,69 @@ border-radius:20px
   font-weight: bold;
   background-color: transparent;
   float:right
+}
+/* Styles for the modal overlay */
+.packagemodal-overlay {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998; /* Lower z-index to position below the modal */
+}
+.packagemodal-overlay.active
+{
+  display:block
+}
+.packagemodal-overlay.disable
+{
+  display:none
+}
+
+/* Show the overlay and modal when the modal is open */
+.packagemodal.packageactive {
+  display: block;
+  right: 50%;
+
+}
+
+/* Styles for the modal container */
+.packagemodal {
+  position: fixed;
+  // top: 50%;
+  right: 0 !important; /* Attach to the right side */
+  transform: translateY(-50%);
+  width: 50%; /* Set the width to 50% */
+  // max-width: 500px; /* Limit the maximum width if needed */
+  background-color: #fff;
+  z-index: 9999;
+  height:100vh;
+  // border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: slideInLeft 0.3s forwards;
+
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Styles for the modal content */
+.packagemodal-content {
+  padding: 20px;
+  overflow-y: auto; 
+  height:100%;
+}
+@media (max-width:454px){
+  .hide-responsive{
+    display:none
+  }
 }
 // .services-list h6
 // {

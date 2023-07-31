@@ -102,12 +102,12 @@ const Ourteam = () =>
  <div  class="col-lg-3">
  <div className='community-column text-center'>
  <div class="community-card min-community-card p-3">
-   <div class="img-container">
+   <div class="img-container text-center mx-auto">
      <img src={item.img} />
    </div>
    <h4 className="community-h3 mb-2">{item.name}</h4>
    <p className="m-0 mb-2"> {item.title} </p>
-   <div class="community-icons">
+   <div class="community-icons mx-auto">
     <a className="mx-auto" href={item.linkedIn} target="_blank">
    <i className="f-size fa fa-fw mx-auto" aria-hidden="true" title="Copy to use linkedin-square"></i>
    </a>

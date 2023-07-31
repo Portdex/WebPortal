@@ -61,6 +61,7 @@ import Productdetail from './pages/Productdetail';
 import CategorySelect from './pages/CategorySelect';
 import About from './pages/about';
 import Author2 from './pages/Author2';
+import CheckLocation from './pages/CheckLocation';
 
 
 
@@ -112,6 +113,7 @@ const app= () => (
       
      
       <Route element={<Explore/>} path="/explore" />
+      <Route element={<CheckLocation/>} path="/checklocation" />
       <Route element={<Explore2/>} path="/explore2" />
       <Route element={<ExploreOpensea/>} path="/exploreOpensea" />
       <Route element={<Auction/>} path="/Auction" />
