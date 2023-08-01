@@ -148,19 +148,19 @@ const Community= () => {
                 {/* <div className='dropdownSelect one'><Select className='select1' styles={customStyles} menuContainerStyle={{'zIndex': 999}} defaultValue={options[0]} options={options} /></div> */}
                 <div className='dropdownSelect two z-index'><Select className='select1' styles={customStyles} defaultValue={options1[0]} onChange={handleProductSelect} options={options1} /></div>
             </div>
-            <div class="row">
+            <div class="row pt-4">
         {/* <!-- Column 1--> */}
         { filteredProducts && filteredProducts.map((author) => (
-        <div  key={author.username} class="col-lg-4 col-md-6 p-5 pt-0">
+        <div  key={author.username} class="col-lg-4 col-md-6 pt-0">
           <div className='community-column text-center'>
          
           <div onClick={() => handleProductClick(author.username)} class="community-card p-3">
-            <div class="img-container">
+            <div class="img-container mx-auto">
               <img src="img/favicon.ico" />
             </div>
             <h3 className="community-h3 mb-2">{author.username}</h3>
             <p className="m-0 mb-2">{author.services || '-'}</p>
-            <div class="community-icons">
+            <div class="community-icons mx-auto">
             {author.payment_method.length > 0 ? (
 author.payment_method.slice(0, 4).map((item, index) => (
   <span className="bot" key={item.name} >

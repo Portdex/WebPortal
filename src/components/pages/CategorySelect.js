@@ -12,6 +12,9 @@ import {
 } from "react-router-dom";
 import Sidebars from '../menu/sidebar';
 import WebSidebar from '../menu/webSidebar';
+import PackageModal from '../components/PackageModal';
+
+
 const fadeInUp = keyframes`
   0% {
     opacity: 0;
@@ -113,6 +116,16 @@ const CategorySelect= () => {
   const [popupPhoneNumber, setPopupPhoneNumber] = useState('');
   const [showAllCategory, setShowAllCategory] = useState(false);
     const [visibleItems, setVisibleItems] = useState(5);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    console.log(isModalOpen)
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   const openPopup = () => {
     setIsPopupOpen(true);
   };
@@ -138,7 +151,11 @@ const CategorySelect= () => {
     setVisibleItems(5);
     setShowAllCategory(false);
   };
-
+  const handleSellerClick = (username) => {
+    console.log("Clicked the View Packages button");
+    setIsModalOpen(true);
+    // navigate(`/seller/${username}`);
+  };
   const sendPopupMessage = () => {
     // Call the Twilio API via your server to send the message
     axios.post('http://localhost:5000/api/send-message', {
@@ -173,6 +190,9 @@ const CategorySelect= () => {
   const navigate = useNavigate();
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+  };
+  const toggleModal = () => {
+    setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen);
   };
   useEffect(() => {
     
@@ -255,9 +275,7 @@ function handleCheckboxChange(checkboxValue) {
   setFilteredData(filtered);
   setInputValue(`I am looking for a ${updatedCheckboxes.join(', ')}`);
 }
-const handleSellerClick = (username) => {
-  navigate(`/seller/${username}`);
-};
+
   
   return(
     <>
@@ -273,11 +291,12 @@ const handleSellerClick = (username) => {
       <div className="chat">
         <div className="height-contain">
       <h6 className='text-center px-3 mt-5 pt-5 pb-3 color-purple'>
-      Select the services you need, Let Portdex do the rest. <br/> Service Providers will come back to you with a Quote. 
+      Select the services you need, Let Portdex do the rest. <br className='hide-responsive'/> Service Providers will come back to you with a Quote. 
         </h6>
         <div className="chat-messages d-flex justify-content-center flex-column">
-        
-  {data === "freelancer" ?
+          <div className="row">
+            <div className="col-lg-3">
+            {data === "freelancer" ? (
   <>
   <ul className='m-auto category-list desktop-view'>
         {freelancerOptions.map((option, index) => (
@@ -314,136 +333,141 @@ const handleSellerClick = (username) => {
     {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
       {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
     </>
+  )
             :
-            <></>
-        }   
-          {data === "accountant" ?
-          <>
- <ul className='m-auto category-list desktop-view'>
-   
- {accountantOptions.map((option, index) => (
-           <li key={option} className=''>
-          <label className='custom-checkbox'>
-            <input
-              type="checkbox"
-              value={option}
-              checked={checkboxes.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
-            />
-           &nbsp; &nbsp; {option}
-           <span class="checkmark"></span>
-          </label>
-        </li>
-      ))}
-            </ul>
-            <ul className='m-auto category-list mobile-view'>
-      {accountantOptions.slice(0, showAllCategory ? accountantOptions.length : visibleItems).map((option, index) => (
-          <li key={option} className=''>
-          <label className='custom-checkbox'>
-            <input
-              type="checkbox"
-              value={option}
-              checked={checkboxes.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
-            />
-           &nbsp; &nbsp; {option}
-           <span class="checkmark"></span>
-          </label>
-        </li>
-      ))}
-            </ul>
-            {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
-      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
-            </>
-            :
-            <></>
-        } 
-         {data === "lawyer" ?
-         <>
- <ul className='m-auto category-list desktop-view'>
-        {lawyerOptions.map((option, index) => (
-          <li key={option} className=''>
-          <label className='custom-checkbox'>
-            <input
-              type="checkbox"
-              value={option}
-              checked={checkboxes.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
-            />
-           &nbsp; &nbsp; {option}
-           <span class="checkmark"></span>
-          </label>
-        </li>
-      ))}
-      </ul>
-      <ul className='m-auto category-list mobile-view'>
-      {lawyerOptions.slice(0, showAllCategory ? lawyerOptions.length : visibleItems).map((option, index) => (
-          <li key={option} className=''>
-          <label className='custom-checkbox'>
-            <input
-              type="checkbox"
-              value={option}
-              checked={checkboxes.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
-            />
-           &nbsp; &nbsp; {option}
-           <span class="checkmark"></span>
-          </label>
-        </li>
+            data === "accountant" ?(
+            <>
+   <ul className='m-auto category-list desktop-view'>
+     
+   {accountantOptions.map((option, index) => (
+             <li key={option} className=''>
+            <label className='custom-checkbox'>
+              <input
+                type="checkbox"
+                value={option}
+                checked={checkboxes.includes(option)}
+                onChange={() => handleCheckboxChange(option)}
+              />
+             &nbsp; &nbsp; {option}
+             <span class="checkmark"></span>
+            </label>
+          </li>
         ))}
-        </ul>
-        {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
-      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
-      </>
-            :
-            <></>
-        } 
-<hr className='custom-hr'/>
-
-        
-        <div className="row">
-
-        { filteredData && filteredData.map((author) => (
-        <div  key={author.username} class="col-lg-4 col-md-6 col-6 p-3 pt-0">
-          <div className='community-column text-center'>
-         
-          <div class="community-card p-3">
-            <div class="img-container">
-              <img src="img/favicon.ico" />
+              </ul>
+              <ul className='m-auto category-list mobile-view'>
+        {accountantOptions.slice(0, showAllCategory ? accountantOptions.length : visibleItems).map((option, index) => (
+            <li key={option} className=''>
+            <label className='custom-checkbox'>
+              <input
+                type="checkbox"
+                value={option}
+                checked={checkboxes.includes(option)}
+                onChange={() => handleCheckboxChange(option)}
+              />
+             &nbsp; &nbsp; {option}
+             <span class="checkmark"></span>
+            </label>
+          </li>
+        ))}
+              </ul>
+              {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+        {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+              </>
+            )
+        :
+        data === "lawyer" ? (
+          <>
+          <ul className='m-auto category-list desktop-view'>
+                 {lawyerOptions.map((option, index) => (
+                   <li key={option} className=''>
+                   <label className='custom-checkbox'>
+                     <input
+                       type="checkbox"
+                       value={option}
+                       checked={checkboxes.includes(option)}
+                       onChange={() => handleCheckboxChange(option)}
+                     />
+                    &nbsp; &nbsp; {option}
+                    <span class="checkmark"></span>
+                   </label>
+                 </li>
+               ))}
+               </ul>
+               <ul className='m-auto category-list mobile-view'>
+               {lawyerOptions.slice(0, showAllCategory ? lawyerOptions.length : visibleItems).map((option, index) => (
+                   <li key={option} className=''>
+                   <label className='custom-checkbox'>
+                     <input
+                       type="checkbox"
+                       value={option}
+                       checked={checkboxes.includes(option)}
+                       onChange={() => handleCheckboxChange(option)}
+                     />
+                    &nbsp; &nbsp; {option}
+                    <span class="checkmark"></span>
+                   </label>
+                 </li>
+                 ))}
+                 </ul>
+                 {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+               {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+               </>
+        )
+        :
+        <></>
+} 
             </div>
-            <h3 className="community-h3 mb-2">{author.username}</h3>
-            <p className="m-0 mb-2">{author.services || '-'}</p>
-            <div class="community-icons">
-            {author.payment_method.length > 0 ? (
+            <div className="col-lg-9">
+            <div className="row pt-4">
+
+{ filteredData && filteredData.map((author) => (
+<div  key={author.username} class="col-lg-12 col-12 p-3 pt-0">
+  <div className='community-column'>
+ 
+  <div class="community-card p-4">
+    <div class="img-container long-cards">
+      <img src="img/favicon.ico" />
+    </div>
+    <h3 className="community-h3 mb-2">{author.username}</h3>
+    <p className="m-0 mb-2">{author.services || '-'}</p>
+    <h6>
+      Payment Method:
+    </h6>
+    <div class="community-icons">
+    {author.payment_method.length > 0 ? (
 author.payment_method.slice(0, 4).map((item, index) => (
-  <span className="bot" key={item.name} >
-    {item.name || '-'} 
-    {index !== author.payment_method.slice(0, 4).length - 1 && ', '}
-  </span>
+<span className="bot" key={item.name} >
+{item.name || '-'} 
+{index !== author.payment_method.slice(0, 4).length - 1 && ', '}
+</span>
 ))
 ) : (
 <span className="bot"> - </span>
 )}
 {author.payment_method.length > 4 && <span className="bot"> ...</span>}
 
-            </div>
-            <div className="button-boxes">
-              <div className="row">
-                <div onClick={() => handleSellerClick(author.username)} className="col-lg-6 view-package-btn">
-                  View Packages
-                </div>
-                <div className="col-lg-6 view-package-btn">
-                  Book
-                </div>
-              </div>
-            </div>
-          </div>
-         
-          </div>
+    </div>
+    <div className="button-boxes">
+      <div className="row">
+        <div className="col-lg-12 view-package-btn text-end">
+          <a onClick={() => handleSellerClick(author.username)} >
+          View Packages
+          </a>
         </div>
-        
-        ))}
-                </div>
+        {/* <div className="col-lg-6 view-package-btn">
+          Book
+        </div> */}
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+
+))}
+        </div>
+            </div>
+          </div>
                 </div>
         </div>
         <div className="chat-fixed">
@@ -467,8 +491,20 @@ author.payment_method.slice(0, 4).map((item, index) => (
           </div>
       </div>
       </div>
-     
-     
+      {isModalOpen && (
+        <div className={`packagemodal-overlay ${isModalOpen ? 'active' : 'disable'}`} onClick={handleCloseModal}>
+          <div className={`packagemodal ${isModalOpen ? 'packageactive' : ''}`}>
+            <div className="packagemodal-content">
+              <div>
+              <a onClick={handleCloseModal} className='cancel-button' >&#x2716;</a>
+              </div>
+
+              {/* Your modal content goes here */}
+             <PackageModal/>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
     {isPopupOpen && (
         <PopupContainer>

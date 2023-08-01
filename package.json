@@ -6,6 +6,7 @@
   "dependencies": {
     "@0x/web3-wrapper": "^8.0.0",
     "@alch/alchemy-web3": "^1.1.8",
+    "@react-google-maps/api": "^2.19.0",
     "@tim-soft/react-spring-web": "^9.0.0-beta.36",
     "aws-amplify": "^5.1.4",
     "axios": "^1.3.4",
@@ -32,6 +33,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-pose": "^4.0.10",
     "react-redux": "^7.2.5",
+    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.1",
     "react-select": "^4.3.1",
