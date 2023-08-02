@@ -62,6 +62,7 @@ import CategorySelect from './pages/CategorySelect';
 import About from './pages/about';
 import Author2 from './pages/Author2';
 import CheckLocation from './pages/CheckLocation';
+import Main from './pages/main';
 
 
 
@@ -109,6 +110,7 @@ const app= () => (
       <Route path="/home" element={<Home />} />
       <Route path="/blockchain" element={<About />} />
       <Route path="/category" element={<CategorySelect />} /> 
+      <Route path="/" element={<Main />} /> 
       <Route element={<Author2 />} path="/seller/:username" />
       
      

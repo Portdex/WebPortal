@@ -305,9 +305,9 @@ return (
                     <li id='Mainbtn2' className=""><span>Services Packages</span></li> */}
                     <li id='Mainbtn' className="mt-3 "><span onClick={handleBtnClick}>Description</span></li>
                     
-                    <li id='Mainbtn2' className="mt-3 active"><span onClick={handleBtnClick2}>Services</span></li>
-                    <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Videos</span></li> 
-                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Digital Products</span></li> 
+                    <li id='Mainbtn2' className="mt-3 active"><span onClick={handleBtnClick2}>Service packages</span></li>
+                    <li id='Mainbtn1' className="mt-3 "><span onClick={handleBtnClick1}>Hourly Booking</span></li> 
+                    <li id='Mainbtn3' className="mt-3 "><span onClick={handleBtnClick3}>Videos</span></li> 
                 </ul>
             </div>
           </div>
