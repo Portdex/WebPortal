@@ -152,9 +152,9 @@ const CategorySelect= () => {
     setShowAllCategory(false);
   };
   const handleSellerClick = (username) => {
-    console.log("Clicked the View Packages button");
-    setIsModalOpen(true);
-    // navigate(`/seller/${username}`);
+    // console.log("Clicked the View Packages button");
+    // setIsModalOpen(true);
+    navigate(`/seller/${username}`);
   };
   const sendPopupMessage = () => {
     // Call the Twilio API via your server to send the message
@@ -205,22 +205,36 @@ const CategorySelect= () => {
     .catch((error) => console.error(error));
     window.scrollTo(0, 0);
   }, []);
-  const accountantOptions = [
-    'Annual accounts',
-    'Bookkeepers',
-    'Payroll',
-    'VAT',
-    'Tax filing',
-    'Tax planning',
-    'Business tax',
-    'Personal tax',
-    'Inheritance tax',
-    'International business',
-    'Establishing a UK base or branching out overseas',
-    // Add more options as needed
-  ];
-  const lawyerOptions = [
-    'Products & Services',
+  const options = {
+    freelancer: [
+      'Web Design',
+      'Graphic Design',
+      'Business Consultants',
+      'Party Organiser',
+      'Tour guide',
+      'House Services',
+      'Mechanics',
+      'Game Developers',
+      'Blog Writers',
+      'Full Stack Developers'
+      // ... more options ...
+    ],
+    accountant: [
+      'Annual accounts',
+      'Bookkeepers',
+      'Payroll',
+      'VAT',
+      'Tax filing',
+      'Tax planning',
+      'Business tax',
+      'Personal tax',
+      'Inheritance tax',
+      'International business',
+      'Establishing a UK base or branching out overseas',
+      // ... more options ...
+    ],
+    lawyer: [
+      'Products & Services',
     'Divorce Law',
     'Family Law',
     'Human Rights Law',
@@ -242,21 +256,10 @@ const CategorySelect= () => {
     'Compromise Agreement for Employees',
     'Employment Law',
     'The Law Society Member',
-    // Add more options as needed
-  ];
-  const freelancerOptions = [
-    'Web Design',
-    'Graphic Design',
-    'Business Consultants',
-    'Party Organiser',
-    'Tour guide',
-    'House Services',
-    'Mechanics',
-    'Game Developers',
-    'Blog Writers',
-    'Full Stack Developers'
-    // Add more options as needed
-  ];
+      // ... more options ...
+    ],
+  };
+
 function handleCheckboxChange(checkboxValue) {
   let updatedCheckboxes = [...checkboxes];
 
@@ -295,136 +298,52 @@ function handleCheckboxChange(checkboxValue) {
         </h6>
         <div className="chat-messages d-flex justify-content-center flex-column">
           <div className="row">
-            <div className="col-lg-3">
-            {data === "freelancer" ? (
-  <>
-  <ul className='m-auto category-list desktop-view'>
-        {freelancerOptions.map((option, index) => (
-            <li key={option} className=''>
-          <label className='custom-checkbox'>
-            <input
-              type="checkbox"
-              value={option}
-              checked={checkboxes.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
-            />
-           &nbsp; {option}
-           <span class="checkmark"></span>
-          </label>
-        </li> 
-      ))}
-      </ul> 
-      <ul className='m-auto category-list mobile-view'>
-      {freelancerOptions.slice(0, showAllCategory ? freelancerOptions.length : visibleItems).map((option, index) => (
-          <li key={option} className=''>
-        <label className='custom-checkbox'>
-          <input
-            type="checkbox"
-            value={option}
-            checked={checkboxes.includes(option)}
-            onChange={() => handleCheckboxChange(option)}
-          />
-         &nbsp; {option}
-         <span class="checkmark"></span>
-        </label>
-      </li> 
-    ))}
-    </ul> 
-    {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
-      {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
-    </>
-  )
-            :
-            data === "accountant" ?(
-            <>
+    
    <ul className='m-auto category-list desktop-view'>
      
-   {accountantOptions.map((option, index) => (
-             <li key={option} className=''>
-            <label className='custom-checkbox'>
+   {options[data]?.map((option) => (
+          <li key={option} className="">
+            <label className="custom-checkbox">
               <input
                 type="checkbox"
                 value={option}
                 checked={checkboxes.includes(option)}
                 onChange={() => handleCheckboxChange(option)}
               />
-             &nbsp; &nbsp; {option}
-             <span class="checkmark"></span>
+              &nbsp; {option}
+              <span class="checkmark"></span>
             </label>
           </li>
         ))}
               </ul>
               <ul className='m-auto category-list mobile-view'>
-        {accountantOptions.slice(0, showAllCategory ? accountantOptions.length : visibleItems).map((option, index) => (
-            <li key={option} className=''>
-            <label className='custom-checkbox'>
+       {options[data]?.slice(0, showAllCategory ? options[data]?.length : visibleItems).map((option) => (
+          <li key={option} className="">
+            <label className="custom-checkbox">
               <input
                 type="checkbox"
                 value={option}
                 checked={checkboxes.includes(option)}
                 onChange={() => handleCheckboxChange(option)}
               />
-             &nbsp; &nbsp; {option}
-             <span class="checkmark"></span>
+              &nbsp; {option}
+              <span class="checkmark"></span>
             </label>
           </li>
         ))}
               </ul>
               {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
         {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
-              </>
-            )
-        :
-        data === "lawyer" ? (
-          <>
-          <ul className='m-auto category-list desktop-view'>
-                 {lawyerOptions.map((option, index) => (
-                   <li key={option} className=''>
-                   <label className='custom-checkbox'>
-                     <input
-                       type="checkbox"
-                       value={option}
-                       checked={checkboxes.includes(option)}
-                       onChange={() => handleCheckboxChange(option)}
-                     />
-                    &nbsp; &nbsp; {option}
-                    <span class="checkmark"></span>
-                   </label>
-                 </li>
-               ))}
-               </ul>
-               <ul className='m-auto category-list mobile-view'>
-               {lawyerOptions.slice(0, showAllCategory ? lawyerOptions.length : visibleItems).map((option, index) => (
-                   <li key={option} className=''>
-                   <label className='custom-checkbox'>
-                     <input
-                       type="checkbox"
-                       value={option}
-                       checked={checkboxes.includes(option)}
-                       onChange={() => handleCheckboxChange(option)}
-                     />
-                    &nbsp; &nbsp; {option}
-                    <span class="checkmark"></span>
-                   </label>
-                 </li>
-                 ))}
-                 </ul>
-                 {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
-               {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
-               </>
-        )
-        :
-        <></>
-} 
-            </div>
-            <div className="col-lg-9">
-            <div className="row pt-4">
+     
+            
+            
+            <div className="row mx-auto pt-4">
 
 { filteredData && filteredData.map((author) => (
-<div  key={author.username} class="col-lg-12 col-12 p-3 pt-0">
+<div  key={author.username} class="col-lg-4 community-main col-6 p-3 pt-0">
   <div className='community-column'>
  
-  <div class="community-card p-4">
+  <div class="community-card text-center p-4">
     <div class="img-container long-cards">
       <img src="img/favicon.ico" />
     </div>
@@ -449,7 +368,7 @@ author.payment_method.slice(0, 4).map((item, index) => (
     </div>
     <div className="button-boxes">
       <div className="row">
-        <div className="col-lg-12 view-package-btn text-end">
+        <div className="col-lg-12 view-package-btn text-center">
           <a onClick={() => handleSellerClick(author.username)} >
           View Packages
           </a>
@@ -466,7 +385,7 @@ author.payment_method.slice(0, 4).map((item, index) => (
 
 ))}
         </div>
-            </div>
+            
           </div>
                 </div>
         </div>

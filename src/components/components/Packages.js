@@ -29,7 +29,7 @@ const Packages = () =>
             </div>
             <div className="small-border"></div>
             <div className="row">
-              <ul className="list-check">
+              <ul className="list-check w-100">
                 <li>
                   200,000+ free Templates
                 </li>
@@ -83,7 +83,7 @@ const Packages = () =>
             </div>
             <div className="small-border"></div>
             <div className="row">
-              <ul className="list-check">
+              <ul className="list-check w-100">
                 <li>
                   200,000+ free Templates
                 </li>
@@ -137,7 +137,7 @@ const Packages = () =>
             </div>
             <div className="small-border"></div>
             <div className="row">
-              <ul className="list-check">
+              <ul className="list-check w-100">
                 <li>
                   200,000+ free Templates
                 </li>
