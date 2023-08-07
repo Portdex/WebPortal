@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import * as selectors from '../../store/selectors';
 import { fetchAuthorList } from "../../store/actions/thunks";
-import fetch from "./fetch";
+import fetch from "../../data/fetch";
 import { Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";

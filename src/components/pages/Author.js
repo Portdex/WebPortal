@@ -12,10 +12,10 @@ import * as Yup from 'yup';
 import auth , { authorUrl }from "../../core/auth";
 import request from '../../core/auth/request';
 import { useNavigate, useParams } from 'react-router-dom';
-import fetch from "./fetch";
+import fetch from "../../data/fetch";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import fetchServices from "./fetchServices";
+import fetchServices from "../../data/fetchServices";
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
     background: #fff;

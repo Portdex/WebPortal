@@ -3,7 +3,8 @@ import { keyframes } from "@emotion/react";
 import '../../assets/chat.css'
 import styled , { createGlobalStyle } from 'styled-components';
 import axios from 'axios';
-import fetch from './fetch';
+
+import fetch from '../../data/fetch';
 import { 
   Link, 
   useNavigate, 
@@ -349,7 +350,7 @@ function handleCheckboxChange(checkboxValue) {
     </div>
     <h3 className="community-h3 mb-2">{author.username}</h3>
     <p className="m-0 mb-2">{author.services || '-'}</p>
-    <h6>
+    {/* <h6>
       Payment Method:
     </h6>
     <div class="community-icons">
@@ -365,7 +366,19 @@ author.payment_method.slice(0, 4).map((item, index) => (
 )}
 {author.payment_method.length > 4 && <span className="bot"> ...</span>}
 
+    </div> */}
+  
+    <div class="community-icons">
+    <i class="f-size fa fa-fw fa-facebook" aria-hidden="true" title="Copy to use facebook-square"></i>
+<i class="f-size fa fa-fw fa-linkedin" aria-hidden="true" title="Copy to use linkedin-square"></i>
+
+<i class="f-size fa fa-fw fa-whatsapp" aria-hidden="true" title="WhatsApp"></i>
+
+<i class="f-size fa fa-fw fa-twitter" aria-hidden="true" title="Copy to use twitter-square"></i>
+
+
     </div>
+    
     <div className="button-boxes">
       <div className="row">
         <div className="col-lg-12 view-package-btn text-center">

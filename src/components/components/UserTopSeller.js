@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import api from '../../core/api';
 import { useNavigate } from 'react-router-dom';
-import fetch from '../pages/fetch';
+import fetch from '../../data/fetch';
 import { useState , useEffect } from 'react';
 
 

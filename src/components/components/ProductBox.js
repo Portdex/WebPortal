@@ -9,7 +9,7 @@ import NftMusicCard from './NftMusicCard';
 import { shuffleArray } from '../../store/utils';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import fetchServices from '../pages/fetchServices';
+import fetchServices from '../../data/fetchServices';
 
 //react functional component
 const ProductBox = () => {

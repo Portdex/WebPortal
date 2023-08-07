@@ -4,8 +4,6 @@ import ScrollToTopBtn from './menu/ScrollToTop';
 import Header from './menu/header';
 import Home from './pages/home';
 
-import Explore from './pages/explore';
-import Explore2 from './pages/explore2';
 import ExploreOpensea from './pages/Opensea/explore';
 // import Rangking from './pages/rangking';
 
@@ -13,7 +11,7 @@ import Auction from './pages/Auction';
 import Helpcenter from './pages/helpcenter';
 import Colection from './pages/colection';
 // import ItemDetail from './pages/ItemDetail';
-import ItemDetailRedux from './pages/ItemDetailRedux';
+// import ItemDetailRedux from './pages/ItemDetailRedux';
 import Author from './pages/Author';
 import AuthorOpensea from './pages/Opensea/author';
 import Wallet from './pages/wallet';
@@ -28,9 +26,6 @@ import Create3 from './pages/create3';
 import Createoption from './pages/createOptions';
 import Activity from './pages/activity';
 import Contact from './pages/contact';
-import ElegantIcons from './pages/elegantIcons';
-import EtlineIcons from './pages/etlineIcons';
-import FontAwesomeIcons from './pages/fontAwesomeIcons';
 
 import Alerts from './pages/alerts';
 
@@ -45,7 +40,6 @@ import Community from './pages/Community';
 import Services from './pages/Services';
 import Information from './pages/Information';
 import Confirmation from './pages/Confirmation';
-import Description from './pages/Description';
 import Portdexvideos from './pages/Portdexvideos';
 import TokenEconomy from './pages/TokenEconomy';
 import SendMessagePopup from './pages/SendMEssage';
@@ -112,45 +106,12 @@ const app= () => (
       <Route path="/category" element={<CategorySelect />} /> 
       <Route path="/" element={<Main />} /> 
       <Route element={<Author2 />} path="/seller/:username" />
-      
-     
-      <Route element={<Explore/>} path="/explore" />
-      <Route element={<CheckLocation/>} path="/checklocation" />
-      <Route element={<Explore2/>} path="/explore2" />
-      <Route element={<ExploreOpensea/>} path="/exploreOpensea" />
-      <Route element={<Auction/>} path="/Auction" />
-      <Route element={<Helpcenter/>} path="/helpcenter" />
-      <Route element={<Colection/>} path="/colection/:collectionId" />
-      <Route element={<ItemDetailRedux/>} path="/ItemDetail/:nftId" />
-      {/* <Route element={<Author />} path="/Author/:index" /> */}
-      <Route element={<Author />} path="/Author/:username" />
-      <Route element={<Servicedetail />} path="/servicedetail/:username/:serviceId" />
-      <Route element={<Profile />} path="/Profile/:authorId" />
-      <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
-      <Route element={<Wallet />} path="/wallet" />
-      <Route element={<Login />} path="/login" />
-      <Route element={<Register />} path="/register" />
-      <Route element={<Price />} path="/price" />
-      <Route element={<News />} path="/news" />
-      <Route element={<NewsSingle />} path="/news/:postId" />
-      <Route element={<Create />} path="/create" />
-      <Route element={<Create2 />} path="/create2" />
-      <Route element={<Create3 />} path="/create3" />
-      <Route element={<Createoption />} path="/createOptions" />
-      <Route element={<Activity />} path="/activity" />
-      <Route element={<Contact />} path="/contact" />
-      <Route element={<ElegantIcons />} path="/elegantIcons" />
-      <Route element={<EtlineIcons />} path="/etlineIcons" />
-      <Route element={<FontAwesomeIcons />} path="/fontAwesomeIcons" />
-      <Route element={<Alerts />} path="/alerts" />
-      <Route element={<Minter />} path="/mint" />
       <Route element={<Marketplace />} path="/marketplace" />
       <Route element={<Product />} path="/products" />
       <Route element={<Community />} path="/community" />
       <Route element={<Services />} path="/services" />
       <Route element={<Information />} path="/information" />
       <Route element={<Confirmation />} path="/confirmation" />
-      {/* <Route element={<Description />} path="/description" /> */}
       <Route element={<Portdexvideos />} path="/videos" />
       <Route element={<TokenEconomy />} path="/tokenEconomy" />
       <Route element={<SendMessagePopup />} path="/check" />
@@ -162,7 +123,36 @@ const app= () => (
       <Route element={<Connectivity />} path="/connectivity" />
       <Route element={<ProductDescription />} path="/productsdetails/:username" />
       <Route element={<Productdetail />} path="/productdetail/:id" />
-      <Route element={<Description />} path="/description/:id" />
+      <Route element={<Wallet />} path="/wallet" />
+      <Route element={<Author />} path="/Author/:username" />
+      <Route element={<Servicedetail />} path="/servicedetail/:username/:serviceId" />
+      <Route element={<Profile />} path="/Profile/:authorId" />
+      <Route element={<Login />} path="/login" />
+      <Route element={<Register />} path="/register" />
+
+      <Route element={<CheckLocation/>} path="/checklocation" />
+      <Route element={<ExploreOpensea/>} path="/exploreOpensea" />
+      <Route element={<Auction/>} path="/Auction" />
+      <Route element={<Helpcenter/>} path="/helpcenter" />
+      <Route element={<Colection/>} path="/colection/:collectionId" />
+      {/* <Route element={<ItemDetailRedux/>} path="/ItemDetail/:nftId" /> */}
+      {/* <Route element={<Author />} path="/Author/:index" /> */}
+      
+      <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
+
+
+      <Route element={<Price />} path="/price" />
+      <Route element={<News />} path="/news" />
+      <Route element={<NewsSingle />} path="/news/:postId" />
+      <Route element={<Create />} path="/create" />
+      <Route element={<Create2 />} path="/create2" />
+      <Route element={<Create3 />} path="/create3" />
+      <Route element={<Createoption />} path="/createOptions" />
+      <Route element={<Activity />} path="/activity" />
+      <Route element={<Contact />} path="/contact" />
+      <Route element={<Alerts />} path="/alerts" />
+      <Route element={<Minter />} path="/mint" />
+    
       
     </Routes>
     <ScrollToTopBtn />

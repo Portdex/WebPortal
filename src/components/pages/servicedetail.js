@@ -12,7 +12,7 @@ import * as Yup from 'yup';
 import auth , { authorUrl }from "../../core/auth";
 import request from '../../core/auth/request';
 import { useNavigate, useParams } from 'react-router-dom';
-import fetchServices from "./fetchServices";
+import fetchServices from "../../data/fetchServices";
 import axios from "axios";
 import Packages from "../components/Packages";
 const GlobalStyles = createGlobalStyle`

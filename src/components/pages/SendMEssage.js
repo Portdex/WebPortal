@@ -4,7 +4,7 @@ import '../../assets/chat.css'
 import styled , { createGlobalStyle } from 'styled-components';
 
 import axios from 'axios';
-import fetch from './fetch';
+import fetch from '../../data/fetch';
 import { 
   Link, 
   useNavigate, 
