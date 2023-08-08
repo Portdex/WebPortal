@@ -6416,6 +6416,12 @@ border-radius:20px
 {
   margin-left:260px
 }
+@media (max-width:600px)
+{
+  .popup-responsive{
+    width:80%;
+  }
+}
 @media (max-width: 895px) {
   .sidebarWeb
   {

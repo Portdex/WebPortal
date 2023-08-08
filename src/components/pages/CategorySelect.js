@@ -439,7 +439,7 @@ author.payment_method.slice(0, 4).map((item, index) => (
       )}
     </div>
     {isPopupOpen && (
-        <PopupContainer>
+        <PopupContainer className='popup-responsive'>
           <h3>Send Message</h3>
           <PopupInput
             type="text"
