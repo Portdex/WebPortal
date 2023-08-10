@@ -3,7 +3,7 @@ import Select from 'react-select'
 import Footer from '../components/footer';
 import AuthorListRedux from '../components/AuthorListRedux';
 import { createGlobalStyle } from 'styled-components';
-import fetch from './fetch';
+import fetch from '../../data/fetch';
 import Spinner from 'react-bootstrap/Spinner';
 import { NavLink, Link,useNavigate } from 'react-router-dom';
 import axios from 'axios';

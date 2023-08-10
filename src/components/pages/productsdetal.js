@@ -1,7 +1,7 @@
 import React, { memo, useEffect , useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 
-import fetch from "../pages/fetch";
+import fetch from "../../data/fetch";
 
 import { useNavigate, useParams } from "react-router-dom";
 

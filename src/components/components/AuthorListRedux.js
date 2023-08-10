@@ -4,7 +4,7 @@ import CommunityColumn from "./CommunityColumn";
 import * as selectors from '../../store/selectors';
 import { fetchAuthorList } from "../../store/actions/thunks";
 import UserTopSeller from "./UserTopSeller";
-import fetch from "../pages/fetch";
+import fetch from "../../data/fetch";
 import { Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";

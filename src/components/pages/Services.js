@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import CheckboxFilter from '../components/CheckboxFilter';
 import ColumnNewRedux from "../components/ColumnNewRedux";
-import fetchServices from './fetchServices';
+import fetchServices from '../../data/fetchServices';
 import ServicesBox from '../components/ServicesBox';
 const GlobalStyles = createGlobalStyle`
   .navbar {

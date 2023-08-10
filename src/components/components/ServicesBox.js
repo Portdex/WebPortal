@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 // import * as selectors from '../../store/selectors';
 import { Link } from 'react-router-dom';
-import fetchServices from '../pages/fetchServices';
+import fetchServices from '../../data/fetchServices';
 
 //react functional component
 const ServicesBox = () => {

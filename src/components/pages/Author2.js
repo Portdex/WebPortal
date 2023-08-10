@@ -8,13 +8,15 @@ import * as Yup from 'yup';
 import auth , { authorUrl }from "../../core/auth";
 import request from '../../core/auth/request';
 import { useNavigate, useParams } from 'react-router-dom';
-import fetch from "./fetch";
+import fetch from "../../data/fetch";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import fetchServices from "./fetchServices";
+import fetchServices from "../../data/fetchServices";
 import Sidebars from "../menu/sidebar";
 import Packages from "../components/Packages";
 import WebSidebar from "../menu/webSidebar";
+import MyCalendar from "../components/Calendar";
+
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
     background: #fff;
@@ -319,10 +321,11 @@ return (
         </div>
         </>
       )}
-        {openMenu1 && author.id && (  
+        {openMenu1 && (  
         <>
         <div id='zero1' className='onStep fadeIn'>
          {/* <ColumnNewRedux shuffle showLoadMore={false} authorId={author.id}/> */}
+         <MyCalendar/>
         </div>
         </>
       )}
