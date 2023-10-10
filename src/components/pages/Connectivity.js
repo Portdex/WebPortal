@@ -108,28 +108,7 @@ const Connectivity= () => {
         </div>
         
         </div>
-        <div className='row mt-5 margin-top-zero d-flex align-items-center'>
-        
-        <div className='col-lg-6 padding-top-zero'>
-            <h4>
-            DeFi Connectivity 
-            </h4>
-            <p>
-           <i> Nearly Half of Gig Economy Freelance and Contract Workers are denied Access to Financial Services (Yahoo Finance 2022). 28% of self-employed workers in the UK struggle to access financial services.
-           </i>
-<br/><br/>
-Portdex will connect freelancers to peer to peer financial system that leverage blockchain and smart contracts to enable micro, small businesses, and the freelance community to access decentralised finance.  ( Portdex will connect freelancers to llenders who may accept invoice /Purchase order to fullfill their need)
-
-            </p>
-          </div>
-        <div className='col-lg-6'>
-          <img
-                    src="/img/vector3.jpg"
-                    className="mx-auto radius img-fluid d-block mb-3"
-                    alt="#"
-                  />
-          </div>
-        </div>
+       
        
         </div>
       </section>

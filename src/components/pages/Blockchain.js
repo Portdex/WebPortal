@@ -92,7 +92,7 @@ const Blockchain= () =>{
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2>Blockchain Technology & Smart contracts </h2>
+              <h2>Decentralised Technologies & Smart contracts </h2>
               <div className="small-border"></div>
               <p className='text-center'>
               </p>

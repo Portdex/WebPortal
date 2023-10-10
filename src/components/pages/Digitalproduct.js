@@ -86,7 +86,7 @@ const Digitalproduct= () => {
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h2>Digital Products NFTs</h2>
+              <h2>Digital Products Tracebility</h2>
               <div className="small-border"></div>
               <p className='text-center'>
               </p>

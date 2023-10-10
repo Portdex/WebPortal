@@ -288,6 +288,17 @@ return (
                               
                               ))
                           }
+                          <br/>
+                           <div class="community-icons">
+    <i class="f-size fa fa-fw fa-facebook" aria-hidden="true" title="Copy to use facebook-square"></i>
+<i class="f-size fa fa-fw fa-linkedin" aria-hidden="true" title="Copy to use linkedin-square"></i>
+
+<i class="f-size fa fa-fw fa-whatsapp" aria-hidden="true" title="WhatsApp"></i>
+
+<i class="f-size fa fa-fw fa-twitter" aria-hidden="true" title="Copy to use twitter-square"></i>
+
+
+    </div>
                           </h4>
                           
                       </div>

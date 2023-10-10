@@ -58,29 +58,26 @@ const footer= () => (
                             </ul>
                         </div>
                     </div> */}
-                    <div className="col-md-3 col-sm-6 col-xs-1">
-                        <div className="widget">
+                    {/* <div className="col-md-3 col-sm-6 col-xs-1">
+                        <div className="widget"> */}
                             {/* <h5>Community</h5>
                             <ul>
                                 <li><Link to="/community">Community</Link></li>
                             </ul> */}
-                            <h5 className=''> Business videos</h5>
+                            {/* <h5 className=''> Business videos</h5>
                             <ul>
                                 <li><Link to="">service providers</Link></li>
                                 <li><Link to="">product videos</Link></li>
                             </ul>
                         </div>
-                        
-                           
-                        
-                    </div>
+                    </div> */}
                     <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>About Us</h5>
                             <ul>
                             <li><Link to="/blockchain">About </Link></li>
                             {/* <li><Link to="/blockchain">Blockchain Technology & Smart contracts </Link></li> */}
-                            <li><Link to="/portexGovernance">Portdex Governance </Link></li>
+                            {/* <li><Link to="/portexGovernance">Portdex Governance </Link></li> */}
                             {/* <li><Link to="">Company</Link></li> */}
                             {/* <li><Link to="/digital-products">Digital Product Traceability Through NFT</Link></li> */}
                             {/* <li><Link to="/tax-tracking">Transaction Level Tax Tracking </Link></li> */}

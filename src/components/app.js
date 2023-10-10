@@ -126,7 +126,8 @@ const app= () => (
       <Route element={<Wallet />} path="/wallet" />
       <Route element={<Author />} path="/Author/:username" />
       <Route element={<Servicedetail />} path="/servicedetail/:username/:serviceId" />
-      <Route element={<Profile />} path="/Profile/:authorId" />
+      {/* <Route element={<Profile />} path="/Profile/:authorId" /> */}
+      <Route element={<Profile />} path="/Profile" />
       <Route element={<Login />} path="/login" />
       <Route element={<Register />} path="/register" />
 

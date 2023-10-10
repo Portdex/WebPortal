@@ -5711,6 +5711,7 @@ blockquote {
   cursor: pointer;
   transition: 0.3s;
   background-color: #ffffff;
+  transition: .7s;
 }
 .community-card:hover h6
 {
@@ -5781,8 +5782,9 @@ font-weight:500
   font-size: 1.4em;
 }
 .community-card:hover {
-  background: linear-gradient(#6045ea, #8567f7);
-  color: #ffffff;
+  background: #403f83;
+  transition: .7s;
+  color:white;
 }
 .community-card:hover .long-cards {
   background-color: white !important;
@@ -6972,6 +6974,10 @@ border-radius:20px
     padding:4px !important;
   }
 }
+#myHeader
+{
+  height:80px
+}
 // .services-list h6
 // {
 //   display:inline-block;
@@ -6988,5 +6994,3 @@ border-radius:20px
 ::-webkit-scrollbar-thumb:hover {
   background-color: #8364e2; /* Set the color of the scrollbar thumb on hover */
 }
-
-

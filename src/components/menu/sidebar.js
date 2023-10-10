@@ -165,48 +165,38 @@ const Sidebars = () => {
 
         <div className="bottom-tabs">
           <ul>
+          <a href='https://business.portdex.ai/web/user_signup'>
             <li className='color-gold'>
-              <a href='https://business.portdex.ai/web/user_signup'>
                 Service Seller 
                 <br/>
               Join Our Beta Community
-              </a>
             </li>
-            <li>
+            </a>
+            {/* <li>
               <a href="/wallet">
               Connect Wallet
               </a>
-            </li>
+            </li> */}
+            <a href="/blockchain">
             <li>
-              <a href="/blockchain">
-              BlockChain Technology
-              </a>
+              Decentralised Technologies
             </li>
-            <li>
-              <a href="/wallet">
+            </a>
+            <a href="/marketplace">
+            <li>              
               Freelancers Governed – Web 3.0 Marketplace
-              </a>
             </li>
+            </a>
+            <a href="/our-team">
             <li>
-              <a href="/wallet">
-             Portdex Governance
-              </a>
-            </li>
-            <li>
-              <a href="/wallet">
-              Business Videos
-              </a>
-            </li>
-<li>
-              <a href="/our-team">
               Our Team
-              </a>
             </li>
-<li>
-              <a href="/community">
+            </a>
+            <a href="/community">
+            <li>
               Community
-              </a>
             </li>
+            </a>
           </ul>
         </div>
         </div>
@@ -232,49 +222,39 @@ const Sidebars = () => {
         </div>
 
         <div className="bottom-tabs">
-          <ul>
+          <ul className='text-start'>
+          <a href='https://business.portdex.ai/web/user_signup'>
             <li className='color-gold'>
-              <a href='https://business.portdex.ai/web/user_signup'>
                 Local Service Seller 
                 <br/>
               Join Our Beta Community
-              </a>
             </li>
-            <li>
+            </a>
+            {/* <li>
               <a href="/wallet">
               Connect Wallet
               </a>
-            </li>
+            </li> */}
+            <a href="/blockchain">
             <li>
-              <a href="/blockchain">
               About
-              </a>
             </li>
+            </a>
+            <a href="/marketplace">
             <li>
-              <a href="/wallet">
               Freelancers Governed – Web 3.0 Marketplace
-              </a>
             </li>
+            </a>
+            <a href="/our-team">
             <li>
-              <a href="/wallet">
-             Portdex Governance
-              </a>
-            </li>
-            <li>
-              <a href="/wallet">
-              Business Videos
-              </a>
-            </li>
-<li>
-              <a href="/our-team">
               Our Team
-              </a>
             </li>
-<li>
-              <a href="/community">
+            </a>
+            <a href="/community">
+            <li>
               Community
-              </a>
             </li>
+            </a>
           </ul>
         </div>
         </div>
