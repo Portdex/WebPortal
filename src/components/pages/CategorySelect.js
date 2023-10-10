@@ -109,9 +109,11 @@ const CategorySelect= () => {
   const [userData, setUserData] = useState([]);
   const [checkboxes, setCheckboxes] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [selectedUsers, setSelectedUsers] = useState([]);
+  
   console.log(userData)
   console.log("filter" , filteredData)
-  const [data, setData] = useState(null);
+  const [valueData, setValueData] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [popupName, setPopupName] = useState('');
   const [popupPhoneNumber, setPopupPhoneNumber] = useState('');
@@ -184,8 +186,8 @@ const CategorySelect= () => {
     // Check if data exists in local storage
     if (storedData) {
       // If data exists, update the state with the retrieved data
-      setData(storedData);
-      console.log(data)
+      setValueData(storedData);
+      console.log(valueData)
     }
   }, []);
   const navigate = useNavigate();
@@ -202,12 +204,21 @@ const CategorySelect= () => {
       data=data.data.results.users;
       setUserData(data);
       // setFilteredProducts(data); 
-    })
+   
+    if (valueData) {
+      const matchingUsers = userData.filter(
+        (user) => user.services === valueData
+      );
+      setSelectedUsers(matchingUsers);
+      console.log(matchingUsers)
+    }
+  })
     .catch((error) => console.error(error));
     window.scrollTo(0, 0);
   }, []);
+ 
   const options = {
-    freelancer: [
+    Freelancer: [
       'Web Design',
       'Graphic Design',
       'Business Consultants',
@@ -220,7 +231,7 @@ const CategorySelect= () => {
       'Full Stack Developers'
       // ... more options ...
     ],
-    accountant: [
+    Accountant: [
       'Annual accounts',
       'Bookkeepers',
       'Payroll',
@@ -234,7 +245,7 @@ const CategorySelect= () => {
       'Establishing a UK base or branching out overseas',
       // ... more options ...
     ],
-    lawyer: [
+    Lawyer: [
       'Products & Services',
     'Divorce Law',
     'Family Law',
@@ -261,6 +272,28 @@ const CategorySelect= () => {
     ],
   };
 
+// function handleCheckboxChange(checkboxValue) {
+//   let updatedCheckboxes = [...checkboxes];
+
+//   if (updatedCheckboxes.includes(checkboxValue)) {
+//     updatedCheckboxes = updatedCheckboxes.filter(value => value !== checkboxValue);
+//   } else {
+//     updatedCheckboxes.push(checkboxValue);
+//   }
+
+//   setCheckboxes(updatedCheckboxes);
+
+//   // Filter the user data based on selected checkboxes
+//   const filtered = userData.filter(user =>
+//     user.category.some(category => updatedCheckboxes.includes(category.name))
+//   );
+//   setFilteredData(filtered);
+//   setInputValue(`I am looking for a ${updatedCheckboxes.join(', ')}`);
+// }
+useEffect(() => {
+  // Update filteredData whenever userData or valueData changes
+  setFilteredData(userData.filter(user => user.services === valueData));
+}, [userData, valueData]);
 function handleCheckboxChange(checkboxValue) {
   let updatedCheckboxes = [...checkboxes];
 
@@ -272,12 +305,18 @@ function handleCheckboxChange(checkboxValue) {
 
   setCheckboxes(updatedCheckboxes);
 
-  // Filter the user data based on selected checkboxes
-  const filtered = userData.filter(user =>
-    user.category.some(category => updatedCheckboxes.includes(category.name))
-  );
-  setFilteredData(filtered);
-  setInputValue(`I am looking for a ${updatedCheckboxes.join(', ')}`);
+  // If no checkboxes are selected, show sellers with valueData service
+  if (updatedCheckboxes.length === 0) {
+    const matchingSellers = userData.filter(user => user.services === valueData);
+    setFilteredData(matchingSellers);
+  } else {
+    // Filter the user data based on selected checkboxes
+    const filtered = userData.filter(user =>
+      user.category.some(category => updatedCheckboxes.includes(category.name))
+    );
+    setFilteredData(filtered);
+    setInputValue(`I am looking for a ${updatedCheckboxes.join(', ')}`);
+  }
 }
 
   
@@ -302,7 +341,7 @@ function handleCheckboxChange(checkboxValue) {
     
    <ul className='m-auto category-list desktop-view'>
      
-   {options[data]?.map((option) => (
+   {options[valueData]?.map((option) => (
           <li key={option} className="">
             <label className="custom-checkbox">
               <input
@@ -318,7 +357,7 @@ function handleCheckboxChange(checkboxValue) {
         ))}
               </ul>
               <ul className='m-auto category-list mobile-view'>
-       {options[data]?.slice(0, showAllCategory ? options[data]?.length : visibleItems).map((option) => (
+       {options[valueData]?.slice(0, showAllCategory ? options[valueData]?.length : visibleItems).map((option) => (
           <li key={option} className="">
             <label className="custom-checkbox">
               <input
@@ -337,10 +376,10 @@ function handleCheckboxChange(checkboxValue) {
         {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
      
             
-            
+    
             <div className="row mx-auto pt-4">
 
-{ filteredData && filteredData.map((author) => (
+            {filteredData.map((author) => (
 <div  key={author.username} class="col-lg-4 community-main col-6 p-3 pt-0">
   <div className='community-column'>
  
@@ -349,25 +388,7 @@ function handleCheckboxChange(checkboxValue) {
       <img src="img/favicon.ico" />
     </div>
     <h3 className="community-h3 mb-2">{author.username}</h3>
-    <p className="m-0 mb-2">{author.services || '-'}</p>
-    {/* <h6>
-      Payment Method:
-    </h6>
-    <div class="community-icons">
-    {author.payment_method.length > 0 ? (
-author.payment_method.slice(0, 4).map((item, index) => (
-<span className="bot" key={item.name} >
-{item.name || '-'} 
-{index !== author.payment_method.slice(0, 4).length - 1 && ', '}
-</span>
-))
-) : (
-<span className="bot"> - </span>
-)}
-{author.payment_method.length > 4 && <span className="bot"> ...</span>}
-
-    </div> */}
-  
+    <p className="m-0 mb-2">{author.services || '-'}</p> 
     <div class="community-icons">
     <i class="f-size fa fa-fw fa-facebook" aria-hidden="true" title="Copy to use facebook-square"></i>
 <i class="f-size fa fa-fw fa-linkedin" aria-hidden="true" title="Copy to use linkedin-square"></i>

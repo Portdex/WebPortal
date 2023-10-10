@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -114,7 +114,9 @@ const navigate=useNavigate();
         <BetaBadge>Beta</BetaBadge>
         {/* Add your logo or other branding elements here if needed */}
       </LogoContainer>
-      <SignInButton>Sign In</SignInButton>
+      <Link to='https://business.portdex.ai/web/login' target='_blank'>
+      <SignInButton> Join SME's Beta </SignInButton>
+      </Link>
     </HeaderContainer>
     <section className='pt-5 mt-5'>
       <div className=" main-screeen">

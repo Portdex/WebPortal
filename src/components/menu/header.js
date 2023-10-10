@@ -135,7 +135,7 @@ const Header = function({ className }) {
    
     <header className={`navbar white ${className}`} id="myHeader">
          <GlobalStyles/>
-     <div className='container'>
+     <div className='container bg-white'>
        <div className='row w-100-nav'>
           <div className='logo px-0'>
               <div className='navbar-title navbar-item'>
@@ -342,7 +342,7 @@ const Header = function({ className }) {
                   <NavLink to="/wallet">Connect Wallet</NavLink>
                 </div> */}
                 <div className="logout">
-                  <NavLink to="/wallet">Connect Wallet-coming soon</NavLink>
+                  {/* <NavLink to="/wallet">Connect Wallet-coming soon</NavLink> */}
                   
                   {/* <div id="de-click-menu-profile" className="de-menu-profile" onClick={() => btn_icon_pop(!showpop)} ref={refpop}>                           
                   <i className="fa fa-user user-icon-style" ></i>

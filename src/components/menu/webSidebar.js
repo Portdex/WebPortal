@@ -38,27 +38,23 @@ const WebSidebar= () => {
               Join Our Beta Community
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/wallet">
               Connect Wallet
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/blockchain">
               About
               </a>
             </li>
+            
             <li>
-              <a href="/wallet">
-              Business Videos
-              </a>
-            </li>
-<li>
               <a href="/our-team">
               Our Team
               </a>
             </li>
-<li>
+            <li>
               <a href="/community">
               Community
               </a>

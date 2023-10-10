@@ -159,22 +159,16 @@ navigate('/category')
     localStorage.setItem("value" , "marketplace")
     navigate('/category')
           }
-  const handleFreelancers =() =>{
-    localStorage.setItem("value" , "freelancer")
-    navigate('/category')
-              }
-  const handleAccountant =() =>{
-    localStorage.setItem("value" , "accountant")
-    navigate('/category')
-                  }
- const handleLawyer =() =>{
-    localStorage.setItem("value" , "lawyer")
-    navigate('/category') 
-   }
+          const handleCategory = (category) => {
+            localStorage.setItem("value", category);
+            navigate('/category');
+          };
+ 
   const itemHandlers = {
-    Freelancers: handleFreelancers,
-    Accountant: handleAccountant,
-    Lawyer: handleLawyer,
+    Freelancers: ()=> handleCategory("Freelancer"),
+    Accountant:()=> handleCategory ("Accountant"),
+    Lawyer:()=> handleCategory("Lawyer"),
+    Teacher:()=> handleCategory("Teacher"),
     // Add more item handlers if needed
   };
 
