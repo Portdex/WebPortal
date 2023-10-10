@@ -57,6 +57,7 @@ import About from './pages/about';
 import Author2 from './pages/Author2';
 import CheckLocation from './pages/CheckLocation';
 import Main from './pages/main';
+import LayerAI from './pages/AI';
 
 
 
@@ -78,7 +79,6 @@ const ProtectedRoute = ({ children }) => {
 const app= () => (
   <div className="wraper">
   <GlobalStyles />
-    <Header/>
     <Routes >
       <Route path="*" element={<Navigate to="/home" replace />} />
       {/* <Route path="/Author">
@@ -124,6 +124,7 @@ const app= () => (
       <Route element={<ProductDescription />} path="/productsdetails/:username" />
       <Route element={<Productdetail />} path="/productdetail/:id" />
       <Route element={<Wallet />} path="/wallet" />
+      <Route element={<LayerAI />} path="/AI" />
       <Route element={<Author />} path="/Author/:username" />
       <Route element={<Servicedetail />} path="/servicedetail/:username/:serviceId" />
       {/* <Route element={<Profile />} path="/Profile/:authorId" /> */}

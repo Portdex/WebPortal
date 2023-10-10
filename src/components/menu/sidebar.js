@@ -172,11 +172,11 @@ const Sidebars = () => {
               Join Our Beta Community
             </li>
             </a>
-            {/* <li>
-              <a href="/wallet">
-              Connect Wallet
-              </a>
-            </li> */}
+            <a href="/AI">
+            <li>
+              AI Layer
+            </li>
+            </a>
             <a href="/blockchain">
             <li>
               Decentralised Technologies
@@ -230,14 +230,14 @@ const Sidebars = () => {
               Join Our Beta Community
             </li>
             </a>
-            {/* <li>
-              <a href="/wallet">
-              Connect Wallet
-              </a>
-            </li> */}
+            <a href="/AI">
+            <li>
+              AI Layer
+            </li>
+            </a>
             <a href="/blockchain">
             <li>
-              About
+            Decentralised Technologies
             </li>
             </a>
             <a href="/marketplace">

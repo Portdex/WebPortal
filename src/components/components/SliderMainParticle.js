@@ -29,7 +29,7 @@ const inline = keyframes`
 const slidermainparticle= () => (
  <div className="container">
     <div className="row align-items-center">
-          <div className="col-md-6">
+          <div className="col-md-12">
               <div className="spacer-single"></div>
               <div className="spacer-double"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>

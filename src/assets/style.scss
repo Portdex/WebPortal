@@ -2323,6 +2323,14 @@ i.font60 {
     -moz-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.3);
 }
+.feature-box:hover h5
+{
+  color:white
+}
+.feature-box:hover h3
+{
+  color:white
+}
 .feature-box.style-3 {
     position: relative;
     overflow: hidden !important;  
@@ -6164,12 +6172,15 @@ color:#8364E2
   }
   .bottom-tabs li
   {
-    cursor:pointer
+    cursor:pointer;
+    color:white;
+    font-size: 16px;
   }
   .bottom-tabs a
   {
  
-    font-weight:500
+    font-weight:500;
+    display: inherit;
   }
   .bottom-tabs li:hover
   {
