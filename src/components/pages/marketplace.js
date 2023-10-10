@@ -5,6 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
 import Catgor from '../components/Catgor';
+import Sidebars from '../menu/sidebar';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.sticky.white {
@@ -57,9 +58,11 @@ const Marketplace= () => {
     window.scrollTo(0, 0);
   }, [])
   return(
-  <div>
+<>
+<Sidebars/>
+  <div className='margin-left-sidebar'>
   <GlobalStyles />
-      <section className="jumbotron no-bg" style={{backgroundImage: `url(${'./img/background/2.jpg'})`}}>
+      <section className="jumbotron no-bg px-3" style={{backgroundImage: `url(${'./img/background/2.jpg'})`}}>
        {/* <Particle/> */}
          <SliderMainParticle/>
       </section>
@@ -207,6 +210,7 @@ Portdex decentralised digital product and services marketplaces will not be cont
     <Footer />
 
   </div>
+  </>
 );
   };
 export default Marketplace;

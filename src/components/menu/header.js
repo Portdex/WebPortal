@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import useOnclickOutside from "react-cool-onclickoutside";
 import auth from '../../core/auth';
-import { createGlobalStyle } from 'styled-components';
+import styled,{ createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   
   
@@ -21,6 +21,36 @@ const GlobalStyles = createGlobalStyle`
     align-items: center;
   }
 }
+`;
+const SidebarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: ${({ showmenu }) => (showmenu ? '0' : '-200px')};
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 9999;
+`;
+const Headers = styled.header`
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width:100%;
+  top: 0;
+`;
+const SidebarOverlay = styled.div`
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 `;
 setDefaultBreakpoints([
   { xs: 0 },
@@ -171,169 +201,64 @@ const Header = function({ className }) {
               <BreakpointProvider>
                 <Breakpoint l down>
                   {showmenu && 
-                  <div className='menu text-center'>
-                  <div className='navbar-item text-start'>
-                  <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
-                      Home
-                    </NavLink>
-                  </div>
-                  <div className='navbar-item text-start'>
-                  <NavLink to="/videos" onClick={() => btn_icon(!showmenu)}>
-                      Videos
-                    </NavLink>
-                  </div>
-                  <div className='navbar-item text-start'>
-                  <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
-                  Service Market place
-                    </NavLink>
-                  </div>
-                  <div className='navbar-item text-start'>
-                    <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
-                      Decentralised Product Marketplace
-                    </NavLink>
-                  </div>
-                  <div className='navbar-item text-start'>
-                  <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
-                      Community
-                    </NavLink>
-                  </div>
-                </div>
-                  // <div className='sidebar'>
-                  //   <img src="/img/close.svg" className="close-button" alt="" onClick={() => btn_icon(!showmenu)} />
-                  //    <div className='sidebar-item'>
-                  //     <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
-                  //      Home
-                  //     </NavLink>
-                  //   </div>
-                  //   <div className='sidebar-item'>
-                  //     <NavLink to="/videos" onClick={() => btn_icon(!showmenu)}>
-                  //    Videos
-                  //     </NavLink>
-                  //   </div>
-                  //   <div className='sidebar-item'>
-                  //     <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
-                  //      Product Marketplace
-                  //     </NavLink>
-                  //   </div>
-                  //   <div className='sidebar-item'>
-                  //     <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
-                  //     Service Marketplace
-                  //     </NavLink>
-                  //   </div>
-                  //   <div className='sidebar-item'>
-                  //     <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
-                  //     Community
-                  //     </NavLink>
-                  //   </div>
-                  
-                  // </div>
+                 <Headers className="navbarHome">
+                 
+                         <SidebarContainer open={showmenu}>
+                        <div className=" p-4 sidebar pt-0">
+                   <div className='p-2 newchat'>
+                   <a href="/">
+                     <img src="/img/portdex-logo_1.png" alt="" />
+                     </a>
+                   </div>
+           
+                   <div className="bottom-tabs">
+                     <ul className='text-start'>
+                     <a href='https://business.portdex.ai/web/user_signup'>
+                       <li className='color-gold'>
+                           Local Service Seller 
+                           <br/>
+                         Join Our Beta Community
+                       </li>
+                       </a>
+                       <a href="/AI">
+                       <li>
+                        AI Layer
+                      </li>
+                      </a>
+                       <a href="/blockchain">
+                       <li>
+                       Decentralised Technologies
+                       </li>
+                       </a>
+                       <a href="/marketplace">
+                       <li>
+                         Freelancers Governed – Web 3.0 Marketplace
+                       </li>
+                       </a>
+                       <a href="/our-team">
+                       <li>
+                         Our Team
+                       </li>
+                       </a>
+                       <a href="/community">
+                       <li>
+                         Community
+                       </li>
+                       </a>
+                     </ul>
+                   </div>
+                   </div>
+                 </SidebarContainer>
+                 <SidebarOverlay open={showmenu} onClick={() => btn_icon(!showmenu)} />
+                
+                      
+                     
+             </Headers>
+                 
                   }
-                  {/* <div className="bottom-bar">
-          <div className='menu row d-flex w-100 justify-content-center'>
-            
-                  <div className='navbar-item col-md-2 col-2'>
-                      <NavLink to="/">
-                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use home"></i>
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item col-md-2 col-2'>
-                      <NavLink to="/videos">
-                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use video-camera"></i>
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item col-md-2 col-2'>
-                      <NavLink to="/services">
-                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use shopping-cart"></i>
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item col-md-2 col-2'>
-                      <NavLink to="/products">
-                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use shopping-bag"></i>
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item col-md-2 col-2'>
-                      <NavLink to="/community">
-                      <i className="fa fa-fw" aria-hidden="true" title="Copy to use wechat"></i>
-                      </NavLink>
-                    </div>
-    </div>
-    </div> */}
                 </Breakpoint>
 
                 <Breakpoint xl className="p-0">
-                  {/* <div className='menu'>
-                  <div className='navbar-item'>
-                      <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
-                       Home
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/products" onClick={() => btn_icon(!showmenu)}>
-                      Decentralised Product Marketplace 
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/services" onClick={() => btn_icon(!showmenu)}>
-                      Service Marketplace
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/community" onClick={() => btn_icon(!showmenu)}>
-                      Community
-                      </NavLink>
-                    </div> */}
-                    {/* <div className='navbar-item'>
-                      <div ref={ref2}>
-                          <div className="dropdown-custom dropdown-toggle btn" 
-                             onMouseEnter={handleBtnClick2} onMouseLeave={closeMenu2}>
-                            Pages
-                            <span className='lines'></span>
-                            {openMenu2 && (
-                            <div className='item-dropdown'>
-                              <div className="dropdown" onClick={closeMenu2}>
-                              <NavLink to="/Author/1" onClick={() => btn_icon(!showmenu)}>Author</NavLink>
-                              <NavLink to="/Profile/1" onClick={() => btn_icon(!showmenu)}>Profile</NavLink> */}
-                              {/* <NavLink to="/AuthorGrey/1" onClick={() => btn_icon(!showmenu)}>Author Grey</NavLink>
-                              <NavLink to="/AuthorOpensea" onClick={() => btn_icon(!showmenu)}>Author OpenSea</NavLink> */}
-                              {/* <NavLink to="/wallet" onClick={() => btn_icon(!showmenu)}>Wallet</NavLink> */}
-                              {/* <NavLink to="/walletGrey" onClick={() => btn_icon(!showmenu)}>Wallet Grey</NavLink> */}
-                              {/* <NavLink to="/create" onClick={() => btn_icon(!showmenu)}>Create</NavLink>
-                              <NavLink to="/create2" onClick={() => btn_icon(!showmenu)}>Create 2</NavLink> */}
-                              {/* <NavLink to="/createOptions" onClick={() => btn_icon(!showmenu)}>Create options</NavLink>
-                              <NavLink to="/mint" onClick={() => btn_icon(!showmenu)}>Nft Minting</NavLink>
-                              <NavLink to="/minter" onClick={() => btn_icon(!showmenu)}>Nft Minting Grey</NavLink> */}
-                              {/* <NavLink to="/news" onClick={() => btn_icon(!showmenu)}>News</NavLink> */}
-                              {/* <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>Gallery</NavLink>
-                              <NavLink to="/login" onClick={() => btn_icon(!showmenu)}>login</NavLink>
-                              <NavLink to="/loginTwo" onClick={() => btn_icon(!showmenu)}>login 2</NavLink>
-                              <NavLink to="/register" onClick={() => btn_icon(!showmenu)}>Register</NavLink>
-                              <NavLink to="/contact" onClick={() => btn_icon(!showmenu)}>Contact Us</NavLink> */}
-                              {/* </div>
-                            </div>
-                          )}
-                          </div>
-                        </div>
-                    </div> */}
-                   
-                    {/* <div className='navbar-item'>
-                      <NavLink to="/marketplace">
-                      Explore
-                      <span className='lines'></span>
-                      </NavLink>
-                     
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
-                      Portdex Videos
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="#" onClick={() => btn_icon(!showmenu)}>
-                      Tokens Economy
-                      </NavLink>
-                    </div> */}
-                
-                  {/* </div> */}
                 </Breakpoint>
               </BreakpointProvider>
 
@@ -344,58 +269,7 @@ const Header = function({ className }) {
                 <div className="logout">
                   {/* <NavLink to="/wallet">Connect Wallet-coming soon</NavLink> */}
                   
-                  {/* <div id="de-click-menu-profile" className="de-menu-profile" onClick={() => btn_icon_pop(!showpop)} ref={refpop}>                           
-                  <i className="fa fa-user user-icon-style" ></i>
-                      {showpop && 
-                        <div className="popshow"> */}
-                          {/* <div className="d-name">
-                              <h4>Monica Lucas</h4>
-                              <span className="name" onClick={()=> window.open("", "_self")}>Set display name</span>
-                          </div>
-                          <div className="d-balance">
-                              <h4>Balance</h4>
-                              12.858 ETH
-                          </div>
-                          <div className="d-wallet">
-                              <h4>My Wallet</h4>
-                              <span id="wallet" className="d-wallet-address">DdzFFzCqrhshMSxb9oW3mRo4MJrQkusV3fGFSTwaiu4wPBqMryA9DYVJCkW9n7twCffG5f5wX2sSkoDXGiZB1HPa7K7f865Kk4LqnrME</span>
-                              <button id="btn_copy" title="Copy Text">Copy</button>
-                          </div> */}
-                          {/* <div className="d-line"></div> */}
-                          {/* <ul className="de-submenu-profile">
-                            <li>
-                              <NavLink to='/profile'>
-                              <span>
-                                <i className="fa fa-user"></i> My profile
-                              </span>
-                              </NavLink>
-                            </li>
-                            <li>
-                            <NavLink to='/create'>
-                              <span>
-                                <i className="fa fa-pencil"></i> Post Your Project
-                              </span>
-                              </NavLink>
-                            </li>
-                            
-                            <li>
-                            <NavLink to='#'>
-                              <span>
-                                <i className="fa fa-pencil cursor-pointer"></i> KYC/AML
-                              </span>
-                              </NavLink>
-                            </li>
-                            <li onClick={handleLogout}>
-                            <NavLink to='/login'>
-                              <span>
-                                <i className="fa fa-sign-out cursor-pointer"></i> Sign In
-                              </span>
-                              </NavLink>
-                            </li>
-                          </ul>
-                        </div>
-                      }
-                  </div> */}
+                 
                 </div>
               </div>
                   

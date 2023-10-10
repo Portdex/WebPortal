@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
+import Sidebars from '../menu/sidebar';
 
 const GlobalStyles = createGlobalStyle`
 .navbar {
@@ -15,6 +16,24 @@ header
   display:none;
 }
 
+@media (max-width: 895px) {
+  .chat-sidebar {
+    display: none;
+  }
+  .RhtDT
+  {
+    display:none !important;
+    background-color:white !important;
+  }
+  .navbarHome {
+    display: block;
+  }
+  .responsive-flex
+  {
+    width:100%;
+  }
+}
+
 `;
 const HeaderContainer = styled.div`
   padding: 10px;
@@ -26,7 +45,8 @@ const HeaderContainer = styled.div`
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color:white;
+  background-color:#8364e2;
+  height:94px
 `;
 
 const LogoContainer = styled.div`
@@ -35,26 +55,29 @@ const LogoContainer = styled.div`
 `;
 
 const BetaBadge = styled.span`
-  background-color: #8364e2;
-  color: #fff;
+  background-color: white;
+  color: #8364e2;
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 4px;
+  font-weight:600;
 `;
 const PortdexText = styled.span`
 margin-left: 20px;
 font-size: 24px;
 margin-right: 10px;
 font-weight: 600;
+color:white
 `;
 
 const SignInButton = styled.button`
-  background-color: #8364e2;
-  color: #fff;
+  background-color: white;
+  color: #8364e2;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight:600
 `;
 
 const Main = () => {
@@ -106,6 +129,7 @@ const Main = () => {
 const navigate=useNavigate();
   return (
     <>
+    <Sidebars/>
     <GlobalStyles/>
     <HeaderContainer>
       <LogoContainer>
@@ -118,7 +142,7 @@ const navigate=useNavigate();
       <SignInButton> Join SME's Beta </SignInButton>
       </Link>
     </HeaderContainer>
-    <section className='pt-5 mt-5'>
+    <section className='pt-5 mt-5  margin-left-sidebar'>
       <div className=" main-screeen">
       <div className="typing-animation">
      
