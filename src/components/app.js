@@ -58,6 +58,7 @@ import Author2 from './pages/Author2';
 import CheckLocation from './pages/CheckLocation';
 import Main from './pages/main';
 import LayerAI from './pages/AI';
+import Chat from './pages/Chat';
 
 
 
@@ -103,9 +104,9 @@ const app= () => (
       </Route> */}
       <Route path="/home" element={<Home />} />
       <Route path="/blockchain" element={<About />} />
-      <Route path="/category" element={<CategorySelect />} /> 
+      <Route path="/:category" element={<CategorySelect />} /> 
       <Route path="/" element={<Main />} /> 
-      <Route element={<Author2 />} path="/seller/:username" />
+      <Route element={<Author2 />} path="/details/:username" />
       <Route element={<Marketplace />} path="/marketplace" />
       <Route element={<Product />} path="/products" />
       <Route element={<Community />} path="/community" />
@@ -125,13 +126,13 @@ const app= () => (
       <Route element={<Productdetail />} path="/productdetail/:id" />
       <Route element={<Wallet />} path="/wallet" />
       <Route element={<LayerAI />} path="/AI" />
+      <Route element={<Chat />} path="/chat" />
       <Route element={<Author />} path="/Author/:username" />
       <Route element={<Servicedetail />} path="/servicedetail/:username/:serviceId" />
       {/* <Route element={<Profile />} path="/Profile/:authorId" /> */}
       <Route element={<Profile />} path="/Profile" />
       <Route element={<Login />} path="/login" />
       <Route element={<Register />} path="/register" />
-
       <Route element={<CheckLocation/>} path="/checklocation" />
       <Route element={<ExploreOpensea/>} path="/exploreOpensea" />
       <Route element={<Auction/>} path="/Auction" />
@@ -139,10 +140,7 @@ const app= () => (
       <Route element={<Colection/>} path="/colection/:collectionId" />
       {/* <Route element={<ItemDetailRedux/>} path="/ItemDetail/:nftId" /> */}
       {/* <Route element={<Author />} path="/Author/:index" /> */}
-      
       <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
-
-
       <Route element={<Price />} path="/price" />
       <Route element={<News />} path="/news" />
       <Route element={<NewsSingle />} path="/news/:postId" />

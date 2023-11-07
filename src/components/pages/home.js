@@ -161,11 +161,11 @@ navigate('/category')
           }
           const handleCategory = (category) => {
             localStorage.setItem("value", category);
-            navigate('/category');
+            navigate(`/${category}`);
           };
  
   const itemHandlers = {
-    Freelancers: ()=> handleCategory("Freelancer"),
+    Freelancers: ()=> handleCategory("Software Developer"),
     Accountant:()=> handleCategory ("Accountant"),
     Lawyer:()=> handleCategory("Lawyer"),
     Teacher:()=> handleCategory("Teacher"),

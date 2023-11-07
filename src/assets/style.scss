@@ -5367,6 +5367,10 @@ blockquote {
   {
     width:100% !important;
   }
+  .responsive-padding
+  {
+    padding-top:50px !important;
+  }
 }
 @media only screen and (max-width: 420px) {
 
@@ -5471,7 +5475,10 @@ blockquote {
 /* .check-box :checked + label {
   border-color: #ddd;
 } */
-
+.user-message
+{
+  text-align: right;
+}
 .check-box :checked + label:before {
   content: "✓";
   background-color: grey;
@@ -5895,6 +5902,24 @@ font-weight:500
   section {
     padding-top:0px
   }    
+}
+@media (max-width: 460px) {
+  .responsive-font {
+    font-size:40px !important;
+    margin-top:30px !important;
+  }    
+  .responsive-margin
+  {
+    margin-top:150px !important;
+  }
+  .responsive-margin-top 
+  {
+    margin-top:120px !important;
+  }
+  .btn-main
+  {
+    padding: 8px 20px !important;
+  }
 }
 .package-box-services
 {

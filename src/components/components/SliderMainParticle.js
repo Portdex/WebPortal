@@ -33,7 +33,7 @@ const slidermainparticle= () => (
               <div className="spacer-single"></div>
               <div className="spacer-double"></div>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1 className="col-white">Decentralized Digital Product And Services MarketPlace</h1>
+              <h1 className="col-white responsive-font">Decentralized Digital Product And Services MarketPlace</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
