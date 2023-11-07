@@ -35,7 +35,7 @@ const About= () => {
          <SliderMain/>
       </section>
 
-      <section className='container no-top no-bottom'>
+      <section className='container no-top responsive-margin-top no-bottom'>
         <FeatureBox/>
       </section>
 
