@@ -1,33 +1,11 @@
 import React , {useState , useEffect} from 'react';
-import { keyframes } from "@emotion/react";
 import '../../assets/chat.css'
 import styled , { createGlobalStyle } from 'styled-components';
 import axios from 'axios';
-
 import fetch from '../../data/fetch';
-import { 
-  Link, 
-  useNavigate, 
-  useMatch,
-  useResolvedPath
-} from "react-router-dom";
+import { useNavigate, } from "react-router-dom";
 import Sidebars from '../menu/sidebar';
-import WebSidebar from '../menu/webSidebar';
 import PackageModal from '../components/PackageModal';
-
-
-const fadeInUp = keyframes`
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-`;
 const GlobalStyles = createGlobalStyle`
 .navbar {
   display: none;
@@ -49,31 +27,6 @@ const GlobalStyles = createGlobalStyle`
     width:100%;
   }
 }
-`;
-
-const Container = styled.div`
-display: flex;
-`;
-
-const Sidebar = styled.div`
-background-color: #f2f2f2;
-width: 250px;
-height: 100vh;
-position: fixed;
-top: 0;
-left: 0;
-animation: ${fadeInUp} 0.3s ease;
-
-@media (max-width: 776px) {
-  display: none;
-}
-`;
-
-const Header = styled.header`
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
 `;
 const PopupContainer = styled.div`
   position: fixed;
@@ -157,7 +110,7 @@ const CategorySelect= () => {
   const handleSellerClick = (username) => {
     // console.log("Clicked the View Packages button");
     // setIsModalOpen(true);
-    navigate(`/seller/${username}`);
+    navigate(`/details/${username}`);
   };
   const sendPopupMessage = () => {
     // Call the Twilio API via your server to send the message
@@ -198,7 +151,6 @@ const CategorySelect= () => {
     setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen);
   };
   useEffect(() => {
-    
     fetch()
     .then(data => {
       data=data.data.results.users;
@@ -210,7 +162,7 @@ const CategorySelect= () => {
         (user) => user.services === valueData
       );
       setSelectedUsers(matchingUsers);
-      console.log(matchingUsers)
+      console.log('matchingUsers ', matchingUsers)
     }
   })
     .catch((error) => console.error(error));
@@ -218,7 +170,7 @@ const CategorySelect= () => {
   }, []);
  
   const options = {
-    Freelancer: [
+    SoftwareDeveloper: [
       'Web Design',
       'Graphic Design',
       'Business Consultants',
@@ -333,7 +285,7 @@ function handleCheckboxChange(checkboxValue) {
     
       <div className="chat">
         <div className="height-contain">
-      <h6 className='text-center px-3 mt-5 pt-5 pb-3 color-purple'>
+      <h6 className='text-center px-3 mt-5 responsive-padding pb-3 color-purple'>
       Select the services you need, Let Portdex do the rest. <br className='hide-responsive'/> Service Providers will come back to you with a Quote. 
         </h6>
         <div className="chat-messages d-flex justify-content-center flex-column">
@@ -341,7 +293,7 @@ function handleCheckboxChange(checkboxValue) {
     
    <ul className='m-auto category-list desktop-view'>
      
-   {options[valueData]?.map((option) => (
+   {options[valueData]?.slice(0, showAllCategory ? options[valueData]?.length : visibleItems).map((option) => (
           <li key={option} className="">
             <label className="custom-checkbox">
               <input
@@ -372,8 +324,9 @@ function handleCheckboxChange(checkboxValue) {
           </li>
         ))}
               </ul>
-              {!showAllCategory && <button className='mobile-view more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
-        {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>}
+              {!showAllCategory && <button className=' more-btn' onClick={handleSeeMore}>See More <i class="fa fa-angle-down"></i> </button>}
+              {showAllCategory && <button className=' more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>} 
+        {/* {showAllCategory && <button className='mobile-view more-btn' onClick={handleClose}>Close <i class="fa fa-angle-up"></i> </button>} */}
      
             
     
@@ -385,7 +338,7 @@ function handleCheckboxChange(checkboxValue) {
  
   <div class="community-card text-center p-4">
     <div class="img-container long-cards">
-      <img src="img/favicon.ico" />
+      <img src="/img/favicon.ico" />
     </div>
     <h3 className="community-h3 mb-2">{author.username}</h3>
     <p className="m-0 mb-2">{author.services || '-'}</p> 

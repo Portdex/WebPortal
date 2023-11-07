@@ -187,6 +187,11 @@ const Sidebars = () => {
               Freelancers Governed – Web 3.0 Marketplace
             </li>
             </a>
+            <a href="/chat">
+            <li>              
+              Chat
+            </li>
+            </a>
             <a href="/our-team">
             <li>
               Our Team

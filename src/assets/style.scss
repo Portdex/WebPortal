@@ -5367,6 +5367,10 @@ blockquote {
   {
     width:100% !important;
   }
+  .responsive-padding
+  {
+    padding-top:50px !important;
+  }
 }
 @media only screen and (max-width: 420px) {
 
@@ -5471,7 +5475,10 @@ blockquote {
 /* .check-box :checked + label {
   border-color: #ddd;
 } */
-
+.user-message
+{
+  text-align: right;
+}
 .check-box :checked + label:before {
   content: "✓";
   background-color: grey;
